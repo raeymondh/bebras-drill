@@ -76,6 +76,13 @@ a{color:var(--blue)}
 .btn-debug:hover:not(:disabled){background:rgba(210,153,34,.18)}
 .btn-exam{color:#ff8b81;border-color:rgba(248,81,73,.55);background:rgba(248,81,73,.12);font-size:14px}
 .btn-ghost{background:transparent}
+.sync-chip{
+  font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.02em;
+  color:#8b949e; background:var(--card); border:1px solid var(--border);
+  border-radius:8px; padding:8px 10px; white-space:nowrap; align-self:center;
+}
+.sync-chip.ok{color:#3fb950;border-color:rgba(63,185,80,.45)}
+.sync-chip.warn{color:#d29922;border-color:rgba(210,153,34,.5)}
 .progress-wrap{flex:1 1 220px;min-width:0;cursor:pointer}
 .progress-track{
   position:relative;height:26px;background:var(--bg);border:1px solid var(--border);
@@ -349,6 +356,7 @@ body.modal-open{overflow:hidden}
       </div>
       <span class="progress-text" id="progressText">0/0 terjawab</span>
     </div>
+    <span class="sync-chip" id="syncChip" title="Sinkronisasi progres cloud">☁ …</span>
     <button id="btnReset" class="btn btn-reset" type="button">🗑️ RESET</button>
   </div>
 
@@ -641,9 +649,69 @@ const modules = [
     try { localStorage.setItem(LS_PROGRESS, JSON.stringify(progress)); } catch (e) { /* storage full/blocked */ }
     scheduleProgressSync();
   }
-  // Progress sync → POST ke server (serve.mjs) yang menulis data/progress.json + progress.md
-  // supaya AI tutor/harness eksternal bisa membaca progres drill. Fire-and-forget, diam jika gagal.
+  // Progress sync → cloud (Cloudflare Pages API + KV di bebras-drill.pages.dev).
+  // Semua device share state yang sama (pull-merge-push saat boot, push tiap jawab benar),
+  // dan AI tutor membaca https://bebras-drill.pages.dev/api/progress.md
   var syncTimer = null;
+  var SYNC_BASE = (location.protocol === 'file:' || (location.hostname.indexOf('github.io') !== -1))
+    ? 'https://bebras-drill.pages.dev/' : '';
+  function syncUrl(p) { return SYNC_BASE + p; }
+  function setSyncChip(text, cls, title) {
+    var el = document.getElementById('syncChip');
+    if (!el) return;
+    el.textContent = text;
+    el.className = 'sync-chip' + (cls ? ' ' + cls : '');
+    el.title = title || '';
+  }
+  function cloudPull(cb) {
+    var done = false;
+    function finish(v) { if (!done) { done = true; cb(v); } }
+    try {
+      fetch(syncUrl('api/progress'), { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {} }) : null); })
+        .catch(function () { finish(null); });
+      setTimeout(function () { finish(null); }, 5000);
+    } catch (e) { finish(null); }
+  }
+  function stateEmpty(p) {
+    p = p || {};
+    var s = p.solved || {}, e = p.examStart || {};
+    var n = 0, k;
+    for (k in s) n += Object.keys(s[k]).length;
+    return n === 0 && Object.keys(e).length === 0;
+  }
+  function mergeProgress(a, b) {
+    var out = { solved: {}, examStart: {} }, ids = {}, k, kk;
+    for (k in a.solved) ids[k] = 1;
+    for (k in b.solved) ids[k] = 1;
+    for (k in ids) {
+      var m = {}, x = a.solved[k] || {}, y = b.solved[k] || {};
+      for (kk in x) m[kk] = true;
+      for (kk in y) m[kk] = true;
+      out.solved[k] = m;
+    }
+    for (k in a.examStart) out.examStart[k] = a.examStart[k];
+    for (k in b.examStart) {
+      if (out.examStart[k] === undefined || Number(b.examStart[k]) > Number(out.examStart[k])) out.examStart[k] = b.examStart[k];
+    }
+    return out;
+  }
+  function bootSync() {
+    cloudPull(function (cloud) {
+      if (!cloud) { setSyncChip('☁ offline', 'warn', 'Cloud tidak terjangkau — progres tetap aman di browser ini'); return; }
+      var merged = mergeProgress(cloud, progress);
+      var changedLocal = JSON.stringify(merged) !== JSON.stringify(progress);
+      var changedCloud = JSON.stringify(merged) !== JSON.stringify(cloud);
+      if (changedLocal) {
+        progress = merged;
+        try { localStorage.setItem(LS_PROGRESS, JSON.stringify(progress)); } catch (e) { /* ignore */ }
+        renderModule();
+      }
+      if (changedCloud || (changedLocal && !stateEmpty(merged))) scheduleProgressSync();
+      setSyncChip('☁ sync', 'ok', 'Progres tersinkron antar perangkat via bebras-drill.pages.dev');
+    });
+  }
   function scheduleProgressSync() {
     if (syncTimer) clearTimeout(syncTimer);
     syncTimer = setTimeout(sendProgressSync, 600);
@@ -651,12 +719,13 @@ const modules = [
   function sendProgressSync() {
     syncTimer = null;
     try {
-      fetch('api/progress', {
+      fetch(syncUrl('api/progress'), {
         method: 'POST', keepalive: true,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: 'bebras-drill-2026', progress: progress, updated: new Date().toISOString(), moduleId: currentId || null })
-      }).catch(function () { /* offline / file:// — abaikan */ });
-    } catch (e) { /* ignore */ }
+      }).then(function (r) { setSyncChip(r.ok ? '☁ sync' : '☁ offline', r.ok ? 'ok' : 'warn'); })
+        .catch(function () { setSyncChip('☁ offline', 'warn'); });
+    } catch (e) { setSyncChip('☁ offline', 'warn'); }
   }
   function loadCurrent() {
     var v = null;
@@ -1220,6 +1289,7 @@ const modules = [
   });
 
   renderModule();
+  bootSync();
 })();
 </script>
 </body>
