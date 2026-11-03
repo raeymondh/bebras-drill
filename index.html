@@ -653,8 +653,9 @@ const modules = [
   // Semua device share state yang sama (pull-merge-push saat boot, push tiap jawab benar),
   // dan AI tutor membaca https://bebras-drill.pages.dev/api/progress.md
   var syncTimer = null;
-  var SYNC_BASE = (location.protocol === 'file:' || (location.hostname.indexOf('github.io') !== -1))
-    ? 'https://bebras-drill.pages.dev/' : '';
+  // Single source of truth: cloud pages.dev (gak diblokir ISP). Dari origin mana pun
+  // (github.io / pages.dev / LAN 192.168.1.3 / file://) sync tetap ke cloud yang sama.
+  var SYNC_BASE = 'https://bebras-drill.pages.dev/';
   function syncUrl(p) { return SYNC_BASE + p; }
   function setSyncChip(text, cls, title) {
     var el = document.getElementById('syncChip');
