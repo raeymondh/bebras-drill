@@ -1,0 +1,26 @@
+{
+  "id": "d14_q4",
+  "scheduleTitle": "Robot (2017)",
+  "bookTitle": "Robot",
+  "book": "b2017",
+  "code": "I-2017-SK-12b",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-SK-12b",
+  "soalPages": [37],
+  "imgPages": [37],
+  "deskripsi": "Milan berhasil mengembangkan robot yang mampu membaca petak berwarna, mengubah warnanya dan berpindah 1 petak ke kiri atau ke kanannya. Robot tersebut bergerak dengan aturan yang digambar dan diartikan sebagai berikut:\n[gambar aturan 1] Jika dia berada di sebuah petak merah, maka robot mengganti warna petak menjadi hijau dan berpindah 1 petak ke kanan.\n[gambar aturan 2] Jika dia berada di sebuah petak merah, maka robot mengganti warna petak menjadi hijau dan berpindah 1 petak ke kiri.\nPada awalnya, robot berada pada petak paling kiri. Ia mendeteksi warna petak, menemukan aturan yang berkaitan dengan warna tersebut, dan berpindah sesuai aturan tersebut. Kemudian robot akan mengulangnya dari petak di mana ia berada. Jika ia tak dapat menemukan aturan, maka berhenti dan keluar dari petak.\nDiberikan sederet petak sebagai berikut:\n[gambar: sederet petak berwarna sebagai posisi awal robot]\nDan aturannya adalah:\n[gambar: daftar aturan warna petak → arah perpindahan]",
+  "pertanyaan": "Pilihlah keadaaan petak saat robot berhenti:",
+  "options": [
+    "a) [gambar keadaan petak — lihat halaman soal]",
+    "b) [gambar keadaan petak — lihat halaman soal]",
+    "c) [gambar keadaan petak — lihat halaman soal]",
+    "d) [gambar keadaan petak — lihat halaman soal]"
+  ],
+  "key": "a",
+  "keys": [],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang benar adalah a).",
+  "penjelasan": "",
+  "iniInformatika": "Dalam bidang informatika, model komputasi memegang peranan sangat penting. Model komputasi adalah aturan dan struktur yang harus ditaati.\nContohnya, model komputasi dari sebuah program komputer (software), adalah sekumpulan teks berisi instruksi dalam bahasa programming yang dipakai untuk menulis program tersebut.\nTantangan yang diberikan di atas sangat mirip dengan model mesin Turing. Mesin Turing adalah model yang sangat berguna sebagai model komputasi karena walaupun sederhana, model ini setara dengan berbagai macam bahasa programming. Artinya, kita bisa menerjemahkan berbagai macam program komputer ke dalam mesin Turing, dan sebaliknya.",
+  "notes": "Tantangan ini bergambar penuh: aturan robot, sederet petak awal, daftar aturan, dan opsi a)–d) semuanya GAMBAR; placeholder berkurung ditambahkan — soal harus ditampilkan bersama imgPages (jpg halaman soal). Buku tidak menyertakan bagian penjelasan. Typo buku 'keadaaan' dipertahankan sesuai teks asli. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-037/038.txt)."
+}

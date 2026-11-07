@@ -1,0 +1,21 @@
+{
+  "id": "sim2017_2",
+  "scheduleTitle": "Kiri Kanan (2017)",
+  "bookTitle": "Kiri Kanan",
+  "book": "b2017",
+  "code": "I-2017-BE-03a",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-BE-03a",
+  "soalPages": [12],
+  "imgPages": [12],
+  "deskripsi": "Berang-berang menciptakan sistem pengkodean kata yang disebut kode berang-berang, dengan memakai peta di atas:\n[gambar: peta taman dengan pohon berlabel huruf dan pintu masuk bertanda panah]\n- Setiap pohon di taman diberi nama dengan satu huruf.\n- Kode untuk setiap huruf ditemukan dengan cara mencapai pohon tersebut dengan berbelok kiri (L) dan kanan (R).\n- Kode untuk setiap huruf selalu dimulai dari pintu masuk taman (bertanda panah).\nContoh-contoh:\n- Contoh 1: Kode untuk A adalah LL karena untuk mencapai pohon A dari pintu masuk taman kamu harus berbelok kiri dua kali.\n- Contoh 2: Kode untuk kata BAR adalah LRLLLR.",
+  "pertanyaan": "Berapa banyak huruf dalam kode berang-berang tersebut untuk kata BEAR? (Tuliskan angkanya!)",
+  "options": [],
+  "key": "",
+  "keys": ["9", "~sembilan"],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang benar adalah 9.",
+  "penjelasan": "Tabel berikut ini berisi kode kiri/kanan untuk semua huruf:\n[tabel/gambar: kode L/R untuk setiap huruf — lihat halaman pembahasan]\nSehingga BEAR akan dikode menjadi LRLLRRLLR yang terdiri dari 9 huruf.",
+  "iniInformatika": "Jika suatu komputer mengganti huruf L dalam kode kiri/kanan dengan 0 dan huruf R dengan 1, maka kode kiri/kanan menjadi apa yang disebut kode biner. Peta untuk taman menjadi suatu struktur data komputer yang disebut pohon biner.\nHal ini berarti rute yang panjang dan rumit dapat disimpan oleh komputer dengan sangat mudah menggunakan ruang yang sangat kecil. Hal menarik mengenai kode ini adalah bahwa tidak diperlukan koma atau pemisah.\nCobalah mengubah kode (decode) jawaban untuk melihat bahwa kamu tidak perlu spasi untuk menunjukkan kode untuk setiap huruf cukup dan mulai dengan kode baru. Jenis kode seperti ini disebut prefix code. Hal ini berarti kode menjadi lebih singkat.",
+  "notes": "SIM (kandidat ujian campuran hari-19): dipilih ulang dari tugas terjadwal hari-2 karena seluruh 20 judul b2017 sudah terjadwal (lihat laporan akhir). Peta taman dan tabel kode L/R per huruf adalah GAMBAR; lihat imgPages. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-012.txt)."
+}

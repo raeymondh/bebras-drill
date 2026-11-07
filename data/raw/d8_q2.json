@@ -1,0 +1,26 @@
+{
+  "id": "d8_q2",
+  "scheduleTitle": "Lift Pengangkut Barang (2018)",
+  "bookTitle": "Lift Pengangkut Barang",
+  "book": "b2018",
+  "code": "I-2018-CH-07b",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CH-07b",
+  "soalPages": [39, 40],
+  "imgPages": [39],
+  "deskripsi": "Sekumpulan berang-berang perlu membawa barang menggunakan sebuah lift pengangkut barang ke atas. Hari sudah malam, dan layanan lift akan dihentikan. Petugas hanya memberi kesempatan untuk dua kali naik. Kapasitas angkut lift untuk sekali jalan adalah 30 kg.\n\n(Berat setiap barang tertera pada gambar di halaman soal: 2kg, 3kg, 5kg, 8kg, 9kg, 9kg, 12kg, 12kg)",
+  "pertanyaan": "Aturlah sehingga sebanyak mungkin barang yang bisa diangkut dengan hanya dua kali naik? Pilih berat barang yang yang akan diangkut di lift pertama dan kedua.",
+  "options": [],
+  "key": "",
+  "keys": [
+    "Lift Pertama: 9kg, 9kg, 12kg. Lift Ke dua: 2kg, 3kg, 5kg, 8kg, 12kg.",
+    "9, 9, 12 ; 2, 3, 5, 8, 12",
+    "9 9 12 2 3 5 8 12",
+    "9,9,12 / 2,3,5,8,12"
+  ],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah:\nLift Pertama: 9kg, 9kg, 12kg.\nLift Ke dua: 2kg, 3kg, 5kg, 8kg, 12kg.",
+  "penjelasan": "Penting untuk pemrograman: Distribusi kedua grup berang-berang harus dimungkinkan di lift 1 dan 2, atau 2 dan 1. Urutan berang-berang di dalam lift harus tidak relevan.\n\nIde pertama yang terlintas dalam pikiran biasanya adalah memasukkan sebanyak mungkin barang yang paling ringan ke lift pertama: 2 + 3 + 5 + 8 + 9 = 27 kg dan ke dalam kabin kedua 9 + 12 = 21 kg (7 berang-berang). Tetapi sebenarnya kita bisa mengangkut 8 berang-berang berikut ke dalam lift:\n\nCaranya: tukarkan berang-berang 9 kg dengan berang-berang 12 kg di lift pertama (total berat lift pertama 30 kg), sehingga kita dapat menggunakan berang-berang 9 kg untuk kabin kedua (total berat kabin kedua 30 kg).",
+  "iniInformatika": "Masalah ini memiliki terlalu banyak kemungkinan, dan tidak mungkin kita bisa memeriksa semuanya dalam waktu yang singkat.\n\nKita harus menemukan solusi 'terbaik' untuk masalah ini, walaupun ini mungkin tidak selalu optimal.\n\nDalam Ilmu Komputer kita sebut ini adalah masalah yang tidak dapat diselesaikan secara praktis. Namun kita bisa mengikuti strategi yang praktis, dimulai dengan mencoba menempatkan berang-berang sebanyak mungkin ke dalam lift pertama. Dalam informatika rencana tersebut mengarah ke solusi yang baik tetapi mungkin bukan yang terbaik yang disebut heuristik.",
+  "notes": "Daftar barang beserta beratnya berupa gambar di hal. 39 — aplikasi menampilkan render halaman asli (imgPages 39). Jawaban fleksibel: beberapa varian format diterima (urutan lift 1/2 boleh ditukar)."
+}

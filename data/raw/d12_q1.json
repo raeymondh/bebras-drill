@@ -1,0 +1,21 @@
+{
+  "id": "d12_q1",
+  "scheduleTitle": "Rumah Sakit Berang-Berang (2016)",
+  "bookTitle": "Rumah Sakit Berang-Berang",
+  "book": "b2016",
+  "code": "2016-CH-03",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-CH-03",
+  "soalPages": [40, 41],
+  "imgPages": [40],
+  "deskripsi": "Dokter berang-berang ingin mendirikan tiga rumah sakit untuk merawat pasien berang-berang.\nDokter mempunyai syarat bahwa rumah sakit tersebut harus berada di tempat yang sedemikian sehingga berang-berang cukup berenang melalui maksimal satu saluran air (kanal) saja untuk dapat menjangkau rumah sakit dari tempat di manapun dia berada.",
+  "pertanyaan": "Tentukan tiga lokasi yang cocok untuk dipilih sebagai tempat didirikannya rumah sakit sesuai dengan persyaratan di atas. Jawaban ditulis secara terurut abjad dengan karakter huruf besar (urut dari A sampai Z) tanpa dipisahkan spasi. Misalnya jawaban yang benar adalah ADE, maka tidak boleh dituliskan sebagai DAE atau AED. Jawaban manapun yang benar akan diperbolehkan.",
+  "options": [],
+  "key": "",
+  "keys": ["EHK", "AEH", "CGI", "CHI", "CIK", "DFK", "A E H", "C G I", "C H I", "C I K", "D F K"],
+  "pairs": [],
+  "jawabanResmi": "Ada banyak solusi benar; salah satu di antaranya adalah EHK, yaitu menggunakan E, H dan K.",
+  "penjelasan": "• dari lokasi D, E dan I , berang-berang dapat berenang ke E.\n• dari lokasi B, C, F, G dan H, berang-berang dapat berenang ke H.\n• dari lokasi A, C, G dan K, berang-berang dapat berenang ke K.\nSolusi lainnya: A E H, C G I, C H I, C I K, D F K.\nSolusi dapat diketemukan dengan menempatkan sebuah lokasi secara random, menandai semua lokasi yang dapat dicapai dalam satu langkah. Kemudian Anda melakukan untuk lokasi berikutnya. Setelah 3 lokasi diipilih, ada dua kemungkinan: apakah itu sebuah solusi, atau ada satu atau lebih lokasi yang tak ditandai. Jika bukan solusi, kita dapat menghapus lokasi terakhir dan menggantinya dengan sebuah lokasi lain, kemudian memeriksa ulang. Jika kita masih tak dapat menemukan solusi dengan 3 lokasi, kita dapat kembali dan menempatkan lokasi terakhir ke tempat lain. Dengan melakukan hal ini secara sistematis, kita dapat menemukan semua solusi.",
+  "iniInformatika": "Dalam informatika, sistem kanal ini digeneralisasi menjadi konsep graf yang terdiri dari simpul, dan jalur (kanal air). Persoalan ini adalah menemukan cakupan simpul dalam graf: sebagian (subset) simpul dikatakan merupakan cakupan simpul sebuah graf, jika dengan menambahkan semua simpul tetangga ke subset ini akan menghasilkan sebuah graf. Biasanya, simpul minimal akan memberikan harga yang efisien. Untuk graf yang besar dan kompleks, sulit menemukan tanpa menuliskan sebuah algoritma. Metoda untuk menempatkan lokasi yang sudah dijelaskan disebut sebagai backtracking. Kita mencoba sebuah solusi dan jika tidak benar, kita kembali ke langkah sebelumnya. Setelah itu coba solusinya sampai mendapat solusi yang benar. Metoda ini tak selalu efisien, tapi untuk soal ini handal untuk dipakai.",
+  "notes": "Tipe sa (isian singkat; buku tanpa opsi). Graf kanal bersimpul A–K ada di hal. 40 di antara dua paragraf deskripsi — WAJIB dilihat untuk menjawab (imgPages). Pertanyaan di buku tercetak dalam blok Deskripsi Soal (tanpa heading 'Pertanyaan') dan bersambung hal. 40→41. keys = semua 6 solusi yang dicantumkan buku (EHK + A E H, C G I, C H I, C I K, D F K), ditambah varian tanpa spasi. Typo buku 'diipilih' dipertahankan; 'I ,' (spasi sebelum koma) sesuai ekstraksi. Spasi ganda artefak pdf.js dinormalisasi; bullet '•' dipulihkan dari glif artefak."
+}

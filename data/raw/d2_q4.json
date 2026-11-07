@@ -1,0 +1,21 @@
+{
+  "id": "d2_q4",
+  "scheduleTitle": "Kode Pemindai (2016)",
+  "bookTitle": "Kode Pemindai",
+  "book": "b2016",
+  "code": "2016-MY-02",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-MY-02",
+  "soalPages": [32, 33, 34, 35],
+  "imgPages": [32, 33],
+  "deskripsi": "Dua mesin pemindai (scanner) mengkodekan citra digital (gambar digital) melalui pengubahan harga-harga piksel citra (baris per baris dari kiri ke kanan), ke kode-kode tertentu. Pengkodeannya adalah dengan menuliskannya sebagai bilangan-bilangan yang masing-masing menyatakan banyaknya piksel dalam suatu deretan yang berwarna sama. Hanya ada dua harga: putih dan hitam. Bilangan bilangan pengkodean menyatakan deretan-deretan piksel yang dimulai dari deretan pertama di pojok kiri atas ke arah kanannya, kemudian bilangan berikutnya untuk deretan dari warna lainnya, secara bergantian.hingga pojok kanan bawah.\n\nKedua mesin menggunakan cara berbeda untuk menangani ujung baris:\n• Scanner-A memproses piksel baris-demi baris hingga ujung baris, dan memulai lagi untuk setiap baris berikutnya sebagai deretan yang berbeda (walaupun warna sama).\n• Scanner-B memproses piksel demi piksel dan, saat di ujung baris, meneruskan ke baris berikutnya sebagai satu deretan (tanpa memulai lagi) ketika warna berlanjut sama.\n\nMisalnya, citra di sebelah kanan akan dikodekan sebagai berikut:\n• Scanner A: 3,1,1,1,2,4 (3 putih, 1 hitam, 1 hitam, 1 putih, 2 hitam, 4 hitam)\n• Scanner B: 3,2,1,6. (3 putih, 2 hitam, 1 putih, 6 hitam)",
+  "pertanyaan": "Citra manakah dari berikut ini yang akan menghasilkan pengkodean yang persis sama oleh kedua mesin pemindai tersebut?\nPilih salah satu:",
+  "options": ["A", "B", "C", "D"],
+  "key": "D",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah D.",
+  "penjelasan": "Perbedaan kedua metoda adalah apakah piksel terakhir dari sebuah baris dan piksel pertama dari baris berikutnya adalah kombinasi atau bukan. Pemindai A tidak mengkombinasikan, sedangkan B mengkombinasikan hanya jika piksel berwarna sama.\n\nJika piksel itu tak sama warnanya, kode dari kedua pemindai akan sama. Maka, kita harus menemukan sebuah citra di mana piksel terakhir dari sebuah baris berbeda dengan piksel pertama dari baris berikutnya, untuk seluruh baris:\n\nKita hanya perlu membandingkan 4 baris terakhir yang membentuk piksel dan 4 baris pertama piksel untuk tahu dengan pasti bahwa piksel-piksel tersebut warnanya berlawanan.",
+  "iniInformatika": "Sebuah scanner (pemindai) adalah sebuah piranti yang membaca secara optikal (memindai) citra dan mengkonversinya menjadi citra dijital.\n\nSaat memindai, warna dan kecerahan dari setiap area sangat kecil yang disebut piksel ditangkap oleh sebuah sensor dan diukur kemudian direkam sebagai nilai numerik. Proses ini disebut sebagai digitasi citra, Sebuah Piksel adalah sebuah kata dalam komputer yang dibentuk dari PICture ELement, sebab sebuah piksel adalah elemen terkecil dari sebuah citra digital. Setiap piksel adalah contoh dari citra asli, makin banyak contoh akan menghasilkan suatu representasi yang lebih akurat dari gambar aslinya.\n\nPemindai A menggunakan akhir baris untuk memulai mengkode beberapa baris, sedangkan Pemindai B membaca piksel sebagai gambar yang kontinu. Masing-masing mempunyai keuntungan. Misalnya untuk citra yang panjang, kita dapat menggunakan angka lebih sedikir dengan B, selain itu perlu menghitung dimensi gambar. Tidak praktis untuk citra yang kecil. Untung/rugi ini penting untuk diperhitungkan dalam ilmu komputer.",
+  "notes": "Soal-10 (hal. 32-35; Ini Informatika menyeberang hal. 34-35, kata kunci hal. 35). Opsi A-D berupa gambar pola piksel (hal. 33) — hanya label huruf yang dapat ditranskripsi. Contoh citra (hal. 32) diperlukan untuk memahami pengkodean. Typo asli buku dipertahankan verbatim: \"Bilangan bilangan\", \"bergantian.hingga\" (tanpa spasi setelah titik), \"sedikir\" (hal. 35). Verifikasi .jpg tidak dapat dilakukan (model sesi ini tidak mendukung input gambar); teks diverifikasi silang terhadap b2016_page-032..035.txt."
+}

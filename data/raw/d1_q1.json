@@ -1,0 +1,27 @@
+{
+  "id": "d1_q1",
+  "scheduleTitle": "Karung-karung Dalam Elevator (2016)",
+  "bookTitle": "Karung-karung Dalam Elevator",
+  "book": "b2016",
+  "code": "2016-CZ-026",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia Ã¢â‚¬â€œ Kelompok Penegak 2016 | Kode Soal: 2016-CZ-026",
+  "soalPages": [
+    22,
+    23
+  ],
+  "imgPages": [22, 23],
+  "deskripsi": "Sejumlah karung diletakkan di koridor, di dekat suatu lift (elevator). Koridor sangat sempit sehingga karung-karung harus dibariskan satu-satu.\n\nKarung-karung hendak dikirimkan ke toko di lantai dasar dengan menggunakan lift tersebut. Sekali angkut, Lift hanya dapat mengangkut karung-karung dengan total berat tidak kurang dari 80 kg dan tidak lebih dari 100 kg. Setelah terkirim maka lift akan kembali ke lantai tersebut.\n\nSaat memuatkan karung-karung ke dalam lift, karung yang terdekat dengan lift yang akan diambil terlebih dulu. Seandainya penambahan suatu karung dapat menyebabkan overload (terlalu berat, karena total beratnya lebih dari 100 kg), karung itu untuk sementara tidak dimasukkan ke dalam lift tapi ditaruh di koridor pada arah berlawanan dari semula sejauh-jauhnya (jika tidak overload tentu akan dimasukkan ke dalam lift!).\n\nBila karung-karung dari barisan awal telah diambil, hal yang sama kemudian dilakukan pada barisan karung yang terbentuk pada koridor arah berlawanan dengan semula hingga seluruh karung di situ berhasil dikirim ke toko atau dipindah ke ujung koridor berlawanan dengannya. Hal itu terus-menerus dilakukan sampai semua karung berhasil dikirim ke toko.",
+  "pertanyaan": "Sampai semua karung dikirimkan ke toko dengan prosedur tersebut di atas, Berapa kali lift turun-naik mengangkut karung-karung itu semula karung-karung ada seperti pada gambar di atas dengan berat masing-masing seperti yang tercantum pada setiap karung?",
+  "options": [],
+  "key": "",
+  "keys": [
+    "4",
+    "empat"
+  ],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah 4.",
+  "penjelasan": "Pada pemuatan pertama, 3 karung dengan berat 40+20+34=94 kg. Pada pemuatan kedua, karung berikutnya (55 kg) dimasukkan ke dalam lift. Karung berikutnya (50 kg) akan mengakibatkan overload, sehingga ditaruh pada ujung yang berlawanan. Karung berikutnya (23 kg) ditaruh kembali dalam lift, namun lift tak dapat pergi hanya dengan total berat 55+23= 78 kg. Karung berikutnya adalah 45 kg, yang akan membuat beban lift terlalu berat, maka karung itu dibawa ke ujung yang berlawanan. Hal yang sama terjadi untuk karung berikutnya (30 kg). Akhirnya, karung berikutnya (10 kg) dapat ditaruh dalam lift, dan berangkat dengan 55+23+10=88 kg. Ketiga karung terakhir (25+30+15 = 70kg) ditaruh dalam lift. Demikian seterusnya pemuatan karung-karung ke dalam lift dilakukan hingga semua karung terkirim.",
+  "iniInformatika": "Pada soal ini, kita perlu memakai algoritma dan menggunakan stack (tumpukan). Stack adalah struktur untuk menyusun benda dengan menaruh dan mengambilnya pada yang terakhir. Salah satu contoh adalah mainan anak-anak untuk membangun sebuah menara dari batu bata, di mana kita harus mengambil mulai dari yang terakhir dipasang pada saat membongkarnya kembali. Saat melakukan penelusuran halaman web, alamat dari halaman yang dikunjungi akan ditaruh dalam stack; saat kita menekan tombol \"balik\" yang ditampilkan adalah yang sebelumnya dikunjungi. Menggunakan stack tak selamanya dapat digunakan. Misalnya jika kita menunggu pada antrian di rumah sakit, siapa yang paling dulu datang seharusnya yang akan dilayani paling dulu.",
+  "notes": "Soal-7 (hal. 22-23). Kode soal di header halaman soal: 2016-CZ-026; daftar isi (hal. 5) menulis I-2016-01-011-CZ-026 Ã¢â‚¬â€ kode header halaman yang dipakai. Isian singkat; jawaban bukan teks berlabel. Gambar barisan karung + berat tiap karung (hal. 22) diperlukan untuk menjawab. Verifikasi .jpg tidak dapat dilakukan (model sesi ini tidak mendukung input gambar); teks diverifikasi silang terhadap b2016_page-022.txt dan b2016_page-023.txt. | [catatan verifikator 2026-10-28 ronde-2: kunci 4 terverifikasi eksternal (ibobr.cz \"Pytle ve vytahu\"); kode buku 2016-CZ-026 adalah typo untuk 2016-CZ-02 â€” task identik di arsip Ceko.]"
+}

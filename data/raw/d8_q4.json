@@ -1,0 +1,21 @@
+{
+  "id": "d8_q4",
+  "scheduleTitle": "Warung Soda (2017)",
+  "bookTitle": "Warung Soda",
+  "book": "b2017",
+  "code": "I-2017-CA-07",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CA-07",
+  "soalPages": [32],
+  "imgPages": [32],
+  "deskripsi": "Empat Bebras sedang dalam perjalanan dan memutuskan untuk berhenti membeli minuman di warung soda terdekat. Masing-masing Bebras mempunyai minuman kesukaan. Warung soda tersebut menawarkan 4 macam minuman, tetapi mereka kehabisan stok dan hanya tersedia satu buah untuk setiap jenis minuman.\n\nJenis minuman yang disukai setiap bebras didaftarkan di bawah ini. Banyaknya gambar hati di atas setiap kolom menunjukkan tingkat kesukaan mereka terhadap minuman tersebut.",
+  "pertanyaan": "Agar setiap Bebras mendapatkan minuman yang paling disukainya, berapakah total hati terbanyak yang bisa diperoleh? Jawablah dengan sebuah bilangan bulat di antara 4 dan 16.",
+  "options": [],
+  "key": "",
+  "keys": ["14", "~14 hati"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah: 14.",
+  "penjelasan": "Karena tiga bebras ingin  , jumlah maksimum banyaknya hati yang dapat diperoleh adalah 4+4+3+3 = 14. Hal ini didapatkan melalui pencocokan berikut:\nAnna   Bernard   Christine   Daniel\nCara lain untuk melihat ini, karena bebras terakhir memilih   sebagai minuman kesukaan dan semua yang lain memilih tersebut sebagai pilihan terakhir, maka bebras terakhir harus mengambil   untuk memaksimalkan kegembiraan grup.\nSekarang, tiga bebras pertama mempunyai kesukaan yang sama namun demikian bebras pertama menyukai   sebagai kesukaan berikutnya dan kedua orang yang lain memilih minuman ini sebagai pilihan ketiga. Dengan demikian, bebras pertama harus mengambil   dan kedua bebras yang lain mengambil   dan   dalam sembarang urutan.",
+  "iniInformatika": "Optimasi adalah bagian yang penting dari informatika. Persoalan Optimasi adalah persoalan yang banyak ditemui dalam informatika. Dalam kasus ini, kita mencoba untuk memaksimalkan kegembiraan grup.\n\nPersoalan ini adalah jenis persoalan pencocokan (matching). Dalam hal ini, mereka mencoba untuk mendapatkan minuman kesukaan yang mungkin untuk membuat semua bebras dalam grup senang. Persoalan ini penting dalam dunia nyata.\n\nSebagai suatu contoh, seorang pasien yang sedang menunggu untuk transplantasi organ berada dalam daftar penunggu yang sangat panjang. Namun demikian tidak semua organ pendonor dapat dipakai untuk semua orang yang sedang dalam daftar tunggu, misalnya golongan darahnya harus dicocokkan dengan tujuan untuk memperbesar kemungkinan keberhasilan operasi. Kendala ini menimbulkan kesulitan untuk menemukan pencocokan untuk membuat semua senang.",
+  "notes": "sa (jawab dengan bilangan bulat). Pembahasan continues on page 33 (incl. 'Ini Informatika!'); soal on page 32. Preference table (hearts per drink per bebras) is an image; inline drink icons are missing from the text layer and are preserved as double-space gaps in penjelasan (e.g. 'tiga bebras ingin  ,'). 'Anna   Bernard   Christine   Daniel' is the caption row of the matching figure. Justification spacing normalized. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support)."
+}

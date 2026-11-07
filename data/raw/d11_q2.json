@@ -1,0 +1,27 @@
+{
+  "id": "d11_q2",
+  "scheduleTitle": "Titik Utama Wifi (2018)",
+  "bookTitle": "Titik Utama Wifi",
+  "book": "b2018",
+  "code": "I-2018-RO-03-X-001-5",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-RO-03-X-001-5",
+  "soalPages": [27, 28],
+  "imgPages": [27],
+  "deskripsi": "Jaringan lokal rumah Bebras dilengkapi dengan 14 titik akses (Access Point) ke Wifi. Pada jaringan ini, beberapa Access Point disebut Titik Kunci (Key Point), yang jika rusak akan menyebabkan Titik Akses lain tidak berfungsi. Misalnya, Titik Akses XX-009 adalah sebuah Titik Kunci: jika XX-009 rusak, maka XX-011 tidak dapat mengakses jaringan lagi.",
+  "pertanyaan": "Titik Akses mana saja yang merupakan Titik Kunci? Jawaban benar bisa lebih dari satu.\n\nPilihan Jawaban:\na) XX-13\nb) XX-02\nc) XX-14\nd) XX-07\ne) XX-06\nf) XX-03\ng) XX-08\nh) XX-01\ni) XX-12\nj) XX-09\nk) XX-04\nl) XX-05\nm) XX-11\nn) XX-10",
+  "options": [],
+  "key": "",
+  "keys": [
+    "XX-02, XX-07, XX-09, XX-04, XX-05",
+    "XX-02 XX-07 XX-09 XX-04 XX-05",
+    "b, d, j, k, l",
+    "bdjkl",
+    "~xx-02 dan ~xx-07"
+  ],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar: XX-02, XX-07, XX-09, XX-04, XX-05 (pilihan b, d, j, k, l).",
+  "penjelasan": "Jawaban yang benar: XX-02, XX-07, XX-09, XX-04, XX-05. Titik-titik Kunci adalah titik artikulasi pada graf jaringan: titik akses yang jika rusak memutus koneksi bagian lain dari jaringan (perhatikan contoh pada soal: XX-09 rusak → XX-11 terputus).",
+  "iniInformatika": "Praktik umum dalam Informatika adalah menggunakan graf sebagai struktur data untuk mewakili jaringan yang merupakan sekumpulan keterhubungan. Pada soal ini, tugasnya terdiri dari menemukan simpul yang memisahkan graf menjadi paling sedikit 2 komponen terkait dalam graf yang terhubung, yang disebut titik artikulasi. Untuk menentukan titik artikulasi dalam graf yang tidak berarah, kita bisa menggunakan algoritma pencarian kedalaman-pertama yang dimodifikasi untuk menyimpan informasi tambahan untuk setiap node.\n\nMari kita anggap bahwa T adalah graf. Kemudian, simpul v adalah titik artikulasi jika:\n1) v adalah akar T dan v memiliki dua anak atau lebih; atau\n2) v bukan akar T dan memiliki anak u di T sehingga tidak ada simpul dalam sub-graf yang didominasi oleh u yang terhubung dengan leluhur v melalui jalur penghubung sesudahnya (anak-anaknya tidak dapat mencapai tingkat yang lebih tinggi pada graf dengan menggunakan jalur lain).",
+  "notes": "Soal asli multi-jawaban (bisa lebih dari satu) — direpresentasikan sebagai ISIAN SINGKAT (isikan semua Titik Kunci); daftar pilihan a)-n) ditampilkan di pertanyaan. Inkonsistensi penomoran buku (XX-009/XX-011 di teks vs XX-09/XX-11 di opsi) dipertahankan. Graf jaringan berupa gambar di hal. 27 (imgPages)."
+}

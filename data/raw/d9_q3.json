@@ -1,0 +1,21 @@
+{
+  "id": "d9_q3",
+  "scheduleTitle": "Baris dan Kolom (2018)",
+  "bookTitle": "Baris dan Kolom",
+  "book": "b2018",
+  "code": "I-2018-BE-03",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-BE-03",
+  "soalPages": [10, 11],
+  "imgPages": [10, 11],
+  "deskripsi": "Pada Gambar-1 berikut, ada sebuah papan permainan dengan 4 buah koin, yang digambarkan sebagai diagram pada Gambar-2.\n\nPada gambar-2, setiap koin digambarkan sebagai sebuah lingkaran. Jika dua buah koin berada pada baris dan kolom yang sama pada papan permainan, maka gambarkan sebuah garis yang menghubungkan kedua buah koin tersebut. Tidak ada garis lain dalam diagram, selain yang menghubungkan dua buah koin seperti dijeskan di atas. Huruf yang dituliskan pada setiap koin akan membantu untuk memeriksa apakah diagram benar.",
+  "pertanyaan": "Untuk gambar papan permainan dengan 6 koin sebagai berikut yang memang tidak kelihatan hurufnya, diagram mana yang benar?",
+  "options": ["A", "B", "C", "D"],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah B.",
+  "penjelasan": "Anda dapat memeriksa dengan cepat dari gambar papan yang sudah di mana koin diberi huruf sebagai berikut (lihat gambar pada halaman pembahasan).\n\nPada papan tersebut, setiap koin memiliki dua koin lainnya di baris yang sama dan satu koin lainnya di kolom yang sama. Oleh karena itu, dalam diagram, setiap lingkaran harus terhubung ke 2 + 1 = 3 lingkaran lainnya.\n\nJawaban D memiliki 7 lingkaran, satu terlalu banyak, jadi jelas salah.\n\nMungkin Anda berpikir diagram A itu benar? Kelihatannya, diagram A sangat mirip dengan letak koin di papan. Namun, koin paling kiri dan paling kanan dalam diagram hanya terhubung dua koin lainnya, sehingga diagram tersebut tidak benar. Untuk membuat diagram A menjadi benar, Anda dapat menambahkan dua garis, seperti pada gambar berikut (lihat gambar pada halaman pembahasan).",
+  "iniInformatika": "Dalam informatika, diagram seperti ini sering digunakan untuk merepresentasikan informasi penting dari suatu masalah. Diagram seperti itu disebut graf. Lingkaran dalam diagram disebut simpul dari graf.\n\nDalam sebuah graf, yang penting untuk diketahui adalah apakah dua simpul terhubung atau tidak. Posisi simpul digambar, tidak penting. Graf yang sama sering dapat digambar dengan cara yang berbeda (posisi simpulnya berbeda), seperti ilustrasi di atas: jawaban B dan gambar terakhir dalam penjelasan adalah diagram yang benar dan mewakili graf yang sama.\n\nTergantung pada informasi apa yang anda butuhkan untuk menyelesaikan masalah, graf dapat menjadi representasi yang berguna untuk memecahkan masalah informatika.\n\nJika misalnya Anda perlu tahu apakah koin putih berada di baris atau kolom yang sama dengan koin hitam, maka graf bukan representasi yang baik: warna koin tidak terwakili dalam simpul. Jika anda perlu tahu apakah masih ada koin yang tersisa di papan sehingga permainan masih bisa dimenangkan, maka graf nya 'berlebihan': anda hanya perlu melacak berapa banyak koin yang tersisa di papan setiap saat, dan tidak perlu mencatat koin mana yang berada di baris atau kolom yang sama dengan koin lain.\n\nDi sisi lain, graf adalah representasi yang baik untuk menjawab pertanyaan seperti \"Berapa jumlah minimal koin yang harus anda hapus sehingga tidak ada bagian dalam kolom baris yang sama dengan bagian lainnya?\".\n\nMenemukan representasi yang tepat untuk suatu masalah adalah salah satu tantangan yang dihadapi pemrogram komputer atau ilmuwan informatika dalam pekerjaan mereka.",
+  "notes": "Opsi A-D berupa gambar diagram (hanya label huruf pada text layer) — aplikasi menampilkan render halaman asli (imgPages 10-11). Gambar pada penjelasan (papan berhuruf, diagram A yang diperbaiki) ada di hal. 11."
+}

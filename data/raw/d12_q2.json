@@ -1,0 +1,21 @@
+{
+  "id": "d12_q2",
+  "scheduleTitle": "Terowongan (2017)",
+  "bookTitle": "Terowongan",
+  "book": "b2017",
+  "code": "I-2017-CH-07b",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-07b",
+  "soalPages": [28],
+  "imgPages": [],
+  "deskripsi": "Rumah bebras Bobi memiliki empat buah ruangan (A, B, C, F) yang dihubungkan oleh terowongan-terowongan. Ruang A, B, dan C adalah ruang tamu, sedangkan ruang F adalah tempat penyimpanan makanan.\n10 ekor berang-berang sedang berada di dalam ruangan A. Mereka merasa kelaparan dan ingin pergi ke ruang F untuk makan. Karena semua berang-berang sangat kelaparan, mereka semua ingin tiba di tempat penyimpanan makanan secepat mungkin.\nUntuk melewati sebuah terowongan dibutuhkan 1 menit dan satu terowongan hanya dapat dilewati oleh 1 berang-berang dalam satu waktu (Saat terowongan dilewati seekor berang-berang, tidak ada berang-berang lain yang dapat lewat sebelum dia keluar).\nBanyaknya terowongan yang menghubungkan dua buah ruangan adalah sebagai berikut:\n▪ Antara A dan B: 4 terowongan\n▪ Antara A dan C: 1 terowongan\n▪ Antara B dan C: 2 terowongan\n▪ Antara B dan F: 1 terowongan\n▪ Antara C dan F: 3 terowongan\nSemua ruangan tidak memiliki batas kapasitas, jadi semua ruangan dapat memuat sebanyak apapun berang-berang yang ada.",
+  "pertanyaan": "Berapa paling banyak berang-berang yang dapat tiba di tempat penyimpanan makanan dalam waktu tepat 2 menit?\nIsi dengan bilangan bulat antara 0 dan 10.",
+  "options": [],
+  "key": "",
+  "keys": ["2", "~dua"],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang tepat adalah 2.",
+  "penjelasan": "Banyaknya berang-berang maksimal yang dapat tiba di tempat penyimpanan makanan tepat dalam 2 menit adalah 2.\nTerdapat 2 buah rute terpendek dari ruangan A menuju tempat penyimpanan makanan. Kedua rute tersebut masing-masing memiliki kapasitas 1 ekor berang-berang dan membutuhkan total 2 menit untuk mencapai ruangan F. Rute tersebut adalah:\n- A ke B ke F\n- A ke C ke F\nSelain kedua rute tersebut, terdapat rute lain yang memiliki kapasitas 2 ekor berang-berang, tetapi membutuhkan waktu 3 menit untuk mencapai ruangan F. Rute tersebut adalah:\n- A ke B ke C ke F\nOleh karena itu, hanya 2 ekor berang-berang yang dapat tiba di tempat penyimpanan makanan tepat dalam waktu 2 menit. Seekor berang-berang menggunakan rute A ke B ke F dan seekor berang-berang lainnya menggunakan rute A ke C ke F.",
+  "iniInformatika": "Hubungan terowongan-terowongan tersebut dapat dibayangkan sebagai flow network (jaringan dari aliran) dalam teori graf. Model graf dapat dibuat untuk menggambarkan ruangan dan terowongan antar ruangan. Sebuah jalur yang menghubungkan dua buah simpul yang menyatakan ruangan memiliki kapasitas yang menyatakan banyaknya terowongan yang menghubungkan kedua ruangan tersebut (sama dengan banyaknya berang-berang yang dapat pergi dari satu ruangan ke ruangan lain yang sama dalam satu waktu bersamaan). Masing-masing jalur akan menerima sebuah aliran (berang-berang yang sedang melewati terowongan). Jumlah aliran yang melewati sebuah jalur tidak dapat melebihi kapasitas dari sisi.\nTujuan yang ingin dicapai adalah mengoptimalkan aliran dari berang-berang yang melewati jaringan tersebut sehingga sebanyak mungkin berang-berang yang tiba dalam waktu yang sesingkat mungkin ke tempat penyimpanan makanan. Ada beberapa algoritma untuk masalah ini, salah satunya yaitu algoritma Ford-Fulkerson.\nPermasalahan kita merupakan kasus khusus dalam masalah flow network, karena berang-berang diperbolehkan untuk menunggu di B dan C jika tidak memungkinkan untuk melanjutkan perjalanan karena terowongan yang dapat dilewati tidak mencukupi untuk semua berang-berang. Dalam masalah flow network klasik, tidak ada aliran yang boleh tertinggal dalam suatu tempat. Semua harus dialirkan segera setelah melewati sebuah saluran. Dalam masalah flow network klasik juga sebuah saluran harus memiliki arah. Sedangkan, dalam kasus ini, berang-berang bebas pergi melewati terowongan dari satu ruangan ke ruangan lainnya dan begitu pula sebaliknya.",
+  "notes": "Soal tidak merujuk gambar apa pun (banyaknya terowongan diberikan sebagai daftar teks); imgPages dikosongkan. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-028/029.txt)."
+}

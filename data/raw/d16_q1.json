@@ -1,0 +1,21 @@
+{
+  "id": "d16_q1",
+  "scheduleTitle": "Memindahkan Dadu (2017)",
+  "bookTitle": "Memindahkan Dadu",
+  "book": "b2017",
+  "code": "I-2017-MY-05",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-MY-05",
+  "soalPages": [34],
+  "imgPages": [34],
+  "deskripsi": "Jack si berang-berang menggulirkan sebuah dadu sepanjang jalan tanpa pengeseran. Untuk memindahkan dadu dari satu petak ke petak berikutnya, Jack memutar dadu sepanjang pinggir yang ada di perbatasan antara dua petak. Dia melakukannya 9 kali sampai dadu mencapai petak berisi bulatan putih di sebelah kanan.\n[gambar: jalur petak-petak yang diguliri dadu, dari petak awal (dadu) sampai petak berbulat putih di sebelah kanan]",
+  "pertanyaan": "Sisi dadu dengan berapa titik ada di dasar dadu saat dadu mencapai petak hijau di ujung?",
+  "options": ["A. 3", "B. 6", "C. 2", "D. 4"],
+  "key": "A",
+  "keys": [],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang tepat adalah 3",
+  "penjelasan": "",
+  "iniInformatika": "Ini adalah contoh pemecahan masalah dengan mengamati hanya sebagian informasi di setiap tahap. Metode ini dapat mengurangi kerumitan dan penggunaan memori. Komputer sering diprogram seperti ini.\nSalah satu alternatif dari metode ini adalah melacak jumlah titik di bagian bawah setelah setiap langkah (1,2,6,5,3,2,6,4,5,3). Tetapi jauh lebih sulit. Untuk beberapa putaran pertama, itu masih mudah. Tetapi setelah beberapa langkah, kita akan mengalami kesulitan karena beberapa angka tidak dapat dilihat.\nPerhatikan bahwa banyaknya titik di dua sisi kebalikan sebuah dadu selalu 7 (1 berlawanan dengan 6; 2 berlawanan dengan 5; 3 berlawanan dengan 4). Pada mulanya, sisi dengan 1 titik (berlawanan dengan sisi 6) ada di dasar dadu, seperti ditunjukkan pada gambar. Setelah memutar dadu sekali ke petak kedua, sisi dengan 2 titik (berlawanan dengan 5) akan berada di dasar dadu.\nMisalnya, pertama-tama kita dapat mencatat posisi awal dadu dengan sisi 3, 5, dan 6 yang berada di posisi kanan, depan dan atas. Kita terus mengamati posisi 3 sisi ini saat dadu berputar, selangkah demi selangkah sampai ke petak terakhir. Setelah dadu selesai bergerak, kita bisa tahu sisi mana yang berada di bawah.\n[Tabel posisi dadu per langkah — kolom: Langkah | Arah bergerak | Posisi kanan | Posisi depan | Posisi atas]\n1 | ↑ | Kanan | Atas | Belakang\n2 | ↑ | Kanan | Belakang | Bawah\n3 | ↑ | Kanan | Bawah | Depan\n4 | → | Bawah | Kiri | Depan\n5 | → | Kiri | Atas | Depan\n6 | ↓ | Kiri | Depan | Bawah\n7 | → | Atas | Depan | Kiri\n8 | ↓ | Depan | Bawah | Kiri\n9 | ↓ | Bawah | Belakang | Kiri\nSelanjutnya, jika kita memprogram dua metode ini di komputer, kita akan melihat bahwa metode pertama, seperti yang ditunjukkan dalam jawaban, lebih cepat.",
+  "notes": "Buku mencantumkan opsi tanpa huruf (bullet 'o'); label A–D ditambahkan (3 = A). Jalur dadu adalah GAMBAR; lihat imgPages. Penalaran jawaban tidak ada di bagian penjelasan terpisah — buku menuliskannya di bagian Ini Informatika (termasuk tabel posisi 9 langkah, direkonstruksi sebagai baris 'kolom | nilai'). Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-034/035.txt)."
+}

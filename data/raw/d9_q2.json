@@ -1,0 +1,28 @@
+{
+  "id": "d9_q2",
+  "scheduleTitle": "Upah Membantu (2017)",
+  "bookTitle": "Upah Membantu",
+  "book": "b2017",
+  "code": "I-2017-SI-05",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-SI-05",
+  "soalPages": [
+    13
+  ],
+  "imgPages": [],
+  "deskripsi": "Untuk mengisi liburannya selama 6 hari, Ana dan Bobi merencanakan tinggal di desa nenek. Kebetulan, di sana ada tiga petani A, B, dan C yang membutuhkan bantuan untuk menggarap sawahnya masing-masing. Mereka menawari Ana dan Bobi upah jika mau membantu mereka. Masing-masing petani tersebut memberikan penawaran yang berbeda:\n• Petani A menawarkan 10 ribu rupiah buat masing-masing (Ana dan Bobi) setiap hari.\n• Petani B hanya akan memberi Bobi sepuluh ribu rupiah pada hari pertama kemudian setiap berikutnya menaikkan sebesar 10 ribu menjadi 20 ribu, 30 ribu, dan seterusnya, sementara ia akan memberi Ana di hari pertama 100 ribu rupiah dan kemudian diturunkan 10 ribu rupiah setiap hari berikutnya menjadi 90 ribu, 80 ribu, dan seterusnya.\n• Petani C tidak tertarik dibantu Bobi, sehingga ia hanya akan memberi 1 ribu rupiah di hari pertama saja dan tidak akan memberi apapun di hari berikutnya. Sementara untuk Ana, ia akan memberikan seribu rupiah pada hari pertama, lalu setiap hari berikutnya dua kali lipat sebelumnya. Jadi Ana akan mendapatkan seribu rupiah, 2 ribu rupiah, 4 ribu rupiah, 8 ribu rupiah dan seterusnya.\nMereka berniat untuk melewati setiap hari masa liburnya di desa nenek dengan membantu petani, dan mereka berdua sudah berjanji untuk bekerja pada petani yang sama. Mengenai upah, mereka juga diam-diam sudah sepakat untuk membagi sama rata dari yang diperoleh berdua.",
+  "pertanyaan": "Kepada petani yang mana mereka bekerja sehingga mendapat upah yang paling banyak ?",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "A atau B"
+  ],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah B.",
+  "penjelasan": "Perhitungan upah petani A sangat sederhana. Masing-masing mendapat upah 50 ribu per hari, sehingga masing-masing akan memperoleh 500 ribu rupiah selama 10 hari.\n\nPetani B lebih rumit perhitungannya:\n• Bobi mendapat 10+20+30+40+50+60+70+80+90+100\n• Anna mendapat 100+90+80+70+60+50+40+30+21+10\nBagaimana mendapatkan hasil penjumlahannya? Pada hari pertama, keduanya memperoleh 110 rupiah, demikian juga 110 rupiah pada hari kedua ... Secara keseluruhan, selama 10 hari keduanya akan memperoleh 1100 rupiah, sehingga masing-masing akan mendapat 550. Hore!\n\nPetani C lebih sulit lagi. Ini hasil penjumlahan upah Ana dan Bobi:\n1 + 1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n2 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n4 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n8 + 8 + 16 . . wah ada pola,\nMari abaikan sisanya,\nAkan berakhir dengan: 512 + 512 = 1024\nJika mereka membagi 1024 untuk mereka berdua, setiap anak akan memperoleh 512.\nMaka, jawabannya adalah Petani B\n\n[catatan verifikator: \"6 hari\" pada soal adalah typo cetak buku — skema upah dan pembahasan menghitung 10 hari (B = 10+20+…+100 = 550 > A = 500; angka \"21\" pada pembahasan seharusnya \"20\"). Jawaban B tetap benar.]",
+  "iniInformatika": "Ilmuwan/Ahli informatika seringkali melakukan perhitungan seperti yang dilakukan untuk pemecahan persoalan ini. Misalnya jika ingin menghitung waktu eksekusi dari sebuah algoritma (upah adalah analogi dari waktu eksekusi). Upah yang diperoleh adalah waktu eksekusi dari operasi yang diperlukan untuk suatu algoritma.\n\nSelain itu, perhatikan betapa efisien menjumlahkan upah petani B. Menjumlahkan semua angka, jumlahkan secara paralel dari depan dan belakang pada saat yang sama, dan membagi dua\n\nPada kasus ini, kasus terakhir menguatirkan, karena jumlah operasi berlipat dua setiap hari, yang mencerminkan dua kali jika data bertambah. Kalau Ana dan Bobi mempunyai waktu 1 hari lebih, mereka berdua akan mendapatkan upah dengan upah Bobo ditambah kelipatan dari upah.",
+  "notes": "mc; options are radio buttons WITHOUT prefix labels in the text layer — the option texts are themselves 'A', 'B', 'C', 'A atau B' (referring to the farmers), matching the book's answer 'B'. 'Ini Informatika!' section is on page 14; soal on page 13. Book's own inconsistencies kept verbatim: story says '6 hari' but the solution computes over 10 days ('selama 10 hari', 10 terms, '500 ribu'); 'Anna' spelling in pembahasan (vs 'Ana'); '100+90+80+70+60+50+40+30+21+10' has 21 (likely misprint for 20, sum then 550 as stated); '110 rupiah'/'1100 rupiah' mean ribu rupiah; 'upah Bobo' in Ini Informatika (vs Bobi). No figure -> imgPages []. Wingdings bullets (U+F0B7) mapped to •; 'masing - masing' justification artifact fixed to 'masing-masing'. Text layer otherwise clean UTF-8. jpg image verification not possible in this session (model without image support). | kunci terverifikasi eksternal/internal 2026-10-28 (data/research_notes.md)"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "sim2017_3",
+  "scheduleTitle": "Keluar dari Labirin (2017)",
+  "bookTitle": "Keluar dari Labirin",
+  "book": "b2017",
+  "code": "I-2017-CH-01A",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-01A",
+  "soalPages": [26],
+  "imgPages": [26],
+  "deskripsi": "Mira perlu menemukan jalan untuk keluar dari sebuah labirin dan meminta anda untuk memberikan arahan. Dia memasuki labirin dari bawah (segitiga hitam) dan harus mencapai pintu keluar pada bagian atas (lingkaran merah besar).\n[gambar: labirin dengan segitiga hitam (posisi masuk, bawah) dan lingkaran merah besar (pintu keluar, atas)]\nNamun, Mira hanya dapat mengingat empat gerakan berikut:\nKode Gerakan | Artinya | Ilustrasi\nA | Berjalan satu langkah maju dan menghadap ke kiri | [ilustrasi]\nB | Berjalan satu langkah maju dan menghadap ke kanan | [ilustrasi]\nC | Berjalan dua langkah maju dan menghadap ke kiri | [ilustrasi]\nD | Berjalan dua langkah maju dan menghadap ke kanan | [ilustrasi]\nMira bisa membentuk sebuah gerakan panjang yang dibentuk dari empat gerakan A, B, C, atau D. Satu gerakan bisa diulang beberapa kali. Urutan gerakan ini dapat membawa Mira keluar dari labirin dengan dua kali perulangan.\nSegitiga hitam menandakan arah ke mana Mira menghadap.",
+  "pertanyaan": "Urutan gerakan manakah yang jika diulang dua kali (sesuai ilustrasi gambar) oleh Mira dapat membuatnya mencapai pintu keluar?",
+  "options": ["A. A,B,C,D", "B. D,A,A,D", "C. C,B,D,A", "D. C,A,A,D"],
+  "key": "B",
+  "keys": [],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang benar adalah D,A,A,D.",
+  "penjelasan": "Gerakan-gerakan berikut ini mengarah ke pintu keluar saat diulangi dua kali:\n[gambar: ilustrasi urutan gerakan D,A,A,D yang diulang dua kali sampai pintu keluar]",
+  "iniInformatika": "Mira sebenarnya sedang mengeksekusi sebuah program untuk mencapai pintu keluar. Sebuah program terdiri dari rangkaian perintah-perintah dan kadangkala beberapa rangkaian perintah perlu diulang.\nUntuk membuat hal tersebut menjadi mudah, bahasa pemrograman menyediakan instruksi khusus yang didefinisikan atau disebut sebagai blok pengulangan (loop blocks). Rangkaian perintah-perintah yang dimasukan ke dalam sebuah blok pengulangan akan diulang sebanyak jumlah pengulangan yang ditentukan oleh pembuat program.\nDengan menggunakan instruksi khusus ini, pemrogram tidak perlu menulis berulang-ulang bagian kode tertentu. Hal tersebut membuat kode menjadi lebih efisien dan lebih mudah untuk dibaca atau dimodifikasi.",
+  "notes": "SIM (kandidat ujian campuran hari-19): dipilih ulang dari tugas terjadwal hari-6 karena seluruh 20 judul b2017 sudah terjadwal (lihat laporan akhir). Labirin, ilustrasi gerakan, dan ilustrasi pembahasan adalah GAMBAR; lihat imgPages. Buku mencantumkan opsi tanpa huruf; label A–D ditambahkan (D,A,A,D = B). Header buku memakai 'Inilah Informatika!'. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-026/027.txt)."
+}

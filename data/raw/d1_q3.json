@@ -1,0 +1,21 @@
+{
+  "id": "d1_q3",
+  "scheduleTitle": "Kode Kartu (2017)",
+  "bookTitle": "Kode Kartu",
+  "book": "b2017",
+  "code": "I-2017-CZ-02",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CZ-02",
+  "soalPages": [11],
+  "imgPages": [11],
+  "deskripsi": "Terdapat lima kartu yang diletakkan berderet. Setiap kartu berisikan lambang hati dalam jumlah tertentu, dari kiri ke kanan secara berurutan adalah 16, 8, 4, 2, dan 1 hati. Di bagian bawah kartu terdapat tulisan angka 0 atau 1. Angka 1 dituliskan jika kartu diatasnya terbuka (dan terlihat gambar hatinya!). Angka 0 dituliskan jika kartu tertutup. Kartu-kartu dapat digunakan untuk membangkitkan kode-kode untuk angka-angka. Sebagai contoh, terdapat 9 gambar hati yang dapat terlihat pada gambar berikut ini, sehingga kode untuk angka 9 adalah 01001.\n0   1   0   0   1",
+  "pertanyaan": "Temukan kode untuk 26 gambar hati.",
+  "options": [],
+  "key": "",
+  "keys": ["11010"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah 11010.",
+  "penjelasan": "",
+  "iniInformatika": "Hati ditempatkan di kartu sehingga hanya ada satu hati pada kartu sebelah kanan, dan setiap kartu di sebelah kiri sesudahnya mengandung dua kali hati. Maka, akan ada 1, 2, 4, 8, dan 16 hati saat dibaca dari kiri ke kanan.\n\nDapat dibuktikan bahwa setiap angka dari 0 s.d. 31 dapat direpresentasikan dengan kombinasi tertentu menggunakan kartu tsb. Kita juga dapat melakukan perhitungan dengan menggunakan kartu-kartu ini.\n\nPengaturan dari hati dipakai dalam sistem bilangan biner yang hanya menggunakan 0 dan 1, yang dipakai komputer untuk menyimpan informasi. Kita juga dapat mengkode teks, gambar, video, musik dengan hanya menggunakan bilangan 0 dan 1.",
+  "notes": "Open short answer (no options in book) -> sa. '0   1   0   0   1' is the digit row printed under the card figure (kept with its wide spacing). Figure: five cards with 16/8/4/2/1 hearts. Text layer is clean UTF-8, no mojibake. jpg image verification not possible in this session (model without image support)."
+}

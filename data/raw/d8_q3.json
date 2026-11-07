@@ -1,0 +1,21 @@
+{
+  "id": "d8_q3",
+  "scheduleTitle": "Harga Terlambat Bangun (2018)",
+  "bookTitle": "Harga Terlambat Bangun",
+  "book": "b2018",
+  "code": "I-2018-IR-03-X-001-5",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-IR-03-X-001-5",
+  "soalPages": [23, 24],
+  "imgPages": [23],
+  "deskripsi": "Bob Bekerja di stasiun Pusat Kota, dan jam kerja dimulai pukul 8:00. Bob akan didenda jika datang terlambat. Untuk setiap 15 menit terlambat, ia harus membayar denda sebesar Rp. 10.000,-. Misalnya jika ia tiba sebelum pukul 8:15 maka ia tidak didenda. Jika ia datang pukul 8:20 maka ia akan didenda Rp. 10.000,-. Pagi ini, Bob ketiduran dan tiba di stasiun keberangkatan pukul 8:08.\n\nTabel berikut menunjukkan tabel keberangkatan berbagai kereta menuju Stasiun Pusat Kota dan harga tiketnya:\n\nKereta | Jadwal | Waktu tempuh ke stasiun Pusat | Harga tiket\nBiasa | Mulai Pk. 6:00 Setiap 05 menit | 40 menit | Rp. 5000,-\nWira-Wiri | Mulai pk 6:00 Setiap 10 menit | 30 menit | Rp 10.000,-\nCepat | Mulai Pk 7:00 Setiap 15 menit | 20 menit | Rp 15.000,-\nEkspres | Mulai Pk 7:00 Setiap 20 menit | 12 menit | Rp 20.000,-",
+  "pertanyaan": "Kereta mana yang harus diambil Bob agar walaupun terlambat, tetap paling “murah” dendanya?",
+  "options": ["A. Wira-Wiri", "B. Biasa", "C. Cepat", "D. Ekspres"],
+  "key": "A",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah A. Wira-Wiri.",
+  "penjelasan": "Wira-Wiri adalah jalur yang paling hemat biaya untuk Bob karena:\n• Jika dia mengambil jalur Biasa, dia akan tiba di tempat kerja pada pukul 08:50, sehingga akan dikenakan total denda Rp. 35.000,- yaitu Rp. 5000,- untuk tiket ditambah Rp. 30.000,- (3 * Rp. 10.000,-) denda untuk keterlambatan.\n• Jika dia mengambil jalur Wira-Wiri, dia akan tiba di tempat kerja pada pukul 08:40, sehingga akan dikenakan denda Rp. 30.000,- yaitu Rp 10.000,- untuk tiket ditambah denda keterlambatan Rp 20.000,- (2 * Rp 10.000,-).\n• Jika dia mengambil jalur Cepat, dia akan tiba di tempat kerja pada pukul 08:35, jadi akan dikenakan denda Rp. 35.000,- yaitu Rp 15.000,- untuk tiket ditambah Rp 20.000,- (2 * Rp 10.000,- ) denda keterlambatan.\n• Jika dia menggunakan jalur Ekspres, dia akan tiba di tempat kerja pada pukul 08:32, jadi biayanya Rp 40.000,- yaitu Rp 20.000,- untuk tiket ditambah Rp 20.000,- (2 * Rp 10.000,-) denda keterlambatan.",
+  "iniInformatika": "Soal ini memperkenalkan konsep Optimasi. Optimasi dengan cara yang paling sederhana berarti memilih elemen terbaik (di sini pilihan yang paling hemat dendanya) dari beberapa alternatif yang tersedia (di sini berbagai jalur kereta) berdasarkan beberapa kriteria (di sini waktu dan biaya).\n\nMasalah optimisasi umumnya terdiri dari memaksimalkan atau meminimalkan nilai suatu fungsi dengan secara sistematis memilih nilai input dan menghitung nilai fungsi tersebut.",
+  "notes": "Tabel kereta di buku berupa tabel bergambar (hal. 23, imgPages); disalin ulang sebagai baris 'kolom | kolom' dengan isi verbatim (inkonsistensi 'Rp.'/'Rp', 'Pk.'/'pk' kecil dipertahankan). Typo buku 'Bob Bekerja' (B kapital) dipertahankan."
+}

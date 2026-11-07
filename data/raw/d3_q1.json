@@ -1,0 +1,21 @@
+{
+  "id": "d3_q1",
+  "scheduleTitle": "Kaca Jendela Pecah (2016)",
+  "bookTitle": "Kaca Jendela Pecah",
+  "book": "b2016",
+  "code": "2016-SK-02",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-SK-02",
+  "soalPages": [20, 21],
+  "imgPages": [20],
+  "deskripsi": "Enam anak sedang bermain di halaman.\n\nSalah satu dari mereka melempar bola dan memecahkan kaca jendela rumah Pak Beaverdam.\n\nSaat Pak Beaverdam memeriksa jendela tersebut, ia sempat melihat punggung dari anak pelaku pelemparan tersebut sedang berlari. Ia hanya ingat si anak menggunakan atasan merah dan berambut pendek.",
+  "pertanyaan": "Siapa si pelaku pelemparan itu?\nPilih salah satu dari empat anak berikut: John, Tom, Jane atau Dan?",
+  "options": ["John", "Tom", "Jane", "Dan"],
+  "key": "John",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah John.",
+  "penjelasan": "Hanya 3 dari anak-anak tersebut memakai atasan merah: Jane, John dan Dane. Tetapi Jane mempunyai rambut pirang dan rambut Dan warnanya ungu. Jadi, si pelempar pastilah John.",
+  "iniInformatika": "Tantangan ini terkait dengan kategorisasi informasi. Salah satu cara menyimpan informasi dalam komputer adalah dalam sebuah basis data. Sebuah basis data menyimpan potongan-potongan informasi yang mempunyai atribut (ciri) yang sama. Misalnya, dalam soal ini, setiap anak mempunyai ciri: warna rambut, baju atasan, panjang rambut. Setiap anak mempunyai nilai yang spesifik untuk atribut-atribut tersebut. Jane dan Eve sama-sama mempunyai atribut warna rambut tetapi nilainya berbeda untuk Jane adalah pirang, sedangkan untuk Eve warna rambutnya adalah coklat. Menentukan atribut apa yang disimpan adalah penting dan menyebabkan kita dapat memilih data dengan atribut tertentu, yang merupakan masalah mendasar dalam database.\n\nTantangan ini untuk siswa yang lebih muda dapat menjadi pengenalan dalam mempelajari karakteristik dari objek nyata, mempertimbangkan kategorisasinya dan membuatnya mampu untuk menentukan sekumpulan objek dengan karakteristik tertentu.",
+  "notes": "Soal-6 (hal. 20-21). Opsi tidak berlabel huruf di buku — nama diambil dari kalimat pertanyaan dengan urutan persis buku (John, Tom, Jane atau Dan). Inkonsistensi asli buku: penjelasan menulis \"Dane\" untuk anak \"Dan\" — dipertahankan verbatim. Gambar enam anak (hal. 20) diperlukan untuk menjawab. Verifikasi .jpg tidak dapat dilakukan (model sesi ini tidak mendukung input gambar); teks diverifikasi silang terhadap b2016_page-020.txt dan b2016_page-021.txt."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "d7_q4",
+  "scheduleTitle": "Dua Berang-Berang Pekerja (2018)",
+  "bookTitle": "Dua Berang-berang Pekerja",
+  "book": "b2018",
+  "code": "I-2018-LT-04-X-011-5",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-LT-04-X-011-5",
+  "soalPages": [37, 38],
+  "imgPages": [37, 38],
+  "deskripsi": "Dua berang-berang sedang membangun sebuah bendungan sehingga perlu mengerjakan 8 tugas (memotong pohon, memotong cabang, mengalirkan kayu, merakit batang, dll. Setiap tugas dinomori dari A s.d. H: A(2), B(3), C(5), D(7), E(10), F(9), G(4), H(6). Angka dalam kurung menunjukkan berapa jam dibutuhkan untuk menyelesaikan setiap tugas. Para bebras bekerja secara bersamaan. Dan urutan penyelesaian pekerjaan diberikan dalam skema berikut: (lihat gambar pada halaman soal)\n\nJika ada lebih dari satu tugas yang harus dikerjakan, maka yang dipilih adalah yang terbesar. Misalnya, para bebras dapat mengerjakan dengan urutan seperti tabel berikut: (lihat gambar pada halaman soal)\n\nJika urutannya demikian, maka pekerjaan akan selesai dalam 32 jam. Tapi, masih ada cara lain untuk menyelesaikan pekerjaan tsb.",
+  "pertanyaan": "Tantangan : tentukan waktu yang paling singkat untuk membangun bendungan ini. Isikan sebuah bilangan bernilai antara 1 s.d. 99.",
+  "options": [],
+  "key": "",
+  "keys": ["23", "~23 jam"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah 23.",
+  "penjelasan": "Gambar dalam pertanyaan menunjukkan jadwal dari dua berang-berang. Kita dapat melihat bahwa berang-berang pertama tidak bekerja untuk waktu yang relatif lama (8 jam), dan berang-berang kedua menganggur selama 6 jam. Akan lebih baik jika mereka bekerja sepanjang waktu.\n\nStrategi yang akan kita gunakan di sini adalah untuk memastikan bahwa dua tugas terbesar E (10) dan F (9) tidak dilakukan oleh berang-berang yang sama. Berikut adalah gambar dari satu jadwal tertentu yang memungkinkan itu (lihat gambar pada halaman pembahasan). Kita akan melihat bahwa bendungan dapat dibangun dalam 23 jam!\n\nPenting juga untuk mengetahui bahwa jadwal khusus ini memungkinkan pekerjaan dilakukan sesingkat mungkin karena berang-berang tidak pernah menganggur.",
+  "iniInformatika": "Untuk beberapa contoh masalah, strategi berang-berang (\"pilih sisa terbesar\") akan menghasilkan waktu tersingkat. Untuk contoh masalah lain (seperti ini) strategi memilah tugas-tugas terbesar sepertinya akan berhasil. Namun, untuk masing-masing strategi ini kita dapat menemukan contoh masalah yang tidak bekerja dengan baik. Satu-satunya cara yang terjamin untuk menemukan jadwal yang menghasilkan waktu tersingkat adalah dengan mencoba semua yang solusi yang mungkin, kecuali ada batasan khusus pada masalahnya.\n\nIni tidak praktis dalam situasi dunia nyata; mungkin diperlukan lebih banyak sumber daya komputer untuk menemukan jadwal sempurna daripada satu berang-berang untuk membangun seluruh bendungan sendiri!\n\nDalam tugas ini, sebuah contoh masalah dipilih untuk menentukan strategi mana (\"pilih sisa terbesar\") yang tidak berfungsi. Dalam hal ini kita harus mempertimbangkan keseluruhan contoh masalahnya, bukan secara membabi buta mengikuti strategi sederhana. Namun, untuk kebanyakan masalah, strategi \"serakah\" berang-berang bisa jadi cukup baik, dan memiliki keuntunganbahwa jadwal dibuat dengan sangat cepat sehingga berang-berang langsung bekerja.\n\nMenemukan contoh masalah untuk menyebabkan strategi berkinerja buruk (seperti yang dilakukan dalam persiapan tugas ini) adalah seni nyata dalam informatika, yang mengharuskan seseorang untuk memahami strategi. Ini adalah keterampilan yang diperlukan jika seseorang ingin tahu waktu menjalankan program komputer yang justru terburuk, yang juga dikenal sebagai analisis algoritma dan digunakan bidang komputasi teori kompleksitas.\n\nhttps://en.wikipedia.org/wiki/Scheduling_(computing)\nhttps://en.wikipedia.org/wiki/Topological_sorting\nhttps://en.wikipedia.org/wiki/Greedy_algorithm\nhttps://en.wikipedia.org/wiki/Computational_complexity_theory",
+  "notes": "Skema urutan tugas, tabel contoh jadwal 32 jam, dan gambar jadwal 23 jam berupa gambar di hal. 37-38 — aplikasi menampilkan render halaman asli (imgPages 37-38). Spasi ekstra dari PDF ('keuntunganbahwa') dirapikan."
+}

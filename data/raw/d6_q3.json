@@ -1,0 +1,26 @@
+{
+  "id": "d6_q3",
+  "scheduleTitle": "Robot Pemotong (2018)",
+  "bookTitle": "Robot Pemotong",
+  "book": "b2018",
+  "code": "I-2018-CY-05",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CY-05",
+  "soalPages": [14, 15],
+  "imgPages": [14],
+  "deskripsi": "Angelo si berang-berang mendapat hadiah sebuah robot yang dapat membantunya untuk menanam pohon untuk membuat kebun. Robot mengerti perintah sebagai berikut:\n\nPerintah — Arti\nStart : Hidupkan robot\nMaju (X) : Robot maju X meter\nMundur (X) : Robot mundur X meter\nKeKiri (X) : Robot berputar ke kiri\nKeKanan (X) : Robot berputar ke kanan\nTanam : Robot menanam Pohon\nUlangi X (instruksi) : Robot mengulangi instruksi dalam kurung sebanyak X kali\nStop : Matikan Robot\n\nAda 16 lokasi yang harus ditanami pohon pada sebuah lapangan berbentuk persegi. Sisi lapangan ukurannya 8 meter dan setiap pohon harus ditanam dengan jarak 2 meter.\n\nRobot berada pada posisi pojok kiri bawah dengan arah seperti ditunjukkan oleh panah. Pada awalnya, robot pada status mati dan setelah selesai menanam pohon, harus dimatikan. Setelah sebuah pohon ditanam, robot dapat melanjutkan gerakan tanpa halangan sepanjang garis-garis pada gambar.",
+  "pertanyaan": "Program yang mana yang akan membuat robot menanam semua pohon sepanjang sisi lapangan seperti ditunjukkan pada gambar?",
+  "options": [
+    "A.\nStart\nUlangi 4{\nUlangi 4{Tanam; Maju(2)},\nKeKanan(90)}\nStop",
+    "B.\nStart\nUlangi 4{\nUlangi 4{ Tanam, Maju (2)},\nKeKiri(90)}\nStop",
+    "C.\nStart\nUlangi 4{\nUlangi 4{ Maju (2), Tanam },\nKeKiri (90)}\nStop",
+    "D.\nStart\nUlangi 4{\nUlangi 4{ Maju (1), Tanam },\nKeKanan (90)}\nStop"
+  ],
+  "key": "A",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah:\nStart\nUlangi 4{\nUlangi 4{Tanam; Maju(2)},\nKeKanan(90)}\nStop\n(yaitu jawaban A).",
+  "penjelasan": "Robot akan mulai dari Ulangi 4 {Tanam, Maju (2)} jadi dia akan menanam 4 pohon pertama di atasnya. Setelah itu, robot akan berbelok ke kanan (90°).\n\nRobot akan mengulangi perintah ini 3 kali sesuai dengan Ulangi 4.\n\nJawaban B dan C tidak akan berfungsi karena mereka membelokkan robot ke kiri, menjauh dari lapangan.\n\nJawaban D tidak akan berfungsi karena Maju (1) tidak memajukan robot pada jarak yang tepat untuk mencapai pohon selanjutnya.",
+  "iniInformatika": "Tantangan ini adalah tentang pemahaman algoritma seperti yang diterapkan dalam program komputer. Pada tantangan ini, algoritma melibatkan urutan langkah yang harus dilakukan oleh robot untuk menyelesaikan tugas yang diinginkan. Berpikir tentang urutan langkah merupakan keterampilan penting untuk pemrograman robot.\n\nPerhatikan juga bahwa ada pengulangan di dalam pengulangan lainnya, yang disebut pengulangan bersarang. Biasanya, pengulangan digunakan untuk mengulang suatu perintah.\n\nKetika Anda memiliki array sederhana atau hanya satu dimensi, anda bisa menggunakan pengulangan sederhana. Namun, jika bekerja dalam dua dimensi (seperti dalam sebuah matriks), anda akan memerlukan pengulangan bersarang.",
+  "notes": "Tabel perintah pada buku dirender sebagai baris 'Perintah : Arti'. Kode soal pada text layer terekstrak 'I-2018-CY-05-' (tanda hubung akhir artefak baris). Opsi berupa blok program (teks utuh di text layer)."
+}

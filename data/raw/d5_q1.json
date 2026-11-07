@@ -1,0 +1,109 @@
+{
+  "id": "d5_q1",
+  "scheduleTitle": "Merapikan Mainan (2016)",
+  "bookTitle": "Merapikan Mainan",
+  "book": "b2016",
+  "code": "2016-CZ-09",
+  "type": "ma",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-CZ-09",
+  "soalPages": [
+    6,
+    7
+  ],
+  "imgPages": [
+    6,
+    7
+  ],
+  "deskripsi": "Keluarga berang-berang merencanakan pergi untuk berpiknik. Sebelum berangkat, ayah meminta mereka merapikan kamarnya. Sesaat kemudian, ayah sangat puas karena ruangannya sangat rapi. Ayah melihat kotak berisi mainan dan berkata: \"Kalian sudah mengerjakan dengan sangat baik. Semua boneka, rangkaian manik-manik dan lidi-lidi sudah berada dalam kotak. Sekarang saya punya permainan tebak-tebakan. Sekarang, kalau saya berikan tiga buah lingkaran berlabel AABBCC, ABCABC, ABCCBA; di mana kalian akan menaruh mainan-mainan tadi? Saya yakin kalian bisa menebak dengan baik, dan sebagai hadiah kalian akan saya belikan es krim\".\n\ncontoh rangkaian mainan boneka\ncontoh rangkaian mainan manik-manik\ncontoh rangkaian mainan lidi-lidi\n\n(Cocokkan setiap mainan dengan pola lingkaran jawaban yang sesuai: AABBCC / ABCABC / ABCCBA.)",
+  "pertanyaan": "Masukkan setiap mainan ke dalam lingkaran-lingkaran yang sesuai dengan label yang tertulis pada masing-masing lingkaran. Tempatkan semua mainan pada lingkaran-lingkaran berlabel AABBCC, ABCABC, ABCCBA, sesuai dengan pola susunan mainan dalam rangkaian.",
+  "options": [],
+  "key": "",
+  "keys": [],
+  "pairs": [
+    {
+      "label": "Rangkaian lidi varian 1 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "AABBCC"
+    },
+    {
+      "label": "Rangkaian lidi varian 2 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "ABCABC"
+    },
+    {
+      "label": "Rangkaian lidi varian 3 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "ABCCBA"
+    },
+    {
+      "label": "Untaian boneka varian 1 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "ABCABC"
+    },
+    {
+      "label": "Untaian boneka varian 2 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "AABBCC"
+    },
+    {
+      "label": "Untaian boneka varian 3 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "ABCCBA"
+    },
+    {
+      "label": "Untaian manik-manik varian 1 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "ABCCBA"
+    },
+    {
+      "label": "Untaian manik-manik varian 2 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "ABCABC"
+    },
+    {
+      "label": "Untaian manik-manik varian 3 → Pola jawaban",
+      "options": [
+        "AABBCC",
+        "ABCABC",
+        "ABCCBA"
+      ],
+      "answer": "AABBCC"
+    }
+  ],
+  "jawabanResmi": "Jawaban resmi berupa gambar pada kotak Jawaban (hlm. 7), tanpa teks: setiap lingkaran memuat tepat satu rangkaian boneka, satu untaian manik-manik, dan satu rangkaian lidi (varian bernomor 1-3 sesuai urutan atas ke bawah pada gambar soal). Lingkaran AABBCC diisi lidi varian 1 (kemiringan berpasangan: dua lidi tegak 0°, lalu dua lidi miring sedang ±22°, lalu dua lidi miring landai ±34°), boneka varian 2 (berpasangan: dua boneka rambut gelap bersebelahan, lalu dua boneka berwajah tampak, lalu dua boneka gundul), dan manik varian 3 (urutan sepanjang tali: hijau,hijau,biru,biru,kuning,kuning - tali menurun pada pasangan hijau dan biru, melengkung pada pasangan kuning). Lingkaran ABCABC diisi lidi varian 2 (siklus: tegak, miring sedang ±22°, miring tajam ±49°, berulang dua kali), boneka varian 1 (siklus tiga: gelap, wajah, gundul, gelap, wajah, gundul - dua boneka gelap saling berseberangan di posisi 12 dan 6), dan manik varian 2 (hijau,biru,kuning,hijau,biru,kuning - tali menyapu dari ujung kanan baris atas ke kiri baris bawah). Lingkaran ABCCBA diisi lidi varian 3 (bercermin: tegak, ±22°, ±48°, ±48°, ±22°, tegak), boneka varian 3 (bercermin: gelap, wajah, gundul, gundul, wajah, gelap - dua boneka gelap bersebelahan di posisi 12 dan 10), dan manik varian 1 (palindrom: hijau,biru,kuning,kuning,biru,hijau - tali memutar di sisi kanan menautkan kedua manik kuning).",
+  "penjelasan": "Masing-masing mainan tersebut masih dapat dikelompokkan kembali berdasarkan “pola”nya. Boneka menurut pola urutan pada lingkaran dalam satu arah tertentu; untaian manik-manik menurut urutannya dalam rangkaian tali; dan mainan lidi-lidi menurut pola kemiringan setiap lidi dalam urutannya dari kiri ke kanan.",
+  "iniInformatika": "Memecahkan suatu persoalan, merancang suatu sistem, dan menganalisis suatu persoalan pada ranah tertentu membutuhkan observasi yang akurat. Berpikir analitis diperlukan untuk memisahkan detail-detail penting dari hal-hal yang kurang penting.",
+  "notes": "Soal-1 (hal. 6-7). Tiga baris terakhir deskripsi adalah kapsi gambar contoh mainan (bukan kalimat soal). Bagian Jawaban di buku TIDAK berisi teks — jawaban tampaknya berupa gambar susunan mainan pada lingkaran (hal. 7); model sesi ini tidak dapat melihat .jpg sehingga jawabanResmi/keys dikosongkan dan PERLU verifikasi visual oleh manusia terhadap b2016_page-007.jpg. Tipe diklasifikasi sa karena bukan pilihan ganda dan bukan dropdown mencocokkan (interaksi asli: menyeret mainan ke lingkaran). Teks diverifikasi silang terhadap b2016_page-006.txt dan b2016_page-007.txt. | KONVERSI 2026-10-28: type sa->ma karena jawaban resmi buku berupa gambar pemetaan (tabel Jawaban hlm.7). keys verifikasi lama dipindah ke sini: [\"AABBCC: lidi 1, boneka 2, manik 3; ABCABC: lidi 2, boneka 1, manik 2; ABCCBA: lidi 3, boneka 3, manik 1\",\"lidi 1 -> AABBCC; lidi 2 -> ABCABC; lidi 3 -> ABCCBA; boneka 1 -> ABCABC; boneka 2 -> AABBCC; boneka 3 -> ABCCBA; manik 1 -> ABCCBA; manik 2 -> ABCABC; manik 3 -> AABBCC\",\"hijau-hijau-biru-biru-kuning-kuning; hijau-biru-kuning-hijau-biru-kuning; hijau-biru-kuning-kuning-biru-hijau\",\"0-0-22-22-34-34; 0-22-49-0-22-49; 0-22-48-48-22-0\",\"AABBCC: lidi berpasangan, boneka berpasangan, manik berpasangan; ABCABC: pola berulang tiga; ABCCBA: pola cermin\"]"
+}

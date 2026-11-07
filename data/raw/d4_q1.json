@@ -1,0 +1,21 @@
+{
+  "id": "d4_q1",
+  "scheduleTitle": "Ramuan Ajaib (2016)",
+  "bookTitle": "Ramuan Ajaib",
+  "book": "b2016",
+  "code": "2016-JP-01",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-JP-01",
+  "soalPages": [8, 9, 10],
+  "imgPages": [8, 9],
+  "deskripsi": "Taro si berang-berang menemukan lima jenis ramuan ajaib yang efeknya adalah sebagai berikut:\n• Ramuan pertama membuat telinga bertambah panjang\n• Ramuan lainnya membuat gigi bertambah panjang\n• Ramuan lainnya membuat kumis menjadi keriting\n• Ramuan lainnya membuat hidung menjadi putih\n• Ramuan terakhir membuat mata menjadi putih\n\nTaro menaruh setiap macam ramuan ajaib tersebut dalam sebuah gelas, dan ada sebuah gelas yang berisi air. Keenam gelas tersebut diberi label A sampai dengan F. Malangnya, ia lupa mencatat gelas mana yang mengandung ramuan ajaib apa. Maka, ia mengadakan percobaan sebagai berikut untuk mengidentifikasi jenis ramuan ajaib pada setiap gelas.\n• Percobaan 1: jika ia mengambil ramuan pada gelas A,B dan C, maka efeknya adalah pada Gambar 1\n• Percobaan 2: jika ia mengambil ramuan pada gelas A,D dan E, maka efeknya adalah pada Gambar 2\n• Percobaan 3: jika ia mengambil ramuan pada gelas C, D dan F, maka efeknya adalah pada Gambar 3",
+  "pertanyaan": "Gelas mana yang berisi air? Pilih salah satu:",
+  "options": ["E", "A", "B", "C", "F", "D"],
+  "key": "D",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar yaitu gelas D.",
+  "penjelasan": "Solusi 1\nPada percobaan pertama, gelas A, B dan C tidak ada yang berisi air, karena ada tiga perubahan pada berang-berang.\nPada percobaan kedua, gelas D atau E berisi air atau ramuan yang membuat hidung menjadi putih. Hal ini dikarenakan dari percobaan pertama A bukan berisi air.\nPada percobaan ketiga, gelas D dan F berisi air murni atau ramuan yang membuat kumis keriting. Hal ini dikarenakan dari percobaan pertama C bukan berisi air murni.\nOleh karena dapat disimpulkan bahwa D adalah air murni.\n\nSolusi 2:\nPercobaan 1 menyebabkan tiga perubahan, Percobaan 2 dan 3 menyebabkan dua perubahan. Oleh karena itu tidak ada air murni pada percobaan 1 dan ada satu gelas pada percobaan 2 dan 3 yang berisi air. Gelas yang sama pada percobaan 2 dan 3 adalah D, maka dengan demikian gelas D adalah air murni.",
+  "iniInformatika": "Pada soal ini kita memiliki beberapa fakta yang dapat digunakan untuk menghasilkan informasi baru dengan cara melakukan ekstrapolasi. Hal ini dapat dilakukan dengan menggunakan penalaran logika (logical reasoning). Logika memegang peranan penting di dalam ilmu komputer. Satuan terkecil dalam komputer adalah bit yang memiliki nilai 1 (benar) atau 0 (salah). Semua informasi di dalam komputer disimpan dalam bentuk deretan kombinasi bit. Komputer menggunakan logika untuk mengambil keputusan dan keputusan tersebut didasarkan pada apakah bit bernilai benar (1) atau salah (0).\n\nSoal ini juga menjelaskan teori dasar himpunan. Kita mencari sebuah elemen dalam himpunan yang tidak digunakan dalam percobaan 1, artinya elemen yang merupakan komplemen dari A, B, C. Setelah itu mencari elemen yang merupakan irisan (elemen yang sama) pada percobaan 2 dan 3.",
+  "notes": "Soal-2 (hal. 8-10; Ini Informatika di hal. 10). Urutan opsi persis seperti buku: E, A, B, C, F, D (tombol radio berlabel gelas — bukan urutan alfabetis). Karakter bullet pada teks sumber terekstrak sebagai '?' — diperbaiki menjadi '•' (dekoding, bukan pengubahan). Gambar 1-3 (efek percobaan) ada di hal. 8 dan diperlukan untuk menjawab. Verifikasi .jpg tidak dapat dilakukan (model sesi ini tidak mendukung input gambar); teks diverifikasi silang terhadap b2016_page-008..010.txt."
+}

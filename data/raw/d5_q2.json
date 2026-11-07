@@ -1,0 +1,21 @@
+{
+  "id": "d5_q2",
+  "scheduleTitle": "Infinite Ice Cream (2018)",
+  "bookTitle": "Infinite Ice Cream",
+  "book": "b2018",
+  "code": "I-2018-IE-01",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-IE-01",
+  "soalPages": [21, 22],
+  "imgPages": [21],
+  "deskripsi": "Ada dua stand (kios) penjual es krim warna warni, dengan 4 warna es krim (ditunjukkan sebagai empat bulatan warna pada soal asli).\n\nEs krim pada stand pertama dibuat dengan mengikuti instruksi sebagai berikut:\n0) Mulai dengan corong kosong.\n1) Ambil warna secara sembarang (random), tambahkan 2 bulatan berwarna sama.\n2) Tambah 1 bulatan dengan warna berbeda.\n3) Jika tingginya sudah sesuai yang diminta, berhenti. Jika belum, kembali langkah 1.\n\nEs krim pada stand kedua tidak mengikuti instruksi tersebut.\n\n(Gambar yang tersedia hanya memperlihatkan beberapa susunan awal)",
+  "pertanyaan": "Yang mana merupakan es krim stand kedua?",
+  "options": ["A.", "B.", "C.", "D."],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah B.",
+  "penjelasan": "Es Krim B adalah satu-satunya es krim yang jelas tidak mengikuti instruksi. Dimulai dengan benar dengan menempatkan dua rasa yang sama diikuti oleh salah satu rasa yang berbeda tetapi kemudian menambahkan dua sendok rasa yang berbeda ketika seharusnya menambahkan dua sendok rasa yang sama.\n\nJawaban A, C, dan D salah karena mereka mengikuti instruksi, setidaknya sejauh yang dapat kita lihat.",
+  "iniInformatika": "Pola dalam kerucut es krim, atau kata-kata, atau gambar, dapat dibuat dengan daftar instruksi singkat. Mengenali pola, dan mengenali bagian-bagian pola, adalah pekerjaan sehari-hari para ilmuwan informatika. Terkadang, sebuah pola berulang, misalnya, pola sederhana yang hanya terus berulang. Ini lebih mudah dikenali. Tantangan ini sedikit lebih sulit, karena polanya tidak berulang.\n\nAda juga jebakan dalam komputer: instruksi kadang-kadang tampak seperti diikuti secara tidak sengaja. Memang, mesin kedua kadang-kadang memilih rasa secara acak dengan cara yang tampaknya mengikuti instruksi. Anda mungkin mengenali instruksi yang dilanggar. Tetapi hanya dengan pengamatan selintas, anda tidak akan pernah bisa yakin bahwa mereka diikuti. Untungnya, dalam soal ini, kami tahu pasti bahwa hanya satu es krim yang dihasilkan dari stand kedua.",
+  "notes": "Opsi A-D berupa gambar es krim (hanya label pada text layer); 4 warna es krim berupa bulatan gambar — aplikasi menampilkan render halaman asli (imgPages 21)."
+}

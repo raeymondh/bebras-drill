@@ -1,0 +1,21 @@
+{
+  "id": "d2_q3",
+  "scheduleTitle": "Kode Kix (2016)",
+  "bookTitle": "Kode Kix",
+  "book": "b2016",
+  "code": "2016-NL-04",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-NL-04",
+  "soalPages": [28, 29],
+  "imgPages": [28, 29],
+  "deskripsi": "Kantor Pos Bebras memiliki kode-kode pos yang berisi 36 karakter alfanumeris ('A'..'Z' dan '0'..'9'). Agar kode-kode pos dapat dibaca oleh mesin pembaca, mereka mengubah kode-kode pos itu menjadi kode-kode Kix.\n\nSetiap karakter dikodekan ke dalam 2 bagian pengkodean: bagian atas dan bagian bawah.\n\nMasing-masing bagian terdiri atas 4 garis vertikal. Kedua bagian digabungkan sedemikian rupa dengan menyusun bagian atas bertumpukan separuhnya pada bagian bawah sebagai berikut. Setiap garis di bagian atas bertumpukan separuhnya dengan separuh garis di bagian bawah seperti pada gambar berikut ini: bagian atas mengambil bagian tengah (middle) dan atas (top) dari setiap garis, sementara bagian bawah megambil bagian tengah (middle) dan bagian bawah (bottom).\n\nMisalnya kode Kix untuk “G7Y0” adalah",
+  "pertanyaan": "Jika Kode Kix-nya adalah sebagai berikut, berapa kode hurufnya?",
+  "options": [],
+  "key": "",
+  "keys": ["BC16", "bc16"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah BC16.",
+  "penjelasan": "Jawaban dapat diperoleh dengan mengamati tabel dan mengkonversi kode Kix menjadi huruf yang terkait. Karakter yang dipakai dalam Kode Kix diberi tanda pada tabel berikut:",
+  "iniInformatika": "Kode Kix (benar-benar dipakai oleh Perusahaan Pos Belanda) adalah sebuah contoh dari kode batang (bar codes). Kode batang dapat dibaca oleh mesin/komputer, sehingga sangat berguna untuk mengotomasi proses dan mengurutkan benda-benda yang diproses kantor pos.\n\nPada contoh ini, informasi dalam tabel dipecah menjadi bagian atas dan bagian bawah. Teknik ini sangat umum dipakai untuk merepresentasi informasi.",
+  "notes": "Soal-9 (hal. 28-30; kata kunci di hal. 30). Diagram penumpukan garis, contoh kode Kix “G7Y0”, gambar Kix pada pertanyaan, dan tabel karakter semuanya gambar (hal. 28-29) dan diperlukan untuk menjawab. Typo asli buku \"megambil\" (hal. 28, seharusnya \"mengambil\") dipertahankan verbatim. Verifikasi .jpg tidak dapat dilakukan (model sesi ini tidak mendukung input gambar); teks diverifikasi silang terhadap b2016_page-028.txt dan b2016_page-029.txt."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "d6_q1",
+  "scheduleTitle": "Temukan Si Pencuri (2016)",
+  "bookTitle": "Temukan si Pencuri",
+  "book": "b2016",
+  "code": "2016-BE-02",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-BE-02",
+  "soalPages": [36, 37],
+  "imgPages": [36, 37],
+  "deskripsi": "Berlian berwarna biru yang terkenal telah dicuri dari museum hari ini. Si pencuri berhasil menukar berlian tersebut dengan perhiasan imitasi murah berwarna hijau.\nPada acara pameran berlian hari ini dihadiri oleh 2000 orang pengunjung. Para pengunjung tersebut memasuki ruangan pameran satu per satu. Inspektur Bebro harus dapat menangkap si pencuri dengan menginterogasi beberapa orang dari pengunjung tersebut. Inspektur Bebro telah memiliki daftar nama dari 2000 orang pengunjung yang memasuki ruang pameran hari ini. Inspektur Bebro akan menanyai setiap orang dengan dengan pertanyaan yang sama:\nApakah warna berlian tersebut hijau atau biru pada saat anda melihatnya ?\nSetiap pengunjung akan menjawab dengan jujur; kecuali si pencuri, yang akan menjawab warna berlian tersebut adalah hijau.",
+  "pertanyaan": "Inspektur Bebro sangat pintar dan akan menggunakan strategi dimana jumlah orang yang akan ditanyai akan seminimal mungkin. Manakah dari pernyataan berikut yang dapat disampaikan Inspektur Bebro tanpa berbohong ?",
+  "options": [
+    "A. Tugas ini adalah tugas yang sulit; Saya perlu menanyai sekurang-kurangnya 200 orang, tetapi kemungkinan terbanyaknya adalah 1999 orang.",
+    "B. Saya tidak dapat menjanjikan apapun. Jika saya tidak beruntung, maka saya akan menanyai setiap pengunjung.",
+    "C. Tidak cukup dengan hanya menanyai 20 orang (kecuali saya sedang beruntung) tetapi saya yakin dapat menyelesaikan tugas saya dengan menanyai kurang dari 200 orang.",
+    "D. Saya dapat menjamin bahwa saya dapat menemukan si pencuri dengan cukup menanyai kurang dari 20 orang."
+  ],
+  "key": "D",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Inspektur Bebro dapat menemukan sang pencuri hanya dengan menginterogasi 11 orang.",
+  "penjelasan": "Sangat mencengangkan bahwa Inspektur Bebro hanya perlu menginterogasi sebagian kecil pengunjung, dengan mengulangi setengah dari daftar dengan cara ini:\nPengunjung diberi nomor 1 s.d 2000 terurut dengan saat memasuki ruangan. Inspektur menginterogasi pengunjung nomor 1000 dan menanyakan warna berlian yang dilihatnya:\n• jika dia menjawab biru, maka si pencuri datang setelah pengunjung nomor 1000 dan nomornya adalah antara nomor 1001 sampai 2000;\n• jika dia menjawab hijau, maka si pencuri bernomor antara 1 sampai 1000 (catat juga bahwa si pencuri mungkin bernomor 1000).\nPada kedua kasus, jumlah pengunjung yang mungkin sebagai si pencuri, berkurang dari 2000 menjadi 1000 (setengahnya).\nBerikutnya, sang Inspektur menanyakan ke orang dengan nomor \"tengah\" sisanya (yaitu nomor 1500 pada kasus pertama, atau nomor 500 pada kasus kedua). Dengan demikian, Inspektur membagi dua jumlah pengunjung (menjadi setengahnya) setiap kali satu pengunjung diinterogasi.\nMengulangi cara yang sama, ia dapat mengurangi jumlah yang dicurigai menjadi 500, 250, 125, 63,32, 16, 8, 4 dan kemudian 2. Saat tinggal 2 tersangka, ia akan menanyakan kepada yang pertama. Jika ia menjawab hijau, ia adalah si pencuri; jika tidak maka yang lainnya adalah pencuri. Inspektur Bebro dapat menemukan sang pencuri hanya dengan menginterogasi 11 orang.",
+  "iniInformatika": "Ide untuk mengulang terhadap separuh dari himpunan objek adalah teknik yang sangat umum digunakan di bidang informatika. Mungkin Anda sudah mengenal binary search, di mana kita mencari pada separuh dari list terurut. Pada kasus ini, kita memakai binary seach untuk menemukan elemen hijau pada sebuah list biru dan hijau, di mana semua elemen biru ada di awal. Fakta bahwa biasanya seorang pencuri selalu berbohong, membuat soal ini menjadi lebih menarik. Patut dicatat bahwa persoalan ini tak dapat dipecahkan jika kita tak tahu sebelumnya tentang warna yang akan dipakai oleh si pencuri untuk menjawab.",
+  "notes": "Judul tercetak di buku: 'Temukan si Pencuri' (huruf s kecil; TOC/schedule memakai 'Si'). Opsi di buku TANPA huruf label (kotak centang; diverifikasi OCR jpg hal. 36-37); prefiks A.–D. ditambahkan penyalin. Buku tidak mencantumkan bagian 'Jawaban' terpisah — jawabanResmi diambil dari kalimat penutup pembahasan (hal. 37, 'hanya dengan menginterogasi 11 orang' → opsi D). Typo buku dipertahankan: 'dengan dengan pertanyaan', 'binary seach', spasi sebelum '?' ('berbohong ?', 'melihatnya ?'), '63,32'. Pertanyaan & opsi melintasi hal. 36→37. Ilustrasi (pencuri/berlian) di tengah deskripsi hal. 36 bersifat dekoratif. Spasi ganda artefak pdf.js dinormalisasi; bullet '•' dipulihkan dari glif artefak."
+}

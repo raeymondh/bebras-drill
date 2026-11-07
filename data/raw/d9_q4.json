@@ -1,0 +1,21 @@
+{
+  "id": "d9_q4",
+  "scheduleTitle": "Jadwal Gladi Resik (2018)",
+  "bookTitle": "Jadwal Gladi Resik",
+  "book": "b2018",
+  "code": "I-2018-BE-04",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-BE-04",
+  "soalPages": [12, 13],
+  "imgPages": [12, 13],
+  "deskripsi": "Sekolah Bebras akan mengadakan pertunjukan menari, dengan penari berpasangan. Ada 6 penari yaitu : Ana, Budi, Cinta, Dori, Evi, Fani.\nMereka akan menari berpasangan :\n1. Ana - Budi\n2. Evi - Dori\n3. Ana - Evi\n4. Budi - Cinta\n5. Dori - Ana\n6. Fani - Budi\n7. Cinta - Evi\n8. Budi – Dori\n9. Dori - Fani\n10. Fani - Evi\n\nPelatih ingin menjadwalkan gladi resik untuk suatu tarian berantai. Dalam sebuah tarian berantai, urutan tarian ditentukan sedemikian rupa sehingga dari satu tarian ke tarian berikutnya, salah satu dari pasangan penari akan tetap tinggal di panggung untuk pertunjukan berikutnya. Selain itu, ada aturan bahwa seorang penari tak boleh dijdwal menari 3 kali berturut-turut, sebab akan kelelahan.\n\nContoh: saat Ana dan Evi menari, salah satu alternatif berikutnya adalah Cinta dan Evi. Setelah itu, Evi tidak dapat menari lagi.",
+  "pertanyaan": "Penari mana yang tak boleh dijadwalkan pada tarian pertama karena akan menyebabkan tidak mungkin membuat pertunjukan tarian berantai?",
+  "options": ["A. Ana", "B. Cinta", "C. Evi", "D. Dori", "E. Budi", "F. Fani"],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah B. Cinta.",
+  "penjelasan": "Perhatikan diagram di samping (lihat gambar pada halaman soal/pembahasan).\n\nDalam diagram ini penari diwakili oleh lingkaran. Dua lingkaran terhubung oleh sebuah garis ketika dua penari harus menari berpasangan. Aturan jadwal latihan digambarkan oleh garis di diagram ini. Perhatikan mulai dari sebuah lingkaran, kita dapat mengikuti garis dari lingkaran tersebut ke lingkaran lain sampai kita melacak setiap garis penghubung tepat satu kali.\n\nKarena saat melacak garis ini kita harus meninggalkan setiap lingkaran yang kita lewati, ini berarti bahwa setiap lingkaran harus memiliki garis penghubung dengan jumlah genap, kecuali yang pertama dan yang terakhir di jalur. Jadi, lingkaran pertama di jalan harus A atau F.\n\nDengan kata lain, jadwal apa pun yang dipilih, pasangan penari pertama harus Ana atau Fani. Cinta adalah satu-satunya penari yang tidak memiliki pasangan dengan keduanya. Jadi dia tidak akan pernah bisa menjadi bagian dari pasangan pertama.\n\nKalau kita perhatikan setiap garis, kita harus mengambil arah dari penari yang sudah ada di latihan sebelumnya ke penari yang akan berada di latihan berikutnya. Karena satu penari tidak akan menari tiga kali berturut-turut, setiap langkah di sebuah garis akan menuju ke suatu lingkaran yang berbeda dalam diagram. Garis penghubung dalam diagram berkorespondensi dengan satu pasang penari.",
+  "iniInformatika": "Diagram penjelasan jawaban di atas adalah graf. Jalurnya (digambarkan sebagai garis) adalah jalur Euler. Graf adalah sebuah cara untuk membuat model dari suatu situasi yang terdiri dari titik atau simpul. Dalam soal ini simpul adalah para penari. Setiap garis menghubungkan dua penari. Garis dalam graf ini mewakili pasangan penari. Dalam soal ini anda akan menggunakan semua pasangan, sedemikian rupa sehingga setiap garis hanya digunakan satu kali. Euler membuktikan bahwa hal ini hanya mungkin jika anda memulai dan berhenti di sebuah simpul dengan jumlah hubungan ganjil.\n\nMewakili informasi menggunakan graf dapat sangat membantu untuk melihat struktur di balik suatu masalah. Perencanaan rute dan penjadwalan adalah contoh lain aplikasi penggunaan graf.",
+  "notes": "Typo buku 'dijdwal' dipertahankan. Graf penjelasan berupa gambar di hal. 12/13 — aplikasi menampilkan render halaman asli (imgPages 12-13). Judul bagian di buku: 'Inilah Informatika!'."
+}

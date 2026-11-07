@@ -1,0 +1,21 @@
+{
+  "id": "d17_q2",
+  "scheduleTitle": "Senyum (2017)",
+  "bookTitle": "Senyum",
+  "book": "b2017",
+  "code": "I-2017-DE-02",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-DE-02",
+  "soalPages": [15],
+  "imgPages": [15],
+  "deskripsi": "Berang-berang menemukan suatu alat untuk mendeteksi wajah tersenyum dengan kamera. Alat tersebut bekerja dengan 2 langkah:\nTahap-1: transformasi foto wajah menjadi semacam \"smiley\" yang diberi dua titik dan garis yang menunjukkan posisi mata dan mulut.\nTahap-2: deteksi apakah wajah tersenyum dengan mencocokkan gambar hasil tahap-1 dengan pola yang terdiri dari garis merah dan titik hijau. Wajah dideteksi sebagai wajah tersenyum, jika dan hanya jika gambarnya menyentuh semua titik hijau dan tidak menyentuh garis merah.",
+  "pertanyaan": "Berapa gambar hasil tahap-1 sebagai berikut, yang dideteksi sebagai wajah tersenyum?",
+  "options": [],
+  "key": "",
+  "keys": ["4", "~empat"],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang benar adalah 4.",
+  "penjelasan": "Gambar yang ditandai dengan x terdeteksi sebagai senyum [tanda x terlihat pada gambar di halaman soal].",
+  "iniInformatika": "Ilmuwan/Ahli Informatika mengembangkan sistem yang dapat mengenali sesuatu (misalnya wajah manusia) pada foto, atau kamera yang selalu hidup untuk menangkap citra. Teknologi ini sekarang mengadopsi konsep yang disebut mesin pembelajar, atau bahkan deep learning. Teknologi ini juga memasukkan tahap pra pemrosesan citra, memodelkan, dan memakai aturan seperti yang diberikan contohnya pada tantangan ini.\nAdalah sangat penting bahwa pendekatan yang digunakan dalam latihan ini sangat disederhanakan, dan mempunyai beberapa kekurangan. Misalnya, empat wajah yang diberikan sebagai alternatif jawaban, hanya dua yang secara tepat merepresentasi senyum. Anda harus mengingat baik-baik, bahwa kelak, rancangan sistem pengenalan citra yang sebenarnya, tidak menghasilkan seperti ini.\n[Teks keterangan gambar di buku] Robot passport checker rejects asian man's photo having closed eyes\n[Teks keterangan gambar di buku] Research shows smartphone fingerprint scanners aren't as secure as we think they are",
+  "notes": "Pertanyaan merujuk gambar barisan wajah hasil tahap-1 (dengan tanda x pada jawaban) di halaman soal; lihat imgPages. Verifikasi visual .jpg tidak tersedia di sesi ini (model tanpa dukungan gambar); transripsi diverifikasi terhadap text layer pdf.js (b2017_page-015.txt)."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "d17_q1",
+  "scheduleTitle": "Petak dan Kotak (2018)",
+  "bookTitle": "Petak dan Kotak",
+  "book": "b2018",
+  "code": "I-2018-CA-06",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CA-06",
+  "soalPages": [32, 33],
+  "imgPages": [32],
+  "deskripsi": "Berang-berang Yudi senang bermain lompat petak. Terdapat 8 petak yang diberi nomor dari 1 s.d. 8. Setiap petak berisi 1 kotak yang ditandai dengan salah satu dari tiga aturan melompat.\n\nContoh:\n1. Gerakan ke kiri: Misalnya sebuah kotak ditandai \"2L\" berarti ia harus melompat ke kiri sebanyak 2 petak lalu menandai petak akhir lompatannya:\n2. Gerakan ke kanan: Misalnya sebuah kotak ditandai dengan \"3R\" berarti ia harus melompat ke kanan sebanyak 3 petak, lalu menandai petak akhir lompatannya:\n3. Diam. Jika aturan adalah \"0\", maka ia harus tetap pada tempatnya alias permainan berakhir.\n\nDiberikan 8 petak dengan kotak-kotak sebagai berikut: (lihat gambar pada halaman soal)",
+  "pertanyaan": "Dimulai dari kotak mana kah (petak awal ini ditandai) agar kemudian setiap petak dapat ditandai tepat satu kali dan berhenti di petak dengan kotak berisi 0?",
+  "options": ["A. 2", "B. 3", "C. 5", "D. Tidak mungkin mengunjungi semua petak."],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah 3.",
+  "penjelasan": "Berpikir mundur, kita dapat melihat bahwa petak 0 dicapai dari kolom 7, yang dicapai oleh petak 6, yang dicapai oleh petak 8, yang dicapai oleh petak 5, yang dicapai oleh petak 2, yang dicapai oleh petak 1, yang dicapai oleh petak 3.\n\nKita juga bisa menggambar ini sebagai graf, dengan label simpul menjadi petak, dan label jalur penghubung adalah \"cara bergerak di antara kolom\". Graf ini dapat ditarik mulai dari simpul mana saja, dan selesai ketika semua simpul telah ditulis.",
+  "iniInformatika": "Masalah ini mencakup beberapa petunjuk berikut: kita dapat menganggap gerakan seperti \"3R\" dari kolom 2 ke kolom 5 sebagai hasil dari sebuah petunjuk. Dengan kumpulan petunjuk ini, yang sebenarnya adalah graf terarah, kita mencari simpul \"head\" atau \"parent\" dari koleksi ini.\n\nMengikuti serangkaian petunjuk penting dalam manajemen memori oleh sistem operasi (atau pengumpulan sampah Java) sehingga memori yang tidak lagi digunakan dapat didaur ulang dan \"direklamasi\" untuk digunakan oleh program lain. Kebanyakan kesalahan perangkat lunak dapat ditemukan dengan melacak kembali kalkulasi / instruksi yang bermasalah kembali ke asalnya.\n\nPernyataan goto (atau pernyataan lompatan dalam bahasa assembly) dapat dimodelkan oleh permainan ini. Pernyataan goto menunjukkan pindah ke bagian lain dari program dan lanjutkan eksekusi daripada menjalankan instruksi \"selanjutnya\", Dalam tugas ini, \"program\" adalah urutan instruksi goto, di mana satu-satunya \"terminasi\" instruksi adalah yang berada di posisi 4.",
+  "notes": "Ilustrasi contoh aturan dan deretan 8 petak berupa gambar di hal. 32 — aplikasi menampilkan render halaman asli (imgPages 32). Kata 'kolom' pada pembahasan buku dipertahankan apa adanya."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "d2_q2",
+  "scheduleTitle": "Peta Harta Karun (2018)",
+  "bookTitle": "Peta Harta Karun",
+  "book": "b2018",
+  "code": "I-2018-TW-04",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-TW-04",
+  "soalPages": [
+    29,
+    30,
+    31
+  ],
+  "imgPages": [
+    29,
+    30
+  ],
+  "deskripsi": "Berang-berang si pembajak mempunyai peta yang sangat besar sehingga harus dipotong-potong dalam potongan kecil. Setiap potongan peta berukuran 8 x 8 petak seperti gambar. Malangnya, kapal si pembajak terlalu kecil sehingga tak dapat membawa semua potongan sekaligus. Untungnya, si pembajak sangat cerdik untuk mendokumentasikan setiap potongan dalam catatannya.\n\n1. Jika semua petak dalam potongan peta sama warnanya, dia mencatat sebagai persegi dengan warna petak tersebut\n2. Atau jika tidak, ia menandai dengan lingkaran dan membagi potongan peta menjadi 4 bagian yang sama seperti pada Gambar 2.\n3. Ulangi proses sampai semua petak ditandai (Gambar 4).\n\nBerikut ini adalah catatan yang ada di buku bebras si pembajak. [catatan transkriptor: lihat gambar catatan pada halaman soal]",
+  "pertanyaan": "Peta yang mana yang cocok dengan catatan tsb?",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang paling tepat adalah B.",
+  "penjelasan": "Dalam bagan, kita dapat menandai titik-titik yang mewakili daerah 4x4 dengan angka 1 hingga 4, dan menandai sub-titik dari titik 1 dengan angka 1-1 hingga 1-4, dan seterusnya. Posisi daerah yang sesuai di peta dan titik-titik dalam bagan ditunjukkan seperti di bawah ini [catatan transkriptor: lihat gambar pada halaman pembahasan]. 1-3, 1-4, 2-3, dan 2-4 ditandai dengan warna hitam dalam bagan, yang berarti bahwa warna dari keempat wilayah 2x2 dalam peta berwarna hitam. Hanya (B) yang memenuhi kriteria ini.\n\nBerikut ini adalah proses untuk merepresentasikan informasi potongan peta dalam bagan sesuai dengan langkah-langkah yang ditentukan dalam tugas. Ini memungkinkan Anda untuk mengetahui secara pasti mengapa peta (B) adalah jawaban yang benar. Dengan cara ini, ruang yang diperlukan untuk menyimpan informasi peta dapat dikurangi.",
+  "iniInformatika": "Bagan 4-wilayah disebut \"Quadtree\" dalam Informatika. Quadtree adalah struktur data pohon di mana setiap simpul memiliki empat anak yang terhubung dengan simpul dari atas ke bawah. Semua bentuk quadtree memiliki beberapa fitur umum:\n- Mereka menguraikan ruang menjadi sel-sel yang bisa beradaptasi.\n- Setiap sel (atau bucket) memiliki kapasitas maksimum. Ketika kapasitas maksimum tercapai, bucket akan terbelah.\n- Direktori tree mengikuti dekomposisi spasial dari quadtree.\n\nAda beberapa penggunaan quadtrees yang umum, seperti representasi gambar (contoh ini), pemrosesan dan kompresi gambar, pembuatan mesh, ... dll. Anda dapat menemukan informasi lebih lanjut di https://en.wikipedia.org/wiki/Quadtree",
+  "notes": "Gambar Gambar 1-4, catatan pembajak, dan bagan penjelasan berupa gambar di hal. 29-30 — aplikasi menampilkan render halaman asli (imgPages 29-30). Opsi A-D berupa gambar peta."
+}

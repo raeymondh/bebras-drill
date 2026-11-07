@@ -1,0 +1,21 @@
+{
+  "id": "d11_q1",
+  "scheduleTitle": "Klub Berbagi Buku (2017)",
+  "bookTitle": "Klub Berbagi Buku",
+  "book": "b2017",
+  "code": "I-2017-IR-07",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-IR-07",
+  "soalPages": [18],
+  "imgPages": [18],
+  "deskripsi": "Ada tujuh (7) siswa yang gemar membaca buku dan mereka membentuk klub untuk berbagi buku. Jika ada satu buku baru diperoleh (dan dibaca) seorang siswa, kemudian ia akan meneruskan meminjamkan ke anggota klub lainnya dengan cara berikut. Tidak setiap siswa menjadi sahabat siswa lainnya, maka seorang siswa hanya meneruskan meminjamkan buku ke siswa yang bersahabat dengannya. Jika seorang siswa mempunyai beberapa sahabat, maka sahabat yang paling muda yang akan dipinjami terlebih dulu, yang belum pernah meminjam buku itu. Kalau semua sahabatnya sudah pernah meminjamnya, maka ia akan mengembalikan ke siswa yang sebelumnya meminjamkan buku itu kepadanya.\nDiagram berikut menunjukkan tujuh siswa dan garis-garis menunjukkan hubungan \"sahabat\" itu. Setiap simpul berisi informasi nama dan umur.\n[gambar: diagram tujuh siswa (simpul berisi nama dan umur) dengan garis hubungan persahabatan]\nBen selesai membaca sebuah buku baru dan ingin berbagi dengan semua anggota klub dan selain Ben belum ada yang pernah membacanya.",
+  "pertanyaan": "Siapa yang akan menjadi pembaca terakhir dari buku tersebut?",
+  "options": ["A. Bill", "B. Sara", "C. Tom", "D. Kim"],
+  "key": "D",
+  "keys": [],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang benar adalah Kim.",
+  "penjelasan": "Ben meminjamkan bukunya ke Ted. Kemudian Ted memberikannya ke Anna. Anna mengoper bukunya ke Bill. Kemudian Bill meminjamkannya ke Tom. Tom mengembalikan bukunya ke Bill. Bill memberikannya kembali ke Anna. Anna meminjamkannya ke Sara. Sara kemudian mengembalikan bukunya ke Anna. Anna mengembalikannya ke Ted. Ted kemudian memberikan buku itu ke Kim.",
+  "iniInformatika": "Kebanyakan dari data yang digunakan di bidang informatika saling berhubungan. Misalnya kehidupan sosial kita yang terbentuk dari jaringan elemen (orang) dan koneksi (persahabatan). Contoh lainnya adalah jaringan transportasi yang terdiri dari elemen (kota) dan koneksi (jalanan). Atau juga rantai makanan yang terdiri dari elemen (makhluk hidup) dan koneksi (produsen–konsumen). Jadi banyak segi kehidupan yang dapat dipandang sebagai \"network\" (jejaring).\nUntuk menggambarkan jejaring, Ilmuwan/Ahli Informatika menggunakan graf sebagai struktur data, yang menggambarkan rangkaian dari hubungan. Untuk menganalisis graf tersebut, ada bermacam-macam algoritma yang dapat dipakai mengevaluasi berbagai hal. Salah satu algoritma yang terkenal adalah Depth-First Search. Algoritma tersebut digunakan untuk mencari struktur data di grafik dalam urutan tertentu. Ini sangat berguna untuk menghitung komponen dalam grafik, misalnya ada berapa komponen grafik yang berhubungan.\nDepth-First dapat digunakan untuk mencari elemen yang terhubung dari suatu titik pangkal. Kalau elemen yang dicari sudah ditemukan, proses yang sama dapat diulangi untuk elemen yang lain. Cara melacak dalam sistem peminjaman buku dalam tantangan ini mirip dengan sistem pencarian Depth-First.",
+  "notes": "Buku mencantumkan opsi tanpa huruf (bullet 'o'); label A–D ditambahkan untuk keperluan kunci jawaban (Kim = D). Diagram persahabatan adalah gambar; lihat imgPages. Perbaikan pdf.js: 'siswa idan'→'siswa dan'. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-018/019.txt)."
+}

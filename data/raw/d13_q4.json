@@ -1,0 +1,33 @@
+{
+  "id": "d13_q4",
+  "scheduleTitle": "Perjalanan Arabot (2017)",
+  "bookTitle": "Perjalanan Arabot",
+  "book": "b2017",
+  "code": "I-2017-CZ-04C",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CZ-04C",
+  "soalPages": [16],
+  "imgPages": [16],
+  "deskripsi": "Arabot adalah sebuah robot yang diharapkan akan berjalan dari titik awal (A, B atau C) hingga stasiun pengisian batere. Dalam perjalanannya Arabot menelusuri jalur-jalur berdasarkan petunjuk arah berupa label yang tertera pada jalur yang sedang dilaluinya untuk memilih jalur berikutnya. Label arah bertuliskan L atau R. Label L akan menginstruksikan Arabot untuk belok ke kiri pada persimpangan berikut, sementara label R menginstruksikan untuk belok ke kanan.\n[gambar: peta jalur dengan titik awal A, B, C, persimpangan, label L/R, dan kotak kosong nomor 1–6]\nGambar di atas adalah peta jalur-jalur tersebut. A, B, dan C adalah tiga kemungkinan titik awal dari mana Arabot akan memulai perjalanannya. Arabot dapat memulai dari A atau B atau C. Selama perjalanannya menuju stasiun pengisian, Arabot tidak boleh mampir di suatu titik awal manapun karena jika demikian maka Arabot akan segera dimatikan disitu.\nTanda [ikon baterai] menyatakan stasiun tempat pengisian batere dan tanda [ikon persimpangan] menyatakan persimpangan jalur dimana Arabot akan memilih jalur sesuai label yang tertera pada jalur sebelumnya.",
+  "pertanyaan": "Sayangnya, beberapa label ternyata sudah hilang dari peta. Keenam label yang hilang tersebut pada gambar ditunjukkan dengan kotak kosong dan diberi nomor 1 sampai dengan 6. Agar Arabot selalu tiba di tanda [ikon baterai], kamu diminta untuk mengisi kotak-kotak kosong itu dengan label-label (L atau R) yang benar. Label dari kotak 1 hingga 6 secara berurutan adalah?",
+  "options": [
+    "a) L, R, L, L, L, R",
+    "b) L, R, R, L, L, R",
+    "c) L, R, R, L, L, L",
+    "d) L, R, R, L, R, R",
+    "e) L, R, R, R, R, L",
+    "f) L, R, L, R, R, L",
+    "g) L, R, L, L, R, R",
+    "h) L, L, R, R, L, L",
+    "i) L, R, R, L, R, L",
+    "j) R, L, R, L, L, R",
+    "k) R, L, L, R, R, L"
+  ],
+  "key": "f",
+  "keys": [],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang benar adalah f) L, R, L, R, R, L.",
+  "penjelasan": "",
+  "iniInformatika": "Sekumpulan aktivitas yang harus dikerjakan dengan urutan tertentu seringkali dikode seperti di atas (\"A\" ke…, \"B\" ke…, dan \"C\" ke…), yang kemudian ditransformasi ke struktur graf seperti pada gambar yang di bidang informatika disebut sebagai struktur data.\nPada saat menelusuri sebuah jalur, Arabot membaca dan menginterpretasi instruksi, dan membaca label untuk menentukan jalan yang akan membawa ke persimpangan berikutnya, yang kemudian akan membawa ke instruksi berikutnya. Dengan cara inilah perangkat keras komputer berfungsi di perangkat elektronikanya. Tantangan ini memunculkan sekumpulan pertanyaan matematis menarik tentang sulitnya menentukan label, bahkan ada kemungkinan tidak dapat ditentukan, dan masih menjadi perhatian para peneliti di bidang algoritma dan kompleksitas komputasional. Situasi pada tantangan ini akan terpakai pada bidang komputasi biologi dan komputasional kedokteran.",
+  "notes": "Peta jalur (dengan 6 kotak label kosong) adalah gambar; lihat imgPages. Ikon baterai/persimpangan tidak terekstrak dari text layer pdf.js — placeholder [ikon …] ditambahkan. Buku tidak menyertakan bagian penjelasan (jawaban langsung). Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-016/017.txt)."
+}

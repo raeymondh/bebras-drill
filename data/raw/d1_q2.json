@@ -1,0 +1,21 @@
+{
+  "id": "d1_q2",
+  "scheduleTitle": "Antrian Mobil (2018)",
+  "bookTitle": "Antrian Mobil",
+  "book": "b2018",
+  "code": "I-2018-CY-03",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CY-03",
+  "soalPages": [34, 35],
+  "imgPages": [34],
+  "deskripsi": "Ari mempunyai jalanan di halamannya yang cukup panjang. Tetangganya dapat parkir di jalan tersebut, namun hanya bisa mundur untuk keluar sebab jalannya sempit. Karena ia hanya memiliki sebuah mobil, tetangga minta izin untuk ikut parkir di jalan tersebut. Supaya yakin tidak ada yang terblokir, ia membuat tabel kapan tetangga boleh parkir, dan kapan harus pergi.\n\nSetiap pagi, mobil yang akan pergi harus keluar sebelum mobil lainnya masuk. Seperti dapat dilihat pada tabel, tak ada yang meninggalkan jalan pada hari Senin.\n\nAri parkir duluan, kemudian Bob parkir setelah Ari.\n\nHari | Jumlah Mobil Pergi | Jumlah Mobil Masuk | Pemilik Mobil dan Urutan Mereka masuk\nSenin | 0 | 2 | Ari, Bob\nSelasa | 1 | 3 | Kati, Ben, Roi\nRabu | 2 | 1 | Desi\nKamis | 0 | 2 | Fina, Rosa\nJumat | 3 | 1 | Vino",
+  "pertanyaan": "Mobil siapa yang akan diparkir di jalanan pada akhir hari Jumat?",
+  "options": ["A. Bob, Vino, Desi", "B. Vino, Ari, Rosa", "C. Ari, Kati, Vino", "D. Ari, Vino, Bob"],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah: C. Ari, Kati, Vino.",
+  "penjelasan": "Jika kita urutkan sepanjang minggu, berikut ini adalah urutan parkir mobil (lihat juga gambar urutan parkir pada halaman pembahasan):\n\nAkhir Senin: Ari, Bob\nAkhir Selasa: Ari, Kati, Ben, Roi\nAkhir Rabu: Ari, Kati, Desi\nAkhir Kamis: Ari, Kati, Desi, Fina, Rosa\nAkhir Jumat: Ari, Kati, Vino",
+  "iniInformatika": "Soal ini menggunakan konsep stack (Tumpukan). Tumpukan adalah tipe data abstrak tempat elemen terakhir yang dimasukkan dimana elemen yang pertama akan keluar. Pengoperasian stack melibatkan dua fungsi: push (memasukkan item ke dalam stack) dan pop (hapus elemen dari stack). Operasi tumpukan digambarkan sebagai LIFO (terakhir masuk pertama keluar).\n\nhttps://en.wikipedia.org/wiki/Stack_(abstract_data_type)",
+  "notes": "Tabel jadwal parkir di buku dirender ulang sebagai baris 'kolom | kolom'. Ilustrasi jalanan & gambar urutan parkir pada hal. 34 (imgPages)."
+}

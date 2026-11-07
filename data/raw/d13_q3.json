@@ -1,0 +1,26 @@
+{
+  "id": "d13_q3",
+  "scheduleTitle": "Plat Rakit Dalam Lalu Lintas Sungai (2016)",
+  "bookTitle": "Plat Rakit",
+  "book": "b2016",
+  "code": "2016-LT-02",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-LT-02",
+  "soalPages": [12, 13],
+  "imgPages": [12, 13],
+  "deskripsi": "Rio si berang-berang sedang membangun rakit. Untuk kontrol lalu lintas sungai, semua rakit harus didaftar. Ini berarti bahwa setiap rakit harus memiliki tanda berupa plat dengan teks yang unik. Teks yang terdiri dari huruf dan angka hanya bisa dibangkitkan sesuai dengan diagram di bawah ini, yaitu dimulai dengan huruf B, diikuti huruf/angka berikutnya sesuai arah panah, dan diakhiri dengan angka digit 0 atau 1.",
+  "pertanyaan": "Manakah 2 (dua) plat berikut yang tidak dapat didaftarkan?",
+  "options": [
+    "A. BBB011 dan BE0S01",
+    "B. BB0100 dan BSA001",
+    "C. BB0001 dan BSA001",
+    "D. BBB100 dan BR00A0"
+  ],
+  "key": "D",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah BBB100 dan BR00A0.",
+  "penjelasan": "Anda harus menelusuri diagram dan memeriksa jawaban: BBB100 salah, sebab digit dimulai dengan angka 1. BR00A0 salah, sebab dari 0 tak dapat ke A, karena panah hanya satu arah dari A ke 0.",
+  "iniInformatika": "Finite automata adalah salah satu bagian penting dari teori ilmu komputer. Komputer dapat membaca sederetan karakter (huruf) dalam sebuah dokumen atau dalam program komputer berkat bantuan finite automata. Finite automata menjelaskan urutan dari instruksi dan menentukan apakah sebarisan karakter menyatakan kombinasi yang dapat mewakili sebuah kata atau tidak.",
+  "notes": "Judul tercetak pada halaman soal hanya 'Plat Rakit'; daftar isi buku mencantumkan 'Plat Rakit Dalam Lalu Lintas Sungai' (judul schedule). Opsi di buku berupa kotak centang TANPA huruf label (diverifikasi via OCR jpg hal. 13); prefiks A.–D. ditambahkan penyalin sesuai skema. Jawaban buku ('BBB100 dan BR00A0') = opsi D. Diagram status (huruf B/S/R/A/E, digit 0/1) ada di hal. 12 — diperlukan untuk menjawab (imgPages). Spasi ganda artefak pdf.js dinormalisasi."
+}

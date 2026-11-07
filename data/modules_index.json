@@ -1,0 +1,596 @@
+{
+  "generated": "2026-11-03T11:39:06.969Z",
+  "schedule": "Minggu 1: 28 Okt–1 Nov 2026 · Minggu 2: 2–8 Nov 2026 · Minggu 3: 9–15 Nov 2026 · HARI H: Senin, 16 Nov 2026",
+  "modules": [
+    {
+      "id": "d1",
+      "label": "HARI 01",
+      "title": "Struktur Data & Logika Dasar",
+      "day": "Rabu, 28 Okt 2026",
+      "week": 1,
+      "file": "day_01_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d1_q1",
+          "title": "Karung-karung Dalam Elevator (2016)",
+          "type": "sa"
+        },
+        {
+          "id": "d1_q2",
+          "title": "Antrian Mobil (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d1_q3",
+          "title": "Kode Kartu (2017)",
+          "type": "sa"
+        },
+        {
+          "id": "d1_q4",
+          "title": "Lampu Kantor (2017)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d2",
+      "label": "HARI 02",
+      "title": "Pola & Pengkodean",
+      "day": "Kamis, 29 Okt 2026",
+      "week": 1,
+      "file": "day_02_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d2_q1",
+          "title": "Kiri Kanan (2017)",
+          "type": "sa"
+        },
+        {
+          "id": "d2_q2",
+          "title": "Peta Harta Karun (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d2_q3",
+          "title": "Kode Kix (2016)",
+          "type": "sa"
+        },
+        {
+          "id": "d2_q4",
+          "title": "Kode Pemindai (2016)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "label": "HARI 03",
+      "title": "Kasus Deduksi",
+      "day": "Jumat, 30 Okt 2026",
+      "week": 1,
+      "file": "day_03_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d3_q1",
+          "title": "Kaca Jendela Pecah (2016)",
+          "type": "mc"
+        },
+        {
+          "id": "d3_q2",
+          "title": "Penyusup (2017)",
+          "type": "sa"
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "label": "HARI 04",
+      "title": "Deduksi & Simulasi",
+      "day": "Sabtu, 31 Okt 2026",
+      "week": 1,
+      "file": "day_04_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d4_q1",
+          "title": "Ramuan Ajaib (2016)",
+          "type": "mc"
+        },
+        {
+          "id": "d4_q2",
+          "title": "Siapa Berbohong? (2018)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d5",
+      "label": "HARI 05",
+      "title": "Pola Gambar & Instruksi",
+      "day": "Minggu, 1 Nov 2026",
+      "week": 1,
+      "file": "day_05_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d5_q1",
+          "title": "Merapikan Mainan (2016)",
+          "type": "ma"
+        },
+        {
+          "id": "d5_q2",
+          "title": "Infinite Ice Cream (2018)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d6",
+      "label": "HARI 06",
+      "title": "Labirin & Robot",
+      "day": "Senin, 2 Nov 2026",
+      "week": 2,
+      "file": "day_06_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d6_q1",
+          "title": "Temukan Si Pencuri (2016)",
+          "type": "mc"
+        },
+        {
+          "id": "d6_q2",
+          "title": "Maze (2016)",
+          "type": "mc"
+        },
+        {
+          "id": "d6_q3",
+          "title": "Robot Pemotong (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d6_q4",
+          "title": "Keluar dari Labirin (2017)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d7",
+      "label": "HARI 07",
+      "title": "Robot & Optimasi",
+      "day": "Selasa, 3 Nov 2026",
+      "week": 2,
+      "file": "day_07_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d7_q1",
+          "title": "Robot Pengumpul Permen (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d7_q2",
+          "title": "Bendungan 2 (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d7_q3",
+          "title": "Pizzeria Biberia (2017)",
+          "type": "sa"
+        },
+        {
+          "id": "d7_q4",
+          "title": "Dua Berang-Berang Pekerja (2018)",
+          "type": "sa"
+        }
+      ]
+    },
+    {
+      "id": "d8",
+      "label": "HARI 08",
+      "title": "Jadwal & Simulasi",
+      "day": "Rabu, 4 Nov 2026",
+      "week": 2,
+      "file": "day_08_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d8_q1",
+          "title": "Tugas Satu Jam (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d8_q2",
+          "title": "Lift Pengangkut Barang (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d8_q3",
+          "title": "Harga Terlambat Bangun (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d8_q4",
+          "title": "Warung Soda (2017)",
+          "type": "sa"
+        }
+      ]
+    },
+    {
+      "id": "d9",
+      "label": "HARI 09",
+      "title": "Grid, Jadwal & Graf",
+      "day": "Kamis, 5 Nov 2026",
+      "week": 2,
+      "file": "day_09_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d9_q1",
+          "title": "Kotak Krayon (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d9_q2",
+          "title": "Upah Membantu (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d9_q3",
+          "title": "Baris dan Kolom (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d9_q4",
+          "title": "Jadwal Gladi Resik (2018)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d10",
+      "label": "HARI 10",
+      "title": "Graf & Rute",
+      "day": "Jumat, 6 Nov 2026",
+      "week": 2,
+      "file": "day_10_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d10_q1",
+          "title": "Jalan Tol (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d10_q2",
+          "title": "KRL (2017)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d11",
+      "label": "HARI 11",
+      "title": "Berbagi & Jaringan",
+      "day": "Sabtu, 7 Nov 2026",
+      "week": 2,
+      "file": "day_11_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d11_q1",
+          "title": "Klub Berbagi Buku (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d11_q2",
+          "title": "Titik Utama Wifi (2018)",
+          "type": "sa"
+        }
+      ]
+    },
+    {
+      "id": "d12",
+      "label": "HARI 12",
+      "title": "Jaringan & Rute",
+      "day": "Minggu, 8 Nov 2026",
+      "week": 2,
+      "file": "day_12_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d12_q1",
+          "title": "Rumah Sakit Berang-Berang (2016)",
+          "type": "sa"
+        },
+        {
+          "id": "d12_q2",
+          "title": "Terowongan (2017)",
+          "type": "sa"
+        }
+      ]
+    },
+    {
+      "id": "d13",
+      "label": "HARI 13",
+      "title": "Graf & Kata",
+      "day": "Senin, 9 Nov 2026",
+      "week": 3,
+      "file": "day_13_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d13_q1",
+          "title": "Hadiah Pertemanan (2018)",
+          "type": "ma"
+        },
+        {
+          "id": "d13_q2",
+          "title": "Kata Terpanjang (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d13_q3",
+          "title": "Plat Rakit Dalam Lalu Lintas Sungai (2016)",
+          "type": "mc"
+        },
+        {
+          "id": "d13_q4",
+          "title": "Perjalanan Arabot (2017)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d14",
+      "label": "HARI 14",
+      "title": "Pola, Diagram & Aturan",
+      "day": "Selasa, 10 Nov 2026",
+      "week": 3,
+      "file": "day_14_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d14_q1",
+          "title": "Kartu Geometris (2016)",
+          "type": "mc"
+        },
+        {
+          "id": "d14_q2",
+          "title": "Kurung (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d14_q3",
+          "title": "Kelereng-kelereng Merah dan Biru (2016)",
+          "type": "sa"
+        },
+        {
+          "id": "d14_q4",
+          "title": "Robot (2017)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d15",
+      "label": "HARI 15",
+      "title": "Logika & Otomata",
+      "day": "Rabu, 11 Nov 2026",
+      "week": 3,
+      "file": "day_15_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d15_q1",
+          "title": "Tandems (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d15_q2",
+          "title": "Lampu Merah Biru (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d15_q3",
+          "title": "Kota Penuh Putaran (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d15_q4",
+          "title": "Medical Labs (2018)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d16",
+      "label": "HARI 16",
+      "title": "Robot & Strategi",
+      "day": "Kamis, 12 Nov 2026",
+      "week": 3,
+      "file": "day_16_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d16_q1",
+          "title": "Memindahkan Dadu (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d16_q2",
+          "title": "Twist and Turn (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d16_q3",
+          "title": "Tempat Perlindungan (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d16_q4",
+          "title": "Tiga sekawan Berang-berang (2018)",
+          "type": "mc"
+        }
+      ]
+    },
+    {
+      "id": "d17",
+      "label": "HARI 17",
+      "title": "Pelacakan & Pola",
+      "day": "Jumat, 13 Nov 2026",
+      "week": 3,
+      "file": "day_17_drill.py",
+      "type": "normal",
+      "questions": [
+        {
+          "id": "d17_q1",
+          "title": "Petak dan Kotak (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d17_q2",
+          "title": "Senyum (2017)",
+          "type": "sa"
+        }
+      ]
+    },
+    {
+      "id": "d18",
+      "label": "HARI 18",
+      "title": "Review — Gladi Bersih & Rest",
+      "day": "Sabtu, 14 Nov 2026",
+      "week": 3,
+      "file": "day_18_review.py",
+      "type": "review",
+      "questions": [
+        {
+          "id": "d18_c1",
+          "title": "Istirahat Total",
+          "type": "check"
+        },
+        {
+          "id": "d18_c2",
+          "title": "Ikut Gladi Bersih di Sekolah",
+          "type": "check"
+        },
+        {
+          "id": "d18_c3",
+          "title": "Review Konsep: Struktur Data",
+          "type": "check"
+        },
+        {
+          "id": "d18_c4",
+          "title": "Review Konsep: Pola & Encoding",
+          "type": "check"
+        },
+        {
+          "id": "d18_c5",
+          "title": "Review Soal yang Gagal",
+          "type": "check"
+        },
+        {
+          "id": "d18_c6",
+          "title": "Persiapan H-1",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "id": "d19",
+      "label": "HARI 19",
+      "title": "Simulasi Lomba Mandiri (45 Menit)",
+      "day": "Minggu, 15 Nov 2026",
+      "week": 3,
+      "file": "day_19_exam.py",
+      "type": "exam",
+      "questions": [
+        {
+          "id": "d19_q1",
+          "title": "Set 1 · Kode Kartu (2017)",
+          "type": "sa"
+        },
+        {
+          "id": "d19_q2",
+          "title": "Set 1 · Kiri Kanan (2017)",
+          "type": "sa"
+        },
+        {
+          "id": "d19_q3",
+          "title": "Set 1 · Keluar dari Labirin (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q4",
+          "title": "Set 1 · Robot Pengumpul Permen (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q5",
+          "title": "Set 1 · Upah Membantu (2017)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q6",
+          "title": "Set 2 · Antrian Mobil (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q7",
+          "title": "Set 2 · Peta Harta Karun (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q8",
+          "title": "Set 2 · Titik Utama Wifi (2018)",
+          "type": "sa"
+        },
+        {
+          "id": "d19_q9",
+          "title": "Set 2 · Twist and Turn (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q10",
+          "title": "Set 2 · Medical Labs (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q11",
+          "title": "Set 3 · Karung-karung Dalam Elevator (2016)",
+          "type": "sa"
+        },
+        {
+          "id": "d19_q12",
+          "title": "Set 3 · Temukan Si Pencuri (2016)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q13",
+          "title": "Set 3 · Jadwal Gladi Resik (2018)",
+          "type": "mc"
+        },
+        {
+          "id": "d19_q14",
+          "title": "Set 3 · Terowongan (2017)",
+          "type": "sa"
+        },
+        {
+          "id": "d19_q15",
+          "title": "Set 3 · Memindahkan Dadu (2017)",
+          "type": "mc"
+        }
+      ]
+    }
+  ],
+  "banner": {
+    "id": "d20",
+    "label": "HARI 20",
+    "day": "Senin, 16 Nov 2026",
+    "title": "HARI H — Lomba Tantangan Bebras SMA 2026"
+  }
+}

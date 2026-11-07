@@ -1,0 +1,31 @@
+{
+  "id": "d16_q2",
+  "scheduleTitle": "Twist and Turn (2018)",
+  "bookTitle": "Twist and Turn",
+  "book": "b2018",
+  "code": "I-2018-RO-02a",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-RO-02a",
+  "soalPages": [
+    45,
+    46
+  ],
+  "imgPages": [
+    45
+  ],
+  "deskripsi": "Tom adalah berang-berang berusia 10 tahun yang tinggal di sebuah kota penuh belokan dan putaran. Hari itu, telpon ibunya ketinggalan di rumah, dan ia meminta Tom untuk mengantarkan ke kantornya. Ibu memberikan sebuah peta agar Tom tidak tersesat. Peta tersebut digambarkan sebagai sebuah persegi dengan petak-petak yang dinomori 1 s.d. 6. Dan panah dari A ke F. Peta tersebut juga mengandung tanda arah yang dapat ditempuh Tom.\n[gambar: tabel legenda tanda arah — panah 'turun saja': Tom hanya dapat turun; panah 'bawah/kanan': Tom dapat ke bawah atau ke kanan; panah 'kiri/bawah': Tom dapat ke kiri atau ke bawah; panah 'atas/kiri': Tom dapat ke atas atau ke kiri; gambar kerucut: Tom menemui halangan sehingga tidak dapat bergerak lagi]\nTom mulai dari pojok kiri atas (A1).\n[gambar: peta persegi berupa grid 6×6 — kolom bernomor 1–6, baris huruf A–F; tiap petak berisi salah satu panah sesuai legenda di atas atau kerucut halangan; Tom (anak laki-laki) di petak A1 pojok kiri atas, kantor ibu (gambar wanita) di petak F6 pojok kanan bawah]",
+  "pertanyaan": "Rute mana yang dapat ditempuh oleh Tom untuk sampai ke kantor ibunya (F6)?",
+  "options": [
+    "a) A1 B1 B2 B3 C3 D3 D4 D5 D6 E6 F6",
+    "b) A1 B1 B2 B3 C3 D3 E3 E4 F4 F5 F6",
+    "c) A1 B1 B2 B3 C3 D3 E3 F3 F4 F5 F6",
+    "d) A1 B1 B2 B3 B4 C4 D4 D5 D6 E6 F6"
+  ],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah c) A1 B1 B2 B3 C3 D3 E3 F3 F4 F5 F6",
+  "penjelasan": "Jawaban A tidak benar karena di E5 Tom akan menemukan halangan.\nJawaban B tidak benar karena Tom tidak dapat berpindah dari B4 ke C4. Dari B4 ia hanya bisa pindah ke B3 atau ke A4.\nJawaban D tidak benar karena Tom tidak dapat beralih dari D3 ke D4. Dari D4 ia hanya bisa pindah ke D2 atau E3.\nJadi jawaban yang benar adalah C.\n\n[catatan verifikator: jawaban c) dikonfirmasi benar berdasarkan peta tercetak (a gagal di D3→D4, b menabrak kerucut di E4, d gagal di D5→D6). Beberapa penyebutan petak pada pembahasan buku di atas kurang tepat — rujuk gambar peta.]",
+  "iniInformatika": "Struktur yang digunakan dalam tugas ini adalah array dua dimensi yang digunakan untuk menggambarkan peta dan array satu dimensi yang digunakan untuk menggambarkan arah bergerak. Array berisi data yang tidak sama, masing-masing elemen adalah struktur data yang terdiri dari dua komponen: karakter dan angka. Untuk menyelesaikan tugas ini, anda harus membaca array dan melacak elemen matriks yang indeksnya ditemukan sebagai nilai dalam array. Meskipun masalahnya nampak sederhana, pembacaan elemen array dan elemen matriks secara simultan adalah sulit karena kondisi yang diberlakukan oleh nilai elemen matriks.\nAnda dapat menemukan solusi dengan menerapkan pencarian pertama yang mendalam (dfs) yang juga disebut backtracking. Cara lain adalah mulai dari ujung jalan dan mencoba mencapai titik awal. Kedua metode ini dapat digabungkan untuk menghasilkan sebuah metode yang efisien jika hanya ada beberapa solusi (jalur).",
+  "notes": "Opsi memakai label huruf kecil a)-d) persis buku; renderer aplikasi memberi nilai radio posisional A-D, sehingga kunci 'C' = opsi c). Tabel legenda panah dan peta grid 6×6 adalah GAMBAR di hal. 45 — wajib dilihat untuk menjawab (imgPages 45). Inkonsistensi buku dipertahankan verbatim: pembahasan menyebut opsi dengan huruf besar A/B/C/D; penjelasan opsi B merujuk langkah 'B4 ke C4' padahal rute b) tercetak 'B3 C3'; penjelasan opsi D merujuk 'D3 ke D4' lalu 'Dari D4 ia hanya bisa pindah ke D2 atau E3'. Kata 'backtracking' dicetak miring di buku (di sini teks polos); spasi ganda artefak pdf.js dinormalisasi. Authorship: 2018-04-09 Laura Ungureanu (Romania); 2018-04-09 Corina Vint (Romania); 2018-05-10 Anton Chukhnov (Russia), reduced the table to 6x6; 2018-05-10 Maciej M. Sysło (Poland). Teks diverifikasi terhadap text layer pdf.js DAN render jpg hal. 45-46. | kunci terverifikasi eksternal/internal 2026-10-28 (data/research_notes.md)"
+}

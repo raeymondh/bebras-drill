@@ -1,0 +1,21 @@
+{
+  "id": "sim2016_2",
+  "scheduleTitle": "Simulasi 2016 #2",
+  "bookTitle": "Jalan Tol",
+  "book": "b2018",
+  "code": "I-2018-IR-06",
+  "type": "sa",
+  "pdfInfo": "Tantangan Bebras Indonesia 2018 – Tingkat SMA (Penegak) | Kode Soal: I-2018-IR-06",
+  "soalPages": [25, 26],
+  "imgPages": [25],
+  "deskripsi": "Bobi si berang-berang memutuskan untuk bepergian dari Hamper ke Mug. Pada peta, lingkaran adalah sebuah kota dan sebuah garis adalah sebuah ruas jalan tol dua arah yang menghubungkan kedua kota. Huruf menunjukkan nama kota. Angka menunjukkan biaya yang harus dibayar saat masuk jalan tol yang menghubungkan dua kota tersebut. Mobil dapat berpindah arah saat ada sebuah persimpangan tapi tetap harus membayar penuh jalan yang dimasukinya. Misalnya untuk bepergian dari kota B ke C, dapat dipilih jalan sehingga membayar 24 = 18+6.",
+  "pertanyaan": "Berapa biaya paling murah dari Hamper ke Mug? Isikan sebuah bilangan bulat",
+  "options": [],
+  "key": "",
+  "keys": ["41"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah 41.",
+  "penjelasan": "Jalan termurah ditunjukkan di bawah ini:\nUntuk membuktikan bahwa jalur ini optimal, seseorang dapat membandingkan pilihan dengan cara berikut.\nJalan termurah yang kita temui biayanya 41, mari kita coba mencari jalan yang lebih murah. Pada awalnya, jelas bahwa jalan itu melalui jalan A – Hamper dengan biaya 13, jadi orang harus menemukan jalur dari A ke Mug yang lebih murah dari 41 - 13 = 28.\nKedua, jelas bahwa kita harus datang ke Mug bukan melalui jalan B – Mug, karena itu sudah 23, dan tidak mungkin menemukan jalur dari B ke A yang lebih murah dari 28 - 23 = 5.\nJadi, kami datang ke Mug di jalan D – Mug dengan biaya tol 6, dan dengan demikian kita harus menemukan jalur dari A ke D yang lebih murah dari 28 - 6 = 22.\nJalur dari A ke D tidak boleh memiliki lebih dari tiga jalan, karena jalan termurah memiliki biaya 6, dan dengan demikian 4 jalan akan memberikan biaya setidaknya 6 * 4 = 24.\nJalan pertama yang mungkin kita lihat untuk keluar dari A adalah A – B. Ini mengarah ke solusi yang jauh lebih mahal, karena kita akan menggunakan jalan tol yang biayanya sangat mahal, 23 atau 18.\nArgumen yang sama berlaku untuk jalan A – F, karena jalan ini sangat mahal.\nJika kita menggunakan jalan A – G, maka kita akan membutuhkan biaya setidaknya 7 + 9 + 7 = 23 yang lebih besar dari 22.\nDan akhirnya, jika kita melewati jalan A – C, kita dapat mencapai tol optimal.",
+  "iniInformatika": "Dalam teori graf, masalah jalur terpendek adalah tentang menemukan jalur antara dua simpul (atau node) dalam grafik sedemikian rupa sehingga jumlah bobot dari tepi penyusununya diminimalkan. Titik graf sesuai dengan persimpangan dan ujungnya sesuai dengan ruas jalan, masing-masing diukur oleh baik jaraknya, atau tolnya, atau beban lalu lintas, atau waktu, dll.\nMasalah menemukan jalur terpendek antara dua persimpangan di peta jalan dengan jenis tol seperti itu yang tidak tergantung pada jarak yang dilalui di sepanjang jalan dapat disederhanakan menjadi masalah jalur terpendek klasik dengan merepresentasikan persimpangan menggunakan simpul dan jalur penghubung tambahan. Dan masalah jalur yang terpendek klasik dapat diselesaikan misalnya dengan algoritma Dijkstra.\nhttps://en.wikipedia.org/wiki/Dijkstra's_algorithm",
+  "notes": "SUMBER DIALIHKAN: diambil dari b2018 karena pool b2016 kosong (12/12 tugas b2016 dipakai/dijadwalkan; b2017 juga habis 20/20). Id/scheduleTitle tetap 'Simulasi 2016 #2' sesuai instruksi — ganti/hapus bila operator menolak substitusi. Dua gambar di hal. 25: peta graf kota (WAJIB dilihat untuk menjawab; bobot tepi terbaca OCR: 13, 6, 7, 9, 18, 11, 21, 9, 23) dan gambar jalur termurah di bagian Jawaban — keduanya tidak dapat direkonstruksi dari teks; imgPages [25]. Tanda pisah '–' dipulihkan dari artefak mojibake. Typo buku 'penyusununya' dipertahankan. Blok Authorship/License (hal. 26) tidak disalin."
+}

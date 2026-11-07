@@ -1,0 +1,25 @@
+{
+  "id": "d9_q1",
+  "scheduleTitle": "Kotak Krayon (2018)",
+  "bookTitle": "Kotak Krayon",
+  "book": "b2018",
+  "code": "I-2018-HU-01",
+  "type": "sa",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-HU-01",
+  "soalPages": [47, 48],
+  "imgPages": [47],
+  "deskripsi": "Ade mempunyai sekotak krayon. Beberapa krayon ada yang menghadap ke atas, ada yang menghadap ke bawah. Menurut Ade, sekotak krayon akan “indah dipandang” kalau semua krayon di dalamnya menghadap ke arah yang sama. Pada satu langkah, ia dapat membalikkan sederet krayon dalam satu baris; setelah melakukan ini maka semua krayon yang semula menghadap ke atas akan menghadap ke bawah dan sebaliknya yang semula menghadap ke bawah akan menghadap ke atas, seperti pada gambar.",
+  "pertanyaan": "Untuk posisi krayon sebagai berikut, berapa langkah minimum harus dilakukan agar Ade mempunyai kotak krayon yang “indah dipandang”? Jawab dengan mengetikkan sebuah bilangan bulat.",
+  "options": [],
+  "key": "",
+  "keys": [
+    "2",
+    "dua",
+    "Dua"
+  ],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah 2.",
+  "penjelasan": "Kita tidak dapat menyelesaikan masalah dengan hanya membalik satu urutan, karena 2 krayon yang mengarah ke bawah terpisah, mereka tidak bersebelahan. Namun untuk mendapatkan kotak yang indah dipandang, bisa dilakukan dalam 2 langkah:\nLangkah pertama: balikkan krayon ke-1, ke-2, ke-3, ke-4, ke-5 dan ke-6.\nLangkah kedua: balikkan krayon ke-2, ke-3, ke-4 dan ke-5.",
+  "iniInformatika": "Memecahkan masalah dengan langkah minimum adalah salah satu keterampilan terpenting dalam ilmu komputer dan kehidupan. Seorang pemrogram yang baik selalu ingin mencari solusi terbaik dari suatu masalah. Untuk pertanyaan ini, solusi terbaik hanya ditemukan dalam 2 langkah, tetapi dalam kasus yang lebih sulit mungkin tidak mudah menemukannya. Sebuah program yang baik dapat membantu.",
+  "notes": "Posisi awal krayon untuk dijawab berupa gambar kotak krayon di hal. 47 — aplikasi menampilkan render halaman asli (imgPages 47; juga berisi gambar contoh pembalikan dan 2 gambar langkah pembahasan). Book labels 'Tantangan:'/'Jawaban:' dipetakan ke field pertanyaan/jawabanResmi. Authorship: 2018-04-09 Zsuzsa Pluhár (HU), pluharzs@caesar.elte.hu; Task Proposal based on idea: https://www.codechef.com/problems/ADACRA."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "d1_q4",
+  "scheduleTitle": "Lampu Kantor (2017)",
+  "bookTitle": "Lampu Kantor",
+  "book": "b2017",
+  "code": "I-2017-HU-09",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-HU-09",
+  "soalPages": [23],
+  "imgPages": [23],
+  "deskripsi": "Delapan bebras menempati ruang masing-masing di kantor. Saat di kantor, para bebras menyalakan lampu, dan mematikannya saat pergi. Atasan mereka memeriksa bebras yang hadir dengan melihat lampu. Gambar di bawah menunjukkan bahwa tidak semua bebras bekerja hari ini.\n\nSang atasan membuat catatan bebras yang bekerja dan yang tidak bekerja, dengan menggunakan simbol-simbol untuk lampu menyala dan lampu mati yang berbeda, tanpa perlu tahu mana awal dan mana yang terakhir.",
+  "pertanyaan": "Catatan mana yang sesuai dengan gambar di atas?",
+  "options": ["a) # & & & # # & #", "b) & # & & & # & #", "c) # & # # & & & &", "d) & & # & & # # &"],
+  "key": "d",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah d) & & # & & # # &",
+  "penjelasan": "",
+  "iniInformatika": "Ilmuwan/Ahli informatika menyenangi bilangan biner {0, 1}, atau {off, on}. Satu digit biner merepresentasi dua keadaan. Untuk kasus ini, lampu “menyala” atau “mati”. Ahli informatika seringkali merepresentasi menjadi 1 dan 0, tetapi simbol lainnya juga dapat dipakai. Tergantung kepada orang yang menentukannya.\n\nhttps://en.wikipedia.org/wiki/Binary_number\nhttps://en.wikipedia.org/wiki/Data\nhttps://en.wikipedia.org/wiki/Data_(computing)",
+  "notes": "mc. Options use the book's lowercase 'a)–d)' labels; # / & symbol spacing kept as printed. Figure: eight office rooms with on/off lamps (image). Book header typo 'PIlihan Jawaban:' (structural header, not part of fields). No separate penjelasan section — book goes straight from answer to 'Ini Informatika!'. Curly quotes “menyala”/“mati” as printed. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support)."
+}

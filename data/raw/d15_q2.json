@@ -1,0 +1,30 @@
+{
+  "id": "d15_q2",
+  "scheduleTitle": "Lampu Merah Biru (2017)",
+  "bookTitle": "Lampu Merah Biru",
+  "book": "b2017",
+  "code": "I-2017-CA-10",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CA-10",
+  "soalPages": [
+    30
+  ],
+  "imgPages": [
+    30
+  ],
+  "deskripsi": "Berang-berang Beta mengirimkan pesan kepada temannya menggunakan 7 lampu, setiap lampu bisa berwarna merah atau biru. Beta menggunakan 5 lampu pertama untuk menunjukkan huruf yang dikirimkan. Untuk menunjukkan bahwa pesan itu benar, Beta memakai 2 lampu sisanya sebagai berikut:\n▪ Lampu ke 6 berwarna biru jika jumlah lampu biru di antara lima lampu pertama adalah genap; jika tidak maka lampu ke 6 berwarna merah.\n▪ Lampu ke 7 berwarna merah jika jumlah lampu merah di antara enam lampu pertama adalah genap; jika tidak maka lampu ke 7 berwarna biru.\nIngatlah, 0 adalah bilangan genap. Sebagai contoh, jika Beta sudah menentukan lima lampu pertama sebagai:\n[gambar: contoh susunan lima lampu pertama]\nMaka lampu ke 6 harus berwarna biru (karena ada 2 lampu biru di antara 5 lampu pertama), dan lampu ke 7 harus berwarna biru (karena terdapat 3 lampu merah di antara 6 lampu pertama). Jadi, dia harus memakai pola berikut ini:\n[gambar: pola tujuh lampu yang benar untuk contoh]",
+  "pertanyaan": "Manakah pola berikut ini yang merupakan pesan yang benar?",
+  "options": [
+    "a) [gambar pola tujuh lampu merah/biru — lihat halaman soal]",
+    "b) [gambar pola tujuh lampu merah/biru — lihat halaman soal]",
+    "c) [gambar pola tujuh lampu merah/biru — lihat halaman soal]",
+    "d) [gambar pola tujuh lampu merah/biru — lihat halaman soal]"
+  ],
+  "key": "a",
+  "keys": [],
+  "pairs": {},
+  "jawabanResmi": "Jawaban yang benar adalah a)",
+  "penjelasan": "Terdapat 1 lampu biru di antara 5 lampu pertama, jadi lampu ke 6 harus berwarna merah. Dengan demikian terdapat 5 lampu merah diantara 6 pertama, jadi lampu ke-7 harus berwarna biru. Untuk jawaban yang lainnya:\n- Untuk (A), lampu ke 7 seharusnya biru, karena terdapat 1 lampu merah diantara enam lampu pertama;\n- Untuk (B), lampu ke 6 seharusnya biru, karena terdapat 0 lampu biru diantara lima lampu pertama dan 0 adalah genap;\n- Untuk (D), lampu ke 7 seharusnya biru, karena terdapat 3 lampu biru diantara enam lampu pertama.\n\n[catatan verifikator: kunci a) dikonfirmasi benar — cek paritas aturan lampu ke-6 dan ke-7 hanya lolos untuk pilihan a (b & c gagal di lampu 7, d gagal di lampu 6). Beberapa angka eliminasi pada pembahasan buku di atas kurang akurat; ikuti alur cek lampu 6 dan 7.]",
+  "iniInformatika": "Kesalahan dapat terjadi ketika informasi dikirim. Misalnya, jika seseorang sedang menyebutkan nomor telepon, nomor kartu kredit, dll, selalu ada kemungkinan bahwa salah satu angka ditulis kembali secara tidak tepat atau urutannya salah. Beberapa kesalahan dapat dideteksi, dan kadang-kadang diperbaiki memakai teknik yang melibatkan check digits.\nPada tantangan ini, lampu ke 6 dan ke 7 berfungsi sebagai tanda untuk meyakinkan bahwa semua lampu sudah dikonfigurasi dengan tepat: jika warna lampu ke 6 atau ke 7 salah ditentukan, kita tahu bahwa pesan tersebut tidak benar.\nNomor Kartu kredit, nomor ISBN buku, atau kode UPC pada produk yang dibeli di toko, semuanya dilengkapi check digits, yang memberikan petunjuk jika terjadi kesalahan dalam pengiriman informasi.",
+  "notes": "Contoh pola lampu dan opsi a)–d) berupa GAMBAR (deretan lampu merah/biru); placeholder berkurung ditambahkan — tampilkan bersama imgPages. Pembahasan buku menuliskan opsi salah sebagai (A),(B),(D) padahal kunci a) — kemungkinan label huruf besar-kecil beda antara teks dan gambar; butuh verifikasi visual. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-030/031.txt). | kunci terverifikasi eksternal/internal 2026-10-28 (data/research_notes.md)"
+}

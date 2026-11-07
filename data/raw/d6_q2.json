@@ -1,0 +1,27 @@
+{
+  "id": "d6_q2",
+  "scheduleTitle": "Maze (2016)",
+  "bookTitle": "Maze",
+  "book": "b2016",
+  "code": "2016-BE-01",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-BE-01",
+  "soalPages": [14, 15],
+  "imgPages": [14],
+  "deskripsi": "Sebuah mobil robot bekerja dengan aturan yang sederhana untuk melalui suatu maze: \"belok kanan setiap memungkinkan untuk belok kanan\". Gambar di kanan menunjukkan suatu contoh bagaimana mobil robot akan berjalan melalui suatu maze.",
+  "pertanyaan": "Dengan cara kerja demikian, berapa banyakkah dari empat maze berikut ini mobil robot dapat akhirnya mencapai titik merah?",
+  "options": [
+    "A. 0",
+    "B. 1",
+    "C. 2",
+    "D. 3",
+    "E. 4"
+  ],
+  "key": "D",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah 3.",
+  "penjelasan": "Pada gambar di bawah ini, garis hijau menunjukkan jalur yang dapat dilalui oleh mobil. Pada Gambar C semua bagian tengah labirin tidak dapat dilalui dan titik merah tidak dapat dicapai. Pada kasus labirin yang lain titik merah dapat dicapai.",
+  "iniInformatika": "Metode yang digunakan oleh mobil robot disebut dengan wall follower. Metode ini merupakan teknik yang lebih sederhana (algoritma) untuk menyelesaikan masalah labirin (maze) yang tidak diketahui tata letaknya. Dengan menggunakan teknik ini tidak akan tersesat dan selalu dapat kembali ke titik asal. Akan tetapi tidak menjamin kita dapat melalui semua labirin seperti dapat dilihat pada solusi yang dijelaskan.",
+  "notes": "Opsi berhuruf A.–E. persis seperti buku. Jawaban buku ditulis sebagai angka '3' yang merupakan opsi D. Bagian 'Penjelasan' di buku kosong (tanpa teks) — teks penalaran di atas diambil dari paragraf bagian 'Jawaban' hal. 15. Gambar 4 maze + contoh jalur ada di hal. 14 (imgPages). Spasi ganda artefak pdf.js dinormalisasi."
+}

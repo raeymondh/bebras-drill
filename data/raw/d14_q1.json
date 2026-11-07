@@ -1,0 +1,26 @@
+{
+  "id": "d14_q1",
+  "scheduleTitle": "Kartu Geometris (2016)",
+  "bookTitle": "Kartu Geometris",
+  "book": "b2016",
+  "code": "2016-CA-09",
+  "type": "mc",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-CA-09",
+  "soalPages": [16, 17],
+  "imgPages": [16, 17],
+  "deskripsi": "Ali ingin bermain dengan John. Ali memiliki beberapa kartu berbentuk geometris dan ingin bertukar beberapa kartu yang dimilikinya dengan Jon. Ali menggunakan aturan pertukaran kartu mengikuti diagram berikut:\nBerdasarkan aturan permainan:\na. kartu persegi diganti dengan 2 kartu segitiga\nb. 1 kartu segitiga diganti dengan 1 kartu persegi, 1 kartu segitiga, dan 1 kartu persegi lainnya\nSebagai contoh, jika Ali mulai permainan dari kartu persegi dengan menggunakan aturan yang ada, setelah 3 langkah dia akan mendapatkan kartu dengan urutan sebagai berikut:",
+  "pertanyaan": "Aturan mana yang akan menghasilkan urutan kartu berikut?",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah B.",
+  "penjelasan": "Perhatikanlah bahwa dengan menggunakan aturan-aturan yang ada pada jawaban B, urutan kartu yang diminta dapat dihasilkan, seperti terlihat pada proses pergantian kartu sebagai berikut:\nUntuk mencoret 2 kemungkinan pilihan lainnya (yaitu jawaban A dan C), kita perlu melakukan observasi.\nUntuk jawaban A, jika dimulai dengan segitiga atau lingkaran, kita tak mungkin memperoleh bujur sangkar. Jika dimulai dengan bujur sangkar, kita akan memperoleh gambar sebagai berikut, dan langkah-langkah yang menghasilkan pola yang terlalu panjang:\nUntuk jawaban C, jika kita mulai dengan segitiga, kita hanya dapat memperoleh sederetan segitiga.\nJika kita mulai dengan kartu persegi: Empat segitiga tidak pernah akan berubah menjadi. Jika kita mulai dengan lingkaran: Seperti sebelumnya, empat segitiga tak dapat membentuk.\nUntuk jawaban D, kita tak mungkin mendapatkan urutan kartu yang diminta.",
+  "iniInformatika": "Aturan-aturan yang disajikan di sini menjelaskan suatu urutan penulisan kembali aturan-aturan yang digunakan pada suatu tata bahasa bebas konteks (context-free grammar) atau sistem tata bahasa lainnya. Tata bahasa dapat digunakan untuk menjelaskan hal-hal seperti:\n• gejala alam, misalnya pertumbuhan tanaman\n• bahasa natural, seperti tata bahasa untuk membentuk kalimat\n• bahasa formal, seperti bagaimana bahasa pemrograman dibentuk.\nSoal ini menanyakan proses bagaimana sebuah kata dapat diturunkan (atau di-parse), dengan hanya menggunakan aturan-aturan yang ada, dimana diberikan beberapa pilihan aturan-aturan yang berbeda. Parsing adalah salah satu tahapan penting dalam penerjemahan sebuah program, dari barisan kata-kata yang dapat dibaca manusia menjadi deretan angka-angka biner yang dapat dipahami oleh mesin komputer.",
+  "notes": "Opsi A–D di buku berupa GAMBAR diagram aturan pertukaran (hal. 17 atas, label huruf A/B/C/D saja) — tidak dapat ditranskripsi sebagai teks; lihat jpg hal. 17. Urutan kartu contoh & target di hal. 16 juga gambar. Ejaan campuran 'John'/'Jon' ada di buku (dibiarkan persis). Beberapa kalimat penjelasan di buku diakhiri/diikuti gambar kartu inline (mis. 'Empat segitiga tidak pernah akan berubah menjadi [gambar]') — gambar tidak disertakan, teks persis buku. Kata penghubung baris 'di-parse' disatukan (terbukti dari jpg). Spasi ganda artefak pdf.js dinormalisasi; bullet '•' dipulihkan dari glif artefak."
+}
