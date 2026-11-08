@@ -1079,6 +1079,57 @@ const modules = [
     d.textContent = text;
     term.append(d);
   }
+  /* ============ confetti: dopamin pas jawaban benar ============ */
+  var fxCanvas = null, fxParts = [], fxRaf = 0;
+  var FX_COLORS = ['#58a6ff', '#3fb950', '#bc8cff', '#d29922', '#f85149', '#79c0ff', '#e6edf3'];
+  function fxLayer() {
+    if (fxCanvas) return fxCanvas;
+    fxCanvas = document.createElement('canvas');
+    fxCanvas.setAttribute('aria-hidden', 'true');
+    fxCanvas.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:200';
+    document.body.append(fxCanvas);
+    fxCanvas.width = innerWidth; fxCanvas.height = innerHeight;
+    return fxCanvas;
+  }
+  function burstConfetti(x, y, n) {
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var c = fxLayer();
+      c.width = innerWidth; c.height = innerHeight;
+      for (var i = 0; i < (n || 90); i++) {
+        var a = Math.random() * Math.PI * 2, sp = 3 + Math.random() * 7;
+        fxParts.push({
+          x: Math.max(10, Math.min(innerWidth - 10, x)),
+          y: Math.max(10, Math.min(innerHeight - 10, y)),
+          vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 6,
+          w: 5 + Math.random() * 6, h: 8 + Math.random() * 8,
+          rot: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.3,
+          col: FX_COLORS[(Math.random() * FX_COLORS.length) | 0],
+          life: 70 + Math.random() * 50
+        });
+      }
+      if (!fxRaf) fxRaf = requestAnimationFrame(fxTick);
+    } catch (e) { /* efek gagal? skip — jangan ganggu gameplay */ }
+  }
+  function fxTick() {
+    if (!fxCanvas) { fxRaf = 0; return; }
+    var ctx = fxCanvas.getContext('2d');
+    ctx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
+    fxParts = fxParts.filter(function (p) { return p.life > 0; });
+    for (var i = 0; i < fxParts.length; i++) {
+      var p = fxParts[i];
+      p.vy += 0.25; p.vx *= 0.99; p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.life--;
+      ctx.save();
+      ctx.globalAlpha = Math.min(1, p.life / 30);
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.col;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    }
+    if (fxParts.length) fxRaf = requestAnimationFrame(fxTick);
+    else { fxRaf = 0; ctx.clearRect(0, 0, fxCanvas.width, fxCanvas.height); }
+  }
   function readAnswer(q) {
     if (q.type === 'mc') {
       var r = document.querySelector('input[name="' + q.id + '"]:checked');
@@ -1126,7 +1177,13 @@ const modules = [
       if (pass) {
         term.classList.add('ok');
         termLine(term, '✓ TEST PASSED — Jawaban benar!');
+        var fxBtn = document.getElementById('btn-check-' + q.id);
+        if (fxBtn) { var fxR = fxBtn.getBoundingClientRect(); burstConfetti(fxR.left + fxR.width / 2, fxR.top + fxR.height / 2); }
+        else burstConfetti(innerWidth / 2, innerHeight / 3);
         onSolved(m, q);
+        // pembahasan langsung nge-pop setelah benar (review soal lama tetap manual)
+        var sol = document.getElementById('sol-' + q.id);
+        if (sol && sol.hidden) toggleSolution(q.id);
       } else {
         term.classList.add('err');
         termLine(term, '✗ TEST FAILED — Jawaban salah. Coba lagi!');
@@ -1353,6 +1410,9 @@ const modules = [
     if (!$('#modulePickerModal').hidden) renderPickerGrid();
   }
   function openCelebration(m) {
+    burstConfetti(innerWidth / 2, innerHeight / 4, 160);
+    burstConfetti(innerWidth / 5, innerHeight / 3, 60);
+    burstConfetti(innerWidth * 4 / 5, innerHeight / 3, 60);
     var idx = modules.findIndex(function (x) { return x.id === m.id; });
     var next = modules[idx + 1] || null;
     var msg, btn;
