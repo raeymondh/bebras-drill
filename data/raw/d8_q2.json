@@ -22,7 +22,15 @@
     "Lift Pertama: 9kg, 9kg, 12kg. Lift Ke dua: 2kg, 3kg, 5kg, 8kg, 12kg.",
     "9, 9, 12 ; 2, 3, 5, 8, 12",
     "9 9 12 2 3 5 8 12",
-    "9,9,12 / 2,3,5,8,12"
+    "9,9,12 / 2,3,5,8,12",
+    "lift pertama 9 9 12, lift kedua 2 3 5 8 12",
+    "lift 1 9 9 12, lift 2 2 3 5 8 12",
+    "9+9+12 dan 2+3+5+8+12",
+    "9,9,12 dan 2,3,5,8,12",
+    "9, 9, 12 dan 2, 3, 5, 8, 12",
+    "9 9 12 / 2 3 5 8 12",
+    "9kg, 9kg, 12kg dan 2kg, 3kg, 5kg, 8kg, 12kg",
+    "9 9 12, 2 3 5 8 12"
   ],
   "pairs": [],
   "jawabanResmi": "Jawaban yang tepat adalah:\nLift Pertama: 9kg, 9kg, 12kg.\nLift Ke dua: 2kg, 3kg, 5kg, 8kg, 12kg.",
