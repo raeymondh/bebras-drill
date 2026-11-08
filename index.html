@@ -1079,6 +1079,28 @@ const modules = [
     d.textContent = text;
     term.append(d);
   }
+  /* glideScroll: smooth-scroll tahan layout-shift (target recompute tiap frame) */
+  function glideScrollTo(el, block) {
+    var t0 = null, start = null, dur = 650, stop = false;
+    var cancel = function () { stop = true; };
+    window.addEventListener('wheel', cancel, { once: true, passive: true });
+    window.addEventListener('touchstart', cancel, { once: true, passive: true });
+    function targetY() {
+      var r = el.getBoundingClientRect();
+      return Math.max(0, window.scrollY + (block === 'end'
+        ? r.bottom - innerHeight + 28
+        : r.top - 14));
+    }
+    function step(ts) {
+      if (stop) return;
+      if (start === null) { start = window.scrollY; t0 = ts; }
+      var p = Math.min(1, (ts - t0) / dur);
+      var e = 1 - Math.pow(1 - p, 3);
+      window.scrollTo(0, start + (targetY() - start) * e);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
   /* ============ confetti: dopamin pas jawaban benar ============ */
   var fxCanvas = null, fxParts = [], fxRaf = 0;
   var FX_COLORS = ['#58a6ff', '#3fb950', '#bc8cff', '#d29922', '#f85149', '#79c0ff', '#e6edf3'];
@@ -1181,9 +1203,13 @@ const modules = [
         if (fxBtn) { var fxR = fxBtn.getBoundingClientRect(); burstConfetti(fxR.left + fxR.width / 2, fxR.top + fxR.height / 2); }
         else burstConfetti(innerWidth / 2, innerHeight / 3);
         onSolved(m, q);
-        // pembahasan langsung nge-pop setelah benar (review soal lama tetap manual)
+        // pembahasan langsung nge-pop + smooth-scroll: ujung bawah panel kelihatan di layar
         var sol = document.getElementById('sol-' + q.id);
         if (sol && sol.hidden) toggleSolution(q.id);
+        if (sol) setTimeout(function () {
+          var r = sol.getBoundingClientRect();
+          glideScrollTo(sol, r.height > innerHeight - 120 ? 'start' : 'end');
+        }, 260);
       } else {
         term.classList.add('err');
         termLine(term, '✗ TEST FAILED — Jawaban salah. Coba lagi!');
