@@ -6,16 +6,23 @@
   "code": "I-2017-BE-03a",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-BE-03a",
-  "soalPages": [12],
-  "imgPages": [12],
+  "soalPages": [
+    12
+  ],
+  "imgPages": [
+    12
+  ],
   "deskripsi": "Berang-berang menciptakan sistem pengkodean kata yang disebut kode berang-berang, dengan memakai peta di atas:\n▪   Setiap pohon di taman diberi nama dengan satu huruf.\n▪   Kode untuk setiap huruf ditemukan dengan cara mencapai pohon tersebut dengan berbelok kiri (L) dan kanan (R).\n▪   Kode untuk setiap huruf selalu dimulai dari pintu masuk taman (bertanda panah).\nContoh-contoh :\n▪   Contoh 1: Kode untuk A adalah LL karena untuk mencapai pohon A dari pintu masuk taman kamu harus berbelok kiri dua kali.\n▪   Contoh 2: Kode untuk kata BAR adalah LRLLLR.",
   "pertanyaan": "Berapa banyak huruf dalam kode berang-berang tersebut untuk kata BEAR? (Tuliskan angkanya!)",
   "options": [],
   "key": "",
-  "keys": ["9"],
+  "keys": [
+    "9"
+  ],
   "pairs": [],
   "jawabanResmi": "Jawaban yang benar adalah 9.",
   "penjelasan": "Tabel berikut ini berisi kode kiri/kanan untuk semua huruf:\nSehingga BEAR akan dikode menjadi LRLLRRLLR yang terdiri dari 9 huruf.",
   "iniInformatika": "Jika suatu komputer mengganti huruf L dalam kode kiri/kanan dengan 0 dan huruf R dengan 1, maka kode kiri/kanan menjadi apa yang disebut kode biner. Peta untuk taman menjadi suatu struktur data komputer yang disebut pohon biner.\n\nHal ini berarti rute yang panjang dan rumit dapat disimpan oleh komputer dengan sangat mudah menggunakan ruang yang sangat kecil. Hal menarik mengenai kode ini adalah bahwa tidak diperlukan koma atau pemisah.\n\nCobalah mengubah kode (decode) jawaban untuk melihat bahwa kamu tidak perlu spasi untuk menunjukkan kode untuk setiap huruf cukup dan mulai dengan kode baru. Jenis kode seperti ini disebut prefix code. Hal ini berarti kode menjadi lebih singkat.",
-  "notes": "sa (Tuliskan angkanya!). Figures not transcribable to text: park map (peta) referenced by 'peta di atas', and the letter-code table in penjelasan (sentence 'Tabel berikut ini berisi...' is followed by a table image). Bullets are ▪ in the book. Code suffix is lowercase 'a' as printed (I-2017-BE-03a). Text layer clean UTF-8. jpg image verification not possible in this session (model without image support)."
+  "notes": "sa (Tuliskan angkanya!). Figures not transcribable to text: park map (peta) referenced by 'peta di atas', and the letter-code table in penjelasan (sentence 'Tabel berikut ini berisi...' is followed by a table image). Bullets are ▪ in the book. Code suffix is lowercase 'a' as printed (I-2017-BE-03a). Text layer clean UTF-8. jpg image verification not possible in this session (model without image support).",
+  "clue": "Kerjakan pelan-pelan per huruf: telusuri dari pintu masuk ke pohon tiap huruf satu per satu, catat belokan kiri/kanannya, lalu hitung panjangnya. Perhatikan polanya juga — makin dalam posisi huruf di taman, makin panjang kodenya."
 }

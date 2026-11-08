@@ -6,24 +6,150 @@
   "code": "I-2018-DE-05-X-001-B",
   "type": "ma",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-DE-05-X-001-B",
-  "soalPages": [18, 19],
-  "imgPages": [18],
+  "soalPages": [
+    18,
+    19
+  ],
+  "imgPages": [
+    18
+  ],
   "deskripsi": "Diagram sebagai berikut menunjukkan hubungan pertemanan di antara sekumpulan berang-berang. Dua berang-berang berteman jika namanya dihubungkan oleh sebuah garis. Mereka merencanakan sebuah pesta. Untuk setiap pasangan teman, satu di antara mereka harus membawa hadiah untuk teman lainnya. Angka menunjukkan berapa hadiah yang dapat dibelinya.\n\nNama di kolom pertama adalah nama berang-berang yang membeli hadiah (Pemberi), pilih berang-berang yang akan menerima hadiah tersebut di kolom Penerima.",
   "pertanyaan": "Tentukan untuk setiap pasangan teman, siapa yang akan membeli hadiah untuk temannya. Setiap berang-berang tidak dapat membeli hadiah lebih dari jumlah yang harus dibelinya.",
+  "clue": "Mulai dari yang paling terkekang: yang nggak punya uang pasti hanya bisa jadi penerima, dan yang uangnya pas-pasan membuat pilihan arahnya sempit. Tetapkan arah pemberi→penerima dari yang begitu dulu, biasanya sisanya ketarik sendiri.",
   "options": [],
   "key": "",
   "keys": [],
   "pairs": [
-    {"label": "Pemberi Jill — hadiah 1 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Kim"},
-    {"label": "Pemberi Jill — hadiah 2 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Ana"},
-    {"label": "Pemberi Sue — hadiah 1 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Jill"},
-    {"label": "Pemberi Sue — hadiah 2 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Bob"},
-    {"label": "Pemberi Sue — hadiah 3 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Kim"},
-    {"label": "Pemberi Ted — hadiah 1 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Jill"},
-    {"label": "Pemberi Tom — hadiah 1 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Jill"},
-    {"label": "Pemberi Tom — hadiah 2 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Ana"},
-    {"label": "Pemberi Ana — hadiah 1 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Bob"},
-    {"label": "Pemberi Kim — hadiah 1 → Penerima", "options": ["Jill", "Sue", "Ted", "Tom", "Ana", "Kim", "Bob"], "answer": "Ted"}
+    {
+      "label": "Pemberi Jill — hadiah 1 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Kim"
+    },
+    {
+      "label": "Pemberi Jill — hadiah 2 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Ana"
+    },
+    {
+      "label": "Pemberi Sue — hadiah 1 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Jill"
+    },
+    {
+      "label": "Pemberi Sue — hadiah 2 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Bob"
+    },
+    {
+      "label": "Pemberi Sue — hadiah 3 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Kim"
+    },
+    {
+      "label": "Pemberi Ted — hadiah 1 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Jill"
+    },
+    {
+      "label": "Pemberi Tom — hadiah 1 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Jill"
+    },
+    {
+      "label": "Pemberi Tom — hadiah 2 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Ana"
+    },
+    {
+      "label": "Pemberi Ana — hadiah 1 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Bob"
+    },
+    {
+      "label": "Pemberi Kim — hadiah 1 → Penerima",
+      "options": [
+        "Jill",
+        "Sue",
+        "Ted",
+        "Tom",
+        "Ana",
+        "Kim",
+        "Bob"
+      ],
+      "answer": "Ted"
+    }
   ],
   "jawabanResmi": "Tabel Jawaban buku:\nPemberi → Penerima:\nJill → Kim, Ana\nSue → Jill, Bob, Kim\nTed → Jill\nTom → Jill, Ana\nAna → Bob\nKim → Ted",
   "penjelasan": "Kita memakai hubungan arah panah untuk menunjukkan pemberi dan penerima. Jika panah menunjuk dari teman A ke teman B, A akan membeli hadiah untuk B. Ada dua cara yang mungkin untuk memilih arah memberi dan mematuhi semua aturan pemberian.\n\nUntuk memilih arah dengan benar, kita mulai dengan Bob. Karena dia tidak punya uang, dia hanya bisa menerima hadiah dari teman-temannya Ana dan Sue. Ana sudah menghabiskan semua uangnya, sehingga dia hanya bisa menerima hadiah dari teman-temannya Jill dan Tom. Artinya, untuk pertemanan ini, tidak ada pilihan.\n\nSekarang kita tampaknya memiliki banyak pilihan. Tetapi ada pilihan kritis: Ted dan Kim keduanya dapat membeli 1 hadiah saja. Untuk pasangan ini, kita perlu memutuskan siapa yang akan membeli hadiah untuk yang lain.\n\n- Jika kita memilih Kim untuk membeli hadiah untuk Ted, maka Kim perlu menerima hadiah dari teman-temannya Jill dan Sue. Jadi hadiah yang bisa dibeli Jill telah mencapai angka tertinggi. Jill harus menerima hadiah dari Ted, Tom, dan Sue. Solusi ini ditunjukkan di sebelah kiri.\n- Jika kita memilih Ted untuk membeli hadiah untuk Kim, maka Ted perlu menerima hadiah dari Jill. Sekali lagi, Jill telah memberikan semua hadiahnya dan harus menerima hadiah dari Tom, Kim dan Sue. Sekali lagi, Sue juga perlu membeli hadiah untuk Kim. Solusi ini ditampilkan di sebelah kanan.\n\nArtinya, setiap pilihan untuk Ted dan Kim tidak meninggalkan pilihan untuk persahabatan yang tersisa. Karena hanya ada dua pilihan untuk Ted dan Kim, hanya ada dua jawaban yang benar.\n\nKemudian kita bisa melihat apakah Jim atau Ted saling memberi hadiah sesuai dengan persyaratan.",

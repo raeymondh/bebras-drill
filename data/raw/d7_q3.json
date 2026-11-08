@@ -6,16 +6,24 @@
   "code": "I-2017-CH-03",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-03",
-  "soalPages": [24],
-  "imgPages": [24],
+  "soalPages": [
+    24
+  ],
+  "imgPages": [
+    24
+  ],
   "deskripsi": "Di kedai pizza Pizzeria Biberia, terdapat sebuah oven yang kecil sehingga hanya dapat digunakan untuk memanggang beberapa roti dan pizza dalam satu saat.\n\nOven hanya dapat menampung sejumlah kombinasi roti dan pizza pada satu saat, sebagai berikut:\nTiga Roti   Satu Roti dan satu pizza besar   Satu pizza kecil dan dua roti\n\nWaktu yang diperlukan untuk memanggang:\nPizza kecil   10 menit\nPizza besar   15 menit\nRoti   20 menit\n\nKetika pizzeria banyak mendapatkan pesanan, juru masak pizza harus merencanakan waktu pemanggangan dengan baik sehingga pesanan tamu dapat disajikan secepat mungkin. Roti dan pizza dapat dimasukkan ke dalam oven dengan urutan apapun sesuai kapasitas maksimum oven. Tetapi, masing-masing roti/pizza yang dimasukkan harus tetap berada dalam oven sampai ada yang matang dan digantikan oleh roti/pizza lainnya selama tempatnya mencukupi.",
   "pertanyaan": "Ada sebuah pesanan yang terdiri dari satu pizza kecil, dua pizza besar, dan empat roti. Berapa waktu minimum (menit) yang diperlukan sampai semua pesanan selesai dipanggang (selang waktu penggantian roti/pizza matang dengan yang baru dianggap nol)? Jawaban diisi dengan bilangan bulat.",
   "options": [],
   "key": "",
-  "keys": ["50", "~50 menit"],
+  "keys": [
+    "50",
+    "~50 menit"
+  ],
   "pairs": [],
   "jawabanResmi": "Jawaban yang benar adalah 50.",
   "penjelasan": "Terdapat beberapa solusi optimal. Kunci untuk menemukan jawabannya adalah memperhatikan bahwa dua roti dan satu pizza kecil secara berurutan memerlukan waktu yang sama dengan dua pizza besar dan satu paket yang terdiri dari dua roti secara berurutan. Keduanya memerlukan waktu 50 menit sehingga baik ruang oven maupun waktu digunakan secara maksimal, sehingga tidak ada solusi yang lebih cepat. Solusi tersebut adalah solusi yang optimal, karena oven selalu terpakai secara maksimal.",
   "iniInformatika": "Ketika mencoba melakukan penjadwalan, seluruh sumber daya (dalam hal ini adalah oven pizza) harus digunakan secara optimal. Waktu harus diusahakan seminimal mungkin. Hal ini dicapai dengan menggunakan ruang oven pizza yang tersedia seoptimal mungkin sehingga waktu pemanggangan pun optimal.\n\nSalah satu algoritma umum untuk penjadwalan adalah Algoritma Round Robin, yang akan dieksekusi sesuai urutan yang disusun dalam lingkaran tunggu. Setiap pekerjaan kemudian mendapat porsi tetap dari waktu prosesor dan jika membutuhkan lebih banyak waktu, akan ditambahkan pada akhir antrian.\n\nUntuk oven, strategi tersebut tidak dapat digunakan sebab kita tidak dapat mengambil pizza atau roti yang belum selesai dan memasukkannya lagi ke oven.\n\nStrategi lainnya adalah mengatur komponen-komponen berdasarkan ukurannya dan mulai dengan ukuran terbesar. Kemudian ruang yang tersedia diisi komponen yang lebih kecil, dan seterusnya. Karena kita juga dapat mengeluarkan dan memanggang makanan yang baru saja dipanggang di tengah proses pemanggangan, maka oven tidak terblokir.\n\nStrategi terbaik, bagaimanapun, adalah selalu memastikan bahwa oven terisi penuh. Jika kita mengatur agar oven selalu terisi penuh, maka pekerjaan memanggang akan selesai dalam waktu tersingkat.",
-  "notes": "sa ('Jawaban diisi dengan bilangan bulat'). 'Inilah Informatika!' section is on page 25; soal on page 24. Oven-capacity line 'Tiga Roti / Satu Roti dan satu pizza besar / Satu pizza kecil dan dua roti' and baking-time block kept with wide spacing; the three oven-combination items are small images (not transcribable). Justification spacing normalized. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support)."
+  "notes": "sa ('Jawaban diisi dengan bilangan bulat'). 'Inilah Informatika!' section is on page 25; soal on page 24. Oven-capacity line 'Tiga Roti / Satu Roti dan satu pizza besar / Satu pizza kecil dan dua roti' and baking-time block kept with wide spacing; the three oven-combination items are small images (not transcribable). Justification spacing normalized. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support).",
+  "clue": "Bayangkan oven sebagai slot yang terus terisi: susun pemanggangan batch demi batch sehingga oven tidak pernah nganggur menunggu. Cari dulu item mana yang paling lama matangnya — dia yang menentukan berapa banyak dia harus masuk oven di awal."
 }

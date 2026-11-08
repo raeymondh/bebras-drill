@@ -6,13 +6,28 @@
   "code": "2016-IT-2b",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-IT-2b",
-  "soalPages": [24, 25],
-  "imgPages": [24, 25],
+  "soalPages": [
+    24,
+    25
+  ],
+  "imgPages": [
+    24,
+    25
+  ],
   "deskripsi": "Berang-berang yang bernama Emil sedang mencoba permainan baru di komputernya. Mula-mula ia harus menyusun sejumlah kelereng di dalam suatu tabung. Sekurangnya harus ada tiga kelereng di dalamnya dan kelereng-kelereng itu berwarna merah atau biru.\nDengan menekan tombol GO, dua kelereng terbawah jatuh dan kemudian akan ada beberapa kelereng lain yang masuk dari atas. Kelereng-kelereng apa yang akan masuk adalah berdasarkan warna dari kelereng-kelereng yang jatuh. Satu dari dua kemungkinan di bawah ini akan terjadi:\nJika yang paling bawah berwarna merah, satu kelereng baru berwarna biru akan masuk ke dalam tabung.\nJika kelereng paling bawah berwarna biru, tiga kelereng baru akan masuk ke dalam tabung dalam urutan: satu merah, satu biru, dan satu merah.\nSelama sekurangnya ada tiga kelereng dalam tabung, Emil masih dapat meng-klik tombol GO lagi. Permainan hanya akan berhenti jika tersisa kurang dari tiga kelereng dalam tabung.\nMisalnya, jika Emil awalnya mengatur kelereng dalam tabung sebagai pada gambar di samping kanan ini, pada akhirnya hanya dua kelereng biru yang tersisa, sehingga permainan berhenti.",
   "pertanyaan": "Emil akan memulai permainan dengan memasukkan tiga kelereng. Tolong usulkan warna-warna apa untuk kelereng-kelereng itu sehingga Emil dapat bermain terus menerus tanpa henti? Warna merah dituliskan dengan huruf M dan warna biru dengan huruf B. Keduanya huruf besar. Urutan kelereng dari atas ke bawah dituliskan dari kiri ke kanan sebagai huruf-huruf (tanpa terpisahkan apapun seperti spasi/koma/dll).",
+  "clue": "Coba simulasikan beberapa kemungkinan susunan awal di kertas, satu klik demi satu klik. Perhatikan warna kelereng paling bawah dan jumlah kelereng setelah tiap klik — carilah susunan yang tidak pernah menyusut sampai habis.",
   "options": [],
   "key": "",
-  "keys": ["BBB", "BMB", "MBB", "MMB", "BRB", "RBB", "RRB"],
+  "keys": [
+    "BBB",
+    "BMB",
+    "MBB",
+    "MMB",
+    "BRB",
+    "RBB",
+    "RRB"
+  ],
   "pairs": [],
   "jawabanResmi": "Permainan tak akan berakhir jika Emil mulai dengan 3 kelereng dan ada satu kelereng biru pada posisi paling bawah.",
   "penjelasan": "Harap dicatat, saat stack awal terdiri dari 3 kelereng dan yang paling bawah adalah merah, satu klik akan mengakhiri permainan. Tetapi jika mulai dengan sebuah stack yang terdiri dari 3 kelereng dan yang paling bawah adalah biru, setelah paling tidak 5 klik silinder akan berisi RBRRBR (lihat gambar di bawah). Sebenarnya, dengan menuliskan warna kelereng dari yang paling atas ke paling bawah, kita akan mendapatkan:\nBBB → RBRB → RBRRB → RBRRBR;\nBRB → RBRB → RBRRB → RBRRBR;\nRBB → RBRR → BRB → RBRB → RBRRB → RBRRBR;\nRRB → RBRR → BRB → RBRB → RBRRB → RBRRBR.\nMaka, permainan akan menjadi 4 siklus (sebab setelah 4 klik, akan didapat konfigurasi yang sama yaitu RBRRBR akan berulang):\nRBRRBR → BRBRR → BBRB → RBRBB → RBRRBR.",

@@ -6,10 +6,17 @@
   "code": "2016-LT-02",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-LT-02",
-  "soalPages": [12, 13],
-  "imgPages": [12, 13],
+  "soalPages": [
+    12,
+    13
+  ],
+  "imgPages": [
+    12,
+    13
+  ],
   "deskripsi": "Rio si berang-berang sedang membangun rakit. Untuk kontrol lalu lintas sungai, semua rakit harus didaftar. Ini berarti bahwa setiap rakit harus memiliki tanda berupa plat dengan teks yang unik. Teks yang terdiri dari huruf dan angka hanya bisa dibangkitkan sesuai dengan diagram di bawah ini, yaitu dimulai dengan huruf B, diikuti huruf/angka berikutnya sesuai arah panah, dan diakhiri dengan angka digit 0 atau 1.",
   "pertanyaan": "Manakah 2 (dua) plat berikut yang tidak dapat didaftarkan?",
+  "clue": "Perlakukan diagram seperti mesin kecil: mulai dari keadaan awal, masukkan teks plat huruf demi huruf mengikuti arah panah, lalu cek apakah teks habis tepat di keadaan akhir. Uji tiap kandidat pelan-pelan — satu langkah melawan arah panah sudah bikin plat tidak sah.",
   "options": [
     "A. BBB011 dan BE0S01",
     "B. BB0100 dan BSA001",

@@ -6,16 +6,26 @@
   "code": "I-2017-BE-05",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-BE-05",
-  "soalPages": [41],
-  "imgPages": [41],
+  "soalPages": [
+    41
+  ],
+  "imgPages": [
+    41
+  ],
   "deskripsi": "Martina perlu berangkat ke sekolah memakai transportasi publik yaitu KRL setiap hari. Karena tidak ada jalur langsung, maka Martina harus berpindah di antara beberapa jalur. Peta berikut ini menunjukkan enam jalur KRL yang ada. Waktu perjalanan pada ruas di antara dua stasiun KRL dituliskan sebagai bilangan yang tertera pada setiap ruas tersebut. Rumah Martina ditandai dengan “H”, sekolahnya ditandai dengan “W”, dan stasiun, untuk berpindah jalur, ditandai dengan “S”.",
   "pertanyaan": "Jika perpindahan jalur dianggap tidak memerlukan waktu, urutan jalur mana yang harus diambil Martina agar tiba di tempat kerja secepat mungkin?",
-  "options": ["a)", "b)", "c)", "d)"],
+  "options": [
+    "a)",
+    "b)",
+    "c)",
+    "d)"
+  ],
   "key": "c",
   "keys": [],
   "pairs": [],
   "jawabanResmi": "Jawaban yang benar adalah c)",
   "penjelasan": "Jarak untuk setiap pilihan A, B, C, D adalah: 13, 12, 11 and 19.",
   "iniInformatika": "Graf adalah struktur data yang sangat penting dalam informatika karena dapat dipakai untuk menyatakan jaringan dari beberapa jenis yang berbeda (sosial, preferensi, transportasi...).\n\nDalam tugas ini, tujuannya adalah menemukan jalur terpendek di antara dua titik dalam suatu graf, jika diberikan bobot pada setiap sisinya. Persoalan ini dikenal sebagai persoalan jalur terpendek dan dapat diatasi antara lain dengan memakai algoritma Dijkstra.",
-  "notes": "mc. Options a)-d) are GRAPHICAL route sequences (images of colored KRL lines) — the text layer contains only the letter labels, so options cannot be transcribed to text; see page image b2017_page-041.jpg. Route map figure (six lines, H/W/S markers) also an image. Jawaban/pembahasan and 'Ini informatika!' section are on page 42. Book quirks kept verbatim: question says 'tempat kerja' though story says sekolah; English 'and' in pembahasan. Curly quotes “H”“W”“S” as printed. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support)."
+  "notes": "mc. Options a)-d) are GRAPHICAL route sequences (images of colored KRL lines) — the text layer contains only the letter labels, so options cannot be transcribed to text; see page image b2017_page-041.jpg. Route map figure (six lines, H/W/S markers) also an image. Jawaban/pembahasan and 'Ini informatika!' section are on page 42. Book quirks kept verbatim: question says 'tempat kerja' though story says sekolah; English 'and' in pembahasan. Curly quotes “H”“W”“S” as printed. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support).",
+  "clue": "Hitung total waktu tiap kombinasi urutan jalur dari H ke W, dijumlahkan ruas demi ruas. Bandingkan kandidatnya — rute dengan perpindahan paling sedikit belum tentu yang paling cepat."
 }

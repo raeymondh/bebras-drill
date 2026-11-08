@@ -6,10 +6,16 @@
   "code": "I-2018-HU-01",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-HU-01",
-  "soalPages": [47, 48],
-  "imgPages": [47],
+  "soalPages": [
+    47,
+    48
+  ],
+  "imgPages": [
+    47
+  ],
   "deskripsi": "Ade mempunyai sekotak krayon. Beberapa krayon ada yang menghadap ke atas, ada yang menghadap ke bawah. Menurut Ade, sekotak krayon akan “indah dipandang” kalau semua krayon di dalamnya menghadap ke arah yang sama. Pada satu langkah, ia dapat membalikkan sederet krayon dalam satu baris; setelah melakukan ini maka semua krayon yang semula menghadap ke atas akan menghadap ke bawah dan sebaliknya yang semula menghadap ke bawah akan menghadap ke atas, seperti pada gambar.",
   "pertanyaan": "Untuk posisi krayon sebagai berikut, berapa langkah minimum harus dilakukan agar Ade mempunyai kotak krayon yang “indah dipandang”? Jawab dengan mengetikkan sebuah bilangan bulat.",
+  "clue": "Tiap langkah membalik sederet krayon sekaligus, dan membalik sederet yang sama sekali lagi mengembalikan semuanya seperti semula. Tandai dulu krayon yang arahnya beda sendiri-sendiri, lalu uji di kertas kombinasi pembalikan sederet yang saling tumpang tindih.",
   "options": [],
   "key": "",
   "keys": [

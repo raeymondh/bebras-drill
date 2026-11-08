@@ -6,11 +6,22 @@
   "code": "I-2018-IE-01",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-IE-01",
-  "soalPages": [21, 22],
-  "imgPages": [21],
+  "soalPages": [
+    21,
+    22
+  ],
+  "imgPages": [
+    21
+  ],
   "deskripsi": "Ada dua stand (kios) penjual es krim warna warni, dengan 4 warna es krim (ditunjukkan sebagai empat bulatan warna pada soal asli).\n\nEs krim pada stand pertama dibuat dengan mengikuti instruksi sebagai berikut:\n0) Mulai dengan corong kosong.\n1) Ambil warna secara sembarang (random), tambahkan 2 bulatan berwarna sama.\n2) Tambah 1 bulatan dengan warna berbeda.\n3) Jika tingginya sudah sesuai yang diminta, berhenti. Jika belum, kembali langkah 1.\n\nEs krim pada stand kedua tidak mengikuti instruksi tersebut.\n\n(Gambar yang tersedia hanya memperlihatkan beberapa susunan awal)",
   "pertanyaan": "Yang mana merupakan es krim stand kedua?",
-  "options": ["A.", "B.", "C.", "D."],
+  "clue": "Perlakukan resepnya seperti program dan telusuri tiap es krim bulatan demi bulatan dari dasar cone ke atas, mencocokkan urutan langkahnya. Pola yang berulang harus konsisten dari bawah sampai puncak — satu langkah saja yang nyimpang sudah cukup untuk menyingkirkan satu pilihan.",
+  "options": [
+    "A.",
+    "B.",
+    "C.",
+    "D."
+  ],
   "key": "B",
   "keys": [],
   "pairs": [],

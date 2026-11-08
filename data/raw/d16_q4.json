@@ -6,10 +6,16 @@
   "code": "I-2018-VN-03",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-VN-03",
-  "soalPages": [53, 54],
-  "imgPages": [53],
+  "soalPages": [
+    53,
+    54
+  ],
+  "imgPages": [
+    53
+  ],
   "deskripsi": "Berang-berang Bobo ([ikon sepeda]), Ali ([ikon papan seluncur]), dan Jan ([ikon skuter]) berada seperti ditunjukkan oleh kendaraannya. Ketiganya berencana untuk bertemu di suatu lokasi untuk bermain bersama. Mereka mengukur jarak dengan rumus: jumlah petak yang mendatar dan vertikal dari posisi masing-masing (hanya dapat mengikuti garis, tidak bisa menyeberangi petak).\n[gambar: peta berupa kisi petak persegi dengan penanda: skuter (Jan) di kanan atas, kotak merah di tengah agak ke atas, sepeda (Bobo) di kiri tengah, segitiga biru dan lingkaran hijau berdampingan di tengah (segitiga di kiri, lingkaran di kanan), belah ketupat kuning tepat di bawah segitiga, papan seluncur (Ali) di kanan bawah]\nContoh: Pada gambar tsb, jarak Ali ([ikon papan seluncur]) dari lokasi pertemuan ([ikon segitiga biru]) adalah 6.",
   "pertanyaan": "Titik mana yang harus dipilih untuk bertemu, agar setiap berang-berang bergerak paling sedikit dari posisi masing-masing? Pilihlah Jawaban yang paling tepat.",
+  "clue": "Ukur sendiri jarak tiap kandidat tempat kumpul dari ketiga posisi — petak mendatar ditambah petak vertikal — jumlahkan, lalu bandingkan antar kandidat. Tempat yang tampak paling tengah belum tentu yang paling hemat.",
   "options": [
     "A. [ikon segitiga biru]",
     "B. [ikon kotak merah]",

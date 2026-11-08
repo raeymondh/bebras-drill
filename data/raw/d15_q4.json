@@ -6,10 +6,14 @@
   "code": "I-2018-CZ-01",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CZ-01",
-  "soalPages": [41, 42],
+  "soalPages": [
+    41,
+    42
+  ],
   "imgPages": [],
   "deskripsi": "Sebuah alat untuk melakukan diagnosa harus menggoncang spesimen secara berulang-ulang. Alat ini bekerja berdasarkan sebuah program komputer, yang ditulis dalam beberapa baris yang diberi nomor. Alat membaca program baris demi baris, dan mengeksekusinya segera setelah membaca.\n\nJika baris mengandung perintah go to X, maka alat akan langsung ke baris X dan meneruskan membaca serta mengeksekusinya.\n\nProgram mampu untuk:\n- menyimpan sebuah nilai bilangan dalam lokasi A dengan instruksi \"set\",\n- menambahkan 1 pada nilai yang disimpan pada lokasi A dengan instruksi \"add\",\n- dan membandingkan nilai A dengan sebuah bilangan lain (=, <, ≤, >, ≥, ≠).",
   "pertanyaan": "Berapa kali alat akan menggoncang spesimen jika prosedurnya ditulis dengan program sebagai berikut:\n\n1. set A to 0\n2. add 1 to A\n3. go to 6\n4. jika A = 60 go to 8\n5. set A to 0\n6. add 1 to A\n7. go to 2\n8. ulangi A kali menggoncang spesimen\n9. stop",
+  "clue": "Jangan cuma dibaca — jalankan programnya dengan tangan: mulai dari baris pertama, ikuti ke mana tiap perintah lompat membawamu, dan catat baris mana saja yang benar-benar pernah dieksekusi. Pola perputarannya akan menunjukkan apa yang tidak pernah terjadi.",
   "options": [
     "A. Spesimen digoncang dua kali.",
     "B. Spesimen digoncang satu kali.",

@@ -6,13 +6,31 @@
   "code": "2016-CH-03",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-CH-03",
-  "soalPages": [40, 41],
-  "imgPages": [40],
+  "soalPages": [
+    40,
+    41
+  ],
+  "imgPages": [
+    40
+  ],
   "deskripsi": "Dokter berang-berang ingin mendirikan tiga rumah sakit untuk merawat pasien berang-berang.\nDokter mempunyai syarat bahwa rumah sakit tersebut harus berada di tempat yang sedemikian sehingga berang-berang cukup berenang melalui maksimal satu saluran air (kanal) saja untuk dapat menjangkau rumah sakit dari tempat di manapun dia berada.",
   "pertanyaan": "Tentukan tiga lokasi yang cocok untuk dipilih sebagai tempat didirikannya rumah sakit sesuai dengan persyaratan di atas. Jawaban ditulis secara terurut abjad dengan karakter huruf besar (urut dari A sampai Z) tanpa dipisahkan spasi. Misalnya jawaban yang benar adalah ADE, maka tidak boleh dituliskan sebagai DAE atau AED. Jawaban manapun yang benar akan diperbolehkan.",
+  "clue": "Anggap peta kanal itu graf: kalau satu lokasi jadi rumah sakit, dia dan semua tetangga langsungnya otomatis terlayani. Tandai jangkauan tiap kandidat, lalu usahakan seluruh peta tertutup — kalau macet, mundur dan ganti pilihan tadi (backtracking).",
   "options": [],
   "key": "",
-  "keys": ["EHK", "AEH", "CGI", "CHI", "CIK", "DFK", "A E H", "C G I", "C H I", "C I K", "D F K"],
+  "keys": [
+    "EHK",
+    "AEH",
+    "CGI",
+    "CHI",
+    "CIK",
+    "DFK",
+    "A E H",
+    "C G I",
+    "C H I",
+    "C I K",
+    "D F K"
+  ],
   "pairs": [],
   "jawabanResmi": "Ada banyak solusi benar; salah satu di antaranya adalah EHK, yaitu menggunakan E, H dan K.",
   "penjelasan": "• dari lokasi D, E dan I , berang-berang dapat berenang ke E.\n• dari lokasi B, C, F, G dan H, berang-berang dapat berenang ke H.\n• dari lokasi A, C, G dan K, berang-berang dapat berenang ke K.\nSolusi lainnya: A E H, C G I, C H I, C I K, D F K.\nSolusi dapat diketemukan dengan menempatkan sebuah lokasi secara random, menandai semua lokasi yang dapat dicapai dalam satu langkah. Kemudian Anda melakukan untuk lokasi berikutnya. Setelah 3 lokasi diipilih, ada dua kemungkinan: apakah itu sebuah solusi, atau ada satu atau lebih lokasi yang tak ditandai. Jika bukan solusi, kita dapat menghapus lokasi terakhir dan menggantinya dengan sebuah lokasi lain, kemudian memeriksa ulang. Jika kita masih tak dapat menemukan solusi dengan 3 lokasi, kita dapat kembali dan menempatkan lokasi terakhir ke tempat lain. Dengan melakukan hal ini secara sistematis, kita dapat menemukan semua solusi.",

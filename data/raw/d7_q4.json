@@ -6,13 +6,23 @@
   "code": "I-2018-LT-04-X-011-5",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-LT-04-X-011-5",
-  "soalPages": [37, 38],
-  "imgPages": [37, 38],
+  "soalPages": [
+    37,
+    38
+  ],
+  "imgPages": [
+    37,
+    38
+  ],
   "deskripsi": "Dua berang-berang sedang membangun sebuah bendungan sehingga perlu mengerjakan 8 tugas (memotong pohon, memotong cabang, mengalirkan kayu, merakit batang, dll. Setiap tugas dinomori dari A s.d. H: A(2), B(3), C(5), D(7), E(10), F(9), G(4), H(6). Angka dalam kurung menunjukkan berapa jam dibutuhkan untuk menyelesaikan setiap tugas. Para bebras bekerja secara bersamaan. Dan urutan penyelesaian pekerjaan diberikan dalam skema berikut: (lihat gambar pada halaman soal)\n\nJika ada lebih dari satu tugas yang harus dikerjakan, maka yang dipilih adalah yang terbesar. Misalnya, para bebras dapat mengerjakan dengan urutan seperti tabel berikut: (lihat gambar pada halaman soal)\n\nJika urutannya demikian, maka pekerjaan akan selesai dalam 32 jam. Tapi, masih ada cara lain untuk menyelesaikan pekerjaan tsb.",
   "pertanyaan": "Tantangan : tentukan waktu yang paling singkat untuk membangun bendungan ini. Isikan sebuah bilangan bernilai antara 1 s.d. 99.",
+  "clue": "Pahami dulu skema urutan di gambar: tugas mana yang harus tuntas sebelum tugas lain boleh mulai. Waktu total ditentukan oleh pekerja yang paling akhir selesai, jadi kejar pembagian tugas yang bikin kedua pekerja hampir nggak pernah nganggur.",
   "options": [],
   "key": "",
-  "keys": ["23", "~23 jam"],
+  "keys": [
+    "23",
+    "~23 jam"
+  ],
   "pairs": [],
   "jawabanResmi": "Jawaban yang tepat adalah 23.",
   "penjelasan": "Gambar dalam pertanyaan menunjukkan jadwal dari dua berang-berang. Kita dapat melihat bahwa berang-berang pertama tidak bekerja untuk waktu yang relatif lama (8 jam), dan berang-berang kedua menganggur selama 6 jam. Akan lebih baik jika mereka bekerja sepanjang waktu.\n\nStrategi yang akan kita gunakan di sini adalah untuk memastikan bahwa dua tugas terbesar E (10) dan F (9) tidak dilakukan oleh berang-berang yang sama. Berikut adalah gambar dari satu jadwal tertentu yang memungkinkan itu (lihat gambar pada halaman pembahasan). Kita akan melihat bahwa bendungan dapat dibangun dalam 23 jam!\n\nPenting juga untuk mengetahui bahwa jadwal khusus ini memungkinkan pekerjaan dilakukan sesingkat mungkin karena berang-berang tidak pernah menganggur.",

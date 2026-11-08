@@ -6,10 +6,17 @@
   "code": "2016-CA-09",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-CA-09",
-  "soalPages": [16, 17],
-  "imgPages": [16, 17],
+  "soalPages": [
+    16,
+    17
+  ],
+  "imgPages": [
+    16,
+    17
+  ],
   "deskripsi": "Ali ingin bermain dengan John. Ali memiliki beberapa kartu berbentuk geometris dan ingin bertukar beberapa kartu yang dimilikinya dengan Jon. Ali menggunakan aturan pertukaran kartu mengikuti diagram berikut:\nBerdasarkan aturan permainan:\na. kartu persegi diganti dengan 2 kartu segitiga\nb. 1 kartu segitiga diganti dengan 1 kartu persegi, 1 kartu segitiga, dan 1 kartu persegi lainnya\nSebagai contoh, jika Ali mulai permainan dari kartu persegi dengan menggunakan aturan yang ada, setelah 3 langkah dia akan mendapatkan kartu dengan urutan sebagai berikut:",
   "pertanyaan": "Aturan mana yang akan menghasilkan urutan kartu berikut?",
+  "clue": "Ini soal aturan penulisan-ulang: untuk tiap pilihan, mulai dari satu kartu lalu ganti-ganti kartunya sesuai aturan, langkah demi langkah di kertas. Cara cepat menyaring: cari jenis kartu yang mustahil muncul pada pilihan tertentu.",
   "options": [
     "A",
     "B",

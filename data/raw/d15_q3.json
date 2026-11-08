@@ -6,16 +6,26 @@
   "code": "I-2017-Sl-02",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-Sl-02",
-  "soalPages": [36],
-  "imgPages": [36],
+  "soalPages": [
+    36
+  ],
+  "imgPages": [
+    36
+  ],
   "deskripsi": "Suatu robot bekerja di suatu kota. Robot berjalan menyusuri jalan dari suatu tempat ke tempat lain mengikuti petunjuk yang diberikan. Pada setiap pertemuan beberapa ruas terdapat putaran (jalan memutar) dan robot akan memutar berlawanan arah jarum jam, kemudian mengambil simpangan urutan tertentu sesuai yang petunjuk yang diberikan.\nPetunjuk yang diberikan berupa angka-angka urutan simpangan. Misalnya petunjuk \"4 1 2\" akan diikuti robot sebagai berikut:\n- Pada putaran pertama, ambil simpangan ke-4.\n- Pada putaran kedua, ambil simpangan ke-1.\n- Pada simpangan ketiga, ambil simpangan ke-2.\nJika robot mula-mula berada di A, maka petunjuk itu akan dijalaninya sebagai tergambar berikut ini dengan menyusuri jalan yang diberi warna gelap sebagai berikut:\n[gambar: peta kota dengan putaran (roundabout) dan rute contoh petunjuk \"4 1 2\" dari A]",
   "pertanyaan": "Jika pada awalnya robot berada di A, petunjuk manakah yang akan membawa robot ke C?",
-  "options": ["(a) “2 2 5 2 1 3”", "(b) “3 1 3 1 2 2”", "(c) “1 2 3 3 1 2 2”", "(d) “1 2 2 2 1 1 2”"],
+  "options": [
+    "(a) “2 2 5 2 1 3”",
+    "(b) “3 1 3 1 2 2”",
+    "(c) “1 2 3 3 1 2 2”",
+    "(d) “1 2 2 2 1 1 2”"
+  ],
   "key": "c",
   "keys": [],
   "pairs": {},
   "jawabanResmi": "Jawaban yang paling tepat adalah (c)",
   "penjelasan": "",
   "iniInformatika": "Tantangan ini memperkenalkan elemen penting dari bahasa pemrograman komputer, yaitu sekumpulan instruksi sekuensial, di mana satu instruksi akan dikerjakan setelah satu instruksi lainnya, sesuai urutan yang ditentukan.\nMisalnya, sederetan instruksi -yang diberikan ke mobil tanpa sopir (self driving car)- adalah sebuah program komputer.\nPada contoh ini, hanya tersedia beberapa instruksi yang sederhana, berarti bahasa pemrogramannya juga sederhana. Pada situasi lain, digunakan bahasa yang berbeda dengan instruksi yang berbeda pula, yang lebih kompleks.",
-  "notes": "Peta kota dengan putaran dan rute adalah GAMBAR; lihat imgPages. Buku tidak menyertakan bagian penjelasan. Kode soal terekstrak sebagai 'I-2017-Sl-02' (huruf terakhir kemungkinan 'SI' Slovenia yang tampil sebagai 'Sl' — bentuk glif l/I sulit dibedakan di text layer). Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-036.txt)."
+  "notes": "Peta kota dengan putaran dan rute adalah GAMBAR; lihat imgPages. Buku tidak menyertakan bagian penjelasan. Kode soal terekstrak sebagai 'I-2017-Sl-02' (huruf terakhir kemungkinan 'SI' Slovenia yang tampil sebagai 'Sl' — bentuk glif l/I sulit dibedakan di text layer). Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-036.txt).",
+  "clue": "Uji pilihan satu per satu di peta: masuk tiap putaran, putar berlawanan arah jarum jam, lalu ambil simpangan sesuai angka petunjuknya. Hati-hati: angka-angka petunjuk dipakai bergiliran, satu angka untuk satu putaran yang dilewati."
 }

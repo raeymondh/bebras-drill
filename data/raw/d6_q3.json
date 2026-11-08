@@ -6,10 +6,16 @@
   "code": "I-2018-CY-05",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CY-05",
-  "soalPages": [14, 15],
-  "imgPages": [14],
+  "soalPages": [
+    14,
+    15
+  ],
+  "imgPages": [
+    14
+  ],
   "deskripsi": "Angelo si berang-berang mendapat hadiah sebuah robot yang dapat membantunya untuk menanam pohon untuk membuat kebun. Robot mengerti perintah sebagai berikut:\n\nPerintah — Arti\nStart : Hidupkan robot\nMaju (X) : Robot maju X meter\nMundur (X) : Robot mundur X meter\nKeKiri (X) : Robot berputar ke kiri\nKeKanan (X) : Robot berputar ke kanan\nTanam : Robot menanam Pohon\nUlangi X (instruksi) : Robot mengulangi instruksi dalam kurung sebanyak X kali\nStop : Matikan Robot\n\nAda 16 lokasi yang harus ditanami pohon pada sebuah lapangan berbentuk persegi. Sisi lapangan ukurannya 8 meter dan setiap pohon harus ditanam dengan jarak 2 meter.\n\nRobot berada pada posisi pojok kiri bawah dengan arah seperti ditunjukkan oleh panah. Pada awalnya, robot pada status mati dan setelah selesai menanam pohon, harus dimatikan. Setelah sebuah pohon ditanam, robot dapat melanjutkan gerakan tanpa halangan sepanjang garis-garis pada gambar.",
   "pertanyaan": "Program yang mana yang akan membuat robot menanam semua pohon sepanjang sisi lapangan seperti ditunjukkan pada gambar?",
+  "clue": "Jalankan tiap program secara manual mulai dari pojok, satu perintah satu gerakan. Perhatikan dua hal yang paling sering bikin gagal: ke arah mana robot berbelok begitu satu sisi selesai, dan apakah jarak majunya benar-benar mendarat di titik tanam berikutnya.",
   "options": [
     "A.\nStart\nUlangi 4{\nUlangi 4{Tanam; Maju(2)},\nKeKanan(90)}\nStop",
     "B.\nStart\nUlangi 4{\nUlangi 4{ Tanam, Maju (2)},\nKeKiri(90)}\nStop",

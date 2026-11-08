@@ -10,9 +10,13 @@
     22,
     23
   ],
-  "imgPages": [22, 23],
+  "imgPages": [
+    22,
+    23
+  ],
   "deskripsi": "Sejumlah karung diletakkan di koridor, di dekat suatu lift (elevator). Koridor sangat sempit sehingga karung-karung harus dibariskan satu-satu.\n\nKarung-karung hendak dikirimkan ke toko di lantai dasar dengan menggunakan lift tersebut. Sekali angkut, Lift hanya dapat mengangkut karung-karung dengan total berat tidak kurang dari 80 kg dan tidak lebih dari 100 kg. Setelah terkirim maka lift akan kembali ke lantai tersebut.\n\nSaat memuatkan karung-karung ke dalam lift, karung yang terdekat dengan lift yang akan diambil terlebih dulu. Seandainya penambahan suatu karung dapat menyebabkan overload (terlalu berat, karena total beratnya lebih dari 100 kg), karung itu untuk sementara tidak dimasukkan ke dalam lift tapi ditaruh di koridor pada arah berlawanan dari semula sejauh-jauhnya (jika tidak overload tentu akan dimasukkan ke dalam lift!).\n\nBila karung-karung dari barisan awal telah diambil, hal yang sama kemudian dilakukan pada barisan karung yang terbentuk pada koridor arah berlawanan dengan semula hingga seluruh karung di situ berhasil dikirim ke toko atau dipindah ke ujung koridor berlawanan dengannya. Hal itu terus-menerus dilakukan sampai semua karung berhasil dikirim ke toko.",
   "pertanyaan": "Sampai semua karung dikirimkan ke toko dengan prosedur tersebut di atas, Berapa kali lift turun-naik mengangkut karung-karung itu semula karung-karung ada seperti pada gambar di atas dengan berat masing-masing seperti yang tercantum pada setiap karung?",
+  "clue": "Jangan menebak — jalankan prosesnya pelan-pelan di atas kertas: catat karung yang ikut setiap perjalanan, dan ingat karung yang ditolak jadi barisan baru yang dibaca dari arah sebaliknya, persis seperti tumpukan (stack). Kalau simulasinya jujur, jumlah perjalanan tinggal dihitung.",
   "options": [],
   "key": "",
   "keys": [

@@ -6,10 +6,16 @@
   "code": "I-2018-CH-07b",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CH-07b",
-  "soalPages": [39, 40],
-  "imgPages": [39],
+  "soalPages": [
+    39,
+    40
+  ],
+  "imgPages": [
+    39
+  ],
   "deskripsi": "Sekumpulan berang-berang perlu membawa barang menggunakan sebuah lift pengangkut barang ke atas. Hari sudah malam, dan layanan lift akan dihentikan. Petugas hanya memberi kesempatan untuk dua kali naik. Kapasitas angkut lift untuk sekali jalan adalah 30 kg.\n\n(Berat setiap barang tertera pada gambar di halaman soal: 2kg, 3kg, 5kg, 8kg, 9kg, 9kg, 12kg, 12kg)",
   "pertanyaan": "Aturlah sehingga sebanyak mungkin barang yang bisa diangkut dengan hanya dua kali naik? Pilih berat barang yang yang akan diangkut di lift pertama dan kedua.",
+  "clue": "Jangan kepalang mengumpulkan barang-barang paling ringan duluan. Ingat, muatan tiap perjalanan boleh mentok di batas — coba tukar-tukar barang antar perjalanan sampai nyaris nggak ada kapasitas yang mubazir, lalu hitung berapa banyak barang yang berhasil diangkut.",
   "options": [],
   "key": "",
   "keys": [

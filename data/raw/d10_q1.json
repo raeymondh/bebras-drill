@@ -6,13 +6,21 @@
   "code": "I-2018-IR-06",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-IR-06",
-  "soalPages": [25, 26],
-  "imgPages": [25],
+  "soalPages": [
+    25,
+    26
+  ],
+  "imgPages": [
+    25
+  ],
   "deskripsi": "Bobi si berang-berang memutuskan untuk bepergian dari Hamper ke Mug. Pada peta, lingkaran adalah sebuah kota dan sebuah garis adalah sebuah ruas jalan tol dua arah yang menghubungkan kedua kota. Huruf menunjukkan nama kota. Angka menunjukkan biaya yang harus dibayar saat masuk jalan tol yang menghubungkan dua kota tersebut. Mobil dapat berpindah arah saat ada sebuah persimpangan tapi tetap harus membayar penuh jalan yang dimasukinya. Misalnya untuk bepergian dari kota B ke C, dapat dipilih jalan sehingga membayar 24 = 18+6.",
   "pertanyaan": "Berapa biaya paling murah dari Hamper ke Mug? Isikan sebuah bilangan bulat",
+  "clue": "Jangan langsung percaya jalur yang kelihatannya paling pendek. Tulis di tiap kota 'biaya termurah sejauh ini untuk sampai ke sini' mulai dari kota asal, lalu sebarkan ke kota-kota tetangganya dan perbarui terus setiap kali ketemu rute yang lebih murah.",
   "options": [],
   "key": "",
-  "keys": ["41"],
+  "keys": [
+    "41"
+  ],
   "pairs": [],
   "jawabanResmi": "Jawaban yang tepat adalah 41.",
   "penjelasan": "Jalan termurah ditunjukkan di bawah ini (lihat gambar pada halaman jawaban):\n\nUntuk membuktikan bahwa jalur ini optimal, seseorang dapat membandingkan pilihan dengan cara berikut.\n\nJalan termurah yang kita temui biayanya 41, mari kita coba mencari jalan yang lebih murah. Pada awalnya, jelas bahwa jalan itu melalui jalan A – Hamper dengan biaya 13, jadi orang harus menemukan jalur dari A ke Mug yang lebih murah dari 41 - 13 = 28.\n\nKedua, jelas bahwa kita harus datang ke Mug bukan melalui jalan B – Mug, karena itu sudah 23, dan tidak mungkin menemukan jalur dari B ke A yang lebih murah dari 28 - 23 = 5.\n\nJadi, kami datang ke Mug di jalan D – Mug dengan biaya tol 6, dan dengan demikian kita harus menemukan jalur dari A ke D yang lebih murah dari 28 - 6 = 22.\n\nJalur dari A ke D tidak boleh memiliki lebih dari tiga jalan, karena jalan termurah memiliki biaya 6, dan dengan demikian 4 jalan akan memberikan biaya setidaknya 6 * 4 = 24.\n\nJalan pertama yang mungkin kita lihat untuk keluar dari A adalah A – B. Ini mengarah ke solusi yang jauh lebih mahal, karena kita akan menggunakan jalan tol yang biayanya sangat mahal, 23 atau 18.\n\nArgumen yang sama berlaku untuk jalan A – F, karena jalan ini sangat mahal.\n\nJika kita menggunakan jalan A – G, maka kita akan membutuhkan biaya setidaknya 7 + 9 + 7 = 23 yang lebih besar dari 22.\n\nDan akhirnya, jika kita melewati jalan A – C, kita dapat mencapai tol optimal.",

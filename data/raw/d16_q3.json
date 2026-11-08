@@ -6,10 +6,15 @@
   "code": "I-2018-IT-01a",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-IT-01a",
-  "soalPages": [36],
-  "imgPages": [36],
+  "soalPages": [
+    36
+  ],
+  "imgPages": [
+    36
+  ],
   "deskripsi": "Keluarga Pak Bebras si berang-berang mempunyai 5 buah gudang makanan sepanjang sungai. Waktu yang dibutuhkan untuk pergi dari satu gudang ke gudang makanan lainnya ditunjukkan dalam gambar.\n[gambar: peta sungai berkelok (pita hijau) dengan 5 gudang makanan (penanda segitiga bernomor 1–5) di sepanjang sungai; label waktu tempuh pada ruas antar gudang: 1–2 = 16, 2–3 = 6, 3–4 = 8, 4–5 = 22]\nPak bebras ingin membuat rumah di dua lokasi pada gudang makanan tsb. agar saat cuaca buruk, dari gudang manapun di antara kelima lokasi itu mereka dapat pergi ke gudang makanan terdekat. Mereka ingin membangun rumah dengan waktu penyelamatan sekecil mungkin, yaitu waktu untuk mencapai salah satu rumah yang paling minimum",
   "pertanyaan": "Pilih dua lokasi mana yang harus dipilih untuk membangun rumah? Jawaban benar terdiri dari dua lokasi.\n\nPilihan Jawaban:\nA. 1\nB. 2\nC. 3\nD. 4\nE. 5\n\nJawab dengan menyebutkan kedua nomor gudang (contoh: 5 dan 2).",
+  "clue": "Perhatikan dulu ujung-ujung jalur sungai: kalau ujungnya bukan rumah, penghuninya harus meluncur sangat jauh saat cuaca buruk. Setelah itu uji pasangan kandidat yang tersisa dan bandingkan perjalanan terjauh yang tetap harus ditempuh seorang penghuni.",
   "options": [],
   "key": "",
   "keys": [

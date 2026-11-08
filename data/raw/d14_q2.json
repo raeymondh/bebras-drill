@@ -6,8 +6,12 @@
   "code": "I-2017-AT-06",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-AT-06",
-  "soalPages": [9],
-  "imgPages": [9],
+  "soalPages": [
+    9
+  ],
+  "imgPages": [
+    9
+  ],
   "deskripsi": "Sebuah toko permata membuat gelang yang tersusun atas bentuk-bentuk hiasan yang mirip tanda kurung. Ada dua bentuk yang berbeda: P-1 dan P-2. Satu pasangan bentuk adalah dua bentuk yang sama yang diposisikan berhadapan: satu menghadap ke kanan (seperti tanda kurung buka) dan satu berikutnya menghadap ke kiri (Seperti tanda kurung tutup). Ada dua kemungkinan pasangan seperti pada gambar berikut, dan selanjutnya pasangan tersebut dinamakan pasangan P-1 dan pasangan P-2.\n[gambar: dua kemungkinan pasangan hiasan — pasangan P-1 atau pasangan P-2]\nProses pembuatan gelang dimulai dari sebuah pasangan apapun (P-1 atau P-2). Pasangan demi pasangan berikutnya disisipkan secara bersamaan pada suatu titik penyisipan: di kiri, atau di tengah, atau di kanan, dari suatu pasangan yang sudah ada pada gelang. Untuk memperjelasnya berikut ini ada sejumlah contoh.\n[gambar: contoh 1]\nContoh ini dimulai dengan pasangan P-1. Pasangan P-1 kedua disisipkan di antara yang pertama, dan pasangan P-1 ketiga disisipkan di sebelah kiri dari P-1 yang pertama.\n[gambar: contoh 2]\nContoh kedua dimulai dari pasangan P-1, kemudian disisipkan sebuah pasangan P-2 di tengah pasangan P-1 yang pertama, terakhir disisipkan pasangan P-1 di tengah pasangan P-2.\n[gambar: contoh 3]\nContoh ketiga dimulai dari pasangan P-2. Pasangan P-1 pertama disisipkan di tengahnya, dan pasangan P-1 kedua disisipkan sebelah kiri pasangan P-1 pertama, tapi masih di dalam P-2. Terakhir pasangan P-1 ketiga disisipkan di tengah pasangan P-1 kedua.",
   "pertanyaan": "Manakah dari gelang-gelang berikut ini yang dibuat dengan cara yang telah diuraikan di atas?",
   "options": [
@@ -22,5 +26,6 @@
   "jawabanResmi": "Jawaban yang tepat adalah d)",
   "penjelasan": "Gelang mulai dibuat dengan dua kurung, menaruh sepasang di antaranya, kemudian menaruh pasangan lain di antara pasangan yang kedua. Semua gelang yang lain tidak dibentuk berdasarkan cara yang telah dijelaskan:\nA. Posisi 3 salah: sisi kanan dari hiasan 2 ditempatkan sebelum sisi kanan dari hiasan 1.\nB. Posisi 1 salah: dimulai dengan sisi kanan hiasan, seharusnya dari sisi kiri.\nC. Posisi 2 salah: susunan terdiri dari 3 sisi kiri dari satu hiasan dan kemudian 3 sisi kanan dari hiasan yang lain, jadi tidak disusun secara berpasangan.",
   "iniInformatika": "Aturan untuk membuat gelang yang dijelaskan pada tantangan ini sama persis seperti aturan menyusun ekspresi kurung. Ilmuwan/Ahli Informatika menyebut ekspresi yang benar dengan \"formula-benar\" (\"well formed formula\"). Ekspresi yang mengandung kesalahan disebut \"formula-salah\". Suatu ekspresi yang merupakan \"formula-benar\" juga disebut \"benar secara sintaks\", yang berarti ekspresi taat pada aturan sintaks (aturan tata bahasa) yang ditentukan. Walaupun kesalahan sintaks mungkin akan sulit dikenali pada sebuah ekspresi yang rumit, kesalahan sintaks secara umum lebih mudah ditemukan dibandingkan \"kesalahan semantik\", yaitu kesalahan logika yang dibuat oleh pemrogram.",
-  "notes": "Opsi jawaban a)–d) berupa GAMBAR gelang (tidak ada teks di buku); placeholder berkurung ditambahkan. Verifikasi visual .jpg tidak tersedia di sesi ini (model tanpa dukungan gambar, OCR tidak tersedia); transripsi diverifikasi terhadap text layer pdf.js (b2017_page-009/010.txt). Perbaikan pdf.js: 'pasan gan'→'pasangan', tanda baca sisa figur ('P-2 ) .'→'P-2.') dibersihkan."
+  "notes": "Opsi jawaban a)–d) berupa GAMBAR gelang (tidak ada teks di buku); placeholder berkurung ditambahkan. Verifikasi visual .jpg tidak tersedia di sesi ini (model tanpa dukungan gambar, OCR tidak tersedia); transripsi diverifikasi terhadap text layer pdf.js (b2017_page-009/010.txt). Perbaikan pdf.js: 'pasan gan'→'pasangan', tanda baca sisa figur ('P-2 ) .'→'P-2.') dibersihkan.",
+  "clue": "Uji tiap kandidat dengan membongkarnya mundur: cabut satu pasangan yang bisa dilepas persis kebalikan cara menyisipkan, ulangi terus sampai tersisa satu pasangan saja. Gelang yang tidak bisa dibongkar habis dengan cara itu berarti bukan hasil proses."
 }

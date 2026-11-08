@@ -6,16 +6,26 @@
   "code": "I-2017-CH-01A",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-01A",
-  "soalPages": [26],
-  "imgPages": [26],
+  "soalPages": [
+    26
+  ],
+  "imgPages": [
+    26
+  ],
   "deskripsi": "Mira perlu menemukan jalan untuk keluar dari sebuah labirin dan meminta anda untuk memberikan arahan. Dia memasuki labirin dari bawah (segitiga hitam) dan harus mencapai pintu keluar pada bagian atas (lingkaran merah besar).\n\nNamun, Mira hanya dapat mengingat empat gerakan berikut:\nKode Gerakan   Artinya   Ilustrasi\nA   Berjalan satu langkah maju dan menghadap ke kiri\nB   Berjalan satu langkah maju dan menghadap ke kanan\nC   Berjalan dua langkah maju dan menghadap ke kiri\nD   Berjalan dua langkah maju dan menghadap ke kanan\n\nMira bisa membentuk sebuah gerakan panjang yang dibentuk dari empat gerakan A, B, C, atau D. Satu gerakan bisa diulang beberapa kali. Urutan gerakan ini dapat membawa Mira keluar dari labirin dengan dua kali perulangan.\n\nSegitiga hitam menandakan arah ke mana Mira menghadap.",
   "pertanyaan": "Urutan gerakan manakah yang jika diulang dua kali (sesuai ilustrasi gambar) oleh Mira dapat membuatnya mencapai pintu keluar?",
-  "options": ["A,B,C,D", "D,A,A,D", "C,B,D,A", "C,A,A,D"],
+  "options": [
+    "A,B,C,D",
+    "D,A,A,D",
+    "C,B,D,A",
+    "C,A,A,D"
+  ],
   "key": "D,A,A,D",
   "keys": [],
   "pairs": [],
   "jawabanResmi": "Jawaban yang benar adalah D,A,A,D.",
   "penjelasan": "Gerakan-gerakan berikut ini mengarah ke pintu keluar saat diulangi dua kali:",
   "iniInformatika": "Mira sebenarnya sedang mengeksekusi sebuah program untuk mencapai pintu keluar. Sebuah program terdiri dari rangkaian perintah-perintah dan kadangkala beberapa rangkaian perintah perlu diulang.\n\nUntuk membuat hal tersebut menjadi mudah, bahasa pemrograman menyediakan instruksi khusus yang didefinisikan atau disebut sebagai blok pengulangan (loop blocks). Rangkaian perintah-perintah yang dimasukan ke dalam sebuah blok pengulangan akan diulang sebanyak jumlah pengulangan yang ditentukan oleh pembuat program.\n\nDengan menggunakan instruksi khusus ini, pemrogram tidak perlu menulis berulang-ulang bagian kode tertentu. Hal tersebut membuat kode menjadi lebih efisien dan lebih mudah untuk dibaca atau dimodifikasi.",
-  "notes": "mc. Jawaban/pembahasan and 'Inilah Informatika!' section are on page 27; soal+options on page 26. Options are radio buttons WITHOUT letter labels in the text layer (book's own answer refers to the sequence itself, 'D,A,A,D'), so key stores the option text rather than a letter. Movement table kept with wide column spacing; 'Ilustrasi' column is images. Maze figure + repeated-movement illustration are images (not transcribable). Justification spacing normalized. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support)."
+  "notes": "mc. Jawaban/pembahasan and 'Inilah Informatika!' section are on page 27; soal+options on page 26. Options are radio buttons WITHOUT letter labels in the text layer (book's own answer refers to the sequence itself, 'D,A,A,D'), so key stores the option text rather than a letter. Movement table kept with wide column spacing; 'Ilustrasi' column is images. Maze figure + repeated-movement illustration are images (not transcribable). Justification spacing normalized. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support).",
+  "clue": "Uji pilihan satu per satu: jalankan gerakannya dari segitiga sampai dua putaran penuh, sambil selalu memperhatikan arah hadap Mira yang berubah setiap satu gerakan."
 }

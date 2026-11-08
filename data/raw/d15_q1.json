@@ -6,16 +6,24 @@
   "code": "I-2017-BY-02",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-BY-02",
-  "soalPages": [39],
+  "soalPages": [
+    39
+  ],
   "imgPages": [],
   "deskripsi": "Suatu sub-string disebut “tandem” jika dinyatakan sebagai dua rangkaian karakter berturutan yang identik. Banyaknya karakter dalam suatu tandem disebut dengan panjang tandem. Misalnya string AABABA mempunyai 3 tandem: AA (panjang 2), ABAB dan BABA (panjang 4).",
   "pertanyaan": "Tentukan panjang dari tandem terpanjang string TCTACTAACCTACTAACAC",
-  "options": ["a) 10 atau lebih", "b) 8", "c) 6", "d) 4"],
+  "options": [
+    "a) 10 atau lebih",
+    "b) 8",
+    "c) 6",
+    "d) 4"
+  ],
   "key": "a",
   "keys": [],
   "pairs": {},
   "jawabanResmi": "Jawaban yang benar adalah a) 10 atau lebih karena terdapat tandem dengan panjang 16.",
   "penjelasan": "Untuk memecahkan soal ini, kita perlu membandingkan beberapa pasang sub string:\nSatu sub-string dimulai dengan karakter pertama T dan berakhir dengan huruf sebelum T berikutnya. Kemungkinan lain sub-string yang dimulai dengan T harus juga dibandingkan:\nT C T ACTAACCTACTAACAC\nT CTAC T AACCTACTAACAC\nT CTACTAACC T ACTAACAC\nT CTACTAACCTAC T AACAC\nDapat dilihat bahwa untuk T hanya terdapat tandem dengan satu huruf.\nKemudian bandingkan sub string yang mungkin yang mulai dengan karakter kedua C dengan cara yang sama:\nT CTACTA ACCTACTAACAC tandem dengan panjang=6\nT C TACTAA C CTACTAACAC\nT CTACTAAC CTACTAAC AC tandem dengan panjang=16\nTerlihat dengan jelas bahwa tandem terakhir adalah yang terpanjang. Untuk menemukan semua tandem, kita dapat memakai algoritma berikut, dimana beg_1 adalah posisi pertama dari sub-string pertama dan beg_2 adalah posisi pertama dari sub-string kedua. poz_1 dan poz_2 adalah posisi saat ini dari setiap sub-string. A(pos_1) dan A(poz_2) adalah karakter yang ada pada posisi yang sama pada setiap sub-string.\nbeg_1 ← 1\nbeg_2 ← beg_1 +1\nmax_Length ← 0\nWHILE beg_1 < N\n  poz_1 ← beg_1\n  poz_2 ← beg_2\n  Length ← 0\n  WHILE A(poz_1) = A(poz_2) AND poz_1 < beg_2\n    Length ← Length+1\n    poz_1 ← poz_1+1\n    poz_2 ← poz_2+1\n  END-WHILE\n  IF poz_1 = beg_2-1 AND Length > max_Length THEN max_Length ← Length\n  IF beg_2<N THEN beg_2 ← beg_2+1\n  ELSE beg_1 ← beg_1+1; beg_2 ← beg_1+1\nEND-WHILE\nOUTPUT(max_Length)",
   "iniInformatika": "Pencarian tandem adalah soal yang kadang-kadang dilakukan pada sebuah teks dalam bentuk string, dalam bio informatika dan analisis status dari berbagai sistem otomatis.\nJika ukuran string makin panjang, seperti dalam kasus rangkaian kode genetik, maka masalah menjadi sangat sulit dan membosankan untuk dilakukan oleh manusia, tetapi dengan proses iterasi (looping) sederhana, komputer dengan cepat dan efisien menyelesaikan algoritma ini.",
-  "notes": "Soal murni teks (string, perbandingan sub-string, pseudocode); tidak ada gambar yang dirujuk, imgPages dikosongkan. Spasi pada baris perbandingan sub-string (mis. 'T CTACTAAC CTACTAAC AC') dipertahankan sesuai buku — spasi menandai batas sub-string. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-039/040.txt)."
+  "notes": "Soal murni teks (string, perbandingan sub-string, pseudocode); tidak ada gambar yang dirujuk, imgPages dikosongkan. Spasi pada baris perbandingan sub-string (mis. 'T CTACTAAC CTACTAAC AC') dipertahankan sesuai buku — spasi menandai batas sub-string. Verifikasi visual .jpg tidak tersedia di sesi ini; transripsi diverifikasi terhadap text layer pdf.js (b2017_page-039/040.txt).",
+  "clue": "Tandem itu potongan string yang paruh kiri dan kanannya kembar persis dan berdempel. Periksa secara sistem: untuk tiap panjang genap, geser jendela dari kiri ke kanan sambil membandingkan kedua paruhnya huruf demi huruf."
 }

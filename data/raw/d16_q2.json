@@ -15,6 +15,7 @@
   ],
   "deskripsi": "Tom adalah berang-berang berusia 10 tahun yang tinggal di sebuah kota penuh belokan dan putaran. Hari itu, telpon ibunya ketinggalan di rumah, dan ia meminta Tom untuk mengantarkan ke kantornya. Ibu memberikan sebuah peta agar Tom tidak tersesat. Peta tersebut digambarkan sebagai sebuah persegi dengan petak-petak yang dinomori 1 s.d. 6. Dan panah dari A ke F. Peta tersebut juga mengandung tanda arah yang dapat ditempuh Tom.\n[gambar: tabel legenda tanda arah — panah 'turun saja': Tom hanya dapat turun; panah 'bawah/kanan': Tom dapat ke bawah atau ke kanan; panah 'kiri/bawah': Tom dapat ke kiri atau ke bawah; panah 'atas/kiri': Tom dapat ke atas atau ke kiri; gambar kerucut: Tom menemui halangan sehingga tidak dapat bergerak lagi]\nTom mulai dari pojok kiri atas (A1).\n[gambar: peta persegi berupa grid 6×6 — kolom bernomor 1–6, baris huruf A–F; tiap petak berisi salah satu panah sesuai legenda di atas atau kerucut halangan; Tom (anak laki-laki) di petak A1 pojok kiri atas, kantor ibu (gambar wanita) di petak F6 pojok kanan bawah]",
   "pertanyaan": "Rute mana yang dapat ditempuh oleh Tom untuk sampai ke kantor ibunya (F6)?",
+  "clue": "Bawa petanya, lalu 'jalan' kaki tiap pilihan rute mulai dari petak awal: di tiap petak cek apakah tanda arahnya mengizinkan langkah berikutnya, dan awas halangan. Rute yang sah harus patuh semua tanda sampai tiba di petak tujuan.",
   "options": [
     "a) A1 B1 B2 B3 C3 D3 D4 D5 D6 E6 F6",
     "b) A1 B1 B2 B3 C3 D3 E3 E4 F4 F5 F6",

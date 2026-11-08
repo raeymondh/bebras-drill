@@ -6,11 +6,22 @@
   "code": "2016-SK-02",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-SK-02",
-  "soalPages": [20, 21],
-  "imgPages": [20],
+  "soalPages": [
+    20,
+    21
+  ],
+  "imgPages": [
+    20
+  ],
   "deskripsi": "Enam anak sedang bermain di halaman.\n\nSalah satu dari mereka melempar bola dan memecahkan kaca jendela rumah Pak Beaverdam.\n\nSaat Pak Beaverdam memeriksa jendela tersebut, ia sempat melihat punggung dari anak pelaku pelemparan tersebut sedang berlari. Ia hanya ingat si anak menggunakan atasan merah dan berambut pendek.",
   "pertanyaan": "Siapa si pelaku pelemparan itu?\nPilih salah satu dari empat anak berikut: John, Tom, Jane atau Dan?",
-  "options": ["John", "Tom", "Jane", "Dan"],
+  "clue": "Perlakukan ciri si pelaku seperti pencarian data: saring dulu semua anak di gambar berdasarkan satu ciri (warna atasan), lalu dari yang lolos, saring lagi pakai ciri kedua (panjang rambut).",
+  "options": [
+    "John",
+    "Tom",
+    "Jane",
+    "Dan"
+  ],
   "key": "John",
   "keys": [],
   "pairs": [],

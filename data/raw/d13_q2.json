@@ -6,13 +6,21 @@
   "code": "I-2018-CZ-08c",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CZ-08c",
-  "soalPages": [16, 17],
-  "imgPages": [16],
+  "soalPages": [
+    16,
+    17
+  ],
+  "imgPages": [
+    16
+  ],
   "deskripsi": "Sekumpulan berang-berang sedang bermain “rantai kata” dalam bahasa Inggris. Salah satu berang-berang memulai dengan mengucapkan sebuah kata. Berang-berang lainnya harus mengucapkan sebuah kata lain yang dimulai dengan huruf terakhir dari kata sebelumnya sampai tak ada kata yang dapat diucapkan. Permainan akan diulang lagi mulai dari sebuah kata lain, dan seterusnya. Sejujurnya, kelompok bermain tersebut belum mengenal banyak kata-kata bahasa Inggris, sehingga rantai kata yang dapat diucapkan terbatas kepada kata-kata sebagai berikut: (lihat daftar kata pada gambar halaman soal: lockjaw, wool, lumber, racquetball, log, gnaw, willow, wood, wind)",
   "pertanyaan": "Berapa banyak kata yang maksimum dapat disebutkan dalam sebuah permainan?",
+  "clue": "Susun dulu rantai semaksimal mungkin, lalu cari batasnya: perhatikan kata yang tak punya penerus — tak ada kata lain yang diawali huruf akhirnya — karena kata begitu hanya bisa duduk di ujung rantai. Kalau calon penutupnya lebih banyak daripada ujung rantai yang ada, ada kata yang harus dikorbankan.",
   "options": [],
   "key": "",
-  "keys": ["8"],
+  "keys": [
+    "8"
+  ],
   "pairs": [],
   "jawabanResmi": "Jawaban yang tepat adalah 8.",
   "penjelasan": "Berang-berang dapat menggunakan paling banyak 8 kata di tiap permainan. Salah satu contohnya adalah : lockjaw-wool-lumber-racquetball-log-gnaw-willow-wood .\n\nBisakah kamu menemukan permainan lain dengan panjang yang sama?\n\nMenurut contoh ini, berarti kita yakin bahwa satu permainan dapat menggunakan setidaknya 8 kata. Tapi kita belum tahu apakah mungkin untuk menggunakan semua kata (9 kata) tersebut.\n\nSekarang perhatikan kata kayu ( Wood ) dan angin ( Wind ). Tidak ada kata-kata yang dimulai dengan d, jadi jika kata-kata ini akan digunakan, itu harus menjadi kata terakhir dari permainan. Tetapi kita tidak mungkin punya dua kata sebagai kata terakhir.\n\nOleh karena itu, kita tidak dapat menggunakan semua 9 kata tersebut dalam satu permainan.",

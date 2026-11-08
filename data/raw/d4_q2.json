@@ -6,11 +6,20 @@
   "code": "I-2018-HR-05",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-HR-05",
-  "soalPages": [43, 44],
+  "soalPages": [
+    43,
+    44
+  ],
   "imgPages": [],
   "deskripsi": "Pada suatu hari yang cerah, Maya, David, Iva, dan Marko bermain sepak bola. Malangnya, salah satu melempar bola dan memecahkan kaca kelas. Bu Guru ingin tahu siapa yang menyebabkan kaca jendela tsb pecah. Bu Guru mengenal dengan baik bahwa tiga di antara anak tersebut tidak pernah bohong. Tapi ia tidak yakin siapa yang bersalah.\n\nAnak-anak tersebut berkata secara berurutan:\n\nMarko: Bukan saya yang memecahkan kaca\nIva: Marko atau David yang memecahkan kaca\nMaya: David yang memecahkan kaca\nDavid: bukan saya, Maya bohong!",
   "pertanyaan": "Siapa yang memecahkan kaca jendela?",
-  "options": ["A. David", "B. Marko", "C. Maya", "D. Iva"],
+  "clue": "Yang bohong cuma seorang. Cari dulu dua pernyataan yang saling bertentangan — nggak mungkin sama-sama benar — lalu uji asumsi: kalau yang ini yang bohong, apakah semua pernyataan anak lain jadi konsisten?",
+  "options": [
+    "A. David",
+    "B. Marko",
+    "C. Maya",
+    "D. Iva"
+  ],
   "key": "A",
   "keys": [],
   "pairs": [],

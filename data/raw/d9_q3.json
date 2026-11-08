@@ -6,11 +6,23 @@
   "code": "I-2018-BE-03",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-BE-03",
-  "soalPages": [10, 11],
-  "imgPages": [10, 11],
+  "soalPages": [
+    10,
+    11
+  ],
+  "imgPages": [
+    10,
+    11
+  ],
   "deskripsi": "Pada Gambar-1 berikut, ada sebuah papan permainan dengan 4 buah koin, yang digambarkan sebagai diagram pada Gambar-2.\n\nPada gambar-2, setiap koin digambarkan sebagai sebuah lingkaran. Jika dua buah koin berada pada baris dan kolom yang sama pada papan permainan, maka gambarkan sebuah garis yang menghubungkan kedua buah koin tersebut. Tidak ada garis lain dalam diagram, selain yang menghubungkan dua buah koin seperti dijeskan di atas. Huruf yang dituliskan pada setiap koin akan membantu untuk memeriksa apakah diagram benar.",
   "pertanyaan": "Untuk gambar papan permainan dengan 6 koin sebagai berikut yang memang tidak kelihatan hurufnya, diagram mana yang benar?",
-  "options": ["A", "B", "C", "D"],
+  "clue": "Ubah soalnya jadi diagram: tiap koin jadi titik, dan sepasang koin dihubungkan garis kalau sebaris atau sekolom. Dari papan permainannya, hitung dulu tiap koin punya berapa koin lain yang sebaris dan sekolom dengannya — angka itu menentukan banyak garis yang harus nempel di tiap titik diagram.",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
   "key": "B",
   "keys": [],
   "pairs": [],

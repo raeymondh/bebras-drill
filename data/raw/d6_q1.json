@@ -6,10 +6,17 @@
   "code": "2016-BE-02",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-BE-02",
-  "soalPages": [36, 37],
-  "imgPages": [36, 37],
+  "soalPages": [
+    36,
+    37
+  ],
+  "imgPages": [
+    36,
+    37
+  ],
   "deskripsi": "Berlian berwarna biru yang terkenal telah dicuri dari museum hari ini. Si pencuri berhasil menukar berlian tersebut dengan perhiasan imitasi murah berwarna hijau.\nPada acara pameran berlian hari ini dihadiri oleh 2000 orang pengunjung. Para pengunjung tersebut memasuki ruangan pameran satu per satu. Inspektur Bebro harus dapat menangkap si pencuri dengan menginterogasi beberapa orang dari pengunjung tersebut. Inspektur Bebro telah memiliki daftar nama dari 2000 orang pengunjung yang memasuki ruang pameran hari ini. Inspektur Bebro akan menanyai setiap orang dengan dengan pertanyaan yang sama:\nApakah warna berlian tersebut hijau atau biru pada saat anda melihatnya ?\nSetiap pengunjung akan menjawab dengan jujur; kecuali si pencuri, yang akan menjawab warna berlian tersebut adalah hijau.",
   "pertanyaan": "Inspektur Bebro sangat pintar dan akan menggunakan strategi dimana jumlah orang yang akan ditanyai akan seminimal mungkin. Manakah dari pernyataan berikut yang dapat disampaikan Inspektur Bebro tanpa berbohong ?",
+  "clue": "Pengunjung lain semuanya jujur, jadi jawaban mereka punya pola kalau diurutkan sesuai nomor masuk — hanya satu orang yang menyeberang. Begitu polanya terlihat, ada teknik klasik yang bisa memangkas separuh calon tersangka setiap kali bertanya.",
   "options": [
     "A. Tugas ini adalah tugas yang sulit; Saya perlu menanyai sekurang-kurangnya 200 orang, tetapi kemungkinan terbanyaknya adalah 1999 orang.",
     "B. Saya tidak dapat menjanjikan apapun. Jika saya tidak beruntung, maka saya akan menanyai setiap pengunjung.",

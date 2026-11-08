@@ -6,11 +6,22 @@
   "code": "I-2018-CA-06",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CA-06",
-  "soalPages": [32, 33],
-  "imgPages": [32],
+  "soalPages": [
+    32,
+    33
+  ],
+  "imgPages": [
+    32
+  ],
   "deskripsi": "Berang-berang Yudi senang bermain lompat petak. Terdapat 8 petak yang diberi nomor dari 1 s.d. 8. Setiap petak berisi 1 kotak yang ditandai dengan salah satu dari tiga aturan melompat.\n\nContoh:\n1. Gerakan ke kiri: Misalnya sebuah kotak ditandai \"2L\" berarti ia harus melompat ke kiri sebanyak 2 petak lalu menandai petak akhir lompatannya:\n2. Gerakan ke kanan: Misalnya sebuah kotak ditandai dengan \"3R\" berarti ia harus melompat ke kanan sebanyak 3 petak, lalu menandai petak akhir lompatannya:\n3. Diam. Jika aturan adalah \"0\", maka ia harus tetap pada tempatnya alias permainan berakhir.\n\nDiberikan 8 petak dengan kotak-kotak sebagai berikut: (lihat gambar pada halaman soal)",
   "pertanyaan": "Dimulai dari kotak mana kah (petak awal ini ditandai) agar kemudian setiap petak dapat ditandai tepat satu kali dan berhenti di petak dengan kotak berisi 0?",
-  "options": ["A. 2", "B. 3", "C. 5", "D. Tidak mungkin mengunjungi semua petak."],
+  "clue": "Tiap kotak hanya menunjuk satu tujuan, jadi petak-petak itu sebenarnya membentuk rantai lompatan. Coba telusuri mundur dari petak tempat permainan berakhir: petak mana saja yang bisa mendarat ke sana, lalu lanjutkan mundur sampai rantainya tersusun semua.",
+  "options": [
+    "A. 2",
+    "B. 3",
+    "C. 5",
+    "D. Tidak mungkin mengunjungi semua petak."
+  ],
   "key": "B",
   "keys": [],
   "pairs": [],

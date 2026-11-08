@@ -6,11 +6,22 @@
   "code": "I-2018-CY-03",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CY-03",
-  "soalPages": [34, 35],
-  "imgPages": [34],
+  "soalPages": [
+    34,
+    35
+  ],
+  "imgPages": [
+    34
+  ],
   "deskripsi": "Ari mempunyai jalanan di halamannya yang cukup panjang. Tetangganya dapat parkir di jalan tersebut, namun hanya bisa mundur untuk keluar sebab jalannya sempit. Karena ia hanya memiliki sebuah mobil, tetangga minta izin untuk ikut parkir di jalan tersebut. Supaya yakin tidak ada yang terblokir, ia membuat tabel kapan tetangga boleh parkir, dan kapan harus pergi.\n\nSetiap pagi, mobil yang akan pergi harus keluar sebelum mobil lainnya masuk. Seperti dapat dilihat pada tabel, tak ada yang meninggalkan jalan pada hari Senin.\n\nAri parkir duluan, kemudian Bob parkir setelah Ari.\n\nHari | Jumlah Mobil Pergi | Jumlah Mobil Masuk | Pemilik Mobil dan Urutan Mereka masuk\nSenin | 0 | 2 | Ari, Bob\nSelasa | 1 | 3 | Kati, Ben, Roi\nRabu | 2 | 1 | Desi\nKamis | 0 | 2 | Fina, Rosa\nJumat | 3 | 1 | Vino",
   "pertanyaan": "Mobil siapa yang akan diparkir di jalanan pada akhir hari Jumat?",
-  "options": ["A. Bob, Vino, Desi", "B. Vino, Ari, Rosa", "C. Ari, Kati, Vino", "D. Ari, Vino, Bob"],
+  "clue": "Jalanan itu cuma punya satu pintu, jadi mobil yang masuk paling akhir harus keluar duluan sebelum mobil lain boleh masuk. Coba isi-kosongkan jalanan itu hari demi hari sesuai tabel, dan catat urutan mobilenya di tiap akhir hari.",
+  "options": [
+    "A. Bob, Vino, Desi",
+    "B. Vino, Ari, Rosa",
+    "C. Ari, Kati, Vino",
+    "D. Ari, Vino, Bob"
+  ],
   "key": "C",
   "keys": [],
   "pairs": [],

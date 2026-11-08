@@ -6,11 +6,22 @@
   "code": "I-2018-IR-03-X-001-5",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-IR-03-X-001-5",
-  "soalPages": [23, 24],
-  "imgPages": [23],
+  "soalPages": [
+    23,
+    24
+  ],
+  "imgPages": [
+    23
+  ],
   "deskripsi": "Bob Bekerja di stasiun Pusat Kota, dan jam kerja dimulai pukul 8:00. Bob akan didenda jika datang terlambat. Untuk setiap 15 menit terlambat, ia harus membayar denda sebesar Rp. 10.000,-. Misalnya jika ia tiba sebelum pukul 8:15 maka ia tidak didenda. Jika ia datang pukul 8:20 maka ia akan didenda Rp. 10.000,-. Pagi ini, Bob ketiduran dan tiba di stasiun keberangkatan pukul 8:08.\n\nTabel berikut menunjukkan tabel keberangkatan berbagai kereta menuju Stasiun Pusat Kota dan harga tiketnya:\n\nKereta | Jadwal | Waktu tempuh ke stasiun Pusat | Harga tiket\nBiasa | Mulai Pk. 6:00 Setiap 05 menit | 40 menit | Rp. 5000,-\nWira-Wiri | Mulai pk 6:00 Setiap 10 menit | 30 menit | Rp 10.000,-\nCepat | Mulai Pk 7:00 Setiap 15 menit | 20 menit | Rp 15.000,-\nEkspres | Mulai Pk 7:00 Setiap 20 menit | 12 menit | Rp 20.000,-",
   "pertanyaan": "Kereta mana yang harus diambil Bob agar walaupun terlambat, tetap paling “murah” dendanya?",
-  "options": ["A. Wira-Wiri", "B. Biasa", "C. Cepat", "D. Ekspres"],
+  "clue": "Bikin tabel biaya per kereta: tentukan keberangkatan paling pagi yang masih bisa dikejar Bob setelah dia tiba di stasiun, hitung jam tibanya, ubah keterlambatan jadi denda, lalu tambahkan harga tiket. Bandingkan totalnya — tiket termurah belum tentu bikin total paling murah.",
+  "options": [
+    "A. Wira-Wiri",
+    "B. Biasa",
+    "C. Cepat",
+    "D. Ekspres"
+  ],
   "key": "A",
   "keys": [],
   "pairs": [],

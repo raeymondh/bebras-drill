@@ -6,11 +6,26 @@
   "code": "2016-JP-01",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-JP-01",
-  "soalPages": [8, 9, 10],
-  "imgPages": [8, 9],
+  "soalPages": [
+    8,
+    9,
+    10
+  ],
+  "imgPages": [
+    8,
+    9
+  ],
   "deskripsi": "Taro si berang-berang menemukan lima jenis ramuan ajaib yang efeknya adalah sebagai berikut:\n• Ramuan pertama membuat telinga bertambah panjang\n• Ramuan lainnya membuat gigi bertambah panjang\n• Ramuan lainnya membuat kumis menjadi keriting\n• Ramuan lainnya membuat hidung menjadi putih\n• Ramuan terakhir membuat mata menjadi putih\n\nTaro menaruh setiap macam ramuan ajaib tersebut dalam sebuah gelas, dan ada sebuah gelas yang berisi air. Keenam gelas tersebut diberi label A sampai dengan F. Malangnya, ia lupa mencatat gelas mana yang mengandung ramuan ajaib apa. Maka, ia mengadakan percobaan sebagai berikut untuk mengidentifikasi jenis ramuan ajaib pada setiap gelas.\n• Percobaan 1: jika ia mengambil ramuan pada gelas A,B dan C, maka efeknya adalah pada Gambar 1\n• Percobaan 2: jika ia mengambil ramuan pada gelas A,D dan E, maka efeknya adalah pada Gambar 2\n• Percobaan 3: jika ia mengambil ramuan pada gelas C, D dan F, maka efeknya adalah pada Gambar 3",
   "pertanyaan": "Gelas mana yang berisi air? Pilih salah satu:",
-  "options": ["E", "A", "B", "C", "F", "D"],
+  "clue": "Ingat, gelas berisi air tidak menambah efek apa pun. Coba bandingkan banyaknya efek tiap percobaan dan perhatikan gelas mana yang ikut muncul di lebih dari satu percobaan — berpikir dengan irisan himpunan membantu.",
+  "options": [
+    "E",
+    "A",
+    "B",
+    "C",
+    "F",
+    "D"
+  ],
   "key": "D",
   "keys": [],
   "pairs": [],

@@ -6,10 +6,16 @@
   "code": "2018-ID-01a",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: 2018-ID-01a",
-  "soalPages": [49, 50],
-  "imgPages": [49],
+  "soalPages": [
+    49,
+    50
+  ],
+  "imgPages": [
+    49
+  ],
   "deskripsi": "Bapak Walikota Bebras harus memelihara 4 (empat) bendungan yang tersebar di kota setiap hari. Untuk pemeliharaan tersebut, 4 (empat) bebras A, B, C dan D yang rumahnya tersebar akan diberi tugas pemeliharaan bendungan. Pak Walikota ingin memberikan tanggung jawab penuh, artinya satu bebras akan bertanggung jawab terhadap pemeliharaan satu bendungan.\n\nBiaya pemeliharaan ditentukan oleh jarak yang ditempuh oleh bebras ke bendungan. Agar paling murah, Pak walikota ingin agar total jarak yang harus ditempuh oleh keempat berang-berang tersebut minimal. Jarak dari rumah setiap berang-berang ke setiap bendungan (dalam meter) diberikan pada tabel sebagai berikut:\n\n | Bendungan 1 | Bendungan 2 | Bendungan 3 | Bendungan 4\nA | 185 | 145 | 143 | 190\nB | 130 | 125 | 175 | 225\nC | 50 | 50 | 100 | 75\nD | 220 | 186 | 185 | 225",
   "pertanyaan": "Mengacu ke tabel yang diberikan, tentukan jarak total yang minimum jika setiap bebras diberi tugas untuk 1 bendungan (dalam satuan meter).",
+  "clue": "Jangan berhenti di jarak termurah tiap bebras, karena bisa jadi beberapa bebras berebut bendungan yang sama. Susun pasangan bebras–bendungan secara sistematis; kalau bentrok, tukar pembagiannya dan bandingkan total jarak tiap susunan.",
   "options": [],
   "key": "",
   "keys": [

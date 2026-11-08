@@ -6,16 +6,25 @@
   "code": "I-2017-DE-03",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-DE-03",
-  "soalPages": [20],
-  "imgPages": [20],
+  "soalPages": [
+    20
+  ],
+  "imgPages": [
+    20
+  ],
   "deskripsi": "Di Museum Bebras ada sistem pengamanan cerdas yang mampu mendeteksi penyusup. Penyusup adalah orang yang berhasil masuk ke museum tidak lewat pintu masuk.\n\nSetiap orang yang masuk atau keluar dari ruangan di monitor oleh sistem yang mendeteksi berapa orang pada setiap ruangan dan merekam datanya dalam sebuah tabel segera setelah satu atau beberapa pengunjung masuk, keluar atau berpindah ruangan. Mungkin saja beberapa orang masuk atau keluar satu atau beberapa ruangan pada saat yang sama. Tabel berikut menunjukkan data yang direkam sistem pengamanan cerdas dan gambar disampingnya menunjukkan denah ruangan di museum.",
   "pertanyaan": "Pada menit keberapa (pada jam 10 tersebut) sistem mendeteksi adanya seorang penyusup? Isi dengan bilangan bulat antara 00 sampai dengan 59.",
   "options": [],
   "key": "",
-  "keys": ["13", "10:13", "~13"],
+  "keys": [
+    "13",
+    "10:13",
+    "~13"
+  ],
   "pairs": [],
   "jawabanResmi": "Jawaban yang tepat adalah 10:13.",
   "penjelasan": "Polisi dipanggil pukul 10.13. Saat itu dua orang masuk Ruang 3, tetapi di ruang itu hanya ada satu orang sebelumnya (di Ruang 2). Jadi seseorang memasuki ruangan 3 dari luar museum tanpa menggunakan pintu masuk.",
   "iniInformatika": "Sistem keamanan yang bisa melacak jumlah orang dapat ditemukan di tempat-tempat seperti bandara, atau tempat penting lainnya. Kamera akan menangkap gambar pada setiap perioda tertentu. Program komputer mengevaluasi gambar dari kamera, mendeteksi orang, mencacah dan menghitungnya. Program-program ini menggunakan kecerdasan buatan (misalnya untuk mengenali manusia) dan juga aturan logis sederhana seperti dalam tugas ini untuk mendeteksi pelanggaran keamanan.",
-  "notes": "sa (answer is a number 00-59). Book's answer line says '10:13' while the question asks for the minute as an integer; keys lead with '13' (the asked quantity), '10:13' kept as variant. Figures: monitoring table + museum floor plan (not transcribable). Justification spacing normalized; extraction artifact 'ta n pa' fixed to 'tanpa'. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support)."
+  "notes": "sa (answer is a number 00-59). Book's answer line says '10:13' while the question asks for the minute as an integer; keys lead with '13' (the asked quantity), '10:13' kept as variant. Figures: monitoring table + museum floor plan (not transcribable). Justification spacing normalized; extraction artifact 'ta n pa' fixed to 'tanpa'. Text layer clean UTF-8. jpg image verification not possible in this session (model without image support).",
+  "clue": "Susun hitungan jumlah orang di tiap ruangan menit demi menit sesuai tabel. Cari menit di mana ada perubahan jumlah orang yang tidak bisa dijelaskan oleh perpindahan manapun yang tercatat."
 }

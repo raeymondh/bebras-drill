@@ -17,6 +17,7 @@
   ],
   "deskripsi": "Berang-berang si pembajak mempunyai peta yang sangat besar sehingga harus dipotong-potong dalam potongan kecil. Setiap potongan peta berukuran 8 x 8 petak seperti gambar. Malangnya, kapal si pembajak terlalu kecil sehingga tak dapat membawa semua potongan sekaligus. Untungnya, si pembajak sangat cerdik untuk mendokumentasikan setiap potongan dalam catatannya.\n\n1. Jika semua petak dalam potongan peta sama warnanya, dia mencatat sebagai persegi dengan warna petak tersebut\n2. Atau jika tidak, ia menandai dengan lingkaran dan membagi potongan peta menjadi 4 bagian yang sama seperti pada Gambar 2.\n3. Ulangi proses sampai semua petak ditandai (Gambar 4).\n\nBerikut ini adalah catatan yang ada di buku bebras si pembajak. [catatan transkriptor: lihat gambar catatan pada halaman soal]",
   "pertanyaan": "Peta yang mana yang cocok dengan catatan tsb?",
+  "clue": "Baca catatan si pembajak mulai dari lingkaran paling atas, lalu turun cabang demi cabang: lingkaran berarti wilayahnya masih dibagi lagi, persegi berarti wilayah itu sudah satu warna utuh. Warnai petak peta wilayah demi wilayah mengikuti urutan cabang, baru cocokkan dengan pilihan.",
   "options": [
     "A",
     "B",

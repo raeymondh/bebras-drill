@@ -6,10 +6,16 @@
   "code": "2016-BE-01",
   "type": "mc",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-BE-01",
-  "soalPages": [14, 15],
-  "imgPages": [14],
+  "soalPages": [
+    14,
+    15
+  ],
+  "imgPages": [
+    14
+  ],
   "deskripsi": "Sebuah mobil robot bekerja dengan aturan yang sederhana untuk melalui suatu maze: \"belok kanan setiap memungkinkan untuk belok kanan\". Gambar di kanan menunjukkan suatu contoh bagaimana mobil robot akan berjalan melalui suatu maze.",
   "pertanyaan": "Dengan cara kerja demikian, berapa banyakkah dari empat maze berikut ini mobil robot dapat akhirnya mencapai titik merah?",
+  "clue": "Jangan jawab dari perasaan — simulasikan aturan \"belok kanan kalau bisa\" langkah demi langkah di tiap maze dengan jujur mengikuti jalurnya. Hati-hati: robot bisa terjebak berputar-putar mengelilingi bagian tengah maze dan tak pernah sampai tujuan.",
   "options": [
     "A. 0",
     "B. 1",

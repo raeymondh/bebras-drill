@@ -6,10 +6,16 @@
   "code": "I-2018-RO-03-X-001-5",
   "type": "sa",
   "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-RO-03-X-001-5",
-  "soalPages": [27, 28],
-  "imgPages": [27],
+  "soalPages": [
+    27,
+    28
+  ],
+  "imgPages": [
+    27
+  ],
   "deskripsi": "Jaringan lokal rumah Bebras dilengkapi dengan 14 titik akses (Access Point) ke Wifi. Pada jaringan ini, beberapa Access Point disebut Titik Kunci (Key Point), yang jika rusak akan menyebabkan Titik Akses lain tidak berfungsi. Misalnya, Titik Akses XX-009 adalah sebuah Titik Kunci: jika XX-009 rusak, maka XX-011 tidak dapat mengakses jaringan lagi.",
   "pertanyaan": "Titik Akses mana saja yang merupakan Titik Kunci? Jawaban benar bisa lebih dari satu.\n\nPilihan Jawaban:\na) XX-13\nb) XX-02\nc) XX-14\nd) XX-07\ne) XX-06\nf) XX-03\ng) XX-08\nh) XX-01\ni) XX-12\nj) XX-09\nk) XX-04\nl) XX-05\nm) XX-11\nn) XX-10",
+  "clue": "Kerjakan dengan uji satu per satu: bayangkan sebuah titik akses mati, lalu telusuri apakah masih ada titik lain yang jadi terputus dari jaringan. Titik yang menjembatani dua kelompok begitulah yang krusial.",
   "options": [],
   "key": "",
   "keys": [
