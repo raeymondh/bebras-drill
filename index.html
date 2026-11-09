@@ -893,6 +893,10 @@ const modules = [
   function solvedCount(m) {
     return m.questions.filter(function (q) { return solvedMap(m.id)[q.id]; }).length;
   }
+  // selesai = sudah dijawab: benar (solved) ATAU gagal 3x (revealed) — keduanya dihitung di progress bar
+  function answeredCount(m) {
+    return m.questions.filter(function (q) { return solvedMap(m.id)[q.id] || isRevealed(q.id); }).length;
+  }
   function isSolved(qid) { return !!solvedMap(currentId)[qid]; }
   function heartsLeft(qid) { var h = progress.hearts && progress.hearts[qid]; return (h === undefined || h === null) ? 3 : Number(h); }
   function isRevealed(qid) { return heartsLeft(qid) <= 0; }
@@ -1625,7 +1629,7 @@ const modules = [
     var m = mod();
     var fill = $('#progressFill'), pct = $('#progressPct'), txt = $('#progressText'), bar = $('#progressBar');
     var total = m ? m.questions.length : 0;
-    var done = m ? solvedCount(m) : 0;
+    var done = m ? answeredCount(m) : 0; // progress = dijawab (benar atau gagal 3x) — biar gak nyangkut 'proses' selamanya
     var p = total ? Math.round((done / total) * 100) : 0;
     fill.style.width = p + '%';
     pct.textContent = p + '%';
@@ -1640,7 +1644,7 @@ const modules = [
     if ($('#modulePickerModal').hidden && $('#celebrationModal').hidden) document.body.classList.remove('modal-open');
   }
   function statusOf(m) {
-    var done = solvedCount(m), total = m.questions.length;
+    var done = answeredCount(m), total = m.questions.length;
     if (total > 0 && done === total) return ['✓ SELESAI', 'st-done'];
     if (done > 0) return ['• PROSES', 'st-prog'];
     return ['BELUM', 'st-none'];
@@ -1650,11 +1654,11 @@ const modules = [
     grid.textContent = '';
     modules.forEach(function (m) {
       var st = statusOf(m);
-      var done = solvedCount(m), total = m.questions.length;
+      var done = answeredCount(m), total = m.questions.length;
       grid.append(el('div', {
         class: 'picker-card module-card' + (m.id === currentId ? ' current' : ''),
         tabindex: '0', role: 'button',
-        'aria-label': m.label + ' — ' + m.title + ' (' + done + '/' + total + ' solved)',
+        'aria-label': m.label + ' — ' + m.title + ' (' + done + '/' + total + ' done)',
         onclick: function () { switchModule(m.id); },
         onkeydown: function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); switchModule(m.id); } }
       },
@@ -1665,7 +1669,7 @@ const modules = [
         el('div', { class: 'pc-title', text: m.title }),
         el('div', { class: 'pc-date', text: '📅 ' + m.day + ' · ' + m.label.replace('HARI', 'Modul Hari') }),
         el('div', { class: 'pc-file', text: m.file }),
-        el('div', { class: 'pc-count', text: done + '/' + total + ' Solved' })
+        el('div', { class: 'pc-count', text: done + '/' + total + ' Done' })
       ));
     });
     grid.append(el('div', { class: 'picker-card picker-banner', 'aria-disabled': 'true' },
