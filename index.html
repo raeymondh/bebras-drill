@@ -723,10 +723,10 @@ const modules = [
   function loadProgress() {
     try {
       var raw = localStorage.getItem(LS_PROGRESS);
-      if (!raw) return { solved: {}, examStart: {}, clueUsed: {} };
+      if (!raw) return { solved: {}, examStart: {}, clueUsed: {}, answers: {} };
       var p = JSON.parse(raw);
-      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {} };
-    } catch (e) { return { solved: {}, examStart: {}, clueUsed: {} }; }
+      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {}, answers: p.answers || {} };
+    } catch (e) { return { solved: {}, examStart: {}, clueUsed: {}, answers: {} }; }
   }
   function saveProgress() {
     try { localStorage.setItem(LS_PROGRESS, JSON.stringify(progress)); } catch (e) { /* storage full/blocked */ }
@@ -753,7 +753,7 @@ const modules = [
     try {
       fetch(syncUrl('api/progress'), { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {} }) : null); })
+        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {}, answers: {} }) : null); })
         .catch(function () { finish(null); });
       setTimeout(function () { finish(null); }, 5000);
     } catch (e) { finish(null); }
@@ -781,6 +781,10 @@ const modules = [
     }
     for (k in a.clueUsed) out.clueUsed[k] = true;
     for (k in b.clueUsed) out.clueUsed[k] = true;
+    // answers (bekas jawaban terakhir per soal): union per qid — b (local) menang kalau konflik
+    out.answers = {};
+    for (k in (a.answers || {})) out.answers[k] = a.answers[k];
+    for (k in (b.answers || {})) if (!(k in out.answers)) out.answers[k] = b.answers[k];
     return out;
   }
   function bootSync() {
@@ -930,6 +934,7 @@ const modules = [
     if (q.type === 'mc') renderMC(q, solved).forEach(function (r) { inputs.append(r); });
     else if (q.type === 'sa') inputs.append(renderSA(q, solved));
     else if (q.type === 'ma') renderMA(q, solved).forEach(function (r) { inputs.append(r); });
+    restoreAnswer(q, inputs); // bekas jawaban terakhir tetap terlihat saat review
     card.append(inputs);
 
     var runBtn = el('button', {
@@ -1062,6 +1067,77 @@ const modules = [
   }
 
   /* ================= render module ================= */
+  /* ================= jawaban terakhir (persist + restore) ================= */
+  function qById(qid) {
+    if (!Array.isArray(modules)) return null;
+    for (var i = 0; i < modules.length; i++) {
+      var q = (modules[i].questions || []).find(function (x) { return x.id === qid; });
+      if (q) return q;
+    }
+    return null;
+  }
+  var ansSaveTimer = null;
+  function scheduleAnswerSave() {
+    if (ansSaveTimer) clearTimeout(ansSaveTimer);
+    ansSaveTimer = setTimeout(saveProgress, 350);
+  }
+  // baca kondisi input di DOM untuk soal q → simpan ke progress.answers[qid] = {v}
+  function captureAnswer(q) {
+    try {
+      if (!q || q.type === 'check') return;
+      var card = document.getElementById('card-' + q.id);
+      if (!card) return;
+      var v = null;
+      if (q.type === 'mc') {
+        var r = card.querySelector('input[type=radio]:checked');
+        v = r ? r.value : null;
+      } else if (q.type === 'sa') {
+        var inp = card.querySelector('input.sa-input');
+        v = inp ? inp.value : null;
+      } else if (q.type === 'ma') {
+        v = [];
+        card.querySelectorAll('select.ma-select').forEach(function (s) { v.push(s.value || ''); });
+      }
+      if (v === null) return;
+      var empty = (q.type === 'mc' || q.type === 'sa') ? !String(v).length : v.every(function (x) { return !x; });
+      progress.answers = progress.answers || {};
+      var prev = JSON.stringify(progress.answers[q.id] || null);
+      if (empty) delete progress.answers[q.id];
+      else progress.answers[q.id] = { v: v };
+      if (JSON.stringify(progress.answers[q.id] || null) !== prev) scheduleAnswerSave();
+    } catch (e) { /* ignore */ }
+  }
+  // pasang kembali jawaban tersimpan ke input card (input sudah disabled kalau solved — value tetap terlihat)
+  function restoreAnswer(q, root) {
+    try {
+      var saved = progress.answers && progress.answers[q.id];
+      if (!saved || !saved.v) return;
+      var v = saved.v;
+      if (q.type === 'mc' && typeof v === 'string') {
+        var r = root.querySelector('input[type=radio][value="' + v + '"]');
+        if (r) r.checked = true;
+      } else if (q.type === 'sa' && typeof v === 'string') {
+        var inp = root.querySelector('input.sa-input');
+        if (inp) inp.value = v;
+      } else if (q.type === 'ma' && Array.isArray(v)) {
+        v.forEach(function (val, i) {
+          var s = root.querySelector('.ma-select[id="ma-' + q.id + '-' + i + '"]');
+          if (s) s.value = val;
+        });
+      }
+    } catch (e) { /* ignore */ }
+  }
+  // delegasi: input/change apa pun di dalam .q-card → capture jawaban terakhir
+  function answerInputHandler(e) {
+    var t = e.target;
+    if (!t || !t.closest) return;
+    var card = t.closest('.q-card');
+    if (!card || !card.id || card.id.indexOf('card-') !== 0) return;
+    captureAnswer(qById(card.id.slice(5)));
+  }
+  document.addEventListener('input', answerInputHandler, true);
+  document.addEventListener('change', answerInputHandler, true);
+
   function renderModule() {
     stopExamTick();
     app.textContent = '';
@@ -1210,6 +1286,7 @@ const modules = [
     if (q) runCheck(m, q);
   }
   function runCheck(m, q) {
+    captureAnswer(q); // pastikan jawaban yang disubmit tersimpan walau event input kelewat
     var term = document.getElementById('term-' + q.id);
     if (!term) return;
     term.hidden = false;
