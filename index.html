@@ -364,6 +364,41 @@ body.fx-shake .ide-window{animation:fxShake .52s cubic-bezier(.36,.07,.19,.97) b
   30%,50%,70%{transform:translate(-8px,3px)}
   40%,60%{transform:translate(8px,-2px)}
 }
+body.fx-shake3 .ide-window{animation:fxShake3 .74s cubic-bezier(.36,.07,.19,.97) both}
+@keyframes fxShake3{
+  10%,90%{transform:translate(-4px,2px)}
+  20%,80%{transform:translate(9px,-3px)}
+  30%,50%,70%{transform:translate(-14px,5px)}
+  40%,60%{transform:translate(14px,-5px)}
+}
+.fx-fail.l3{background:radial-gradient(ellipse at 50% 50%, rgba(248,81,73,.06) 30%, rgba(248,81,73,.28) 58%, rgba(120,10,10,.72) 100%)}
+/* hearts: 3 percobaan per soal — pecah makin intense tiap salah */
+.hearts-row{display:flex;gap:7px;align-items:center;margin:12px 0 0;font-size:19px;line-height:1}
+.heart{display:inline-block;filter:drop-shadow(0 0 5px rgba(248,81,73,.5))}
+.heart.lost{filter:grayscale(1) brightness(.55);opacity:.5;transform:scale(.82)}
+.heart.breaking{animation:heartBreak .42s cubic-bezier(.3,.1,.2,1) both}
+.hearts-row.lvl-2 .heart.breaking{animation-duration:.55s}
+.hearts-row.lvl-3 .heart.breaking{animation-duration:.78s}
+.hearts-row.lvl-2{animation:heartsShake .5s both}
+.hearts-row.lvl-3{animation:heartsShakeBig .75s both}
+@keyframes heartBreak{
+  0%{transform:scale(1)}
+  18%{transform:scale(1.8) rotate(-16deg)}
+  36%{transform:scale(1.15) rotate(12deg)}
+  52%{transform:scale(1.6) rotate(-9deg) translateY(-7px)}
+  72%{transform:scale(.65) rotate(15deg) translateY(5px);opacity:.7}
+  100%{transform:scale(.82);opacity:.5}
+}
+@keyframes heartsShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+@keyframes heartsShakeBig{0%,100%{transform:translateX(0)}15%{transform:translateX(-10px)}30%{transform:translateX(9px)}45%{transform:translateX(-8px)}60%{transform:translateX(7px)}80%{transform:translateX(-4px)}}
+.card-shake{animation:cardShakeBig .6s both}
+@keyframes cardShakeBig{0%,100%{transform:translateX(0)}20%{transform:translateX(-11px)}40%{transform:translateX(9px)}60%{transform:translateX(-6px)}80%{transform:translateX(4px)}}
+.qc-skull{font-size:16px;opacity:.9}
+/* jawaban dipaksakan (gagal 3x): sengaja gak satisfying — kusam, desaturasi, tanpa warna hidup */
+.solution-panel.forced{filter:grayscale(.85) brightness(.8);border-color:rgba(248,81,73,.4);background:rgba(248,81,73,.04)}
+.solution-panel.forced::before{content:'// JAWABAN DIPAKSAKAN — GAGAL 3x. Baca pelan-pelan, pahami, jangan diulang.';display:block;font-family:'Fira Code',monospace;font-size:11px;color:#f85149;opacity:.85;margin-bottom:10px;letter-spacing:.4px}
+.q-card.revealed{opacity:.9}
+.q-card.revealed .q-id-chip{color:#f85149;border-color:rgba(248,81,73,.4)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
@@ -723,10 +758,10 @@ const modules = [
   function loadProgress() {
     try {
       var raw = localStorage.getItem(LS_PROGRESS);
-      if (!raw) return { solved: {}, examStart: {}, clueUsed: {}, answers: {} };
+      if (!raw) return { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {} };
       var p = JSON.parse(raw);
-      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {}, answers: p.answers || {} };
-    } catch (e) { return { solved: {}, examStart: {}, clueUsed: {}, answers: {} }; }
+      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {}, answers: p.answers || {}, hearts: p.hearts || {} };
+    } catch (e) { return { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {} }; }
   }
   function saveProgress() {
     try { localStorage.setItem(LS_PROGRESS, JSON.stringify(progress)); } catch (e) { /* storage full/blocked */ }
@@ -753,7 +788,7 @@ const modules = [
     try {
       fetch(syncUrl('api/progress'), { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {}, answers: {} }) : null); })
+        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {} }) : null); })
         .catch(function () { finish(null); });
       setTimeout(function () { finish(null); }, 5000);
     } catch (e) { finish(null); }
@@ -785,6 +820,12 @@ const modules = [
     out.answers = {};
     for (k in (a.answers || {})) out.answers[k] = a.answers[k];
     for (k in (b.answers || {})) if (!(k in out.answers)) out.answers[k] = b.answers[k];
+    // hearts: ambil yang PALING rendah (monoton turun — salah di device mana pun dihitung)
+    out.hearts = {};
+    for (k in (a.hearts || {})) out.hearts[k] = a.hearts[k];
+    for (k in (b.hearts || {})) {
+      if (out.hearts[k] === undefined || Number(b.hearts[k]) < Number(out.hearts[k])) out.hearts[k] = b.hearts[k];
+    }
     return out;
   }
   function bootSync() {
@@ -853,6 +894,8 @@ const modules = [
     return m.questions.filter(function (q) { return solvedMap(m.id)[q.id]; }).length;
   }
   function isSolved(qid) { return !!solvedMap(currentId)[qid]; }
+  function heartsLeft(qid) { var h = progress.hearts && progress.hearts[qid]; return (h === undefined || h === null) ? 3 : Number(h); }
+  function isRevealed(qid) { return heartsLeft(qid) <= 0; }
 
   /* ================= render: empty ================= */
   function renderEmpty() {
@@ -893,15 +936,17 @@ const modules = [
   /* ================= render: question card ================= */
   function renderCard(m, q) {
     var solved = isSolved(q.id);
+    var revealed = !solved && isRevealed(q.id);
+    var locked = solved || revealed;
     var card = el('article', {
-      class: 'q-card' + (solved ? ' solved' : ''), id: 'card-' + q.id,
+      class: 'q-card' + (solved ? ' solved' : '') + (revealed ? ' revealed' : ''), id: 'card-' + q.id,
       'aria-label': 'Soal ' + q.id + ' — ' + q.title
     });
     card.append(el('div', { class: 'qc-head' },
       el('span', { class: 'q-id-chip', text: q.id }),
       el('h3', { class: 'qc-title', text: q.title }),
       el('span', { class: 'q-type-badge type-' + q.type, text: q.badge || badgeFor(q.type) }),
-      solved ? el('span', { class: 'qc-check', 'aria-label': 'Selesai', title: 'Selesai', text: '✓' }) : null
+      solved ? el('span', { class: 'qc-check', 'aria-label': 'Selesai', title: 'Selesai', text: '✓' }) : (revealed ? el('span', { class: 'qc-skull', 'aria-label': 'Gagal 3x — jawaban dibuka paksa', title: 'Gagal 3x — jawaban dibuka paksa', text: '💀' }) : null)
     ));
     if (q.pdfInfo) card.append(el('div', { class: 'pdf-badge', text: '📄 ' + q.pdfInfo }));
     var hasImgs = Array.isArray(q.img) && q.img.length;
@@ -931,9 +976,9 @@ const modules = [
     }
 
     var inputs = el('div', { class: 'q-inputs', role: 'group', 'aria-label': 'Input jawaban ' + q.id });
-    if (q.type === 'mc') renderMC(q, solved).forEach(function (r) { inputs.append(r); });
-    else if (q.type === 'sa') inputs.append(renderSA(q, solved));
-    else if (q.type === 'ma') renderMA(q, solved).forEach(function (r) { inputs.append(r); });
+    if (q.type === 'mc') renderMC(q, locked).forEach(function (r) { inputs.append(r); });
+    else if (q.type === 'sa') inputs.append(renderSA(q, locked));
+    else if (q.type === 'ma') renderMA(q, locked).forEach(function (r) { inputs.append(r); });
     restoreAnswer(q, inputs); // bekas jawaban terakhir tetap terlihat saat review
     card.append(inputs);
 
@@ -941,20 +986,20 @@ const modules = [
       class: 'btn btn-run', id: 'btn-check-' + q.id, type: 'button',
       onclick: function () { runCheck(m, q); }
     }, '▶ RUN_CHECK()');
-    if (solved) runBtn.disabled = true;
+    if (locked) runBtn.disabled = true;
     var dbgBtn = el('button', {
       class: 'btn btn-debug', id: 'btn-debug-' + q.id, type: 'button',
       'aria-expanded': 'false', onclick: function () { toggleSolution(q.id); }
     }, '🐞 DEBUG_SOLUTION');
-    // pembahasan baru boleh dibuka SETELAH jawaban benar (kecuali checklist review)
-    if (q.type !== 'check' && !solved) dbgBtn.hidden = true;
+    // pembahasan baru boleh dibuka SETELAH jawaban benar / nyawa habis (kecuali checklist review)
+    if (q.type !== 'check' && !solved && !revealed) dbgBtn.hidden = true;
     var clueBtn = null;
     if (q.clue && q.type !== 'check') {
       clueBtn = el('button', {
         class: 'btn btn-clue', id: 'btn-clue-' + q.id, type: 'button',
         onclick: function () { askClue(q); }
       }, '💡 CLUE()');
-      if (solved) clueBtn.disabled = true; // jawaban sudah benar — clue gak relevan lagi
+      if (locked) clueBtn.disabled = true; // jawaban sudah benar / dipaksakan — clue gak relevan lagi
     }
     card.append(el('div', { class: 'q-actions' }, runBtn, dbgBtn, clueBtn));
 
@@ -967,11 +1012,23 @@ const modules = [
     }
     if (cluePanel) card.append(cluePanel);
 
+    // hearts: 3 percobaan per soal (hidden kalau solved atau checklist review)
+    if (q.type !== 'check' && !solved) {
+      var n = heartsLeft(q.id);
+      var hs = [];
+      for (var hi = 0; hi < 3; hi++) hs.push(el('span', { class: 'heart' + (hi < n ? '' : ' lost'), text: hi < n ? '❤' : '🖤' }));
+      card.append(el('div', { class: 'hearts-row', id: 'hearts-' + q.id, role: 'img', 'aria-label': 'Sisa percobaan: ' + n + ' dari 3' }, hs));
+    }
+
     var term = el('div', { class: 'terminal-box', id: 'term-' + q.id, 'aria-live': 'polite', hidden: 'true' });
     if (solved) {
       term.hidden = false; term.classList.add('ok');
       termLine(term, '> run_check(' + q.id + ')...', 'cmd');
       termLine(term, '✓ TEST PASSED — Jawaban benar!');
+    } else if (revealed) {
+      term.hidden = false; term.classList.add('err');
+      termLine(term, '> run_check(' + q.id + ')...', 'cmd');
+      termLine(term, '✗ GAGAL 3x — nyawa habis. Jawaban dibuka paksa, baca & pahami.');
     }
     card.append(term);
 
@@ -999,6 +1056,11 @@ const modules = [
       ) : null
     );
     card.append(sol);
+    if (revealed) {
+      sol.hidden = false;
+      sol.classList.add('forced');
+      if (dbgBtn) dbgBtn.setAttribute('aria-expanded', 'true');
+    }
     return card;
   }
 
@@ -1190,7 +1252,8 @@ const modules = [
   }
   /* fx salah: vignette merah + layar bergetar */
   var fxFailEl = null;
-  function failFx() {
+  function failFx(level) {
+    level = level || 2;
     try {
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       if (!fxFailEl) {
@@ -1200,19 +1263,23 @@ const modules = [
         fxFailEl.setAttribute('aria-hidden', 'true');
         document.body.append(fxFailEl);
       }
+      if (level >= 3) fxFailEl.classList.add('l3'); else fxFailEl.classList.remove('l3');
       fxFailEl.classList.remove('on');
       void fxFailEl.offsetWidth; // restart transition
       fxFailEl.classList.add('on');
       document.body.classList.remove('fx-shake');
+      document.body.classList.remove('fx-shake3');
       void document.body.offsetWidth;
-      document.body.classList.add('fx-shake');
-      setTimeout(function () { fxFailEl.classList.remove('on'); }, 380);
-      setTimeout(function () { document.body.classList.remove('fx-shake'); }, 560);
+      if (level >= 2) document.body.classList.add('fx-shake');
+      if (level >= 3) document.body.classList.add('fx-shake3');
+      setTimeout(function () { fxFailEl.classList.remove('on'); }, level >= 3 ? 540 : 380);
+      setTimeout(function () { document.body.classList.remove('fx-shake'); document.body.classList.remove('fx-shake3'); }, level >= 3 ? 800 : 560);
     } catch (e) { /* efek gagal? skip */ }
   }
   /* ============ confetti: dopamin pas jawaban benar ============ */
   var fxCanvas = null, fxParts = [], fxRaf = 0;
   var FX_COLORS = ['#58a6ff', '#3fb950', '#bc8cff', '#d29922', '#f85149', '#79c0ff', '#e6edf3'];
+  var FX_FAIL_COLORS = ['#f85149', '#da3633', '#8b1a1a', '#67060c'];
   function fxLayer() {
     if (fxCanvas) return fxCanvas;
     fxCanvas = document.createElement('canvas');
@@ -1222,11 +1289,12 @@ const modules = [
     fxCanvas.width = innerWidth; fxCanvas.height = innerHeight;
     return fxCanvas;
   }
-  function burstConfetti(x, y, n) {
+  function burstConfetti(x, y, n, cols) {
     try {
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       var c = fxLayer();
       c.width = innerWidth; c.height = innerHeight;
+      var palette = cols || FX_COLORS;
       for (var i = 0; i < (n || 90); i++) {
         var a = Math.random() * Math.PI * 2, sp = 3 + Math.random() * 7;
         fxParts.push({
@@ -1235,13 +1303,15 @@ const modules = [
           vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 6,
           w: 5 + Math.random() * 6, h: 8 + Math.random() * 8,
           rot: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.3,
-          col: FX_COLORS[(Math.random() * FX_COLORS.length) | 0],
+          col: palette[(Math.random() * palette.length) | 0],
           life: 70 + Math.random() * 50
         });
       }
       if (!fxRaf) fxRaf = requestAnimationFrame(fxTick);
     } catch (e) { /* efek gagal? skip — jangan ganggu gameplay */ }
   }
+  // serpihan merah: heart terakhir pecah (gagal 3x) — kebalikan confetti
+  function burstFail(x, y) { burstConfetti(x, y, 46, FX_FAIL_COLORS); }
   function fxTick() {
     if (!fxCanvas) { fxRaf = 0; return; }
     var ctx = fxCanvas.getContext('2d');
@@ -1321,9 +1391,21 @@ const modules = [
           glideScrollTo(sol, r.height > innerHeight - 120 ? 'start' : 'end');
         }, 260);
       } else {
+        var left = Math.max(0, heartsLeft(q.id) - 1);
+        progress.hearts = progress.hearts || {};
+        progress.hearts[q.id] = left;
+        saveProgress();
         term.classList.add('err');
-        termLine(term, '✗ TEST FAILED — Jawaban salah. Coba lagi!');
-        failFx();
+        if (left <= 0) {
+          termLine(term, '✗ GAGAL 3x — nyawa habis. Jawaban dibuka paksa, baca & pahami.');
+          heartBreakFx(q.id, 0);
+          failFx(3);
+          revealQuestion(q.id);
+        } else {
+          termLine(term, '✗ SALAH (' + (3 - left) + '/3) — sisa nyawa: ' + left + '. Tenang, mikir lagi pelan-pelan.');
+          heartBreakFx(q.id, left);
+          failFx(3 - left);
+        }
       }
     }, 220);
   }
@@ -1344,11 +1426,67 @@ const modules = [
     card.querySelectorAll('input,select').forEach(function (n) { n.disabled = true; });
     var rb = document.getElementById('btn-check-' + qid);
     if (rb) rb.disabled = true;
+    var hr = document.getElementById('hearts-' + qid);
+    if (hr) hr.hidden = true; // sudah solved — hearts gak relevan lagi
     var db = document.getElementById('btn-debug-' + qid);
     if (db) db.hidden = false; // pembahasan terbuka setelah jawaban benar
     var head = card.querySelector('.qc-head');
     if (head && !head.querySelector('.qc-check')) {
       head.append(el('span', { class: 'qc-check', 'aria-label': 'Selesai', title: 'Selesai', text: '✓' }));
+    }
+  }
+  /* ============ hearts: animasi pecah + reveal paksa ============ */
+  // left = sisa nyawa SETELAH gagal (2/1/0). Pecah dari kanan: left=2 → heart paling kanan.
+  function heartBreakFx(qid, left) {
+    try {
+      var row = document.getElementById('hearts-' + qid);
+      if (!row) return;
+      row.classList.remove('lvl-2', 'lvl-3');
+      if (left === 1) row.classList.add('lvl-2');
+      if (left === 0) row.classList.add('lvl-3');
+      void row.offsetWidth; // restart animasi row
+      var hs = row.querySelectorAll('.heart');
+      var h = hs[left];
+      if (h) {
+        h.classList.remove('lost');
+        h.textContent = '💔';
+        h.classList.add('breaking');
+        setTimeout(function () {
+          h.classList.remove('breaking');
+          h.classList.add('lost');
+          h.textContent = '🖤';
+        }, left === 0 ? 800 : left === 1 ? 570 : 440);
+      }
+      if (left === 0) {
+        var card = document.getElementById('card-' + qid);
+        if (card) { card.classList.remove('card-shake'); void card.offsetWidth; card.classList.add('card-shake'); }
+        var r = row.getBoundingClientRect();
+        burstFail(r.left + r.width / 2, r.top + r.height / 2);
+      }
+    } catch (e) { /* efek gagal? skip */ }
+  }
+  // nyawa habis: buka jawaban PAKSA — sengaja gak satisfying (kusam, tanpa confetti, tanpa hijau)
+  function revealQuestion(qid) {
+    var card = document.getElementById('card-' + qid);
+    if (!card) { renderModule(); return; }
+    card.classList.add('revealed');
+    card.querySelectorAll('input,select').forEach(function (n) { n.disabled = true; });
+    var rb = document.getElementById('btn-check-' + qid); if (rb) rb.disabled = true;
+    var cb = document.getElementById('btn-clue-' + qid); if (cb) cb.disabled = true;
+    var db = document.getElementById('btn-debug-' + qid);
+    if (db) { db.hidden = false; db.setAttribute('aria-expanded', 'true'); }
+    var head = card.querySelector('.qc-head');
+    if (head && !head.querySelector('.qc-skull')) {
+      head.append(el('span', { class: 'qc-skull', 'aria-label': 'Gagal 3x — jawaban dibuka paksa', title: 'Gagal 3x — jawaban dibuka paksa', text: '💀' }));
+    }
+    var sol = document.getElementById('sol-' + qid);
+    if (sol) {
+      sol.hidden = false;
+      sol.classList.add('forced');
+      setTimeout(function () {
+        var r = sol.getBoundingClientRect();
+        glideScrollTo(sol, r.height > innerHeight - 120 ? 'start' : 'end');
+      }, 350);
     }
   }
   function toggleSolution(qid) {
