@@ -135,6 +135,94 @@ main#app{padding:22px;min-height:58vh}
   color:#ff8b81;background:rgba(248,81,73,.1);border:1px solid rgba(248,81,73,.5);
   border-radius:8px;padding:12px 16px;
 }
+/* ---- v3.11: exam zero-feedback + evaluasi + redo + victory ---- */
+.btn-submit{color:#0d1117;border-color:rgba(63,185,80,.7);background:linear-gradient(180deg,#3fb950,#2ea043);font-weight:700;font-size:14px}
+.btn-submit:hover:not(:disabled){border-color:#56d364;background:linear-gradient(180deg,#46c35a,#33a647)}
+.exam-fill{font-family:var(--mono);font-size:12px;font-weight:600;padding:8px 12px;border-radius:8px;background:var(--bg);border:1px solid var(--border);color:#79c0ff;white-space:nowrap}
+.exam-fill.full{color:#0d1117;background:rgba(63,185,80,.85);border-color:#3fb950}
+.btn-mini{font-size:12px;padding:6px 12px;min-height:34px}
+.qc-x{color:#ff8b81;font-weight:800;font-size:15px}
+.qc-void{color:#8b949e;font-weight:800;font-size:15px}
+/* hasil / failed modal */
+.er-backdrop{position:fixed;inset:0;z-index:130;display:flex;align-items:center;justify-content:center;background:rgba(1,4,9,.88);padding:16px;overflow:auto}
+.er-backdrop[hidden]{display:none}
+.er-card{max-width:580px;width:100%;background:var(--window);border:1px solid rgba(248,81,73,.5);border-radius:12px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.6);animation:pop .22s ease both}
+.er-title{font-family:var(--mono);font-size:17px;font-weight:800;color:#ff8b81;letter-spacing:.03em;text-align:center}
+.er-title.gold{color:#ffd700;text-shadow:0 0 24px rgba(255,215,0,.35)}
+.er-sub{color:#e6edf3;text-align:center;font-size:13.5px;margin-top:8px;line-height:1.65}
+.er-sub2{color:#8b949e;text-align:center;font-size:12px;margin-top:6px;line-height:1.6}
+.er-stats{font-family:var(--mono);font-size:12.5px;color:#c9d1d9;margin-top:14px;line-height:1.9;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px;word-break:break-word}
+.er-stats .ok{color:#56d364}.er-stats .bad{color:#ff8b81}.er-stats .void{color:#8b949e}
+.er-ask{color:#e3b341;font-weight:700;font-size:13px;margin-top:16px;font-family:var(--mono)}
+.er-reasons{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.reason-btn{font-family:var(--mono);font-size:12px;padding:9px 14px;min-height:40px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:#c9d1d9;cursor:pointer;transition:border-color .15s,background .15s}
+.reason-btn:hover{border-color:#e3b341}
+.reason-btn.selected{color:#0d1117;background:#e3b341;border-color:#e3b341;font-weight:700}
+.er-cta{width:100%;margin-top:18px;font-size:14px}
+/* evaluasi stepper */
+.eval-backdrop{position:fixed;inset:0;z-index:135;background:rgba(1,4,9,.94);overflow:auto;padding:18px}
+.eval-backdrop[hidden]{display:none}
+.eval-card{max-width:780px;margin:0 auto;background:var(--window);border:1px solid var(--border);border-radius:12px;padding:18px}
+.eval-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.eval-step{font-family:var(--mono);font-weight:700;color:#79c0ff;font-size:13px;white-space:nowrap}
+.eval-title{color:#e6edf3;font-weight:700;font-size:15px;flex:1;min-width:200px;line-height:1.5}
+.eval-qimg img,.eval-qtext{width:100%;border-radius:8px;border:1px solid var(--border)}
+.eval-qtext{padding:12px 14px;color:#c9d1d9;font-size:13.5px;line-height:1.7}
+.eval-ans{font-family:var(--mono);font-size:13px;line-height:2;margin:12px 0;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 14px;word-break:break-word}
+.eval-ans .yours{color:#ff8b81}.eval-ans .key{color:#56d364}
+.eval-fields{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.eval-fields label{font-family:var(--mono);font-size:11.5px;color:#d29922;display:block;margin-bottom:4px;letter-spacing:.03em}
+.eval-fields textarea{width:100%;min-height:74px;resize:vertical;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-family:var(--sans),sans-serif;font-size:13.5px;line-height:1.6}
+.eval-fields textarea:focus{outline:2px solid var(--blue);outline-offset:0}
+.eval-nav{display:flex;justify-content:space-between;gap:10px;margin-top:16px}
+.eval-sol img{width:100%;border-radius:8px;border:1px solid var(--border);margin-top:10px}
+/* redo: eskalasi 3x press */
+.redo-yes{transition:transform .18s cubic-bezier(.34,1.56,.64,1),background .18s,border-color .18s,box-shadow .18s;font-weight:700}
+.redo-yes.s1{transform:scale(1.16);background:rgba(248,81,73,.25);border-color:rgba(248,81,73,.8);box-shadow:0 0 18px rgba(248,81,73,.35)}
+.redo-yes.s2{transform:scale(1.34);background:rgba(248,81,73,.42);border-color:#f85149;box-shadow:0 0 30px rgba(248,81,73,.5);animation:heartbeat .9s ease-in-out infinite}
+.redo-yes.s3{transform:scale(1.55);background:linear-gradient(180deg,#f85149,#da3633);color:#fff;border-color:#ff8b81;box-shadow:0 0 48px rgba(248,81,73,.75);animation:heartbeat .55s ease-in-out infinite}
+@keyframes heartbeat{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4)}}
+.redo-card.quake{animation:cardShakeBig .6s cubic-bezier(.36,.07,.19,.97) both}
+/* victory: blank → surat → victory page */
+body.victory-open{overflow:hidden}
+.vp-overlay{position:fixed;inset:0;z-index:300;background:#000;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .7s ease}
+.vp-overlay.on{opacity:1}
+.vp-overlay[hidden]{display:none}
+.vp-stage{position:relative;text-align:center;max-width:640px;width:100%;padding:24px}
+.vp-overlay.gone .vp-stage{display:none}
+.vp-envelope{position:relative;width:min(300px,78vw);height:190px;margin:30px auto 0;background:linear-gradient(180deg,#1c2431,#12161d);border:1px solid rgba(227,179,65,.65);border-radius:10px;cursor:pointer;animation:vpeIn .8s cubic-bezier(.22,1,.36,1) .15s both,float 3.2s ease-in-out 1.2s infinite;box-shadow:0 0 44px rgba(227,179,65,.28)}
+@keyframes vpeIn{from{opacity:0;transform:translateY(26px) scale(.92)}to{opacity:1;transform:none}}
+.vp-flap{position:absolute;top:0;left:0;right:0;height:96px;transform-origin:top center;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,0,.2,1);z-index:2}
+.vp-flap::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#232c3d,#1a2230);clip-path:polygon(0 0,100% 0,50% 100%);border-bottom:1px solid rgba(227,179,65,.4)}
+.vp-envelope.open .vp-flap{transform:rotateX(-180deg)}
+.vp-seal{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;background:radial-gradient(circle at 35% 30%,#ffe9a8,#e3b341 55%,#9a6b12);box-shadow:0 2px 10px rgba(0,0,0,.5);transition:opacity .3s,transform .5s;z-index:3}
+.vp-envelope.open .vp-seal{opacity:0;transform:translateX(-50%) scale(.6)}
+.vp-paper{position:absolute;left:50%;bottom:10px;width:86%;transform:translateX(-50%);height:0;overflow:hidden;background:linear-gradient(180deg,#f6ead2,#efe0bd);color:#241d0e;border-radius:6px;transition:height .65s cubic-bezier(.22,1,.36,1);z-index:1;box-shadow:0 4px 18px rgba(0,0,0,.45)}
+.vp-envelope.open .vp-paper{height:150px}
+.vp-paper .vp-ph{position:absolute;inset:auto 0 10px;font-family:var(--mono);font-size:10px;color:#6b5a33;text-align:center;letter-spacing:.04em}
+.vp-cap{font-family:var(--mono);color:#e3b341;font-size:13px;letter-spacing:.06em;opacity:0;animation:vpeIn .8s .6s ease both;margin-top:20px}
+/* victory letter */
+.vp-letter{display:none;opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+.vp-overlay.letter .vp-letter{display:block;opacity:1;transform:none}
+.vp-ltitle{font-family:var(--mono);font-size:clamp(19px,4.6vw,26px);font-weight:800;color:#ffd700;text-shadow:0 0 26px rgba(255,215,0,.4);letter-spacing:.03em}
+.vp-lscore{font-family:var(--mono);color:#e3b341;font-size:13px;margin-top:12px;letter-spacing:.12em}
+.vp-lbody{margin-top:24px;text-align:left}
+.vp-p{color:#e9d8a6;line-height:1.95;font-size:14px;margin:14px 0;opacity:0}
+.vp-overlay.letter .vp-p{animation:vpRise .8s ease both}
+.vp-overlay.letter .vp-p:nth-child(1){animation-delay:.3s}
+.vp-overlay.letter .vp-p:nth-child(2){animation-delay:.8s}
+.vp-overlay.letter .vp-p:nth-child(3){animation-delay:1.3s}
+.vp-overlay.letter .vp-p:nth-child(4){animation-delay:1.8s}
+.vp-overlay.letter .vp-p:nth-child(5){animation-delay:2.3s}
+.vp-overlay.letter .vp-p:nth-child(6){animation-delay:2.8s}
+@keyframes vpRise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.vp-p b{color:#ffd700}
+.vp-sign{font-family:var(--mono);color:#8b949e;font-size:12px;margin-top:22px;opacity:0}
+.vp-overlay.letter .vp-sign{animation:vpRise .8s 3.3s ease both}
+.vp-actions{margin-top:26px;display:flex;justify-content:center}
+.vp-btn{color:#0d1117;background:linear-gradient(180deg,#ffd700,#e3b341);border-color:#ffd700;font-weight:800;opacity:0}
+.vp-overlay.letter .vp-btn{animation:vpRise .8s 3.6s ease both}
+.vp-btn:hover:not(:disabled){border-color:#fff3b0;background:linear-gradient(180deg,#ffe066,#efc34e)}
 /* ---- question cards ---- */
 .cards{display:flex;flex-direction:column;gap:18px}
 .q-card{
@@ -651,21 +739,21 @@ const modules = [
 {id:"d18_c6",title:"Persiapan H-1",type:"check",badge:"REVIEW",pdfInfo:"",img:[],imgSol:[],deskripsi:"Siapkan alat tulis & kartu peserta, cek lokasi/jam lomba, matikan alarm yang salah, tidur cepat. Besok: SIMULASI LOMBA MANDIRI 45 menit!",jawabanResmi:"",penjelasan:"",iniInformatika:""}
 ]},
 {id:"d19",label:"HARI 19",title:"Simulasi Lomba Mandiri (45 Menit)",day:"Minggu, 15 Nov 2026",week:3,file:"day_19_exam.py",type:"exam",questions:[
-{id:"d19_q1",title:"Set 1 · Kode Kartu (2017)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CZ-02",img:IMG["d1_q3"],imgSol:IMG["d1_q3_sol"],deskripsi:"Terdapat lima kartu yang diletakkan berderet. Setiap kartu berisikan lambang hati dalam jumlah tertentu, dari kiri ke kanan secara berurutan adalah 16, 8, 4, 2, dan 1 hati. Di bagian bawah kartu terdapat tulisan angka 0 atau 1. Angka 1 dituliskan jika kartu diatasnya terbuka (dan terlihat gambar hatinya!). Angka 0 dituliskan jika kartu tertutup. Kartu-kartu dapat digunakan untuk membangkitkan kode-kode untuk angka-angka. Sebagai contoh, terdapat 9 gambar hati yang dapat terlihat pada gambar berikut ini, sehingga kode untuk angka 9 adalah 01001.\n0   1   0   0   1",pertanyaan:"Temukan kode untuk 26 gambar hati.",keys:["11010"],jawabanResmi:"Jawaban yang benar adalah 11010.",penjelasan:"",iniInformatika:"Hati ditempatkan di kartu sehingga hanya ada satu hati pada kartu sebelah kanan, dan setiap kartu di sebelah kiri sesudahnya mengandung dua kali hati. Maka, akan ada 1, 2, 4, 8, dan 16 hati saat dibaca dari kiri ke kanan.\n\nDapat dibuktikan bahwa setiap angka dari 0 s.d. 31 dapat direpresentasikan dengan kombinasi tertentu menggunakan kartu tsb. Kita juga dapat melakukan perhitungan dengan menggunakan kartu-kartu ini.\n\nPengaturan dari hati dipakai dalam sistem bilangan biner yang hanya menggunakan 0 dan 1, yang dipakai komputer untuk menyimpan informasi. Kita juga dapat mengkode teks, gambar, video, musik dengan hanya menggunakan bilangan 0 dan 1.",clue:"Ini sebenarnya cara komputer menyimpan angka: nilai tiap kartu dua kali nilai kartu di kanannya. Coba mulai dari kartu bernilai paling besar — kalau masih ada sisa yang belum tercukupi, lanjut ke kartu berikutnya, dan catat kartu mana saja yang terpakai."},
-{id:"d19_q2",title:"Set 1 · Kiri Kanan (2017)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-BE-03a",img:IMG["d2_q1"],imgSol:IMG["d2_q1_sol"],deskripsi:"Berang-berang menciptakan sistem pengkodean kata yang disebut kode berang-berang, dengan memakai peta di atas:\n▪   Setiap pohon di taman diberi nama dengan satu huruf.\n▪   Kode untuk setiap huruf ditemukan dengan cara mencapai pohon tersebut dengan berbelok kiri (L) dan kanan (R).\n▪   Kode untuk setiap huruf selalu dimulai dari pintu masuk taman (bertanda panah).\nContoh-contoh :\n▪   Contoh 1: Kode untuk A adalah LL karena untuk mencapai pohon A dari pintu masuk taman kamu harus berbelok kiri dua kali.\n▪   Contoh 2: Kode untuk kata BAR adalah LRLLLR.",pertanyaan:"Berapa banyak huruf dalam kode berang-berang tersebut untuk kata BEAR? (Tuliskan angkanya!)",keys:["9"],jawabanResmi:"Jawaban yang benar adalah 9.",penjelasan:"Tabel berikut ini berisi kode kiri/kanan untuk semua huruf:\nSehingga BEAR akan dikode menjadi LRLLRRLLR yang terdiri dari 9 huruf.",iniInformatika:"Jika suatu komputer mengganti huruf L dalam kode kiri/kanan dengan 0 dan huruf R dengan 1, maka kode kiri/kanan menjadi apa yang disebut kode biner. Peta untuk taman menjadi suatu struktur data komputer yang disebut pohon biner.\n\nHal ini berarti rute yang panjang dan rumit dapat disimpan oleh komputer dengan sangat mudah menggunakan ruang yang sangat kecil. Hal menarik mengenai kode ini adalah bahwa tidak diperlukan koma atau pemisah.\n\nCobalah mengubah kode (decode) jawaban untuk melihat bahwa kamu tidak perlu spasi untuk menunjukkan kode untuk setiap huruf cukup dan mulai dengan kode baru. Jenis kode seperti ini disebut prefix code. Hal ini berarti kode menjadi lebih singkat.",clue:"Kerjakan pelan-pelan per huruf: telusuri dari pintu masuk ke pohon tiap huruf satu per satu, catat belokan kiri/kanannya, lalu hitung panjangnya. Perhatikan polanya juga — makin dalam posisi huruf di taman, makin panjang kodenya."},
-{id:"d19_q3",title:"Set 1 · Keluar dari Labirin (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-01A",img:IMG["d6_q4"],imgSol:[],deskripsi:"Mira perlu menemukan jalan untuk keluar dari sebuah labirin dan meminta anda untuk memberikan arahan. Dia memasuki labirin dari bawah (segitiga hitam) dan harus mencapai pintu keluar pada bagian atas (lingkaran merah besar).\n\nNamun, Mira hanya dapat mengingat empat gerakan berikut:\nKode Gerakan   Artinya   Ilustrasi\nA   Berjalan satu langkah maju dan menghadap ke kiri\nB   Berjalan satu langkah maju dan menghadap ke kanan\nC   Berjalan dua langkah maju dan menghadap ke kiri\nD   Berjalan dua langkah maju dan menghadap ke kanan\n\nMira bisa membentuk sebuah gerakan panjang yang dibentuk dari empat gerakan A, B, C, atau D. Satu gerakan bisa diulang beberapa kali. Urutan gerakan ini dapat membawa Mira keluar dari labirin dengan dua kali perulangan.\n\nSegitiga hitam menandakan arah ke mana Mira menghadap.",pertanyaan:"Urutan gerakan manakah yang jika diulang dua kali (sesuai ilustrasi gambar) oleh Mira dapat membuatnya mencapai pintu keluar?",options:["A,B,C,D","D,A,A,D","C,B,D,A","C,A,A,D"],key:"B",jawabanResmi:"Jawaban yang benar adalah D,A,A,D.",penjelasan:"Gerakan-gerakan berikut ini mengarah ke pintu keluar saat diulangi dua kali:",iniInformatika:"Mira sebenarnya sedang mengeksekusi sebuah program untuk mencapai pintu keluar. Sebuah program terdiri dari rangkaian perintah-perintah dan kadangkala beberapa rangkaian perintah perlu diulang.\n\nUntuk membuat hal tersebut menjadi mudah, bahasa pemrograman menyediakan instruksi khusus yang didefinisikan atau disebut sebagai blok pengulangan (loop blocks). Rangkaian perintah-perintah yang dimasukan ke dalam sebuah blok pengulangan akan diulang sebanyak jumlah pengulangan yang ditentukan oleh pembuat program.\n\nDengan menggunakan instruksi khusus ini, pemrogram tidak perlu menulis berulang-ulang bagian kode tertentu. Hal tersebut membuat kode menjadi lebih efisien dan lebih mudah untuk dibaca atau dimodifikasi.",clue:"Uji pilihan satu per satu: jalankan gerakannya dari segitiga sampai dua putaran penuh, sambil selalu memperhatikan arah hadap Mira yang berubah setiap satu gerakan."},
-{id:"d19_q4",title:"Set 1 · Robot Pengumpul Permen (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CA-12",img:IMG["d7_q1"],imgSol:IMG["d7_q1_sol"],deskripsi:"Robot Candy diprogram untuk mengumpulkan permen sebanyak mungkin yang terhampar di lantai yang terdiri dari petak-petak. Tugas tersebut dilakukan pada saat robot berjalan melalui petak demi petak lantai. Setiap petak di lantai sebagai tergambar di bawah ini memiliki 0, 1, 2 atau 3 permen. Robot Candy mulai dari petak S (untuk start) di kiri bawah dan berakhir di petak F (untuk finish) di kanan atas. Namun, Robot Candy memiliki keterbatasan: setiap kali berpindah, dia hanya bisa berpindah dari satu petak ke petak berikutnya di sebelah kanannya atau di sebelah atasnya.",pertanyaan:"Mengingat Robot Candy akan mengumpulkan permen sebanyak-banyaknya, berapa banyak permen yang dikumpulkan oleh Robot Candy?",options:["10","12","14","16","13"],key:"C",jawabanResmi:"Jawaban yang benar adalah 14.",penjelasan:"Salah satu pendekatannya adalah mengisi tabel \"terbaik\" dari permen yang bisa dikumpulkan mengisi \"sapuan diagonal\" dari tabel. Awalnya kita punya 0 permen, jadi kita bisa memikirkan tabel sebagai berikut:\nDimana elemen dicetak dengan huruf tebal adalah jumlah maksimal permen yang bisa kita capai di setiap sel. Dengan bergerak naik robot akan mendapatkan 3 permen, dan dengan bergerak ke kanan robot akan mendapatkan 0 permen, jadi kita bisa memperbarui tabel kita:\nPerhatikan sel yang ada di sebelah kanan angka 3 yang dicetak tebal dan di atas angka 0 yang dicetak tebal. Berapakah jumlah maksimum permen yang bisa kita kumpulkan untuk sampai ke sel ini? Kita harus sampai ke sel ini setelah mengumpulkan 3, bukan 0, permen. Jadi, kita bisa berada di sel ini setelah mengumpulkan 4 permen.\n\nMelanjutkan dengan cara ini, kita dapat melihat bahwa jumlah maksimal permen yang bisa kita kumpulkan di dalam sebuah sel adalah jumlah permen dalam sel tersebut ditambah dan jumlah permen yang terbesar antara sel di sebelah kiri atas sel di bawahnya. Secara matematis hal ini dapat dinyatakan dengan:\n\nv (i, 0) = 0\nv (0, j) = 0\nv (i, j) = c (i, j) + max {v (i-1, j), v (i, j-1)}\n\ndimana v (i, j) adalah jumlah maksimum permen yang dapat dikumpulkan di sel (i, j), dan c (i, j) adalah jumlah permen dalam grid pada sel (i, j) pada awalnya.\n\nJika kita ingin mengacu ke sel paling kiri dan paling bawah, kita perlu menambahkan kolom angka nol ke kiri dan deretan angka nol ke bagian bawah tabel. Dengan menerapkan hubungan ini, kita bisa mengisi sisa tabel sebagai berikut:\ndan oleh karena itu, kita bisa mengumpulkan 14 permen di sel F.",iniInformatika:"Menentukan solusi \"terbaik\" di antara serangkaian solusi yang mungkin adalah masalah yang sulit dan bermanfaat. Untuk masalah pengumpulan permen ini, kita bisa mencoba semua jalur yang mungkin, yang merupakan solusi brute force.\n\nSayangnya, ada banyak sekali jalur: khususnya, untuk masalah ini, ada 70 jalur yang berbeda. Dalam kasus khusus ini, kita dapat mencoba untuk menemukan beberapa bagian tugas yang \"layak\" dan mencoba (dan berhasil) untuk menemukan solusi terbaik dari sana. Karena kotaknya relatif kecil, kita bisa mengurangi kemungkinan lain yang harus lebih buruk lagi.\n\nSolusi yang lebih efisien melibatkan pengisian tabel, seperti yang dijelaskan di atas, dengan menggunakan teknik yang disebut memoisasi dari dynamic programming recurrence. Artinya, setelah mendapatkan formula hubungan untuk solusi \"terbaik\" dari sel saat ini, berdasarkan sel ke kiri atau sel di bawah, kita melakukan 25 perhitungan, dalam hal ini, untuk menghitung jumlah maksimum dari permen tersedia, kita membangun solusi yang lebih besar dari kondisi awal.",clue:"Jangan menebak jalan dari lihat-lihat saja — hitung akumulasi permen maksimum sampai tiap petak, diisi dari S maju petak demi petak. Setiap petak hanya bisa dicapai dari petak di kirinya atau di bawahnya, jadi bandingkan keduanya dan simpan yang lebih besar."},
-{id:"d19_q5",title:"Set 1 · Upah Membantu (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-SI-05",img:[],imgSol:[],deskripsi:"Untuk mengisi liburannya selama 6 hari, Ana dan Bobi merencanakan tinggal di desa nenek. Kebetulan, di sana ada tiga petani A, B, dan C yang membutuhkan bantuan untuk menggarap sawahnya masing-masing. Mereka menawari Ana dan Bobi upah jika mau membantu mereka. Masing-masing petani tersebut memberikan penawaran yang berbeda:\n• Petani A menawarkan 10 ribu rupiah buat masing-masing (Ana dan Bobi) setiap hari.\n• Petani B hanya akan memberi Bobi sepuluh ribu rupiah pada hari pertama kemudian setiap berikutnya menaikkan sebesar 10 ribu menjadi 20 ribu, 30 ribu, dan seterusnya, sementara ia akan memberi Ana di hari pertama 100 ribu rupiah dan kemudian diturunkan 10 ribu rupiah setiap hari berikutnya menjadi 90 ribu, 80 ribu, dan seterusnya.\n• Petani C tidak tertarik dibantu Bobi, sehingga ia hanya akan memberi 1 ribu rupiah di hari pertama saja dan tidak akan memberi apapun di hari berikutnya. Sementara untuk Ana, ia akan memberikan seribu rupiah pada hari pertama, lalu setiap hari berikutnya dua kali lipat sebelumnya. Jadi Ana akan mendapatkan seribu rupiah, 2 ribu rupiah, 4 ribu rupiah, 8 ribu rupiah dan seterusnya.\nMereka berniat untuk melewati setiap hari masa liburnya di desa nenek dengan membantu petani, dan mereka berdua sudah berjanji untuk bekerja pada petani yang sama. Mengenai upah, mereka juga diam-diam sudah sepakat untuk membagi sama rata dari yang diperoleh berdua.",pertanyaan:"Kepada petani yang mana mereka bekerja sehingga mendapat upah yang paling banyak ?",options:["A","B","C","A atau B"],key:"B",jawabanResmi:"Jawaban yang tepat adalah B.",penjelasan:"Perhitungan upah petani A sangat sederhana. Masing-masing mendapat upah 50 ribu per hari, sehingga masing-masing akan memperoleh 500 ribu rupiah selama 10 hari.\n\nPetani B lebih rumit perhitungannya:\n• Bobi mendapat 10+20+30+40+50+60+70+80+90+100\n• Anna mendapat 100+90+80+70+60+50+40+30+21+10\nBagaimana mendapatkan hasil penjumlahannya? Pada hari pertama, keduanya memperoleh 110 rupiah, demikian juga 110 rupiah pada hari kedua ... Secara keseluruhan, selama 10 hari keduanya akan memperoleh 1100 rupiah, sehingga masing-masing akan mendapat 550. Hore!\n\nPetani C lebih sulit lagi. Ini hasil penjumlahan upah Ana dan Bobi:\n1 + 1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n2 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n4 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n8 + 8 + 16 . . wah ada pola,\nMari abaikan sisanya,\nAkan berakhir dengan: 512 + 512 = 1024\nJika mereka membagi 1024 untuk mereka berdua, setiap anak akan memperoleh 512.\nMaka, jawabannya adalah Petani B\n\n[catatan verifikator: \"6 hari\" pada soal adalah typo cetak buku — skema upah dan pembahasan menghitung 10 hari (B = 10+20+…+100 = 550 > A = 500; angka \"21\" pada pembahasan seharusnya \"20\"). Jawaban B tetap benar.]",iniInformatika:"Ilmuwan/Ahli informatika seringkali melakukan perhitungan seperti yang dilakukan untuk pemecahan persoalan ini. Misalnya jika ingin menghitung waktu eksekusi dari sebuah algoritma (upah adalah analogi dari waktu eksekusi). Upah yang diperoleh adalah waktu eksekusi dari operasi yang diperlukan untuk suatu algoritma.\n\nSelain itu, perhatikan betapa efisien menjumlahkan upah petani B. Menjumlahkan semua angka, jumlahkan secara paralel dari depan dan belakang pada saat yang sama, dan membagi dua\n\nPada kasus ini, kasus terakhir menguatirkan, karena jumlah operasi berlipat dua setiap hari, yang mencerminkan dua kali jika data bertambah. Kalau Ana dan Bobi mempunyai waktu 1 hari lebih, mereka berdua akan mendapatkan upah dengan upah Bobo ditambah kelipatan dari upah.",clue:"Jangan puas lihat hari pertama saja — jumlahkan upah harian selama enam hari penuh untuk tiap petani, satu per satu. Perhatikan pola tiap penawaran: ada yang tetap, ada yang naik/turun teratur, ada yang menggandakan diri tiap hari."},
-{id:"d19_q6",title:"Set 2 · Antrian Mobil (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CY-03",img:IMG["d1_q2"],imgSol:IMG["d1_q2_sol"],deskripsi:"Ari mempunyai jalanan di halamannya yang cukup panjang. Tetangganya dapat parkir di jalan tersebut, namun hanya bisa mundur untuk keluar sebab jalannya sempit. Karena ia hanya memiliki sebuah mobil, tetangga minta izin untuk ikut parkir di jalan tersebut. Supaya yakin tidak ada yang terblokir, ia membuat tabel kapan tetangga boleh parkir, dan kapan harus pergi.\n\nSetiap pagi, mobil yang akan pergi harus keluar sebelum mobil lainnya masuk. Seperti dapat dilihat pada tabel, tak ada yang meninggalkan jalan pada hari Senin.\n\nAri parkir duluan, kemudian Bob parkir setelah Ari.\n\nHari | Jumlah Mobil Pergi | Jumlah Mobil Masuk | Pemilik Mobil dan Urutan Mereka masuk\nSenin | 0 | 2 | Ari, Bob\nSelasa | 1 | 3 | Kati, Ben, Roi\nRabu | 2 | 1 | Desi\nKamis | 0 | 2 | Fina, Rosa\nJumat | 3 | 1 | Vino",pertanyaan:"Mobil siapa yang akan diparkir di jalanan pada akhir hari Jumat?",options:["A. Bob, Vino, Desi","B. Vino, Ari, Rosa","C. Ari, Kati, Vino","D. Ari, Vino, Bob"],key:"C",jawabanResmi:"Jawaban yang benar adalah: C. Ari, Kati, Vino.",penjelasan:"Jika kita urutkan sepanjang minggu, berikut ini adalah urutan parkir mobil (lihat juga gambar urutan parkir pada halaman pembahasan):\n\nAkhir Senin: Ari, Bob\nAkhir Selasa: Ari, Kati, Ben, Roi\nAkhir Rabu: Ari, Kati, Desi\nAkhir Kamis: Ari, Kati, Desi, Fina, Rosa\nAkhir Jumat: Ari, Kati, Vino",iniInformatika:"Soal ini menggunakan konsep stack (Tumpukan). Tumpukan adalah tipe data abstrak tempat elemen terakhir yang dimasukkan dimana elemen yang pertama akan keluar. Pengoperasian stack melibatkan dua fungsi: push (memasukkan item ke dalam stack) dan pop (hapus elemen dari stack). Operasi tumpukan digambarkan sebagai LIFO (terakhir masuk pertama keluar).\n\nhttps://en.wikipedia.org/wiki/Stack_(abstract_data_type)",clue:"Jalanan itu cuma punya satu pintu, jadi mobil yang masuk paling akhir harus keluar duluan sebelum mobil lain boleh masuk. Coba isi-kosongkan jalanan itu hari demi hari sesuai tabel, dan catat urutan mobilenya di tiap akhir hari."},
-{id:"d19_q7",title:"Set 2 · Peta Harta Karun (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-TW-04",img:IMG["d2_q2"],imgSol:IMG["d2_q2_sol"],deskripsi:"Berang-berang si pembajak mempunyai peta yang sangat besar sehingga harus dipotong-potong dalam potongan kecil. Setiap potongan peta berukuran 8 x 8 petak seperti gambar. Malangnya, kapal si pembajak terlalu kecil sehingga tak dapat membawa semua potongan sekaligus. Untungnya, si pembajak sangat cerdik untuk mendokumentasikan setiap potongan dalam catatannya.\n\n1. Jika semua petak dalam potongan peta sama warnanya, dia mencatat sebagai persegi dengan warna petak tersebut\n2. Atau jika tidak, ia menandai dengan lingkaran dan membagi potongan peta menjadi 4 bagian yang sama seperti pada Gambar 2.\n3. Ulangi proses sampai semua petak ditandai (Gambar 4).\n\nBerikut ini adalah catatan yang ada di buku bebras si pembajak. [catatan transkriptor: lihat gambar catatan pada halaman soal]",pertanyaan:"Peta yang mana yang cocok dengan catatan tsb?",options:["A","B","C","D"],key:"B",jawabanResmi:"Jawaban yang paling tepat adalah B.",penjelasan:"Dalam bagan, kita dapat menandai titik-titik yang mewakili daerah 4x4 dengan angka 1 hingga 4, dan menandai sub-titik dari titik 1 dengan angka 1-1 hingga 1-4, dan seterusnya. Posisi daerah yang sesuai di peta dan titik-titik dalam bagan ditunjukkan seperti di bawah ini [catatan transkriptor: lihat gambar pada halaman pembahasan]. 1-3, 1-4, 2-3, dan 2-4 ditandai dengan warna hitam dalam bagan, yang berarti bahwa warna dari keempat wilayah 2x2 dalam peta berwarna hitam. Hanya (B) yang memenuhi kriteria ini.\n\nBerikut ini adalah proses untuk merepresentasikan informasi potongan peta dalam bagan sesuai dengan langkah-langkah yang ditentukan dalam tugas. Ini memungkinkan Anda untuk mengetahui secara pasti mengapa peta (B) adalah jawaban yang benar. Dengan cara ini, ruang yang diperlukan untuk menyimpan informasi peta dapat dikurangi.",iniInformatika:"Bagan 4-wilayah disebut \"Quadtree\" dalam Informatika. Quadtree adalah struktur data pohon di mana setiap simpul memiliki empat anak yang terhubung dengan simpul dari atas ke bawah. Semua bentuk quadtree memiliki beberapa fitur umum:\n- Mereka menguraikan ruang menjadi sel-sel yang bisa beradaptasi.\n- Setiap sel (atau bucket) memiliki kapasitas maksimum. Ketika kapasitas maksimum tercapai, bucket akan terbelah.\n- Direktori tree mengikuti dekomposisi spasial dari quadtree.\n\nAda beberapa penggunaan quadtrees yang umum, seperti representasi gambar (contoh ini), pemrosesan dan kompresi gambar, pembuatan mesh, ... dll. Anda dapat menemukan informasi lebih lanjut di https://en.wikipedia.org/wiki/Quadtree",clue:"Baca catatan si pembajak mulai dari lingkaran paling atas, lalu turun cabang demi cabang: lingkaran berarti wilayahnya masih dibagi lagi, persegi berarti wilayah itu sudah satu warna utuh. Warnai petak peta wilayah demi wilayah mengikuti urutan cabang, baru cocokkan dengan pilihan."},
-{id:"d19_q8",title:"Set 2 · Titik Utama Wifi (2018)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-RO-03-X-001-5",img:IMG["d11_q2"],imgSol:IMG["d11_q2_sol"],deskripsi:"Jaringan lokal rumah Bebras dilengkapi dengan 14 titik akses (Access Point) ke Wifi. Pada jaringan ini, beberapa Access Point disebut Titik Kunci (Key Point), yang jika rusak akan menyebabkan Titik Akses lain tidak berfungsi. Misalnya, Titik Akses XX-009 adalah sebuah Titik Kunci: jika XX-009 rusak, maka XX-011 tidak dapat mengakses jaringan lagi.",pertanyaan:"Titik Akses mana saja yang merupakan Titik Kunci? Jawaban benar bisa lebih dari satu.\n\nPilihan Jawaban:\na) XX-13\nb) XX-02\nc) XX-14\nd) XX-07\ne) XX-06\nf) XX-03\ng) XX-08\nh) XX-01\ni) XX-12\nj) XX-09\nk) XX-04\nl) XX-05\nm) XX-11\nn) XX-10",keys:["XX-02, XX-07, XX-09, XX-04, XX-05","XX-02 XX-07 XX-09 XX-04 XX-05","b, d, j, k, l","bdjkl","~xx-02 dan ~xx-07"],jawabanResmi:"Jawaban yang benar: XX-02, XX-07, XX-09, XX-04, XX-05 (pilihan b, d, j, k, l).",penjelasan:"Jawaban yang benar: XX-02, XX-07, XX-09, XX-04, XX-05. Titik-titik Kunci adalah titik artikulasi pada graf jaringan: titik akses yang jika rusak memutus koneksi bagian lain dari jaringan (perhatikan contoh pada soal: XX-09 rusak → XX-11 terputus).",iniInformatika:"Praktik umum dalam Informatika adalah menggunakan graf sebagai struktur data untuk mewakili jaringan yang merupakan sekumpulan keterhubungan. Pada soal ini, tugasnya terdiri dari menemukan simpul yang memisahkan graf menjadi paling sedikit 2 komponen terkait dalam graf yang terhubung, yang disebut titik artikulasi. Untuk menentukan titik artikulasi dalam graf yang tidak berarah, kita bisa menggunakan algoritma pencarian kedalaman-pertama yang dimodifikasi untuk menyimpan informasi tambahan untuk setiap node.\n\nMari kita anggap bahwa T adalah graf. Kemudian, simpul v adalah titik artikulasi jika:\n1) v adalah akar T dan v memiliki dua anak atau lebih; atau\n2) v bukan akar T dan memiliki anak u di T sehingga tidak ada simpul dalam sub-graf yang didominasi oleh u yang terhubung dengan leluhur v melalui jalur penghubung sesudahnya (anak-anaknya tidak dapat mencapai tingkat yang lebih tinggi pada graf dengan menggunakan jalur lain).",clue:"Kerjakan dengan uji satu per satu: bayangkan sebuah titik akses mati, lalu telusuri apakah masih ada titik lain yang jadi terputus dari jaringan. Titik yang menjembatani dua kelompok begitulah yang krusial."},
-{id:"d19_q9",title:"Set 2 · Twist and Turn (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-RO-02a",img:IMG["d16_q2"],imgSol:IMG["d16_q2_sol"],deskripsi:"Tom adalah berang-berang berusia 10 tahun yang tinggal di sebuah kota penuh belokan dan putaran. Hari itu, telpon ibunya ketinggalan di rumah, dan ia meminta Tom untuk mengantarkan ke kantornya. Ibu memberikan sebuah peta agar Tom tidak tersesat. Peta tersebut digambarkan sebagai sebuah persegi dengan petak-petak yang dinomori 1 s.d. 6. Dan panah dari A ke F. Peta tersebut juga mengandung tanda arah yang dapat ditempuh Tom.\n[gambar: tabel legenda tanda arah — panah 'turun saja': Tom hanya dapat turun; panah 'bawah/kanan': Tom dapat ke bawah atau ke kanan; panah 'kiri/bawah': Tom dapat ke kiri atau ke bawah; panah 'atas/kiri': Tom dapat ke atas atau ke kiri; gambar kerucut: Tom menemui halangan sehingga tidak dapat bergerak lagi]\nTom mulai dari pojok kiri atas (A1).\n[gambar: peta persegi berupa grid 6×6 — kolom bernomor 1–6, baris huruf A–F; tiap petak berisi salah satu panah sesuai legenda di atas atau kerucut halangan; Tom (anak laki-laki) di petak A1 pojok kiri atas, kantor ibu (gambar wanita) di petak F6 pojok kanan bawah]",pertanyaan:"Rute mana yang dapat ditempuh oleh Tom untuk sampai ke kantor ibunya (F6)?",options:["a) A1 B1 B2 B3 C3 D3 D4 D5 D6 E6 F6","b) A1 B1 B2 B3 C3 D3 E3 E4 F4 F5 F6","c) A1 B1 B2 B3 C3 D3 E3 F3 F4 F5 F6","d) A1 B1 B2 B3 B4 C4 D4 D5 D6 E6 F6"],key:"C",jawabanResmi:"Jawaban yang tepat adalah c) A1 B1 B2 B3 C3 D3 E3 F3 F4 F5 F6",penjelasan:"Jawaban A tidak benar karena di E5 Tom akan menemukan halangan.\nJawaban B tidak benar karena Tom tidak dapat berpindah dari B4 ke C4. Dari B4 ia hanya bisa pindah ke B3 atau ke A4.\nJawaban D tidak benar karena Tom tidak dapat beralih dari D3 ke D4. Dari D4 ia hanya bisa pindah ke D2 atau E3.\nJadi jawaban yang benar adalah C.\n\n[catatan verifikator: jawaban c) dikonfirmasi benar berdasarkan peta tercetak (a gagal di D3→D4, b menabrak kerucut di E4, d gagal di D5→D6). Beberapa penyebutan petak pada pembahasan buku di atas kurang tepat — rujuk gambar peta.]",iniInformatika:"Struktur yang digunakan dalam tugas ini adalah array dua dimensi yang digunakan untuk menggambarkan peta dan array satu dimensi yang digunakan untuk menggambarkan arah bergerak. Array berisi data yang tidak sama, masing-masing elemen adalah struktur data yang terdiri dari dua komponen: karakter dan angka. Untuk menyelesaikan tugas ini, anda harus membaca array dan melacak elemen matriks yang indeksnya ditemukan sebagai nilai dalam array. Meskipun masalahnya nampak sederhana, pembacaan elemen array dan elemen matriks secara simultan adalah sulit karena kondisi yang diberlakukan oleh nilai elemen matriks.\nAnda dapat menemukan solusi dengan menerapkan pencarian pertama yang mendalam (dfs) yang juga disebut backtracking. Cara lain adalah mulai dari ujung jalan dan mencoba mencapai titik awal. Kedua metode ini dapat digabungkan untuk menghasilkan sebuah metode yang efisien jika hanya ada beberapa solusi (jalur).",clue:"Bawa petanya, lalu 'jalan' kaki tiap pilihan rute mulai dari petak awal: di tiap petak cek apakah tanda arahnya mengizinkan langkah berikutnya, dan awas halangan. Rute yang sah harus patuh semua tanda sampai tiba di petak tujuan."},
-{id:"d19_q10",title:"Set 2 · Medical Labs (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CZ-01",img:[],imgSol:[],deskripsi:"Sebuah alat untuk melakukan diagnosa harus menggoncang spesimen secara berulang-ulang. Alat ini bekerja berdasarkan sebuah program komputer, yang ditulis dalam beberapa baris yang diberi nomor. Alat membaca program baris demi baris, dan mengeksekusinya segera setelah membaca.\n\nJika baris mengandung perintah go to X, maka alat akan langsung ke baris X dan meneruskan membaca serta mengeksekusinya.\n\nProgram mampu untuk:\n- menyimpan sebuah nilai bilangan dalam lokasi A dengan instruksi \"set\",\n- menambahkan 1 pada nilai yang disimpan pada lokasi A dengan instruksi \"add\",\n- dan membandingkan nilai A dengan sebuah bilangan lain (=, <, ≤, >, ≥, ≠).",pertanyaan:"Berapa kali alat akan menggoncang spesimen jika prosedurnya ditulis dengan program sebagai berikut:\n\n1. set A to 0\n2. add 1 to A\n3. go to 6\n4. jika A = 60 go to 8\n5. set A to 0\n6. add 1 to A\n7. go to 2\n8. ulangi A kali menggoncang spesimen\n9. stop",options:["A. Spesimen digoncang dua kali.","B. Spesimen digoncang satu kali.","C. Spesimen digoncang 60 kali.","D. Prosedur tidak akan pernah berhenti dan tidak pernah mengguncang spesimen."],key:"D",jawabanResmi:"Jawaban yang benar adalah D. Prosedur tidak akan pernah berhenti dan tidak pernah mengguncang spesimen.",penjelasan:"Program ini selalu memerintah untuk melompat dari baris 3 ke 6 dan dari baris 7 ke 2. Kecuali pada awalnya, program hanya mengunjungi baris No. 2, 3, 6, 7. Instruksi untuk menggoyang spesimen ada di baris No. 8, yang tidak pernah dikunjungi. Ini berarti perangkat tidak akan pernah mengguncang apa pun sesuai dengan program, jadi jawaban yang benar adalah d). Selain itu, instruksi pada saluran No. 9 tidak pernah dieksekusi, sehingga program berlanjut selamanya.",iniInformatika:"Bahasa pemrograman pertama, yang dikembangkan pada tahun '40-an dan '50-an, seperti yang nampak di tugas ini disebut bahasa rakitan. Baris program diberi nomor dan perintah khusus, yang dikenal sebagai instruksi, digunakan untuk melompat ke baris yang berbeda dari yang berikutnya. Sangat sulit untuk membaca program-program ini dan menemukan kesalahan tetapi mudah membuatnya. Bahasa pemrograman seperti itu rawan kesalahan sehingga bahasa pemrograman yang lebih modern dikembangkan mulai tahun 50-an. Bahasa-bahasa modern ini tidak berorientasi pada garis, melainkan mengandung struktur seperti loop, prosedur dan pilihan.\n\nhttps://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf",clue:"Jangan cuma dibaca — jalankan programnya dengan tangan: mulai dari baris pertama, ikuti ke mana tiap perintah lompat membawamu, dan catat baris mana saja yang benar-benar pernah dieksekusi. Pola perputarannya akan menunjukkan apa yang tidak pernah terjadi."},
-{id:"d19_q11",title:"Set 3 · Karung-karung Dalam Elevator (2016)",type:"sa",pdfInfo:"Bebras Indonesia Ã¢â‚¬â€œ Kelompok Penegak 2016 | Kode Soal: 2016-CZ-026",img:IMG["d1_q1"],imgSol:IMG["d1_q1_sol"],deskripsi:"Sejumlah karung diletakkan di koridor, di dekat suatu lift (elevator). Koridor sangat sempit sehingga karung-karung harus dibariskan satu-satu.\n\nKarung-karung hendak dikirimkan ke toko di lantai dasar dengan menggunakan lift tersebut. Sekali angkut, Lift hanya dapat mengangkut karung-karung dengan total berat tidak kurang dari 80 kg dan tidak lebih dari 100 kg. Setelah terkirim maka lift akan kembali ke lantai tersebut.\n\nSaat memuatkan karung-karung ke dalam lift, karung yang terdekat dengan lift yang akan diambil terlebih dulu. Seandainya penambahan suatu karung dapat menyebabkan overload (terlalu berat, karena total beratnya lebih dari 100 kg), karung itu untuk sementara tidak dimasukkan ke dalam lift tapi ditaruh di koridor pada arah berlawanan dari semula sejauh-jauhnya (jika tidak overload tentu akan dimasukkan ke dalam lift!).\n\nBila karung-karung dari barisan awal telah diambil, hal yang sama kemudian dilakukan pada barisan karung yang terbentuk pada koridor arah berlawanan dengan semula hingga seluruh karung di situ berhasil dikirim ke toko atau dipindah ke ujung koridor berlawanan dengannya. Hal itu terus-menerus dilakukan sampai semua karung berhasil dikirim ke toko.",pertanyaan:"Sampai semua karung dikirimkan ke toko dengan prosedur tersebut di atas, Berapa kali lift turun-naik mengangkut karung-karung itu semula karung-karung ada seperti pada gambar di atas dengan berat masing-masing seperti yang tercantum pada setiap karung?",keys:["4","empat"],jawabanResmi:"Jawaban yang benar adalah 4.",penjelasan:"Pada pemuatan pertama, 3 karung dengan berat 40+20+34=94 kg. Pada pemuatan kedua, karung berikutnya (55 kg) dimasukkan ke dalam lift. Karung berikutnya (50 kg) akan mengakibatkan overload, sehingga ditaruh pada ujung yang berlawanan. Karung berikutnya (23 kg) ditaruh kembali dalam lift, namun lift tak dapat pergi hanya dengan total berat 55+23= 78 kg. Karung berikutnya adalah 45 kg, yang akan membuat beban lift terlalu berat, maka karung itu dibawa ke ujung yang berlawanan. Hal yang sama terjadi untuk karung berikutnya (30 kg). Akhirnya, karung berikutnya (10 kg) dapat ditaruh dalam lift, dan berangkat dengan 55+23+10=88 kg. Ketiga karung terakhir (25+30+15 = 70kg) ditaruh dalam lift. Demikian seterusnya pemuatan karung-karung ke dalam lift dilakukan hingga semua karung terkirim.",iniInformatika:"Pada soal ini, kita perlu memakai algoritma dan menggunakan stack (tumpukan). Stack adalah struktur untuk menyusun benda dengan menaruh dan mengambilnya pada yang terakhir. Salah satu contoh adalah mainan anak-anak untuk membangun sebuah menara dari batu bata, di mana kita harus mengambil mulai dari yang terakhir dipasang pada saat membongkarnya kembali. Saat melakukan penelusuran halaman web, alamat dari halaman yang dikunjungi akan ditaruh dalam stack; saat kita menekan tombol \"balik\" yang ditampilkan adalah yang sebelumnya dikunjungi. Menggunakan stack tak selamanya dapat digunakan. Misalnya jika kita menunggu pada antrian di rumah sakit, siapa yang paling dulu datang seharusnya yang akan dilayani paling dulu.",clue:"Jangan menebak — jalankan prosesnya pelan-pelan di atas kertas: catat karung yang ikut setiap perjalanan, dan ingat karung yang ditolak jadi barisan baru yang dibaca dari arah sebaliknya, persis seperti tumpukan (stack). Kalau simulasinya jujur, jumlah perjalanan tinggal dihitung."},
-{id:"d19_q12",title:"Set 3 · Temukan Si Pencuri (2016)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-BE-02",img:IMG["d6_q1"],imgSol:IMG["d6_q1_sol"],deskripsi:"Berlian berwarna biru yang terkenal telah dicuri dari museum hari ini. Si pencuri berhasil menukar berlian tersebut dengan perhiasan imitasi murah berwarna hijau.\nPada acara pameran berlian hari ini dihadiri oleh 2000 orang pengunjung. Para pengunjung tersebut memasuki ruangan pameran satu per satu. Inspektur Bebro harus dapat menangkap si pencuri dengan menginterogasi beberapa orang dari pengunjung tersebut. Inspektur Bebro telah memiliki daftar nama dari 2000 orang pengunjung yang memasuki ruang pameran hari ini. Inspektur Bebro akan menanyai setiap orang dengan dengan pertanyaan yang sama:\nApakah warna berlian tersebut hijau atau biru pada saat anda melihatnya ?\nSetiap pengunjung akan menjawab dengan jujur; kecuali si pencuri, yang akan menjawab warna berlian tersebut adalah hijau.",pertanyaan:"Inspektur Bebro sangat pintar dan akan menggunakan strategi dimana jumlah orang yang akan ditanyai akan seminimal mungkin. Manakah dari pernyataan berikut yang dapat disampaikan Inspektur Bebro tanpa berbohong ?",options:["A. Tugas ini adalah tugas yang sulit; Saya perlu menanyai sekurang-kurangnya 200 orang, tetapi kemungkinan terbanyaknya adalah 1999 orang.","B. Saya tidak dapat menjanjikan apapun. Jika saya tidak beruntung, maka saya akan menanyai setiap pengunjung.","C. Tidak cukup dengan hanya menanyai 20 orang (kecuali saya sedang beruntung) tetapi saya yakin dapat menyelesaikan tugas saya dengan menanyai kurang dari 200 orang.","D. Saya dapat menjamin bahwa saya dapat menemukan si pencuri dengan cukup menanyai kurang dari 20 orang."],key:"D",jawabanResmi:"Inspektur Bebro dapat menemukan sang pencuri hanya dengan menginterogasi 11 orang.",penjelasan:"Sangat mencengangkan bahwa Inspektur Bebro hanya perlu menginterogasi sebagian kecil pengunjung, dengan mengulangi setengah dari daftar dengan cara ini:\nPengunjung diberi nomor 1 s.d 2000 terurut dengan saat memasuki ruangan. Inspektur menginterogasi pengunjung nomor 1000 dan menanyakan warna berlian yang dilihatnya:\n• jika dia menjawab biru, maka si pencuri datang setelah pengunjung nomor 1000 dan nomornya adalah antara nomor 1001 sampai 2000;\n• jika dia menjawab hijau, maka si pencuri bernomor antara 1 sampai 1000 (catat juga bahwa si pencuri mungkin bernomor 1000).\nPada kedua kasus, jumlah pengunjung yang mungkin sebagai si pencuri, berkurang dari 2000 menjadi 1000 (setengahnya).\nBerikutnya, sang Inspektur menanyakan ke orang dengan nomor \"tengah\" sisanya (yaitu nomor 1500 pada kasus pertama, atau nomor 500 pada kasus kedua). Dengan demikian, Inspektur membagi dua jumlah pengunjung (menjadi setengahnya) setiap kali satu pengunjung diinterogasi.\nMengulangi cara yang sama, ia dapat mengurangi jumlah yang dicurigai menjadi 500, 250, 125, 63,32, 16, 8, 4 dan kemudian 2. Saat tinggal 2 tersangka, ia akan menanyakan kepada yang pertama. Jika ia menjawab hijau, ia adalah si pencuri; jika tidak maka yang lainnya adalah pencuri. Inspektur Bebro dapat menemukan sang pencuri hanya dengan menginterogasi 11 orang.",iniInformatika:"Ide untuk mengulang terhadap separuh dari himpunan objek adalah teknik yang sangat umum digunakan di bidang informatika. Mungkin Anda sudah mengenal binary search, di mana kita mencari pada separuh dari list terurut. Pada kasus ini, kita memakai binary seach untuk menemukan elemen hijau pada sebuah list biru dan hijau, di mana semua elemen biru ada di awal. Fakta bahwa biasanya seorang pencuri selalu berbohong, membuat soal ini menjadi lebih menarik. Patut dicatat bahwa persoalan ini tak dapat dipecahkan jika kita tak tahu sebelumnya tentang warna yang akan dipakai oleh si pencuri untuk menjawab.",clue:"Pengunjung lain semuanya jujur, jadi jawaban mereka punya pola kalau diurutkan sesuai nomor masuk — hanya satu orang yang menyeberang. Begitu polanya terlihat, ada teknik klasik yang bisa memangkas separuh calon tersangka setiap kali bertanya."},
-{id:"d19_q13",title:"Set 3 · Jadwal Gladi Resik (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-BE-04",img:IMG["d9_q4"],imgSol:IMG["d9_q4_sol"],deskripsi:"Sekolah Bebras akan mengadakan pertunjukan menari, dengan penari berpasangan. Ada 6 penari yaitu : Ana, Budi, Cinta, Dori, Evi, Fani.\nMereka akan menari berpasangan :\n1. Ana - Budi\n2. Evi - Dori\n3. Ana - Evi\n4. Budi - Cinta\n5. Dori - Ana\n6. Fani - Budi\n7. Cinta - Evi\n8. Budi – Dori\n9. Dori - Fani\n10. Fani - Evi\n\nPelatih ingin menjadwalkan gladi resik untuk suatu tarian berantai. Dalam sebuah tarian berantai, urutan tarian ditentukan sedemikian rupa sehingga dari satu tarian ke tarian berikutnya, salah satu dari pasangan penari akan tetap tinggal di panggung untuk pertunjukan berikutnya. Selain itu, ada aturan bahwa seorang penari tak boleh dijdwal menari 3 kali berturut-turut, sebab akan kelelahan.\n\nContoh: saat Ana dan Evi menari, salah satu alternatif berikutnya adalah Cinta dan Evi. Setelah itu, Evi tidak dapat menari lagi.",pertanyaan:"Penari mana yang tak boleh dijadwalkan pada tarian pertama karena akan menyebabkan tidak mungkin membuat pertunjukan tarian berantai?",options:["A. Ana","B. Cinta","C. Evi","D. Dori","E. Budi","F. Fani"],key:"B",jawabanResmi:"Jawaban yang benar adalah B. Cinta.",penjelasan:"Perhatikan diagram di bawah ini.\n\nDalam diagram ini penari diwakili oleh lingkaran. Dua lingkaran terhubung oleh sebuah garis ketika dua penari harus menari berpasangan. Aturan jadwal latihan digambarkan oleh garis di diagram ini. Perhatikan mulai dari sebuah lingkaran, kita dapat mengikuti garis dari lingkaran tersebut ke lingkaran lain sampai kita melacak setiap garis penghubung tepat satu kali.\n\nKarena saat melacak garis ini kita harus meninggalkan setiap lingkaran yang kita lewati, ini berarti bahwa setiap lingkaran harus memiliki garis penghubung dengan jumlah genap, kecuali yang pertama dan yang terakhir di jalur. Jadi, lingkaran pertama di jalan harus A atau F.\n\nDengan kata lain, jadwal apa pun yang dipilih, pasangan penari pertama harus Ana atau Fani. Cinta adalah satu-satunya penari yang tidak memiliki pasangan dengan keduanya. Jadi dia tidak akan pernah bisa menjadi bagian dari pasangan pertama.\n\nKalau kita perhatikan setiap garis, kita harus mengambil arah dari penari yang sudah ada di latihan sebelumnya ke penari yang akan berada di latihan berikutnya. Karena satu penari tidak akan menari tiga kali berturut-turut, setiap langkah di sebuah garis akan menuju ke suatu lingkaran yang berbeda dalam diagram. Garis penghubung dalam diagram berkorespondensi dengan satu pasang penari.",iniInformatika:"Diagram penjelasan jawaban di atas adalah graf. Jalurnya (digambarkan sebagai garis) adalah jalur Euler. Graf adalah sebuah cara untuk membuat model dari suatu situasi yang terdiri dari titik atau simpul. Dalam soal ini simpul adalah para penari. Setiap garis menghubungkan dua penari. Garis dalam graf ini mewakili pasangan penari. Dalam soal ini anda akan menggunakan semua pasangan, sedemikian rupa sehingga setiap garis hanya digunakan satu kali. Euler membuktikan bahwa hal ini hanya mungkin jika anda memulai dan berhenti di sebuah simpul dengan jumlah hubungan ganjil.\n\nMewakili informasi menggunakan graf dapat sangat membantu untuk melihat struktur di balik suatu masalah. Perencanaan rute dan penjadwalan adalah contoh lain aplikasi penggunaan graf.",clue:"Gambar tiap pasangan penari sebagai garis penghubung antar nama, jadilah diagram jaringan. Tarian berantai artinya ada jalan yang melewati tiap garis persis sekali — dan di jalan begitu, penari dengan jumlah koneksi ganjil hanya muat di posisi ujung jalur."},
-{id:"d19_q14",title:"Set 3 · Terowongan (2017)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-07b",img:[],imgSol:[],deskripsi:"Rumah bebras Bobi memiliki empat buah ruangan (A, B, C, F) yang dihubungkan oleh terowongan-terowongan. Ruang A, B, dan C adalah ruang tamu, sedangkan ruang F adalah tempat penyimpanan makanan.\n10 ekor berang-berang sedang berada di dalam ruangan A. Mereka merasa kelaparan dan ingin pergi ke ruang F untuk makan. Karena semua berang-berang sangat kelaparan, mereka semua ingin tiba di tempat penyimpanan makanan secepat mungkin.\nUntuk melewati sebuah terowongan dibutuhkan 1 menit dan satu terowongan hanya dapat dilewati oleh 1 berang-berang dalam satu waktu (Saat terowongan dilewati seekor berang-berang, tidak ada berang-berang lain yang dapat lewat sebelum dia keluar).\nBanyaknya terowongan yang menghubungkan dua buah ruangan adalah sebagai berikut:\n▪ Antara A dan B: 4 terowongan\n▪ Antara A dan C: 1 terowongan\n▪ Antara B dan C: 2 terowongan\n▪ Antara B dan F: 1 terowongan\n▪ Antara C dan F: 3 terowongan\nSemua ruangan tidak memiliki batas kapasitas, jadi semua ruangan dapat memuat sebanyak apapun berang-berang yang ada.",pertanyaan:"Berapa paling banyak berang-berang yang dapat tiba di tempat penyimpanan makanan dalam waktu tepat 2 menit?\nIsi dengan bilangan bulat antara 0 dan 10.",keys:["2","~dua"],jawabanResmi:"Jawaban yang tepat adalah 2.",penjelasan:"Banyaknya berang-berang maksimal yang dapat tiba di tempat penyimpanan makanan tepat dalam 2 menit adalah 2.\nTerdapat 2 buah rute terpendek dari ruangan A menuju tempat penyimpanan makanan. Kedua rute tersebut masing-masing memiliki kapasitas 1 ekor berang-berang dan membutuhkan total 2 menit untuk mencapai ruangan F. Rute tersebut adalah:\n- A ke B ke F\n- A ke C ke F\nSelain kedua rute tersebut, terdapat rute lain yang memiliki kapasitas 2 ekor berang-berang, tetapi membutuhkan waktu 3 menit untuk mencapai ruangan F. Rute tersebut adalah:\n- A ke B ke C ke F\nOleh karena itu, hanya 2 ekor berang-berang yang dapat tiba di tempat penyimpanan makanan tepat dalam waktu 2 menit. Seekor berang-berang menggunakan rute A ke B ke F dan seekor berang-berang lainnya menggunakan rute A ke C ke F.",iniInformatika:"Hubungan terowongan-terowongan tersebut dapat dibayangkan sebagai flow network (jaringan dari aliran) dalam teori graf. Model graf dapat dibuat untuk menggambarkan ruangan dan terowongan antar ruangan. Sebuah jalur yang menghubungkan dua buah simpul yang menyatakan ruangan memiliki kapasitas yang menyatakan banyaknya terowongan yang menghubungkan kedua ruangan tersebut (sama dengan banyaknya berang-berang yang dapat pergi dari satu ruangan ke ruangan lain yang sama dalam satu waktu bersamaan). Masing-masing jalur akan menerima sebuah aliran (berang-berang yang sedang melewati terowongan). Jumlah aliran yang melewati sebuah jalur tidak dapat melebihi kapasitas dari sisi.\nTujuan yang ingin dicapai adalah mengoptimalkan aliran dari berang-berang yang melewati jaringan tersebut sehingga sebanyak mungkin berang-berang yang tiba dalam waktu yang sesingkat mungkin ke tempat penyimpanan makanan. Ada beberapa algoritma untuk masalah ini, salah satunya yaitu algoritma Ford-Fulkerson.\nPermasalahan kita merupakan kasus khusus dalam masalah flow network, karena berang-berang diperbolehkan untuk menunggu di B dan C jika tidak memungkinkan untuk melanjutkan perjalanan karena terowongan yang dapat dilewati tidak mencukupi untuk semua berang-berang. Dalam masalah flow network klasik, tidak ada aliran yang boleh tertinggal dalam suatu tempat. Semua harus dialirkan segera setelah melewati sebuah saluran. Dalam masalah flow network klasik juga sebuah saluran harus memiliki arah. Sedangkan, dalam kasus ini, berang-berang bebas pergi melewati terowongan dari satu ruangan ke ruangan lainnya dan begitu pula sebaliknya.",clue:"Pikirkan menit demi menit: siapa saja yang bisa berpindah ke ruangan mana di menit pertama, lalu di menit kedua. Jumlah terowongan antar ruangan itu terbatas — di situlah kemacetan terjadi, jadi hitung kapasitas tiap \"gerbang\" per menit."},
-{id:"d19_q15",title:"Set 3 · Memindahkan Dadu (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-MY-05",img:IMG["d16_q1"],imgSol:IMG["d16_q1_sol"],deskripsi:"Jack si berang-berang menggulirkan sebuah dadu sepanjang jalan tanpa pengeseran. Untuk memindahkan dadu dari satu petak ke petak berikutnya, Jack memutar dadu sepanjang pinggir yang ada di perbatasan antara dua petak. Dia melakukannya 9 kali sampai dadu mencapai petak berisi bulatan putih di sebelah kanan.\n[gambar: jalur petak-petak yang diguliri dadu, dari petak awal (dadu) sampai petak berbulat putih di sebelah kanan]",pertanyaan:"Sisi dadu dengan berapa titik ada di dasar dadu saat dadu mencapai petak hijau di ujung?",options:["A. 3","B. 6","C. 2","D. 4"],key:"A",jawabanResmi:"Jawaban yang tepat adalah 3",penjelasan:"",iniInformatika:"Ini adalah contoh pemecahan masalah dengan mengamati hanya sebagian informasi di setiap tahap. Metode ini dapat mengurangi kerumitan dan penggunaan memori. Komputer sering diprogram seperti ini.\nSalah satu alternatif dari metode ini adalah melacak jumlah titik di bagian bawah setelah setiap langkah (1,2,6,5,3,2,6,4,5,3). Tetapi jauh lebih sulit. Untuk beberapa putaran pertama, itu masih mudah. Tetapi setelah beberapa langkah, kita akan mengalami kesulitan karena beberapa angka tidak dapat dilihat.\nPerhatikan bahwa banyaknya titik di dua sisi kebalikan sebuah dadu selalu 7 (1 berlawanan dengan 6; 2 berlawanan dengan 5; 3 berlawanan dengan 4). Pada mulanya, sisi dengan 1 titik (berlawanan dengan sisi 6) ada di dasar dadu, seperti ditunjukkan pada gambar. Setelah memutar dadu sekali ke petak kedua, sisi dengan 2 titik (berlawanan dengan 5) akan berada di dasar dadu.\nMisalnya, pertama-tama kita dapat mencatat posisi awal dadu dengan sisi 3, 5, dan 6 yang berada di posisi kanan, depan dan atas. Kita terus mengamati posisi 3 sisi ini saat dadu berputar, selangkah demi selangkah sampai ke petak terakhir. Setelah dadu selesai bergerak, kita bisa tahu sisi mana yang berada di bawah.\n[Tabel posisi dadu per langkah — kolom: Langkah | Arah bergerak | Posisi kanan | Posisi depan | Posisi atas]\n1 | ↑ | Kanan | Atas | Belakang\n2 | ↑ | Kanan | Belakang | Bawah\n3 | ↑ | Kanan | Bawah | Depan\n4 | → | Bawah | Kiri | Depan\n5 | → | Kiri | Atas | Depan\n6 | ↓ | Kiri | Depan | Bawah\n7 | → | Atas | Depan | Kiri\n8 | ↓ | Depan | Bawah | Kiri\n9 | ↓ | Bawah | Belakang | Kiri\nSelanjutnya, jika kita memprogram dua metode ini di komputer, kita akan melihat bahwa metode pertama, seperti yang ditunjukkan dalam jawaban, lebih cepat.",clue:"Yang menentukan bukan cuma dadunya bergulir, tapi sisi mana yang jatuh ke bawah setiap putaran. Tandai dulu keenam sisi dadu di posisi awal, lalu gulirkan mengikuti jalur sisi demi sisi sambil mencatat sisi bawah di tiap langkah."}
+{id:"d19_q1",title:"Set 1 · Kode Kartu (2017)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CZ-02",img:IMG["d1_q3"],imgSol:IMG["d1_q3_sol"],deskripsi:"Terdapat lima kartu yang diletakkan berderet. Setiap kartu berisikan lambang hati dalam jumlah tertentu, dari kiri ke kanan secara berurutan adalah 16, 8, 4, 2, dan 1 hati. Di bagian bawah kartu terdapat tulisan angka 0 atau 1. Angka 1 dituliskan jika kartu diatasnya terbuka (dan terlihat gambar hatinya!). Angka 0 dituliskan jika kartu tertutup. Kartu-kartu dapat digunakan untuk membangkitkan kode-kode untuk angka-angka. Sebagai contoh, terdapat 9 gambar hati yang dapat terlihat pada gambar berikut ini, sehingga kode untuk angka 9 adalah 01001.\n0   1   0   0   1",pertanyaan:"Temukan kode untuk 26 gambar hati.",keys:["11010"],jawabanResmi:"Jawaban yang benar adalah 11010.",penjelasan:"",iniInformatika:"Hati ditempatkan di kartu sehingga hanya ada satu hati pada kartu sebelah kanan, dan setiap kartu di sebelah kiri sesudahnya mengandung dua kali hati. Maka, akan ada 1, 2, 4, 8, dan 16 hati saat dibaca dari kiri ke kanan.\n\nDapat dibuktikan bahwa setiap angka dari 0 s.d. 31 dapat direpresentasikan dengan kombinasi tertentu menggunakan kartu tsb. Kita juga dapat melakukan perhitungan dengan menggunakan kartu-kartu ini.\n\nPengaturan dari hati dipakai dalam sistem bilangan biner yang hanya menggunakan 0 dan 1, yang dipakai komputer untuk menyimpan informasi. Kita juga dapat mengkode teks, gambar, video, musik dengan hanya menggunakan bilangan 0 dan 1.",clue:"Ini sebenarnya cara komputer menyimpan angka: nilai tiap kartu dua kali nilai kartu di kanannya. Coba mulai dari kartu bernilai paling besar — kalau masih ada sisa yang belum tercukupi, lanjut ke kartu berikutnya, dan catat kartu mana saja yang terpakai.",src:"d1_q3"},
+{id:"d19_q2",title:"Set 1 · Kiri Kanan (2017)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-BE-03a",img:IMG["d2_q1"],imgSol:IMG["d2_q1_sol"],deskripsi:"Berang-berang menciptakan sistem pengkodean kata yang disebut kode berang-berang, dengan memakai peta di atas:\n▪   Setiap pohon di taman diberi nama dengan satu huruf.\n▪   Kode untuk setiap huruf ditemukan dengan cara mencapai pohon tersebut dengan berbelok kiri (L) dan kanan (R).\n▪   Kode untuk setiap huruf selalu dimulai dari pintu masuk taman (bertanda panah).\nContoh-contoh :\n▪   Contoh 1: Kode untuk A adalah LL karena untuk mencapai pohon A dari pintu masuk taman kamu harus berbelok kiri dua kali.\n▪   Contoh 2: Kode untuk kata BAR adalah LRLLLR.",pertanyaan:"Berapa banyak huruf dalam kode berang-berang tersebut untuk kata BEAR? (Tuliskan angkanya!)",keys:["9"],jawabanResmi:"Jawaban yang benar adalah 9.",penjelasan:"Tabel berikut ini berisi kode kiri/kanan untuk semua huruf:\nSehingga BEAR akan dikode menjadi LRLLRRLLR yang terdiri dari 9 huruf.",iniInformatika:"Jika suatu komputer mengganti huruf L dalam kode kiri/kanan dengan 0 dan huruf R dengan 1, maka kode kiri/kanan menjadi apa yang disebut kode biner. Peta untuk taman menjadi suatu struktur data komputer yang disebut pohon biner.\n\nHal ini berarti rute yang panjang dan rumit dapat disimpan oleh komputer dengan sangat mudah menggunakan ruang yang sangat kecil. Hal menarik mengenai kode ini adalah bahwa tidak diperlukan koma atau pemisah.\n\nCobalah mengubah kode (decode) jawaban untuk melihat bahwa kamu tidak perlu spasi untuk menunjukkan kode untuk setiap huruf cukup dan mulai dengan kode baru. Jenis kode seperti ini disebut prefix code. Hal ini berarti kode menjadi lebih singkat.",clue:"Kerjakan pelan-pelan per huruf: telusuri dari pintu masuk ke pohon tiap huruf satu per satu, catat belokan kiri/kanannya, lalu hitung panjangnya. Perhatikan polanya juga — makin dalam posisi huruf di taman, makin panjang kodenya.",src:"d2_q1"},
+{id:"d19_q3",title:"Set 1 · Keluar dari Labirin (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-01A",img:IMG["d6_q4"],imgSol:[],deskripsi:"Mira perlu menemukan jalan untuk keluar dari sebuah labirin dan meminta anda untuk memberikan arahan. Dia memasuki labirin dari bawah (segitiga hitam) dan harus mencapai pintu keluar pada bagian atas (lingkaran merah besar).\n\nNamun, Mira hanya dapat mengingat empat gerakan berikut:\nKode Gerakan   Artinya   Ilustrasi\nA   Berjalan satu langkah maju dan menghadap ke kiri\nB   Berjalan satu langkah maju dan menghadap ke kanan\nC   Berjalan dua langkah maju dan menghadap ke kiri\nD   Berjalan dua langkah maju dan menghadap ke kanan\n\nMira bisa membentuk sebuah gerakan panjang yang dibentuk dari empat gerakan A, B, C, atau D. Satu gerakan bisa diulang beberapa kali. Urutan gerakan ini dapat membawa Mira keluar dari labirin dengan dua kali perulangan.\n\nSegitiga hitam menandakan arah ke mana Mira menghadap.",pertanyaan:"Urutan gerakan manakah yang jika diulang dua kali (sesuai ilustrasi gambar) oleh Mira dapat membuatnya mencapai pintu keluar?",options:["A,B,C,D","D,A,A,D","C,B,D,A","C,A,A,D"],key:"B",jawabanResmi:"Jawaban yang benar adalah D,A,A,D.",penjelasan:"Gerakan-gerakan berikut ini mengarah ke pintu keluar saat diulangi dua kali:",iniInformatika:"Mira sebenarnya sedang mengeksekusi sebuah program untuk mencapai pintu keluar. Sebuah program terdiri dari rangkaian perintah-perintah dan kadangkala beberapa rangkaian perintah perlu diulang.\n\nUntuk membuat hal tersebut menjadi mudah, bahasa pemrograman menyediakan instruksi khusus yang didefinisikan atau disebut sebagai blok pengulangan (loop blocks). Rangkaian perintah-perintah yang dimasukan ke dalam sebuah blok pengulangan akan diulang sebanyak jumlah pengulangan yang ditentukan oleh pembuat program.\n\nDengan menggunakan instruksi khusus ini, pemrogram tidak perlu menulis berulang-ulang bagian kode tertentu. Hal tersebut membuat kode menjadi lebih efisien dan lebih mudah untuk dibaca atau dimodifikasi.",clue:"Uji pilihan satu per satu: jalankan gerakannya dari segitiga sampai dua putaran penuh, sambil selalu memperhatikan arah hadap Mira yang berubah setiap satu gerakan.",src:"d6_q4"},
+{id:"d19_q4",title:"Set 1 · Robot Pengumpul Permen (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CA-12",img:IMG["d7_q1"],imgSol:IMG["d7_q1_sol"],deskripsi:"Robot Candy diprogram untuk mengumpulkan permen sebanyak mungkin yang terhampar di lantai yang terdiri dari petak-petak. Tugas tersebut dilakukan pada saat robot berjalan melalui petak demi petak lantai. Setiap petak di lantai sebagai tergambar di bawah ini memiliki 0, 1, 2 atau 3 permen. Robot Candy mulai dari petak S (untuk start) di kiri bawah dan berakhir di petak F (untuk finish) di kanan atas. Namun, Robot Candy memiliki keterbatasan: setiap kali berpindah, dia hanya bisa berpindah dari satu petak ke petak berikutnya di sebelah kanannya atau di sebelah atasnya.",pertanyaan:"Mengingat Robot Candy akan mengumpulkan permen sebanyak-banyaknya, berapa banyak permen yang dikumpulkan oleh Robot Candy?",options:["10","12","14","16","13"],key:"C",jawabanResmi:"Jawaban yang benar adalah 14.",penjelasan:"Salah satu pendekatannya adalah mengisi tabel \"terbaik\" dari permen yang bisa dikumpulkan mengisi \"sapuan diagonal\" dari tabel. Awalnya kita punya 0 permen, jadi kita bisa memikirkan tabel sebagai berikut:\nDimana elemen dicetak dengan huruf tebal adalah jumlah maksimal permen yang bisa kita capai di setiap sel. Dengan bergerak naik robot akan mendapatkan 3 permen, dan dengan bergerak ke kanan robot akan mendapatkan 0 permen, jadi kita bisa memperbarui tabel kita:\nPerhatikan sel yang ada di sebelah kanan angka 3 yang dicetak tebal dan di atas angka 0 yang dicetak tebal. Berapakah jumlah maksimum permen yang bisa kita kumpulkan untuk sampai ke sel ini? Kita harus sampai ke sel ini setelah mengumpulkan 3, bukan 0, permen. Jadi, kita bisa berada di sel ini setelah mengumpulkan 4 permen.\n\nMelanjutkan dengan cara ini, kita dapat melihat bahwa jumlah maksimal permen yang bisa kita kumpulkan di dalam sebuah sel adalah jumlah permen dalam sel tersebut ditambah dan jumlah permen yang terbesar antara sel di sebelah kiri atas sel di bawahnya. Secara matematis hal ini dapat dinyatakan dengan:\n\nv (i, 0) = 0\nv (0, j) = 0\nv (i, j) = c (i, j) + max {v (i-1, j), v (i, j-1)}\n\ndimana v (i, j) adalah jumlah maksimum permen yang dapat dikumpulkan di sel (i, j), dan c (i, j) adalah jumlah permen dalam grid pada sel (i, j) pada awalnya.\n\nJika kita ingin mengacu ke sel paling kiri dan paling bawah, kita perlu menambahkan kolom angka nol ke kiri dan deretan angka nol ke bagian bawah tabel. Dengan menerapkan hubungan ini, kita bisa mengisi sisa tabel sebagai berikut:\ndan oleh karena itu, kita bisa mengumpulkan 14 permen di sel F.",iniInformatika:"Menentukan solusi \"terbaik\" di antara serangkaian solusi yang mungkin adalah masalah yang sulit dan bermanfaat. Untuk masalah pengumpulan permen ini, kita bisa mencoba semua jalur yang mungkin, yang merupakan solusi brute force.\n\nSayangnya, ada banyak sekali jalur: khususnya, untuk masalah ini, ada 70 jalur yang berbeda. Dalam kasus khusus ini, kita dapat mencoba untuk menemukan beberapa bagian tugas yang \"layak\" dan mencoba (dan berhasil) untuk menemukan solusi terbaik dari sana. Karena kotaknya relatif kecil, kita bisa mengurangi kemungkinan lain yang harus lebih buruk lagi.\n\nSolusi yang lebih efisien melibatkan pengisian tabel, seperti yang dijelaskan di atas, dengan menggunakan teknik yang disebut memoisasi dari dynamic programming recurrence. Artinya, setelah mendapatkan formula hubungan untuk solusi \"terbaik\" dari sel saat ini, berdasarkan sel ke kiri atau sel di bawah, kita melakukan 25 perhitungan, dalam hal ini, untuk menghitung jumlah maksimum dari permen tersedia, kita membangun solusi yang lebih besar dari kondisi awal.",clue:"Jangan menebak jalan dari lihat-lihat saja — hitung akumulasi permen maksimum sampai tiap petak, diisi dari S maju petak demi petak. Setiap petak hanya bisa dicapai dari petak di kirinya atau di bawahnya, jadi bandingkan keduanya dan simpan yang lebih besar.",src:"d7_q1"},
+{id:"d19_q5",title:"Set 1 · Upah Membantu (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-SI-05",img:[],imgSol:[],deskripsi:"Untuk mengisi liburannya selama 6 hari, Ana dan Bobi merencanakan tinggal di desa nenek. Kebetulan, di sana ada tiga petani A, B, dan C yang membutuhkan bantuan untuk menggarap sawahnya masing-masing. Mereka menawari Ana dan Bobi upah jika mau membantu mereka. Masing-masing petani tersebut memberikan penawaran yang berbeda:\n• Petani A menawarkan 10 ribu rupiah buat masing-masing (Ana dan Bobi) setiap hari.\n• Petani B hanya akan memberi Bobi sepuluh ribu rupiah pada hari pertama kemudian setiap berikutnya menaikkan sebesar 10 ribu menjadi 20 ribu, 30 ribu, dan seterusnya, sementara ia akan memberi Ana di hari pertama 100 ribu rupiah dan kemudian diturunkan 10 ribu rupiah setiap hari berikutnya menjadi 90 ribu, 80 ribu, dan seterusnya.\n• Petani C tidak tertarik dibantu Bobi, sehingga ia hanya akan memberi 1 ribu rupiah di hari pertama saja dan tidak akan memberi apapun di hari berikutnya. Sementara untuk Ana, ia akan memberikan seribu rupiah pada hari pertama, lalu setiap hari berikutnya dua kali lipat sebelumnya. Jadi Ana akan mendapatkan seribu rupiah, 2 ribu rupiah, 4 ribu rupiah, 8 ribu rupiah dan seterusnya.\nMereka berniat untuk melewati setiap hari masa liburnya di desa nenek dengan membantu petani, dan mereka berdua sudah berjanji untuk bekerja pada petani yang sama. Mengenai upah, mereka juga diam-diam sudah sepakat untuk membagi sama rata dari yang diperoleh berdua.",pertanyaan:"Kepada petani yang mana mereka bekerja sehingga mendapat upah yang paling banyak ?",options:["A","B","C","A atau B"],key:"B",jawabanResmi:"Jawaban yang tepat adalah B.",penjelasan:"Perhitungan upah petani A sangat sederhana. Masing-masing mendapat upah 50 ribu per hari, sehingga masing-masing akan memperoleh 500 ribu rupiah selama 10 hari.\n\nPetani B lebih rumit perhitungannya:\n• Bobi mendapat 10+20+30+40+50+60+70+80+90+100\n• Anna mendapat 100+90+80+70+60+50+40+30+21+10\nBagaimana mendapatkan hasil penjumlahannya? Pada hari pertama, keduanya memperoleh 110 rupiah, demikian juga 110 rupiah pada hari kedua ... Secara keseluruhan, selama 10 hari keduanya akan memperoleh 1100 rupiah, sehingga masing-masing akan mendapat 550. Hore!\n\nPetani C lebih sulit lagi. Ini hasil penjumlahan upah Ana dan Bobi:\n1 + 1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n2 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n4 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 =\n8 + 8 + 16 . . wah ada pola,\nMari abaikan sisanya,\nAkan berakhir dengan: 512 + 512 = 1024\nJika mereka membagi 1024 untuk mereka berdua, setiap anak akan memperoleh 512.\nMaka, jawabannya adalah Petani B\n\n[catatan verifikator: \"6 hari\" pada soal adalah typo cetak buku — skema upah dan pembahasan menghitung 10 hari (B = 10+20+…+100 = 550 > A = 500; angka \"21\" pada pembahasan seharusnya \"20\"). Jawaban B tetap benar.]",iniInformatika:"Ilmuwan/Ahli informatika seringkali melakukan perhitungan seperti yang dilakukan untuk pemecahan persoalan ini. Misalnya jika ingin menghitung waktu eksekusi dari sebuah algoritma (upah adalah analogi dari waktu eksekusi). Upah yang diperoleh adalah waktu eksekusi dari operasi yang diperlukan untuk suatu algoritma.\n\nSelain itu, perhatikan betapa efisien menjumlahkan upah petani B. Menjumlahkan semua angka, jumlahkan secara paralel dari depan dan belakang pada saat yang sama, dan membagi dua\n\nPada kasus ini, kasus terakhir menguatirkan, karena jumlah operasi berlipat dua setiap hari, yang mencerminkan dua kali jika data bertambah. Kalau Ana dan Bobi mempunyai waktu 1 hari lebih, mereka berdua akan mendapatkan upah dengan upah Bobo ditambah kelipatan dari upah.",clue:"Jangan puas lihat hari pertama saja — jumlahkan upah harian selama enam hari penuh untuk tiap petani, satu per satu. Perhatikan pola tiap penawaran: ada yang tetap, ada yang naik/turun teratur, ada yang menggandakan diri tiap hari.",src:"d9_q2"},
+{id:"d19_q6",title:"Set 2 · Antrian Mobil (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CY-03",img:IMG["d1_q2"],imgSol:IMG["d1_q2_sol"],deskripsi:"Ari mempunyai jalanan di halamannya yang cukup panjang. Tetangganya dapat parkir di jalan tersebut, namun hanya bisa mundur untuk keluar sebab jalannya sempit. Karena ia hanya memiliki sebuah mobil, tetangga minta izin untuk ikut parkir di jalan tersebut. Supaya yakin tidak ada yang terblokir, ia membuat tabel kapan tetangga boleh parkir, dan kapan harus pergi.\n\nSetiap pagi, mobil yang akan pergi harus keluar sebelum mobil lainnya masuk. Seperti dapat dilihat pada tabel, tak ada yang meninggalkan jalan pada hari Senin.\n\nAri parkir duluan, kemudian Bob parkir setelah Ari.\n\nHari | Jumlah Mobil Pergi | Jumlah Mobil Masuk | Pemilik Mobil dan Urutan Mereka masuk\nSenin | 0 | 2 | Ari, Bob\nSelasa | 1 | 3 | Kati, Ben, Roi\nRabu | 2 | 1 | Desi\nKamis | 0 | 2 | Fina, Rosa\nJumat | 3 | 1 | Vino",pertanyaan:"Mobil siapa yang akan diparkir di jalanan pada akhir hari Jumat?",options:["A. Bob, Vino, Desi","B. Vino, Ari, Rosa","C. Ari, Kati, Vino","D. Ari, Vino, Bob"],key:"C",jawabanResmi:"Jawaban yang benar adalah: C. Ari, Kati, Vino.",penjelasan:"Jika kita urutkan sepanjang minggu, berikut ini adalah urutan parkir mobil (lihat juga gambar urutan parkir pada halaman pembahasan):\n\nAkhir Senin: Ari, Bob\nAkhir Selasa: Ari, Kati, Ben, Roi\nAkhir Rabu: Ari, Kati, Desi\nAkhir Kamis: Ari, Kati, Desi, Fina, Rosa\nAkhir Jumat: Ari, Kati, Vino",iniInformatika:"Soal ini menggunakan konsep stack (Tumpukan). Tumpukan adalah tipe data abstrak tempat elemen terakhir yang dimasukkan dimana elemen yang pertama akan keluar. Pengoperasian stack melibatkan dua fungsi: push (memasukkan item ke dalam stack) dan pop (hapus elemen dari stack). Operasi tumpukan digambarkan sebagai LIFO (terakhir masuk pertama keluar).\n\nhttps://en.wikipedia.org/wiki/Stack_(abstract_data_type)",clue:"Jalanan itu cuma punya satu pintu, jadi mobil yang masuk paling akhir harus keluar duluan sebelum mobil lain boleh masuk. Coba isi-kosongkan jalanan itu hari demi hari sesuai tabel, dan catat urutan mobilenya di tiap akhir hari.",src:"d1_q2"},
+{id:"d19_q7",title:"Set 2 · Peta Harta Karun (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-TW-04",img:IMG["d2_q2"],imgSol:IMG["d2_q2_sol"],deskripsi:"Berang-berang si pembajak mempunyai peta yang sangat besar sehingga harus dipotong-potong dalam potongan kecil. Setiap potongan peta berukuran 8 x 8 petak seperti gambar. Malangnya, kapal si pembajak terlalu kecil sehingga tak dapat membawa semua potongan sekaligus. Untungnya, si pembajak sangat cerdik untuk mendokumentasikan setiap potongan dalam catatannya.\n\n1. Jika semua petak dalam potongan peta sama warnanya, dia mencatat sebagai persegi dengan warna petak tersebut\n2. Atau jika tidak, ia menandai dengan lingkaran dan membagi potongan peta menjadi 4 bagian yang sama seperti pada Gambar 2.\n3. Ulangi proses sampai semua petak ditandai (Gambar 4).\n\nBerikut ini adalah catatan yang ada di buku bebras si pembajak. [catatan transkriptor: lihat gambar catatan pada halaman soal]",pertanyaan:"Peta yang mana yang cocok dengan catatan tsb?",options:["A","B","C","D"],key:"B",jawabanResmi:"Jawaban yang paling tepat adalah B.",penjelasan:"Dalam bagan, kita dapat menandai titik-titik yang mewakili daerah 4x4 dengan angka 1 hingga 4, dan menandai sub-titik dari titik 1 dengan angka 1-1 hingga 1-4, dan seterusnya. Posisi daerah yang sesuai di peta dan titik-titik dalam bagan ditunjukkan seperti di bawah ini [catatan transkriptor: lihat gambar pada halaman pembahasan]. 1-3, 1-4, 2-3, dan 2-4 ditandai dengan warna hitam dalam bagan, yang berarti bahwa warna dari keempat wilayah 2x2 dalam peta berwarna hitam. Hanya (B) yang memenuhi kriteria ini.\n\nBerikut ini adalah proses untuk merepresentasikan informasi potongan peta dalam bagan sesuai dengan langkah-langkah yang ditentukan dalam tugas. Ini memungkinkan Anda untuk mengetahui secara pasti mengapa peta (B) adalah jawaban yang benar. Dengan cara ini, ruang yang diperlukan untuk menyimpan informasi peta dapat dikurangi.",iniInformatika:"Bagan 4-wilayah disebut \"Quadtree\" dalam Informatika. Quadtree adalah struktur data pohon di mana setiap simpul memiliki empat anak yang terhubung dengan simpul dari atas ke bawah. Semua bentuk quadtree memiliki beberapa fitur umum:\n- Mereka menguraikan ruang menjadi sel-sel yang bisa beradaptasi.\n- Setiap sel (atau bucket) memiliki kapasitas maksimum. Ketika kapasitas maksimum tercapai, bucket akan terbelah.\n- Direktori tree mengikuti dekomposisi spasial dari quadtree.\n\nAda beberapa penggunaan quadtrees yang umum, seperti representasi gambar (contoh ini), pemrosesan dan kompresi gambar, pembuatan mesh, ... dll. Anda dapat menemukan informasi lebih lanjut di https://en.wikipedia.org/wiki/Quadtree",clue:"Baca catatan si pembajak mulai dari lingkaran paling atas, lalu turun cabang demi cabang: lingkaran berarti wilayahnya masih dibagi lagi, persegi berarti wilayah itu sudah satu warna utuh. Warnai petak peta wilayah demi wilayah mengikuti urutan cabang, baru cocokkan dengan pilihan.",src:"d2_q2"},
+{id:"d19_q8",title:"Set 2 · Titik Utama Wifi (2018)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-RO-03-X-001-5",img:IMG["d11_q2"],imgSol:IMG["d11_q2_sol"],deskripsi:"Jaringan lokal rumah Bebras dilengkapi dengan 14 titik akses (Access Point) ke Wifi. Pada jaringan ini, beberapa Access Point disebut Titik Kunci (Key Point), yang jika rusak akan menyebabkan Titik Akses lain tidak berfungsi. Misalnya, Titik Akses XX-009 adalah sebuah Titik Kunci: jika XX-009 rusak, maka XX-011 tidak dapat mengakses jaringan lagi.",pertanyaan:"Titik Akses mana saja yang merupakan Titik Kunci? Jawaban benar bisa lebih dari satu.\n\nPilihan Jawaban:\na) XX-13\nb) XX-02\nc) XX-14\nd) XX-07\ne) XX-06\nf) XX-03\ng) XX-08\nh) XX-01\ni) XX-12\nj) XX-09\nk) XX-04\nl) XX-05\nm) XX-11\nn) XX-10",keys:["XX-02, XX-07, XX-09, XX-04, XX-05","XX-02 XX-07 XX-09 XX-04 XX-05","b, d, j, k, l","bdjkl","~xx-02 dan ~xx-07"],jawabanResmi:"Jawaban yang benar: XX-02, XX-07, XX-09, XX-04, XX-05 (pilihan b, d, j, k, l).",penjelasan:"Jawaban yang benar: XX-02, XX-07, XX-09, XX-04, XX-05. Titik-titik Kunci adalah titik artikulasi pada graf jaringan: titik akses yang jika rusak memutus koneksi bagian lain dari jaringan (perhatikan contoh pada soal: XX-09 rusak → XX-11 terputus).",iniInformatika:"Praktik umum dalam Informatika adalah menggunakan graf sebagai struktur data untuk mewakili jaringan yang merupakan sekumpulan keterhubungan. Pada soal ini, tugasnya terdiri dari menemukan simpul yang memisahkan graf menjadi paling sedikit 2 komponen terkait dalam graf yang terhubung, yang disebut titik artikulasi. Untuk menentukan titik artikulasi dalam graf yang tidak berarah, kita bisa menggunakan algoritma pencarian kedalaman-pertama yang dimodifikasi untuk menyimpan informasi tambahan untuk setiap node.\n\nMari kita anggap bahwa T adalah graf. Kemudian, simpul v adalah titik artikulasi jika:\n1) v adalah akar T dan v memiliki dua anak atau lebih; atau\n2) v bukan akar T dan memiliki anak u di T sehingga tidak ada simpul dalam sub-graf yang didominasi oleh u yang terhubung dengan leluhur v melalui jalur penghubung sesudahnya (anak-anaknya tidak dapat mencapai tingkat yang lebih tinggi pada graf dengan menggunakan jalur lain).",clue:"Kerjakan dengan uji satu per satu: bayangkan sebuah titik akses mati, lalu telusuri apakah masih ada titik lain yang jadi terputus dari jaringan. Titik yang menjembatani dua kelompok begitulah yang krusial.",src:"d11_q2"},
+{id:"d19_q9",title:"Set 2 · Twist and Turn (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-RO-02a",img:IMG["d16_q2"],imgSol:IMG["d16_q2_sol"],deskripsi:"Tom adalah berang-berang berusia 10 tahun yang tinggal di sebuah kota penuh belokan dan putaran. Hari itu, telpon ibunya ketinggalan di rumah, dan ia meminta Tom untuk mengantarkan ke kantornya. Ibu memberikan sebuah peta agar Tom tidak tersesat. Peta tersebut digambarkan sebagai sebuah persegi dengan petak-petak yang dinomori 1 s.d. 6. Dan panah dari A ke F. Peta tersebut juga mengandung tanda arah yang dapat ditempuh Tom.\n[gambar: tabel legenda tanda arah — panah 'turun saja': Tom hanya dapat turun; panah 'bawah/kanan': Tom dapat ke bawah atau ke kanan; panah 'kiri/bawah': Tom dapat ke kiri atau ke bawah; panah 'atas/kiri': Tom dapat ke atas atau ke kiri; gambar kerucut: Tom menemui halangan sehingga tidak dapat bergerak lagi]\nTom mulai dari pojok kiri atas (A1).\n[gambar: peta persegi berupa grid 6×6 — kolom bernomor 1–6, baris huruf A–F; tiap petak berisi salah satu panah sesuai legenda di atas atau kerucut halangan; Tom (anak laki-laki) di petak A1 pojok kiri atas, kantor ibu (gambar wanita) di petak F6 pojok kanan bawah]",pertanyaan:"Rute mana yang dapat ditempuh oleh Tom untuk sampai ke kantor ibunya (F6)?",options:["a) A1 B1 B2 B3 C3 D3 D4 D5 D6 E6 F6","b) A1 B1 B2 B3 C3 D3 E3 E4 F4 F5 F6","c) A1 B1 B2 B3 C3 D3 E3 F3 F4 F5 F6","d) A1 B1 B2 B3 B4 C4 D4 D5 D6 E6 F6"],key:"C",jawabanResmi:"Jawaban yang tepat adalah c) A1 B1 B2 B3 C3 D3 E3 F3 F4 F5 F6",penjelasan:"Jawaban A tidak benar karena di E5 Tom akan menemukan halangan.\nJawaban B tidak benar karena Tom tidak dapat berpindah dari B4 ke C4. Dari B4 ia hanya bisa pindah ke B3 atau ke A4.\nJawaban D tidak benar karena Tom tidak dapat beralih dari D3 ke D4. Dari D4 ia hanya bisa pindah ke D2 atau E3.\nJadi jawaban yang benar adalah C.\n\n[catatan verifikator: jawaban c) dikonfirmasi benar berdasarkan peta tercetak (a gagal di D3→D4, b menabrak kerucut di E4, d gagal di D5→D6). Beberapa penyebutan petak pada pembahasan buku di atas kurang tepat — rujuk gambar peta.]",iniInformatika:"Struktur yang digunakan dalam tugas ini adalah array dua dimensi yang digunakan untuk menggambarkan peta dan array satu dimensi yang digunakan untuk menggambarkan arah bergerak. Array berisi data yang tidak sama, masing-masing elemen adalah struktur data yang terdiri dari dua komponen: karakter dan angka. Untuk menyelesaikan tugas ini, anda harus membaca array dan melacak elemen matriks yang indeksnya ditemukan sebagai nilai dalam array. Meskipun masalahnya nampak sederhana, pembacaan elemen array dan elemen matriks secara simultan adalah sulit karena kondisi yang diberlakukan oleh nilai elemen matriks.\nAnda dapat menemukan solusi dengan menerapkan pencarian pertama yang mendalam (dfs) yang juga disebut backtracking. Cara lain adalah mulai dari ujung jalan dan mencoba mencapai titik awal. Kedua metode ini dapat digabungkan untuk menghasilkan sebuah metode yang efisien jika hanya ada beberapa solusi (jalur).",clue:"Bawa petanya, lalu 'jalan' kaki tiap pilihan rute mulai dari petak awal: di tiap petak cek apakah tanda arahnya mengizinkan langkah berikutnya, dan awas halangan. Rute yang sah harus patuh semua tanda sampai tiba di petak tujuan.",src:"d16_q2"},
+{id:"d19_q10",title:"Set 2 · Medical Labs (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-CZ-01",img:[],imgSol:[],deskripsi:"Sebuah alat untuk melakukan diagnosa harus menggoncang spesimen secara berulang-ulang. Alat ini bekerja berdasarkan sebuah program komputer, yang ditulis dalam beberapa baris yang diberi nomor. Alat membaca program baris demi baris, dan mengeksekusinya segera setelah membaca.\n\nJika baris mengandung perintah go to X, maka alat akan langsung ke baris X dan meneruskan membaca serta mengeksekusinya.\n\nProgram mampu untuk:\n- menyimpan sebuah nilai bilangan dalam lokasi A dengan instruksi \"set\",\n- menambahkan 1 pada nilai yang disimpan pada lokasi A dengan instruksi \"add\",\n- dan membandingkan nilai A dengan sebuah bilangan lain (=, <, ≤, >, ≥, ≠).",pertanyaan:"Berapa kali alat akan menggoncang spesimen jika prosedurnya ditulis dengan program sebagai berikut:\n\n1. set A to 0\n2. add 1 to A\n3. go to 6\n4. jika A = 60 go to 8\n5. set A to 0\n6. add 1 to A\n7. go to 2\n8. ulangi A kali menggoncang spesimen\n9. stop",options:["A. Spesimen digoncang dua kali.","B. Spesimen digoncang satu kali.","C. Spesimen digoncang 60 kali.","D. Prosedur tidak akan pernah berhenti dan tidak pernah mengguncang spesimen."],key:"D",jawabanResmi:"Jawaban yang benar adalah D. Prosedur tidak akan pernah berhenti dan tidak pernah mengguncang spesimen.",penjelasan:"Program ini selalu memerintah untuk melompat dari baris 3 ke 6 dan dari baris 7 ke 2. Kecuali pada awalnya, program hanya mengunjungi baris No. 2, 3, 6, 7. Instruksi untuk menggoyang spesimen ada di baris No. 8, yang tidak pernah dikunjungi. Ini berarti perangkat tidak akan pernah mengguncang apa pun sesuai dengan program, jadi jawaban yang benar adalah d). Selain itu, instruksi pada saluran No. 9 tidak pernah dieksekusi, sehingga program berlanjut selamanya.",iniInformatika:"Bahasa pemrograman pertama, yang dikembangkan pada tahun '40-an dan '50-an, seperti yang nampak di tugas ini disebut bahasa rakitan. Baris program diberi nomor dan perintah khusus, yang dikenal sebagai instruksi, digunakan untuk melompat ke baris yang berbeda dari yang berikutnya. Sangat sulit untuk membaca program-program ini dan menemukan kesalahan tetapi mudah membuatnya. Bahasa pemrograman seperti itu rawan kesalahan sehingga bahasa pemrograman yang lebih modern dikembangkan mulai tahun 50-an. Bahasa-bahasa modern ini tidak berorientasi pada garis, melainkan mengandung struktur seperti loop, prosedur dan pilihan.\n\nhttps://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf",clue:"Jangan cuma dibaca — jalankan programnya dengan tangan: mulai dari baris pertama, ikuti ke mana tiap perintah lompat membawamu, dan catat baris mana saja yang benar-benar pernah dieksekusi. Pola perputarannya akan menunjukkan apa yang tidak pernah terjadi.",src:"d15_q4"},
+{id:"d19_q11",title:"Set 3 · Karung-karung Dalam Elevator (2016)",type:"sa",pdfInfo:"Bebras Indonesia Ã¢â‚¬â€œ Kelompok Penegak 2016 | Kode Soal: 2016-CZ-026",img:IMG["d1_q1"],imgSol:IMG["d1_q1_sol"],deskripsi:"Sejumlah karung diletakkan di koridor, di dekat suatu lift (elevator). Koridor sangat sempit sehingga karung-karung harus dibariskan satu-satu.\n\nKarung-karung hendak dikirimkan ke toko di lantai dasar dengan menggunakan lift tersebut. Sekali angkut, Lift hanya dapat mengangkut karung-karung dengan total berat tidak kurang dari 80 kg dan tidak lebih dari 100 kg. Setelah terkirim maka lift akan kembali ke lantai tersebut.\n\nSaat memuatkan karung-karung ke dalam lift, karung yang terdekat dengan lift yang akan diambil terlebih dulu. Seandainya penambahan suatu karung dapat menyebabkan overload (terlalu berat, karena total beratnya lebih dari 100 kg), karung itu untuk sementara tidak dimasukkan ke dalam lift tapi ditaruh di koridor pada arah berlawanan dari semula sejauh-jauhnya (jika tidak overload tentu akan dimasukkan ke dalam lift!).\n\nBila karung-karung dari barisan awal telah diambil, hal yang sama kemudian dilakukan pada barisan karung yang terbentuk pada koridor arah berlawanan dengan semula hingga seluruh karung di situ berhasil dikirim ke toko atau dipindah ke ujung koridor berlawanan dengannya. Hal itu terus-menerus dilakukan sampai semua karung berhasil dikirim ke toko.",pertanyaan:"Sampai semua karung dikirimkan ke toko dengan prosedur tersebut di atas, Berapa kali lift turun-naik mengangkut karung-karung itu semula karung-karung ada seperti pada gambar di atas dengan berat masing-masing seperti yang tercantum pada setiap karung?",keys:["4","empat"],jawabanResmi:"Jawaban yang benar adalah 4.",penjelasan:"Pada pemuatan pertama, 3 karung dengan berat 40+20+34=94 kg. Pada pemuatan kedua, karung berikutnya (55 kg) dimasukkan ke dalam lift. Karung berikutnya (50 kg) akan mengakibatkan overload, sehingga ditaruh pada ujung yang berlawanan. Karung berikutnya (23 kg) ditaruh kembali dalam lift, namun lift tak dapat pergi hanya dengan total berat 55+23= 78 kg. Karung berikutnya adalah 45 kg, yang akan membuat beban lift terlalu berat, maka karung itu dibawa ke ujung yang berlawanan. Hal yang sama terjadi untuk karung berikutnya (30 kg). Akhirnya, karung berikutnya (10 kg) dapat ditaruh dalam lift, dan berangkat dengan 55+23+10=88 kg. Ketiga karung terakhir (25+30+15 = 70kg) ditaruh dalam lift. Demikian seterusnya pemuatan karung-karung ke dalam lift dilakukan hingga semua karung terkirim.",iniInformatika:"Pada soal ini, kita perlu memakai algoritma dan menggunakan stack (tumpukan). Stack adalah struktur untuk menyusun benda dengan menaruh dan mengambilnya pada yang terakhir. Salah satu contoh adalah mainan anak-anak untuk membangun sebuah menara dari batu bata, di mana kita harus mengambil mulai dari yang terakhir dipasang pada saat membongkarnya kembali. Saat melakukan penelusuran halaman web, alamat dari halaman yang dikunjungi akan ditaruh dalam stack; saat kita menekan tombol \"balik\" yang ditampilkan adalah yang sebelumnya dikunjungi. Menggunakan stack tak selamanya dapat digunakan. Misalnya jika kita menunggu pada antrian di rumah sakit, siapa yang paling dulu datang seharusnya yang akan dilayani paling dulu.",clue:"Jangan menebak — jalankan prosesnya pelan-pelan di atas kertas: catat karung yang ikut setiap perjalanan, dan ingat karung yang ditolak jadi barisan baru yang dibaca dari arah sebaliknya, persis seperti tumpukan (stack). Kalau simulasinya jujur, jumlah perjalanan tinggal dihitung.",src:"d1_q1"},
+{id:"d19_q12",title:"Set 3 · Temukan Si Pencuri (2016)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2016 | Kode Soal: 2016-BE-02",img:IMG["d6_q1"],imgSol:IMG["d6_q1_sol"],deskripsi:"Berlian berwarna biru yang terkenal telah dicuri dari museum hari ini. Si pencuri berhasil menukar berlian tersebut dengan perhiasan imitasi murah berwarna hijau.\nPada acara pameran berlian hari ini dihadiri oleh 2000 orang pengunjung. Para pengunjung tersebut memasuki ruangan pameran satu per satu. Inspektur Bebro harus dapat menangkap si pencuri dengan menginterogasi beberapa orang dari pengunjung tersebut. Inspektur Bebro telah memiliki daftar nama dari 2000 orang pengunjung yang memasuki ruang pameran hari ini. Inspektur Bebro akan menanyai setiap orang dengan dengan pertanyaan yang sama:\nApakah warna berlian tersebut hijau atau biru pada saat anda melihatnya ?\nSetiap pengunjung akan menjawab dengan jujur; kecuali si pencuri, yang akan menjawab warna berlian tersebut adalah hijau.",pertanyaan:"Inspektur Bebro sangat pintar dan akan menggunakan strategi dimana jumlah orang yang akan ditanyai akan seminimal mungkin. Manakah dari pernyataan berikut yang dapat disampaikan Inspektur Bebro tanpa berbohong ?",options:["A. Tugas ini adalah tugas yang sulit; Saya perlu menanyai sekurang-kurangnya 200 orang, tetapi kemungkinan terbanyaknya adalah 1999 orang.","B. Saya tidak dapat menjanjikan apapun. Jika saya tidak beruntung, maka saya akan menanyai setiap pengunjung.","C. Tidak cukup dengan hanya menanyai 20 orang (kecuali saya sedang beruntung) tetapi saya yakin dapat menyelesaikan tugas saya dengan menanyai kurang dari 200 orang.","D. Saya dapat menjamin bahwa saya dapat menemukan si pencuri dengan cukup menanyai kurang dari 20 orang."],key:"D",jawabanResmi:"Inspektur Bebro dapat menemukan sang pencuri hanya dengan menginterogasi 11 orang.",penjelasan:"Sangat mencengangkan bahwa Inspektur Bebro hanya perlu menginterogasi sebagian kecil pengunjung, dengan mengulangi setengah dari daftar dengan cara ini:\nPengunjung diberi nomor 1 s.d 2000 terurut dengan saat memasuki ruangan. Inspektur menginterogasi pengunjung nomor 1000 dan menanyakan warna berlian yang dilihatnya:\n• jika dia menjawab biru, maka si pencuri datang setelah pengunjung nomor 1000 dan nomornya adalah antara nomor 1001 sampai 2000;\n• jika dia menjawab hijau, maka si pencuri bernomor antara 1 sampai 1000 (catat juga bahwa si pencuri mungkin bernomor 1000).\nPada kedua kasus, jumlah pengunjung yang mungkin sebagai si pencuri, berkurang dari 2000 menjadi 1000 (setengahnya).\nBerikutnya, sang Inspektur menanyakan ke orang dengan nomor \"tengah\" sisanya (yaitu nomor 1500 pada kasus pertama, atau nomor 500 pada kasus kedua). Dengan demikian, Inspektur membagi dua jumlah pengunjung (menjadi setengahnya) setiap kali satu pengunjung diinterogasi.\nMengulangi cara yang sama, ia dapat mengurangi jumlah yang dicurigai menjadi 500, 250, 125, 63,32, 16, 8, 4 dan kemudian 2. Saat tinggal 2 tersangka, ia akan menanyakan kepada yang pertama. Jika ia menjawab hijau, ia adalah si pencuri; jika tidak maka yang lainnya adalah pencuri. Inspektur Bebro dapat menemukan sang pencuri hanya dengan menginterogasi 11 orang.",iniInformatika:"Ide untuk mengulang terhadap separuh dari himpunan objek adalah teknik yang sangat umum digunakan di bidang informatika. Mungkin Anda sudah mengenal binary search, di mana kita mencari pada separuh dari list terurut. Pada kasus ini, kita memakai binary seach untuk menemukan elemen hijau pada sebuah list biru dan hijau, di mana semua elemen biru ada di awal. Fakta bahwa biasanya seorang pencuri selalu berbohong, membuat soal ini menjadi lebih menarik. Patut dicatat bahwa persoalan ini tak dapat dipecahkan jika kita tak tahu sebelumnya tentang warna yang akan dipakai oleh si pencuri untuk menjawab.",clue:"Pengunjung lain semuanya jujur, jadi jawaban mereka punya pola kalau diurutkan sesuai nomor masuk — hanya satu orang yang menyeberang. Begitu polanya terlihat, ada teknik klasik yang bisa memangkas separuh calon tersangka setiap kali bertanya.",src:"d6_q1"},
+{id:"d19_q13",title:"Set 3 · Jadwal Gladi Resik (2018)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2018 | Kode Soal: I-2018-BE-04",img:IMG["d9_q4"],imgSol:IMG["d9_q4_sol"],deskripsi:"Sekolah Bebras akan mengadakan pertunjukan menari, dengan penari berpasangan. Ada 6 penari yaitu : Ana, Budi, Cinta, Dori, Evi, Fani.\nMereka akan menari berpasangan :\n1. Ana - Budi\n2. Evi - Dori\n3. Ana - Evi\n4. Budi - Cinta\n5. Dori - Ana\n6. Fani - Budi\n7. Cinta - Evi\n8. Budi – Dori\n9. Dori - Fani\n10. Fani - Evi\n\nPelatih ingin menjadwalkan gladi resik untuk suatu tarian berantai. Dalam sebuah tarian berantai, urutan tarian ditentukan sedemikian rupa sehingga dari satu tarian ke tarian berikutnya, salah satu dari pasangan penari akan tetap tinggal di panggung untuk pertunjukan berikutnya. Selain itu, ada aturan bahwa seorang penari tak boleh dijdwal menari 3 kali berturut-turut, sebab akan kelelahan.\n\nContoh: saat Ana dan Evi menari, salah satu alternatif berikutnya adalah Cinta dan Evi. Setelah itu, Evi tidak dapat menari lagi.",pertanyaan:"Penari mana yang tak boleh dijadwalkan pada tarian pertama karena akan menyebabkan tidak mungkin membuat pertunjukan tarian berantai?",options:["A. Ana","B. Cinta","C. Evi","D. Dori","E. Budi","F. Fani"],key:"B",jawabanResmi:"Jawaban yang benar adalah B. Cinta.",penjelasan:"Perhatikan diagram di bawah ini.\n\nDalam diagram ini penari diwakili oleh lingkaran. Dua lingkaran terhubung oleh sebuah garis ketika dua penari harus menari berpasangan. Aturan jadwal latihan digambarkan oleh garis di diagram ini. Perhatikan mulai dari sebuah lingkaran, kita dapat mengikuti garis dari lingkaran tersebut ke lingkaran lain sampai kita melacak setiap garis penghubung tepat satu kali.\n\nKarena saat melacak garis ini kita harus meninggalkan setiap lingkaran yang kita lewati, ini berarti bahwa setiap lingkaran harus memiliki garis penghubung dengan jumlah genap, kecuali yang pertama dan yang terakhir di jalur. Jadi, lingkaran pertama di jalan harus A atau F.\n\nDengan kata lain, jadwal apa pun yang dipilih, pasangan penari pertama harus Ana atau Fani. Cinta adalah satu-satunya penari yang tidak memiliki pasangan dengan keduanya. Jadi dia tidak akan pernah bisa menjadi bagian dari pasangan pertama.\n\nKalau kita perhatikan setiap garis, kita harus mengambil arah dari penari yang sudah ada di latihan sebelumnya ke penari yang akan berada di latihan berikutnya. Karena satu penari tidak akan menari tiga kali berturut-turut, setiap langkah di sebuah garis akan menuju ke suatu lingkaran yang berbeda dalam diagram. Garis penghubung dalam diagram berkorespondensi dengan satu pasang penari.",iniInformatika:"Diagram penjelasan jawaban di atas adalah graf. Jalurnya (digambarkan sebagai garis) adalah jalur Euler. Graf adalah sebuah cara untuk membuat model dari suatu situasi yang terdiri dari titik atau simpul. Dalam soal ini simpul adalah para penari. Setiap garis menghubungkan dua penari. Garis dalam graf ini mewakili pasangan penari. Dalam soal ini anda akan menggunakan semua pasangan, sedemikian rupa sehingga setiap garis hanya digunakan satu kali. Euler membuktikan bahwa hal ini hanya mungkin jika anda memulai dan berhenti di sebuah simpul dengan jumlah hubungan ganjil.\n\nMewakili informasi menggunakan graf dapat sangat membantu untuk melihat struktur di balik suatu masalah. Perencanaan rute dan penjadwalan adalah contoh lain aplikasi penggunaan graf.",clue:"Gambar tiap pasangan penari sebagai garis penghubung antar nama, jadilah diagram jaringan. Tarian berantai artinya ada jalan yang melewati tiap garis persis sekali — dan di jalan begitu, penari dengan jumlah koneksi ganjil hanya muat di posisi ujung jalur.",src:"d9_q4"},
+{id:"d19_q14",title:"Set 3 · Terowongan (2017)",type:"sa",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-CH-07b",img:[],imgSol:[],deskripsi:"Rumah bebras Bobi memiliki empat buah ruangan (A, B, C, F) yang dihubungkan oleh terowongan-terowongan. Ruang A, B, dan C adalah ruang tamu, sedangkan ruang F adalah tempat penyimpanan makanan.\n10 ekor berang-berang sedang berada di dalam ruangan A. Mereka merasa kelaparan dan ingin pergi ke ruang F untuk makan. Karena semua berang-berang sangat kelaparan, mereka semua ingin tiba di tempat penyimpanan makanan secepat mungkin.\nUntuk melewati sebuah terowongan dibutuhkan 1 menit dan satu terowongan hanya dapat dilewati oleh 1 berang-berang dalam satu waktu (Saat terowongan dilewati seekor berang-berang, tidak ada berang-berang lain yang dapat lewat sebelum dia keluar).\nBanyaknya terowongan yang menghubungkan dua buah ruangan adalah sebagai berikut:\n▪ Antara A dan B: 4 terowongan\n▪ Antara A dan C: 1 terowongan\n▪ Antara B dan C: 2 terowongan\n▪ Antara B dan F: 1 terowongan\n▪ Antara C dan F: 3 terowongan\nSemua ruangan tidak memiliki batas kapasitas, jadi semua ruangan dapat memuat sebanyak apapun berang-berang yang ada.",pertanyaan:"Berapa paling banyak berang-berang yang dapat tiba di tempat penyimpanan makanan dalam waktu tepat 2 menit?\nIsi dengan bilangan bulat antara 0 dan 10.",keys:["2","~dua"],jawabanResmi:"Jawaban yang tepat adalah 2.",penjelasan:"Banyaknya berang-berang maksimal yang dapat tiba di tempat penyimpanan makanan tepat dalam 2 menit adalah 2.\nTerdapat 2 buah rute terpendek dari ruangan A menuju tempat penyimpanan makanan. Kedua rute tersebut masing-masing memiliki kapasitas 1 ekor berang-berang dan membutuhkan total 2 menit untuk mencapai ruangan F. Rute tersebut adalah:\n- A ke B ke F\n- A ke C ke F\nSelain kedua rute tersebut, terdapat rute lain yang memiliki kapasitas 2 ekor berang-berang, tetapi membutuhkan waktu 3 menit untuk mencapai ruangan F. Rute tersebut adalah:\n- A ke B ke C ke F\nOleh karena itu, hanya 2 ekor berang-berang yang dapat tiba di tempat penyimpanan makanan tepat dalam waktu 2 menit. Seekor berang-berang menggunakan rute A ke B ke F dan seekor berang-berang lainnya menggunakan rute A ke C ke F.",iniInformatika:"Hubungan terowongan-terowongan tersebut dapat dibayangkan sebagai flow network (jaringan dari aliran) dalam teori graf. Model graf dapat dibuat untuk menggambarkan ruangan dan terowongan antar ruangan. Sebuah jalur yang menghubungkan dua buah simpul yang menyatakan ruangan memiliki kapasitas yang menyatakan banyaknya terowongan yang menghubungkan kedua ruangan tersebut (sama dengan banyaknya berang-berang yang dapat pergi dari satu ruangan ke ruangan lain yang sama dalam satu waktu bersamaan). Masing-masing jalur akan menerima sebuah aliran (berang-berang yang sedang melewati terowongan). Jumlah aliran yang melewati sebuah jalur tidak dapat melebihi kapasitas dari sisi.\nTujuan yang ingin dicapai adalah mengoptimalkan aliran dari berang-berang yang melewati jaringan tersebut sehingga sebanyak mungkin berang-berang yang tiba dalam waktu yang sesingkat mungkin ke tempat penyimpanan makanan. Ada beberapa algoritma untuk masalah ini, salah satunya yaitu algoritma Ford-Fulkerson.\nPermasalahan kita merupakan kasus khusus dalam masalah flow network, karena berang-berang diperbolehkan untuk menunggu di B dan C jika tidak memungkinkan untuk melanjutkan perjalanan karena terowongan yang dapat dilewati tidak mencukupi untuk semua berang-berang. Dalam masalah flow network klasik, tidak ada aliran yang boleh tertinggal dalam suatu tempat. Semua harus dialirkan segera setelah melewati sebuah saluran. Dalam masalah flow network klasik juga sebuah saluran harus memiliki arah. Sedangkan, dalam kasus ini, berang-berang bebas pergi melewati terowongan dari satu ruangan ke ruangan lainnya dan begitu pula sebaliknya.",clue:"Pikirkan menit demi menit: siapa saja yang bisa berpindah ke ruangan mana di menit pertama, lalu di menit kedua. Jumlah terowongan antar ruangan itu terbatas — di situlah kemacetan terjadi, jadi hitung kapasitas tiap \"gerbang\" per menit.",src:"d12_q2"},
+{id:"d19_q15",title:"Set 3 · Memindahkan Dadu (2017)",type:"mc",pdfInfo:"Bebras Indonesia – Kelompok Penegak 2017 | Kode Soal: I-2017-MY-05",img:IMG["d16_q1"],imgSol:IMG["d16_q1_sol"],deskripsi:"Jack si berang-berang menggulirkan sebuah dadu sepanjang jalan tanpa pengeseran. Untuk memindahkan dadu dari satu petak ke petak berikutnya, Jack memutar dadu sepanjang pinggir yang ada di perbatasan antara dua petak. Dia melakukannya 9 kali sampai dadu mencapai petak berisi bulatan putih di sebelah kanan.\n[gambar: jalur petak-petak yang diguliri dadu, dari petak awal (dadu) sampai petak berbulat putih di sebelah kanan]",pertanyaan:"Sisi dadu dengan berapa titik ada di dasar dadu saat dadu mencapai petak hijau di ujung?",options:["A. 3","B. 6","C. 2","D. 4"],key:"A",jawabanResmi:"Jawaban yang tepat adalah 3",penjelasan:"",iniInformatika:"Ini adalah contoh pemecahan masalah dengan mengamati hanya sebagian informasi di setiap tahap. Metode ini dapat mengurangi kerumitan dan penggunaan memori. Komputer sering diprogram seperti ini.\nSalah satu alternatif dari metode ini adalah melacak jumlah titik di bagian bawah setelah setiap langkah (1,2,6,5,3,2,6,4,5,3). Tetapi jauh lebih sulit. Untuk beberapa putaran pertama, itu masih mudah. Tetapi setelah beberapa langkah, kita akan mengalami kesulitan karena beberapa angka tidak dapat dilihat.\nPerhatikan bahwa banyaknya titik di dua sisi kebalikan sebuah dadu selalu 7 (1 berlawanan dengan 6; 2 berlawanan dengan 5; 3 berlawanan dengan 4). Pada mulanya, sisi dengan 1 titik (berlawanan dengan sisi 6) ada di dasar dadu, seperti ditunjukkan pada gambar. Setelah memutar dadu sekali ke petak kedua, sisi dengan 2 titik (berlawanan dengan 5) akan berada di dasar dadu.\nMisalnya, pertama-tama kita dapat mencatat posisi awal dadu dengan sisi 3, 5, dan 6 yang berada di posisi kanan, depan dan atas. Kita terus mengamati posisi 3 sisi ini saat dadu berputar, selangkah demi selangkah sampai ke petak terakhir. Setelah dadu selesai bergerak, kita bisa tahu sisi mana yang berada di bawah.\n[Tabel posisi dadu per langkah — kolom: Langkah | Arah bergerak | Posisi kanan | Posisi depan | Posisi atas]\n1 | ↑ | Kanan | Atas | Belakang\n2 | ↑ | Kanan | Belakang | Bawah\n3 | ↑ | Kanan | Bawah | Depan\n4 | → | Bawah | Kiri | Depan\n5 | → | Kiri | Atas | Depan\n6 | ↓ | Kiri | Depan | Bawah\n7 | → | Atas | Depan | Kiri\n8 | ↓ | Depan | Bawah | Kiri\n9 | ↓ | Bawah | Belakang | Kiri\nSelanjutnya, jika kita memprogram dua metode ini di komputer, kita akan melihat bahwa metode pertama, seperti yang ditunjukkan dalam jawaban, lebih cepat.",clue:"Yang menentukan bukan cuma dadunya bergulir, tapi sisi mana yang jatuh ke bawah setiap putaran. Tandai dulu keenam sisi dadu di posisi awal, lalu gulirkan mengikuti jalur sisi demi sisi sambil mencatat sisi bawah di tiap langkah.",src:"d16_q1"}
 ]}
 ];
 
@@ -756,12 +844,13 @@ const modules = [
   var pendingNext = null;
 
   function loadProgress() {
+    var empty = function () { return { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {}, examRun: 0, examSetSrcs: {}, examHistory: [], examUsed: [], bebras100: false }; };
     try {
       var raw = localStorage.getItem(LS_PROGRESS);
-      if (!raw) return { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {} };
+      if (!raw) return empty();
       var p = JSON.parse(raw);
-      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {}, answers: p.answers || {}, hearts: p.hearts || {} };
-    } catch (e) { return { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {} }; }
+      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {}, answers: p.answers || {}, hearts: p.hearts || {}, examRun: p.examRun || 0, examSetSrcs: p.examSetSrcs || {}, examHistory: Array.isArray(p.examHistory) ? p.examHistory : [], examUsed: Array.isArray(p.examUsed) ? p.examUsed : [], bebras100: !!p.bebras100 };
+    } catch (e) { return empty(); }
   }
   function saveProgress() {
     try { localStorage.setItem(LS_PROGRESS, JSON.stringify(progress)); } catch (e) { /* storage full/blocked */ }
@@ -788,7 +877,7 @@ const modules = [
     try {
       fetch(syncUrl('api/progress'), { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {} }) : null); })
+        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {}, examRun: 0, examSetSrcs: {}, examHistory: [], examUsed: [], bebras100: false }) : null); })
         .catch(function () { finish(null); });
       setTimeout(function () { finish(null); }, 5000);
     } catch (e) { finish(null); }
@@ -798,7 +887,8 @@ const modules = [
     var s = p.solved || {}, e = p.examStart || {}, c = p.clueUsed || {};
     var n = 0, k;
     for (k in s) n += Object.keys(s[k]).length;
-    return n === 0 && Object.keys(e).length === 0 && Object.keys(c).length === 0;
+    return n === 0 && Object.keys(e).length === 0 && Object.keys(c).length === 0
+      && !(p.examHistory || []).length && !(p.examUsed || []).length && !p.bebras100;
   }
   function mergeProgress(a, b) {
     var out = { solved: {}, examStart: {}, clueUsed: {} }, ids = {}, k, kk;
@@ -826,6 +916,21 @@ const modules = [
     for (k in (b.hearts || {})) {
       if (out.hearts[k] === undefined || Number(b.hearts[k]) < Number(out.hearts[k])) out.hearts[k] = b.hearts[k];
     }
+    // exam (v3.11): run maksimum, set soal per run, riwayat per run (b/local menang per run), used union
+    out.examRun = Math.max(Number(a.examRun) || 0, Number(b.examRun) || 0);
+    out.examSetSrcs = {};
+    for (k in (a.examSetSrcs || {})) out.examSetSrcs[k] = a.examSetSrcs[k];
+    for (k in (b.examSetSrcs || {})) out.examSetSrcs[k] = b.examSetSrcs[k];
+    var histA = Array.isArray(a.examHistory) ? a.examHistory : [];
+    var histB = Array.isArray(b.examHistory) ? b.examHistory : [];
+    var byRun = {};
+    histA.forEach(function (h) { if (h && h.run !== undefined) byRun[h.run] = h; });
+    histB.forEach(function (h) { if (h && h.run !== undefined) byRun[h.run] = h; }); // local menang utk run sama
+    out.examHistory = Object.keys(byRun).map(function (r) { return byRun[r]; }).sort(function (x, y) { return x.run - y.run; });
+    out.examUsed = [];
+    (a.examUsed || []).forEach(function (x) { if (out.examUsed.indexOf(x) < 0) out.examUsed.push(x); });
+    (b.examUsed || []).forEach(function (x) { if (out.examUsed.indexOf(x) < 0) out.examUsed.push(x); });
+    out.bebras100 = !!(a.bebras100 || b.bebras100);
     return out;
   }
   function bootSync() {
@@ -898,8 +1003,48 @@ const modules = [
     return m.questions.filter(function (q) { return solvedMap(m.id)[q.id] || isRevealed(q.id); }).length;
   }
   function isSolved(qid) { return !!solvedMap(currentId)[qid]; }
+  // jumlah "terjawab" utk progress bar: normal = solved/revealed; exam = input terisi (live, zero feedback)
+  function moduleAnswered(m) {
+    if (m.type !== 'exam') return answeredCount(m);
+    try { return m.questions.filter(function (q) { return readAnswer(q) !== null; }).length; }
+    catch (e) { return answeredCount(m); }
+  }
   function heartsLeft(qid) { var h = progress.hearts && progress.hearts[qid]; return (h === undefined || h === null) ? 3 : Number(h); }
   function isRevealed(qid) { return heartsLeft(qid) <= 0; }
+
+  /* ================= exam engine helpers (v3.11) ================= */
+  function examRunOf() { return Number(progress.examRun) || 0; }
+  function examStartKey(run) { return run === 0 ? 'd19' : 'd19:r' + run; }
+  function examHistOf(run) {
+    return (progress.examHistory || []).find(function (h) { return Number(h.run) === Number(run); }) || null;
+  }
+  function examSubmitted() { var h = examHistOf(examRunOf()); return !!(h && h.submitted); }
+  function poolQById(src) {
+    if (!Array.isArray(modules)) return null;
+    for (var i = 0; i < modules.length; i++) {
+      if (modules[i].type !== 'normal') continue;
+      var q = modules[i].questions.find(function (x) { return x.id === src; });
+      if (q) return q;
+    }
+    return null;
+  }
+  // ganti set soal d19 dgn set run redo yang tersimpan (id deterministik d19r<run>_<n>)
+  function applyExamSet(m) {
+    if (!m || m.type !== 'exam') return 0;
+    var run = examRunOf();
+    if (!run) return 0;
+    var srcs = (progress.examSetSrcs || {})[run];
+    if (!Array.isArray(srcs) || !srcs.length) return 0;
+    m.questions = srcs.map(function (src, i) {
+      var q0 = poolQById(src);
+      return q0 ? Object.assign({}, q0, { id: 'd19r' + run + '_' + (i + 1), src: src }) : null;
+    }).filter(Boolean);
+    return m.questions.length;
+  }
+  function shuffleArr(a) {
+    for (var i = a.length - 1; i > 0; i--) { var j = (Math.random() * (i + 1)) | 0; var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
 
   /* ================= render: empty ================= */
   function renderEmpty() {
@@ -930,27 +1075,49 @@ const modules = [
     return head;
   }
   function renderExamControls(m) {
+    var hist = examHistOf(examRunOf());
+    var done = !!(hist && hist.submitted);
     return el('div', { class: 'exam-controls' },
       el('span', { class: 'exam-chip', id: 'examChip', 'aria-label': 'Sisa waktu simulasi', text: '⏱ 45:00' }),
+      el('span', { class: 'exam-fill', id: 'examFill', 'aria-label': 'Soal terisi', text: '0/' + m.questions.length + ' terisi', hidden: 'true' }),
       el('button', { class: 'btn btn-exam', id: 'btnStartExam', type: 'button', text: '▶ MULAI SIMULASI' }),
-      el('div', { class: 'exam-banner', id: 'examBanner', role: 'alert', hidden: 'true' })
+      el('button', { class: 'btn btn-submit', id: 'btnSubmitExam', type: 'button', text: '🏁 SUBMIT JAWABAN', hidden: 'true' }),
+      el('div', { class: 'exam-banner', id: 'examBanner', role: 'alert', hidden: 'true' }),
+      done && !progress.bebras100 ? el('button', { class: 'btn btn-debug btn-mini', id: 'btnEvalReopen', type: 'button', text: '📋 EVALUASI' }) : null,
+      done && !progress.bebras100 ? el('button', { class: 'btn btn-exam btn-mini', id: 'btnRedoReopen', type: 'button', text: '🔁 REDO' }) : null,
+      progress.bebras100 ? el('button', { class: 'btn btn-mini', id: 'btnVictoryReplay', type: 'button', 'aria-label': 'Buka lagi victory page', title: 'Victory page — BEBRAS 100%', text: '🏆' }) : null
     );
   }
 
   /* ================= render: question card ================= */
   function renderCard(m, q) {
-    var solved = isSolved(q.id);
-    var revealed = !solved && isRevealed(q.id);
-    var locked = solved || revealed;
+    // d19 exam (v3.11): zero feedback — tanpa RUN_CHECK/hearts/pembahasan selama sim berlangsung
+    var examMode = m.type === 'exam';
+    var exHist = examMode ? examHistOf(examRunOf()) : null;
+    var exDone = examMode ? !!(exHist && exHist.submitted) : false;
+    var exStarted = examMode ? !!progress.examStart[examStartKey(examRunOf())] : false;
+    var solved = !examMode && isSolved(q.id);
+    var revealed = !examMode && !solved && isRevealed(q.id);
+    var locked = examMode ? (!exStarted || exDone) : (solved || revealed);
     var card = el('article', {
       class: 'q-card' + (solved ? ' solved' : '') + (revealed ? ' revealed' : ''), id: 'card-' + q.id,
       'aria-label': 'Soal ' + q.id + ' — ' + q.title
     });
+    var markEl = null;
+    if (examMode && exDone) {
+      var isBlank = exHist.blank.indexOf(q.id) >= 0;
+      var exCorrect = exHist.correct.indexOf(q.id) >= 0;
+      markEl = exCorrect
+        ? el('span', { class: 'qc-check', 'aria-label': 'Benar', title: 'Benar', text: '✓' })
+        : (isBlank
+          ? el('span', { class: 'qc-void', 'aria-label': 'Kosong', title: 'Tidak dijawab', text: '⬜' })
+          : el('span', { class: 'qc-x', 'aria-label': 'Salah', title: 'Salah', text: '✗' }));
+    }
     card.append(el('div', { class: 'qc-head' },
       el('span', { class: 'q-id-chip', text: q.id }),
       el('h3', { class: 'qc-title', text: q.title }),
       el('span', { class: 'q-type-badge type-' + q.type, text: q.badge || badgeFor(q.type) }),
-      solved ? el('span', { class: 'qc-check', 'aria-label': 'Selesai', title: 'Selesai', text: '✓' }) : (revealed ? el('span', { class: 'qc-skull', 'aria-label': 'Gagal 3x — jawaban dibuka paksa', title: 'Gagal 3x — jawaban dibuka paksa', text: '💀' }) : null)
+      markEl ? markEl : (solved ? el('span', { class: 'qc-check', 'aria-label': 'Selesai', title: 'Selesai', text: '✓' }) : (revealed ? el('span', { class: 'qc-skull', 'aria-label': 'Gagal 3x — jawaban dibuka paksa', title: 'Gagal 3x — jawaban dibuka paksa', text: '💀' }) : null))
     ));
     if (q.pdfInfo) card.append(el('div', { class: 'pdf-badge', text: '📄 ' + q.pdfInfo }));
     var hasImgs = Array.isArray(q.img) && q.img.length;
@@ -986,19 +1153,20 @@ const modules = [
     restoreAnswer(q, inputs); // bekas jawaban terakhir tetap terlihat saat review
     card.append(inputs);
 
-    var runBtn = el('button', {
+    var runBtn = examMode ? null : el('button', {
       class: 'btn btn-run', id: 'btn-check-' + q.id, type: 'button',
       onclick: function () { runCheck(m, q); }
     }, '▶ RUN_CHECK()');
-    if (locked) runBtn.disabled = true;
+    if (!examMode && locked) runBtn.disabled = true;
     var dbgBtn = el('button', {
       class: 'btn btn-debug', id: 'btn-debug-' + q.id, type: 'button',
       'aria-expanded': 'false', onclick: function () { toggleSolution(q.id); }
     }, '🐞 DEBUG_SOLUTION');
-    // pembahasan baru boleh dibuka SETELAH jawaban benar / nyawa habis (kecuali checklist review)
-    if (q.type !== 'check' && !solved && !revealed) dbgBtn.hidden = true;
+    // pembahasan baru boleh dibuka SETELAH jawaban benar / nyawa habis / exam selesai dinilai
+    if (examMode) { if (!exDone) dbgBtn.hidden = true; }
+    else if (q.type !== 'check' && !solved && !revealed) dbgBtn.hidden = true;
     var clueBtn = null;
-    if (q.clue && q.type !== 'check') {
+    if (q.clue && q.type !== 'check' && !examMode) {
       clueBtn = el('button', {
         class: 'btn btn-clue', id: 'btn-clue-' + q.id, type: 'button',
         onclick: function () { askClue(q); }
@@ -1008,7 +1176,7 @@ const modules = [
     card.append(el('div', { class: 'q-actions' }, runBtn, dbgBtn, clueBtn));
 
     var cluePanel = null;
-    if (q.clue && q.type !== 'check') {
+    if (q.clue && q.type !== 'check' && !examMode) {
       cluePanel = el('div', { class: 'clue-panel', id: 'clue-' + q.id, hidden: 'true' },
         el('span', { class: 'clue-tag', text: '// 💡 CLUE — petunjuk arah, bukan jawaban' }),
         el('span', { text: q.clue }));
@@ -1016,8 +1184,8 @@ const modules = [
     }
     if (cluePanel) card.append(cluePanel);
 
-    // hearts: 3 percobaan per soal (hidden kalau solved atau checklist review)
-    if (q.type !== 'check' && !solved) {
+    // hearts: 3 percobaan per soal (hidden kalau solved / checklist review / mode exam)
+    if (q.type !== 'check' && !solved && !examMode) {
       var n = heartsLeft(q.id);
       var hs = [];
       for (var hi = 0; hi < 3; hi++) hs.push(el('span', { class: 'heart' + (hi < n ? '' : ' lost'), text: hi < n ? '❤' : '🖤' }));
@@ -1025,14 +1193,16 @@ const modules = [
     }
 
     var term = el('div', { class: 'terminal-box', id: 'term-' + q.id, 'aria-live': 'polite', hidden: 'true' });
-    if (solved) {
-      term.hidden = false; term.classList.add('ok');
-      termLine(term, '> run_check(' + q.id + ')...', 'cmd');
-      termLine(term, '✓ TEST PASSED — Jawaban benar!');
-    } else if (revealed) {
-      term.hidden = false; term.classList.add('err');
-      termLine(term, '> run_check(' + q.id + ')...', 'cmd');
-      termLine(term, '✗ GAGAL 3x — nyawa habis. Jawaban dibuka paksa, baca & pahami.');
+    if (!examMode) {
+      if (solved) {
+        term.hidden = false; term.classList.add('ok');
+        termLine(term, '> run_check(' + q.id + ')...', 'cmd');
+        termLine(term, '✓ TEST PASSED — Jawaban benar!');
+      } else if (revealed) {
+        term.hidden = false; term.classList.add('err');
+        termLine(term, '> run_check(' + q.id + ')...', 'cmd');
+        termLine(term, '✗ GAGAL 3x — nyawa habis. Jawaban dibuka paksa, baca & pahami.');
+      }
     }
     card.append(term);
 
@@ -1084,7 +1254,7 @@ const modules = [
       placeholder: 'ketik jawabanmu, lalu tekan Enter…', autocomplete: 'off', spellcheck: 'false',
       'aria-label': 'Jawaban isian singkat untuk ' + q.id,
       disabled: solved || undefined,
-      onkeydown: function (e) { if (e.key === 'Enter') { e.preventDefault(); runCheckById(q.id); } }
+      onkeydown: function (e) { if (e.key === 'Enter') { e.preventDefault(); var mm = mod(); if (mm && mm.type === 'exam') return; runCheckById(q.id); } }
     });
     return input;
   }
@@ -1214,6 +1384,7 @@ const modules = [
     }
     var m = mod() || modules[0];
     currentId = m.id;
+    if (m.type === 'exam') applyExamSet(m); // pasang set soal redo (kalau examRun > 0)
     app.append(renderModuleHeader(m));
     var section = el('section', { class: 'cards', 'aria-label': 'Daftar soal ' + m.label });
     m.questions.forEach(function (q) {
@@ -1558,25 +1729,40 @@ const modules = [
     if (checked && solvedCount(m) === m.questions.length) openCelebration(m);
   }
 
-  /* ================= exam module (d19) ================= */
+  /* ================= exam module (d19) — v3.11 zero-feedback simulation ================= */
   function stopExamTick() { if (examTick) { clearInterval(examTick); examTick = null; } }
   function setupExam(m) {
     var chip = document.getElementById('examChip');
     var startBtn = document.getElementById('btnStartExam');
+    var submitBtn = document.getElementById('btnSubmitExam');
+    var fillChip = document.getElementById('examFill');
+    var banner = document.getElementById('examBanner');
     var section = document.querySelector('.cards');
     var total = EXAM_MINUTES * 60 * 1000;
+    var run = examRunOf();
+    var hist = examHistOf(run);
+    var done = !!(hist && hist.submitted);
+    var started = !!progress.examStart[examStartKey(run)];
     function fmt(ms) {
       var s = Math.max(0, Math.ceil(ms / 1000));
       return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
     }
+    function updateExamFill() {
+      if (!fillChip) return;
+      var n = 0;
+      try { n = m.questions.filter(function (q) { return readAnswer(q) !== null; }).length; } catch (e) { /* noop */ }
+      fillChip.textContent = n + '/' + m.questions.length + ' terisi';
+      fillChip.classList.toggle('full', n === m.questions.length);
+    }
     function tick() {
-      var t0 = progress.examStart[m.id];
+      var t0 = progress.examStart[examStartKey(examRunOf())];
       if (!t0 || !chip) return;
       var left = total - (Date.now() - t0);
       if (left <= 0) {
         chip.textContent = '⏱ 00:00';
         chip.classList.add('danger');
-        examOver(m);
+        chip.classList.remove('warn');
+        submitExam(m, true);
         return;
       }
       chip.textContent = '⏱ ' + fmt(left);
@@ -1585,40 +1771,417 @@ const modules = [
     }
     function startTick() { stopExamTick(); examTick = setInterval(tick, 250); tick(); }
     function maybeStart() {
-      if (progress.examStart[m.id]) return;
-      progress.examStart[m.id] = Date.now();
+      if (done) return;
+      var key = examStartKey(examRunOf());
+      if (progress.examStart[key]) return;
+      progress.examStart[key] = Date.now();
       saveProgress();
-      if (startBtn) startBtn.hidden = true;
-      startTick();
+      renderModule(); // buka kunci input kartu (kartu dirender locked sebelum mulai) + pasang ulang kontrol
+      return;
     }
     if (startBtn) startBtn.addEventListener('click', maybeStart);
+    if (submitBtn) submitBtn.addEventListener('click', askSubmitConfirm);
     if (section) {
       section.addEventListener('focusin', maybeStart);
-      section.addEventListener('change', maybeStart);
+      section.addEventListener('change', function () { maybeStart(); updateExamFill(); });
+      section.addEventListener('input', updateExamFill);
     }
-    if (progress.examStart[m.id]) {
+    var evalBtn = document.getElementById('btnEvalReopen');
+    var redoBtn = document.getElementById('btnRedoReopen');
+    var vpBtn = document.getElementById('btnVictoryReplay');
+    if (evalBtn) evalBtn.addEventListener('click', function () { var h = examHistOf(examRunOf()); if (h) openEval(h); });
+    if (redoBtn) redoBtn.addEventListener('click', openRedoPrompt);
+    if (vpBtn) vpBtn.addEventListener('click', function () { startVictory(true); });
+    if (done) {
       if (startBtn) startBtn.hidden = true;
+      if (submitBtn) submitBtn.hidden = true;
+      if (fillChip) { fillChip.hidden = false; updateExamFill(); }
+      if (banner) {
+        banner.hidden = false;
+        banner.textContent = (hist.score === m.questions.length ? '🏆 ' : (hist.auto ? '⏰ WAKTU HABIS — ' : '')) +
+          'SIMULASI SELESAI — Skor: ' + hist.score + '/' + m.questions.length +
+          (hist.score === m.questions.length ? ' — buka suratnya di tombol 🏆' : ' — review lewat tombol 📋 EVALUASI');
+      }
+    } else if (started) {
+      if (startBtn) startBtn.hidden = true;
+      if (submitBtn) submitBtn.hidden = false;
+      if (fillChip) { fillChip.hidden = false; updateExamFill(); }
       startTick();
     } else if (chip) {
       chip.textContent = '⏱ ' + fmt(total);
     }
   }
-  function examOver(m) {
+
+  /* ---------- submit & grading (zero feedback sampai submit) ---------- */
+  var submitModal = null;
+  function askSubmitConfirm() {
+    var m = mod();
+    if (!m || m.type !== 'exam' || examSubmitted()) return;
+    var blank = 0;
+    try { blank = m.questions.filter(function (q) { return readAnswer(q) === null; }).length; } catch (e) { /* noop */ }
+    if (!submitModal) {
+      submitModal = el('div', { class: 'er-backdrop', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Konfirmasi submit' },
+        el('div', { class: 'er-card' },
+          el('div', { class: 'er-title', text: '🏁 KONFIRMASI SUBMIT' }),
+          el('div', { class: 'er-sub', id: 'submitAskText' }),
+          el('div', { class: 'er-sub2', text: 'Setelah submit, SEMUA jawaban langsung dinilai dan gak bisa diubah — kayak lomba beneran.' }),
+          el('div', { class: 'cue-actions' },
+            el('button', { class: 'btn btn-ghost', type: 'button', text: 'Belum, cek dulu', onclick: closeSubmitConfirm }),
+            el('button', { class: 'btn btn-submit', type: 'button', text: 'Ya, submit!', onclick: function () { closeSubmitConfirm(); submitExam(mod(), false); } }))));
+      submitModal.addEventListener('click', function (e) { if (e.target === submitModal) closeSubmitConfirm(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && submitModal && !submitModal.hidden) closeSubmitConfirm(); });
+      document.body.append(submitModal);
+    }
+    var ask = submitModal.querySelector('#submitAskText');
+    if (ask) ask.textContent = blank === 0
+      ? 'Semua soal udah terisi. Submit sekarang dan lihat hasilnya?'
+      : 'Masih ada ' + blank + ' soal KOSONG. Yakin submit sekarang?';
+    submitModal.hidden = false;
+  }
+  function closeSubmitConfirm() { if (submitModal) submitModal.hidden = true; }
+
+  function submitExam(m, auto) {
     stopExamTick();
-    var score = solvedCount(m), n = m.questions.length;
-    var chip = document.getElementById('examChip');
-    if (chip) { chip.textContent = '⏱ 00:00'; chip.classList.add('danger'); chip.classList.remove('warn'); }
-    var banner = document.getElementById('examBanner');
-    if (banner) { banner.hidden = false; banner.textContent = '⏰ WAKTU HABIS — Skor: ' + score + '/' + n; }
-    document.querySelectorAll('.q-card input, .q-card select, .q-card .btn-run, .q-card .btn-clue').forEach(function (x) { x.disabled = true; });
+    if (!m || m.type !== 'exam' || examSubmitted()) return;
+    var correct = [], wrong = [], blank = [], answers = {}, srcs = {};
     m.questions.forEach(function (q) {
-      var term = document.getElementById('term-' + q.id);
-      if (term) {
-        term.hidden = false;
-        termLine(term, "⏰ TIME'S UP — Simulasi selesai. Skor: " + score + '/' + n, 'timeup');
+      var val = readAnswer(q);
+      answers[q.id] = val;
+      srcs[q.id] = q.src || q.id;
+      if (val === null) { blank.push(q.id); return; }
+      var pass = q.type === 'mc' ? evalMC(val, q) : (q.type === 'sa' ? evalSA(val, q) : evalMA(val, q));
+      (pass ? correct : wrong).push(q.id);
+      if (pass) {
+        if (!progress.solved[m.id]) progress.solved[m.id] = {};
+        progress.solved[m.id][q.id] = true;
       }
     });
+    var hist = {
+      run: examRunOf(), date: Date.now(), auto: !!auto, submitted: true,
+      set: m.questions.map(function (q) { return q.id; }),
+      srcs: srcs, answers: answers,
+      correct: correct, wrong: wrong, blank: blank,
+      score: correct.length, reason: null, eval: {}
+    };
+    progress.examHistory = progress.examHistory || [];
+    progress.examHistory.push(hist);
+    progress.examUsed = progress.examUsed || [];
+    m.questions.forEach(function (q) {
+      var s = q.src || q.id;
+      if (progress.examUsed.indexOf(s) < 0) progress.examUsed.push(s);
+    });
+    saveProgress();
+    renderModule(); // lock kartu + tanda ✓/✗/⬜ + banner skor
+    if (hist.score === m.questions.length) {
+      progress.bebras100 = true;
+      saveProgress();
+      setTimeout(function () { startVictory(false); }, 600);
+    } else {
+      setTimeout(function () { openFailedModal(hist); }, 500);
+    }
   }
+
+  /* ---------- mission failed + evaluasi terbimbing ---------- */
+  var failModal = null;
+  function openFailedModal(hist) {
+    var n = hist.correct.length + hist.wrong.length + hist.blank.length;
+    if (!failModal) {
+      failModal = el('div', { class: 'er-backdrop', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Hasil simulasi' },
+        el('div', { class: 'er-card' },
+          el('div', { class: 'er-title', text: '💀 MISSION FAILED' }),
+          el('div', { class: 'er-sub', text: 'anda gagal menamatkan bebras 100%' }),
+          el('div', { class: 'er-stats', id: 'failStats' }),
+          el('div', { class: 'er-ask', text: 'Menurut lu sendiri — kenapa gagal? (jujur aja, ini buat evaluasi lu)' }),
+          el('div', { class: 'er-reasons', id: 'failReasons' }),
+          el('button', { class: 'btn btn-run er-cta', type: 'button', text: 'ayo kita evaluasi, masih bisa pejuang!', onclick: function () { closeFailModal(); var h = examHistOf(examRunOf()); if (h) openEval(h); } })));
+      document.body.append(failModal);
+    }
+    var stats = failModal.querySelector('#failStats');
+    if (stats) {
+      stats.textContent = '';
+      stats.append(
+        el('div', {}, 'Skor: ' + hist.score + '/' + n + (hist.auto ? ' (⏰ waktu habis)' : '')),
+        el('div', {}, el('span', { class: 'ok', text: '✓ BENAR (' + hist.correct.length + ')' }), hist.correct.length ? ' — ' + hist.correct.join(', ') : ''),
+        el('div', {}, el('span', { class: 'bad', text: '✗ SALAH (' + hist.wrong.length + ')' }), hist.wrong.length ? ' — ' + hist.wrong.join(', ') : ''),
+        el('div', {}, el('span', { class: 'void', text: '⬜ KOSONG (' + hist.blank.length + ')' }), hist.blank.length ? ' — ' + hist.blank.join(', ') : ''));
+    }
+    var rwrap = failModal.querySelector('#failReasons');
+    if (rwrap) {
+      rwrap.textContent = '';
+      [['time', '⏱ Kehabisan waktu'], ['wrong', '❌ Salah jawaban'], ['mix', '🔀 Campuran']].forEach(function (r) {
+        rwrap.append(el('button', {
+          class: 'reason-btn' + (hist.reason === r[0] ? ' selected' : ''), type: 'button', text: r[1],
+          onclick: function (e) {
+            hist.reason = r[0];
+            saveProgress();
+            rwrap.querySelectorAll('.reason-btn').forEach(function (b) { b.classList.remove('selected'); });
+            e.currentTarget.classList.add('selected');
+          }
+        }));
+      });
+    }
+    failModal.hidden = false;
+  }
+  function closeFailModal() { if (failModal) failModal.hidden = true; }
+
+  var evalModal = null, evalState = null, evalSaveTimer = null;
+  function evalItems(hist) {
+    return hist.set.filter(function (qid) { return hist.wrong.indexOf(qid) >= 0 || hist.blank.indexOf(qid) >= 0; });
+  }
+  function fmtOpt(q, letter) {
+    var opt = (q.options || []).filter(function (o) { return o.replace(/^\s*/, '').slice(0, 1) === letter; })[0];
+    return opt ? letter + ' — ' + opt.replace(/^\s*[A-H][.)]\s*/, '') : String(letter);
+  }
+  function evalYourText(q, val) {
+    if (val === null || val === undefined) return '(tidak dijawab)';
+    if (q.type === 'mc') return fmtOpt(q, String(val));
+    if (q.type === 'sa') return '"' + String(val) + '"';
+    return Array.isArray(val) ? val.join(' | ') : String(val);
+  }
+  function evalKeyText(q) {
+    if (q.type === 'mc') return fmtOpt(q, String(q.key));
+    if (q.type === 'sa') {
+      var ks = (q.keys || []).filter(function (k) { return k.charAt(0) !== '~'; });
+      return ks.length ? ks.join(' / ') : (q.jawabanResmi || '(lihat pembahasan)');
+    }
+    return (q.pairs || []).map(function (p) { return p.answer; }).join(' | ');
+  }
+  function commitEvalSave() {
+    if (evalSaveTimer) { clearTimeout(evalSaveTimer); evalSaveTimer = null; }
+    if (!evalState) return;
+    var qid = evalState.items[evalState.idx];
+    var w = document.getElementById('evWhat'), y = document.getElementById('evWhy');
+    evalState.hist.eval = evalState.hist.eval || {};
+    var cur = evalState.hist.eval[qid] || {};
+    var nw = { what: w ? w.value : (cur.what || ''), why: y ? y.value : (cur.why || '') };
+    if (nw.what || nw.why) evalState.hist.eval[qid] = nw; else delete evalState.hist.eval[qid];
+    saveProgress();
+  }
+  function scheduleEvalSave() {
+    if (evalSaveTimer) clearTimeout(evalSaveTimer);
+    evalSaveTimer = setTimeout(commitEvalSave, 500);
+  }
+  function openEval(hist) {
+    var items = evalItems(hist);
+    if (!items.length) { openRedoPrompt(); return; }
+    evalState = { hist: hist, items: items, idx: 0 };
+    if (!evalModal) {
+      evalModal = el('div', { class: 'eval-backdrop', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Evaluasi simulasi' },
+        el('div', { class: 'eval-card' },
+          el('div', { class: 'eval-head', id: 'evalHead' }),
+          el('div', { id: 'evalBody' }),
+          el('div', { class: 'eval-nav', id: 'evalNav' })));
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && evalModal && !evalModal.hidden) closeEval(); });
+      document.body.append(evalModal);
+    }
+    renderEval();
+    evalModal.hidden = false;
+  }
+  function renderEval() {
+    if (!evalModal || !evalState) return;
+    var st = evalState, hist = st.hist;
+    var qid = st.items[st.idx];
+    var q = qById(qid);
+    var head = evalModal.querySelector('#evalHead');
+    var body = evalModal.querySelector('#evalBody');
+    var nav = evalModal.querySelector('#evalNav');
+    if (!q || !head || !body || !nav) return;
+    var isBlank = hist.blank.indexOf(qid) >= 0;
+    head.textContent = '';
+    head.append(
+      el('span', { class: 'eval-step', text: '📋 EVALUASI ' + (st.idx + 1) + '/' + st.items.length }),
+      el('span', { class: 'q-id-chip', text: q.id }),
+      el('span', { class: 'eval-title', text: q.title + (isBlank ? ' (gak dijawab)' : ' (salah)') }),
+      el('button', { class: 'modal-close', type: 'button', 'aria-label': 'Tutup evaluasi', text: '✕', onclick: closeEval }));
+    body.textContent = '';
+    var soalImgs = Array.isArray(q.img) && q.img.length && typeof q.img[0] === 'string' && q.img[0].length > 0;
+    if (soalImgs) body.append(el('div', { class: 'eval-qimg' }, q.img.map(function (src) {
+      return el('img', { src: src, alt: 'Gambar soal ' + q.id, loading: 'lazy', 'data-lb': src, 'data-cap': 'Soal ' + q.id });
+    })));
+    else if (q.pertanyaan) body.append(el('div', { class: 'eval-qtext', text: q.pertanyaan }));
+    body.append(el('div', { class: 'eval-ans' },
+      el('div', { class: 'yours' }, 'Jawabanmu: ', el('b', { text: evalYourText(q, hist.answers ? hist.answers[qid] : null) })),
+      el('div', { class: 'key' }, 'Kunci: ', el('b', { text: evalKeyText(q) }))));
+    var solWrap = el('div', { class: 'eval-sol', id: 'evalSol', hidden: 'true' });
+    var solImgs = Array.isArray(q.imgSol) && q.imgSol.length && typeof q.imgSol[0] === 'string' && q.imgSol[0].length > 0;
+    if (solImgs) q.imgSol.forEach(function (src) {
+      solWrap.append(el('img', { src: src, alt: 'Pembahasan ' + q.id, loading: 'lazy', 'data-lb': src, 'data-cap': 'Pembahasan ' + q.id }));
+    });
+    if (q.jawabanResmi) solWrap.append(el('div', { class: 'eval-soltext', text: q.jawabanResmi }));
+    if (q.penjelasan) solWrap.append(el('div', { class: 'eval-soltext', text: q.penjelasan }));
+    if (q.iniInformatika) solWrap.append(el('div', { class: 'eval-soltext info' }, '💡 INI INFORMATIKA! — ' + q.iniInformatika));
+    var dbg = el('button', { class: 'btn btn-debug btn-mini', type: 'button', 'aria-expanded': 'false', text: '🐞 BUKA PEMBAHASAN', onclick: function () {
+      solWrap.hidden = !solWrap.hidden;
+      dbg.setAttribute('aria-expanded', String(!solWrap.hidden));
+      dbg.textContent = solWrap.hidden ? '🐞 BUKA PEMBAHASAN' : '🐞 TUTUP PEMBAHASAN';
+    } });
+    body.append(dbg, solWrap);
+    var saved = (hist.eval || {})[qid] || {};
+    body.append(el('div', { class: 'eval-fields' },
+      el('div', {},
+        el('label', { 'for': 'evWhat', text: '// APA YANG GUA SALAH? (konsep apa yang ke-miss)' }),
+        el('textarea', { id: 'evWhat', placeholder: 'tuliskan konsep / langkah yang kepleset…', oninput: scheduleEvalSave, text: saved.what || '' })),
+      el('div', {},
+        el('label', { 'for': 'evWhy', text: '// KENAPA GUA SALAH? (kalau karena waktu: nomor yang makan waktu + teknik biar lebih cepat)' }),
+        el('textarea', { id: 'evWhy', placeholder: 'kenapanya… strategi per-soal…', oninput: scheduleEvalSave, text: saved.why || '' }))));
+    nav.textContent = '';
+    var back = el('button', { class: 'btn btn-ghost', type: 'button', text: '← Mundur', onclick: function () {
+      commitEvalSave();
+      if (evalState && evalState.idx > 0) { evalState.idx--; renderEval(); }
+    } });
+    back.disabled = st.idx === 0;
+    var last = st.idx === st.items.length - 1;
+    var next = el('button', { class: 'btn btn-run', type: 'button', text: last ? 'Selesai evaluasi ✓' : 'Lanjut →', onclick: function () {
+      commitEvalSave();
+      if (evalState.idx < evalState.items.length - 1) { evalState.idx++; renderEval(); }
+      else { closeEval(); openRedoPrompt(); }
+    } });
+    nav.append(back, next);
+  }
+  function closeEval() { if (evalModal) evalModal.hidden = true; }
+
+  /* ---------- redo: 3x press, makin gede & makinIntensity ---------- */
+  var redoModal = null, redoPress = 0, redoYesBtn = null;
+  function openRedoPrompt() {
+    if (!redoModal) {
+      redoYesBtn = el('button', { class: 'btn btn-submit redo-yes', id: 'btnRedoYes', type: 'button', text: 'Iya', onclick: pressRedo });
+      redoModal = el('div', { class: 'er-backdrop', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Redo simulasi' },
+        el('div', { class: 'er-card redo-card', id: 'redoCard' },
+          el('div', { class: 'er-title', text: '⛔ MOMEN PENENTUAN' }),
+          el('div', { class: 'er-sub', text: 'Apakah anda ingin melakukan redo simulasi?' }),
+          el('div', { class: 'er-sub2', text: 'Set redo: 15 soal yang BELUM pernah kamu kerjakan — diacak dari seluruh modul drill (d1–d17). Timer reset 45:00, gak bisa di-undo.' }),
+          el('div', { class: 'cue-actions' },
+            el('button', { class: 'btn btn-ghost', type: 'button', text: 'Belum, nanti', onclick: closeRedoModal }),
+            redoYesBtn)));
+      redoModal.addEventListener('click', function (e) { if (e.target === redoModal) closeRedoModal(); });
+      document.body.append(redoModal);
+    }
+    redoPress = 0;
+    redoYesBtn.className = 'btn btn-submit redo-yes';
+    redoYesBtn.disabled = false;
+    redoYesBtn.textContent = 'Iya';
+    redoModal.hidden = false;
+  }
+  function pressRedo() {
+    if (!redoYesBtn) return;
+    redoPress++;
+    var card = document.getElementById('redoCard');
+    if (redoPress === 1) {
+      redoYesBtn.classList.add('s1');
+      redoYesBtn.textContent = 'Iya, yakin';
+    } else if (redoPress === 2) {
+      redoYesBtn.classList.remove('s1');
+      redoYesBtn.classList.add('s2');
+      redoYesBtn.textContent = 'BENERAN?!';
+      if (card) { card.classList.remove('quake'); void card.offsetWidth; card.classList.add('quake'); }
+    } else if (redoPress === 3) {
+      redoYesBtn.classList.remove('s2');
+      redoYesBtn.classList.add('s3');
+      redoYesBtn.textContent = 'REDO SEKARANG! 💥';
+      redoYesBtn.disabled = true;
+      failFx(3);
+      setTimeout(startRedo, 600);
+    }
+  }
+  function closeRedoModal() { if (redoModal) redoModal.hidden = true; }
+  function startRedo() {
+    closeRedoModal();
+    var pool = [];
+    modules.forEach(function (mm) {
+      if (mm.type === 'normal') mm.questions.forEach(function (q) { pool.push(q.id); });
+    });
+    var used = progress.examUsed || [];
+    var fresh = pool.filter(function (id) { return used.indexOf(id) < 0; });
+    var wrapped = fresh.length < 15; // pool habis → kocok ulang semua soal drill
+    if (wrapped) fresh = pool.slice();
+    shuffleArr(fresh);
+    var srcs = fresh.slice(0, Math.min(15, fresh.length));
+    if (!srcs.length) return;
+    var run = examRunOf() + 1;
+    progress.examRun = run;
+    progress.examSetSrcs = progress.examSetSrcs || {};
+    progress.examSetSrcs[run] = srcs;
+    saveProgress();
+    renderModule();
+    try { window.scrollTo({ top: 0 }); } catch (e) { /* noop */ }
+    var banner = document.getElementById('examBanner');
+    if (banner) {
+      banner.hidden = false;
+      banner.textContent = '🔁 REDO RUN ' + run + (wrapped ? ' — pool soal baru udah habis, diacak ulang dari semua soal drill' : ' — 15 soal BARU yang belum pernah kamu kerjakan') + '. Tekan ▶ MULAI SIMULASI kalau mental lu udah siap.';
+    }
+  }
+
+  /* ---------- victory: blank → surat → victory page ---------- */
+  var vp = null;
+  var VP_GOLD = ['#ffd700', '#ffc83d', '#e3b341', '#fff3b0', '#d29922', '#ffe9a8'];
+  var VP_PARAS = [
+    'Surat ini gak ditulis oleh kebetulan. Ia ditulis oleh <b>75 soal</b>, <b>19 hari</b>, dan satu orang yang gak pernah berhenti di kata <b>"susah"</b>.',
+    'Terima kasih atas kerja kerasmu sejak <b>Hari 1</b> — dari sekadar kepikiran "pengen improve", sampai keinginan <b>100%</b> yang kelihatan nyata: di tiap drill, tiap clue yang lu buka dengan berat hati, tiap jawaban salah yang lu benerin lagi pelan-pelan. Hari ini bukan keberuntungan. Ini <b>bukti</b>.',
+    '<b>100% di simulasi hari ini</b> artinya satu hal: besok, lu udah pernah finis. Otak lu udah tahu jalannya. Tinggal jalanin lagi — pelan, tenang, satu soal satu soal. Apa yang lu latih 3 minggu ini udah jauh lebih dari cukup.',
+    'Besok ingat ini: <b>tidur yang cukup, sarapan, datang lebih awal</b>. Baca soal dua kali sebelum menjawab. Kalau mentok dua menit, tandai, lanjut, balik lagi nanti. Gak ada satu soal pun yang lebih penting dari ketenanganmu. Tenang itu senjata.',
+    'Dan sekarang… tugas program ini resmi selesai. Workspace ini bakal jadi kenangan — tapi yang lu bawa pulang bukan file ini. Yang lu bawa pulang adalah <b>cara berpikir lu</b>: sabar, terstruktur, dan gak nyerah di soal yang kelihatannya mustahil.',
+    'Selamat, pejuang. Lu sampai di garis finis dengan keringat otak lu sendiri. <b>That\'s a wrap.</b> 🦁 Sekarang, temui versi lu yang udah terbukti — dan perlihatkan itu besok.'
+  ];
+  function ensureVictory() {
+    if (vp) return;
+    var envelope = el('div', { class: 'vp-envelope', role: 'button', tabindex: '0', 'aria-label': 'Sebuah surat untukmu — tap untuk membuka' },
+      el('div', { class: 'vp-flap' }),
+      el('div', { class: 'vp-seal', text: '💯' }),
+      el('div', { class: 'vp-paper' }, el('div', { class: 'vp-ph', text: '— tap untuk membuka —' })));
+    var stage = el('div', { class: 'vp-stage' },
+      envelope,
+      el('div', { class: 'vp-cap', text: '✉ Sebuah surat untukmu…' }));
+    var letter = el('div', { class: 'vp-letter' },
+      el('h2', { class: 'vp-ltitle', text: 'UNTUKMU, PEJUANG BEBRAS' }),
+      el('div', { class: 'vp-lscore', text: '🏆 BEBRAS 100% — SIMULASI TUNTAS, 15/15' }));
+    var lbody = el('div', { class: 'vp-lbody' });
+    VP_PARAS.forEach(function (t) { var p = el('div', { class: 'vp-p' }); p.innerHTML = t; lbody.append(p); });
+    letter.append(lbody,
+      el('div', { class: 'vp-sign', text: '// exit code 0 — bebras_sma_complete_workspace.py · mission complete' }),
+      el('div', { class: 'vp-actions' },
+        el('button', { class: 'btn vp-btn', type: 'button', text: 'kembali ke workspace', onclick: closeVictory })));
+    stage.append(letter);
+    vp = el('div', { class: 'vp-overlay', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Victory — BEBRAS 100%' }, stage);
+    envelope.addEventListener('click', openEnvelope);
+    envelope.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openEnvelope(); } });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && vp && !vp.hidden && vp.classList.contains('letter')) closeVictory();
+    });
+    document.body.append(vp);
+  }
+  function startVictory(replay) {
+    ensureVictory();
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    vp.className = 'vp-overlay';
+    vp.hidden = false;
+    document.body.classList.add('victory-open');
+    if (reduce) { vp.classList.add('on', 'letter', 'gone'); return; }
+    requestAnimationFrame(function () { requestAnimationFrame(function () { vp.classList.add('on'); }); });
+    if (!replay) setTimeout(function () { burstConfetti(innerWidth / 2, innerHeight * 0.3, 60, VP_GOLD); }, 900);
+  }
+  function openEnvelope() {
+    var env = vp && vp.querySelector('.vp-envelope');
+    if (!env || env.classList.contains('open')) return;
+    env.classList.add('open');
+    setTimeout(function () {
+      vp.classList.add('letter', 'gone');
+      stormGold();
+    }, 1100);
+  }
+  function stormGold() {
+    var W = innerWidth, H = innerHeight;
+    burstConfetti(W / 2, H * 0.22, 160, VP_GOLD);
+    setTimeout(function () { burstConfetti(W * 0.18, H * 0.3, 80, VP_GOLD); burstConfetti(W * 0.82, H * 0.3, 80, VP_GOLD); }, 600);
+    setTimeout(function () { burstConfetti(W * 0.35, H * 0.18, 70, VP_GOLD); burstConfetti(W * 0.65, H * 0.18, 70, VP_GOLD); }, 1300);
+  }
+  function closeVictory() {
+    if (!vp) return;
+    vp.hidden = true;
+    vp.className = 'vp-overlay';
+    document.body.classList.remove('victory-open');
+    renderModule(); // refresh tombol 🏆 di exam controls
+  }
+
 
   /* ================= progress / toolbar ================= */
   function updateToolbar() {
@@ -1629,7 +2192,7 @@ const modules = [
     var m = mod();
     var fill = $('#progressFill'), pct = $('#progressPct'), txt = $('#progressText'), bar = $('#progressBar');
     var total = m ? m.questions.length : 0;
-    var done = m ? answeredCount(m) : 0; // progress = dijawab (benar atau gagal 3x) — biar gak nyangkut 'proses' selamanya
+    var done = m ? moduleAnswered(m) : 0; // progress = dijawab (benar/gagal 3x; exam = terisi) — biar gak nyangkut 'proses' selamanya
     var p = total ? Math.round((done / total) * 100) : 0;
     fill.style.width = p + '%';
     pct.textContent = p + '%';
