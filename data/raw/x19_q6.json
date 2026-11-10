@@ -1,0 +1,28 @@
+{
+  "id": "x19_q6",
+  "scheduleTitle": "SIMULASI · Si Topi Merah",
+  "bookTitle": "Si Topi Merah",
+  "book": "b2019",
+  "code": "2019-RO-02",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-RO-02",
+  "soalPages": [14],
+  "imgPages": [14, 15],
+  "deskripsi": "Si Topi Merah ingin memungut bunga di kebun nenek. Kebun tersebut dibagi menjadi beberapa bagian, setiap bagian mempunyai sejumlah bunga. Topi Merah mulai dari kiri atas dan berjalan hanya dengan arah turun atau ke kanan, sampai ke pojok kanan bawah.\n[gambar: peta kebun 5 baris bagian berbentuk tangga, tiap bagian berisi sejumlah bunga, + ilustrasi Topi Merah di kiri atas]",
+  "pertanyaan": "Berapa banyaknya bunga yang paling banyak dapat dikumpulkan oleh si Topi Merah?",
+  "options": [
+    "a) 35",
+    "b) 38",
+    "c) 58",
+    "d) 41"
+  ],
+  "key": "D",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah: d) 41.",
+  "penjelasan": "Pada setiap bagian, kita dapat menghitung jumlah maksimum bunga yang dapat dikumpulkan oleh Red Riding Hood dari awal hingga bagian tersebut (mari sebut ini sebagai maksimum). Maksimum dapat dihitung sebagai berikut:\n• Jika suatu bagian hanya dapat dijangkau dari satu bagian sebelumnya, maka maksimumnya adalah jumlah bunga di bagian tersebut ditambah dengan maksimum dari bagian sebelumnya.\n• Jika suatu bagian dapat dijangkau dari dua bagian sebelumnya, maka maksimumnya adalah jumlah bunga di bagian tersebut ditambah dengan yang lebih besar dari kedua bagian sebelumnya.",
+  "iniInformatika": "Solusi ini adalah penerapan strategi \"dynamic programming\" untuk memperoleh solusi yang optimal.\nPrinsip pemrograman dinamis adalah bahwa ada hasil-hasil perhitungan dari sub masalah yang dihitung terlebih dahulu. Dalam kasus kita, itu adalah jumlah maksimum bunga yang dikumpulkan dari titik awal ke salah satu dari bagian-bagian tengah. Triknya adalah beberapa hasil perhitungan submasalah yang sudah dihitung digunakan untuk menghitung hasil perhitungan submasalah yang baru. Dengan menerapkan ide ini, gelombang banjir (flood wave) hasil perhitungan submasalah yang sudah dihitung berasal dari titik awal. Ketika mencapai titik akhir, maka kita memiliki hasil akhir yang diinginkan. Banyak masalah optimisasi praktis dapat dipecahkan dengan strategi ini, yang sering menghasilkan algoritma yang sangat efisien dalam hal waktu.\nhttps://en.wikipedia.org/wiki/Dynamic_programming",
+  "clue": "",
+  "notes": "Peta kebun berupa gambar (imgPages). Pembahasan memakai nama Inggris 'Red Riding Hood' padahal soal memakai 'si Topi Merah' — quirk buku, dipertahankan. Bullets pdf glyph '' dikoreksi '•' per jpg. Link Wikipedia berdiri sendiri di akhir Ini Informatika (melanjut ke hal. 15). Footer/Authorship/License tidak disalin."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "x20_q12",
+  "scheduleTitle": "SIMULASI · Permainan Robot",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-PH-02",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-PH-02",
+  "soalPages": [24],
+  "imgPages": [24, 25],
+  "deskripsi": "Alice dan Bob mengendalikan robot di sebuah labirin yang berisi permata. Robot mulai di lokasi di “START HERE” yang ditunjukkan di bawah ini. Robot akan terus mengikuti jalan sampai di persimpangan. Salah satu pemain memutuskan jalur mana (kiri atau kanan) yang harus diambil robot. Robot kemudian akan mengikuti jalur tersebut lagi sampai persimpangan berikutnya tercapai, dan seterusnya.\n\nAlice dan Bob bermain bergantian, dan memutuskan bahwa Alice menjadi pemain yang memulai. Permainan berakhir saat robot mencapai jalan buntu. Robot kemudian mengambil semua permata di sana. Alice ingin robot itu mendapatkan permata sebanyak mungkin, sedangkan Bob ingin robot itu mendapatkan permata sesedikit mungkin. Alice dan Bob sama-sama tahu bahwa masing-masing adalah pemain yang cerdas serta teliti dan akan memilih yang terbaik. Jadi jika misalnya Bob akan mengarahkan robot ke arah percabangan dimana 3 atau 7 permata bisa dijangkau, dia tahu bahwa Alice akan memerintahkan robot untuk memilih jalur menuju 7 permata.",
+  "pertanyaan": "Berapa permata yang akan dipungut oleh robot pada akhir permainan? Jawaban adalah sebuah bilangan bulat antara 1, 2, ... sampai dengan 8.",
+  "options": [],
+  "key": "",
+  "keys": ["5", "lima"],
+  "pairs": [],
+  "jawabanResmi": "5",
+  "penjelasan": "Alice tahu bahwa jika dia membuat robotnya berbelok ke kanan pada belokan pertama, Bob tidak akan membuat robotnya berbelok ke kiri. Dengan demikian, robot tidak akan pernah bisa mendapatkan 6 atau 8 permata. Jika Alice membuat robot ke kanan, robot hanya bisa mendapatkan 3. Ada kemungkinan robot mendapatkan lebih banyak jika berbelok ke kiri. (Anda akan melihat nanti bahwa robot tidak mungkin mendapatkan 2 permata jika berbelok ke kiri, jadi robot hanya bisa mendapatkan 4, 5, atau 7 permata yang semuanya lebih besar dari 3.) Jadi, pada giliran pertama, Alice membuat robot ke kiri.\n\nBob tahu bahwa jika dia membuat robotnya berbelok ke kiri pada belokan kedua, Alice tidak akan membuat robotnya berbelok ke kiri. Dengan demikian, robot tidak akan pernah bisa mendapatkan 2 permata. Jika Bob membuat robot ke kiri, robot hanya bisa mendapatkan 7. Ada kemungkinan robot mendapatkan lebih sedikit jika ke kanan. Jadi, pada belokan kedua, Bob membuat robot berjalan ke kanan.\n\nTerakhir, pada belokan ketiga, Alice jelas akan membuat robot itu berbelok ke kiri. Ada cara mudah dan sederhana untuk mendapatkan jawabannya: tandai pertigaan satu per satu, mulai dari bawah. Di lapisan paling bawah, giliran Alice. Lihatlah angka-angka tepat di bawah setiap pertigaan, dan tulis angka yang lebih besar pada pertigaan. Di lapisan tengah, giliran Bob. Sekali lagi, lihat angka tepat di bawah setiap pertigaan, dan tulis angka yang lebih kecil pada pertigaan. Terakhir, di lapisan atas, giliran Alice. Sekali lagi, lihat angka tepat di bawah pertigaan atas, dan tulis angka yang lebih besar di titik awal. Angka ini adalah jawabannya.",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Gambar labirin percabangan (8 jalan buntu berisi permata; dari kiri jumlah permata 2, 8, 5, 4, 9, 7, 1, 3; label 'START HERE' di pangkal) di hal. 24 - WAJIB dilihat untuk menjawab; aplikasi menampilkan render halaman asli (imgPages 24-25). Jawaban + awal penjelasan berada di halaman soal yang sama (hal. 24), penjelasan berlanjut ke hal. 25. Kata 'dimana' (tanpa spasi) dipertahankan sesuai buku. Buku 2020 TIDAK memiliki bagian 'Ini Informatika!'. Authorship: Vernon Gutierrez (Philippines, author), Maria Krisel Cristobal (Philippines, illustrator)."
+}

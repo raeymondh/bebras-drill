@@ -1,0 +1,23 @@
+{
+  "id": "x19_q12",
+  "scheduleTitle": "SIMULASI · Semut di Sarang",
+  "bookTitle": "Buku Bebras Indonesia 2019 – Kategori Penegak",
+  "book": "b2019",
+  "code": "2019-LT-06",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-LT-06",
+  "soalPages": [28],
+  "imgPages": [28, 29],
+  "deskripsi": "10 semut sedang berada di lokasi A dan mencoba untuk menuju ke F. Hanya 1 semut dapat lewat batang kayu setiap saat. Untuk pergi dari satu lokasi menuju lokasi lainnya dibutuhkan 1 menit. [gambar graf lokasi A–F yang dihubungkan batang kayu — lihat halaman soal]",
+  "pertanyaan": "Berapa banyak semut dapat mencapai F dalam waktu 3 menit?\nJawab dengan bilangan bulat antara 0 s.d 10.",
+  "options": [],
+  "key": "",
+  "keys": ["7", "tujuh"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah 7.",
+  "penjelasan": "Situasi yang mungkin setelah setiap menit digambarkan sebagai berikut.\n\nSetelah satu menit: [gambar situasi semut setelah menit pertama — lihat halaman soal]\n\nSetelah dua menit: [gambar situasi semut setelah menit kedua — lihat halaman soal]\n\nSetelah tiga menit: [gambar situasi semut setelah menit ketiga — lihat halaman soal]",
+  "iniInformatika": "Tujuan yang ingin dicapai pada soal ini adalah untuk mengoptimalkan aliran semut melalui jaringan sehingga sebanyak mungkin semut sampai di lokasi makanan dalam waktu 3 menit. Masalah ini adalah masalah optimasi.\nSemut yang tidak menyadari struktur jaringan yang mereka lalui tidak akan dapat menemukan solusi terbaik. Sebaliknya, seorang pengamat yang dapat melihat struktur jaringan dapat menemukan strategi yang optimal.\nPada soal ini, diasumsikan bahwa semut menyadari struktur jaringan, sehingga mereka dapat memilih jalur optimal untuk bergerak di sepanjang jalur tertentu.\n\nGraf adalah struktur data abstrak yang digunakan untuk memodelkan jaringan dan terdapat banyak algoritma untuk mengoptimalkan aliran dalam keadaan tertentu. Atau tanpa menggunakan algoritma yang sudah ada sebelumnya, kami dapat menyatakan bahwa:\n• Tidak masuk akal untuk mengirimkan lebih dari 1 semut lewat D-E.\n• Tidak masuk akal untuk mengirimkan lebih dari 2 semut lewat A-B\n• Saluran antara B-C tidak akan mempengaruhi aliran sehingga dapat diabaikan\n• Faktor yang akan membatasi adalah B-F dan C-F\nPertimbangan tersebut memungkinkan kita untuk menemukan solusi optimal.\n\nhttps://en.wikipedia.org/wiki/Flow_network\nhttps://en.wikipedia.org/wiki/Maximum_flow_problem\nhttps://en.wikipedia.org/wiki/Optimization_problem",
+  "clue": "",
+  "notes": "Isian singkat ('Jawab dengan bilangan bulat antara 0 s.d 10.' — baris kedua pertanyaan, tanpa spasi setelah 'd' pada 's.d' sesuai buku). Graf lokasi semut (hal. 28) dan tiga gambar situasi 'Setelah satu/dua/tiga menit' (hal. 28–29) adalah gambar — WAJIB lihat halaman soal; penjelasan buku hanya berisi kalimat pengantar + caption gambar. Ini Informatika diakhiri 3 tautan Wikipedia (flow network / maximum flow / optimization) sesuai buku."
+}

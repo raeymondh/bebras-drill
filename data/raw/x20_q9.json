@@ -1,0 +1,23 @@
+{
+  "id": "x20_q9",
+  "scheduleTitle": "SIMULASI · Kelereng dan Kotak-kotak",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-VN-04",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-VN-04",
+  "soalPages": [18],
+  "imgPages": [18, 19],
+  "deskripsi": "Hira mempunyai sebuah nampan dengan 9 kotak dan 9 kelereng:\n\nHira memilih antara 0 dan 9 kelereng, menaruhnya ke dalam kotak-kotak dengan aturan sebagai berikut:\n• Setiap kelereng ditaruh pada kotak yang berbeda (satu kotak maksimum 1 kelereng).\n• Banyaknya kelereng di setiap baris adalah genap.\n• Banyaknya kelereng pada setiap kolom adalah genap.",
+  "pertanyaan": "Ada berapa banyak cara untuk menaruh kelereng dalam nampan (kotak-kotak)?\nCatatan, menaruh kelereng dengan susunan\nO   O\nO   O\ndihitung berbeda dari susunan\nO   O\nO   O",
+  "options": ["A. 12", "B. 16", "C. 64", "D. 512"],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "B",
+  "penjelasan": "Pertama, perhatikan bagian dari nampan yang ada dalam lingkaran (memuat 2x2 kotak).\n\nAda 4 kotak di bagian ini dan setiap kotak dapat memuat kelereng di dalamnya, dapat pula tidak memuat kelereng. Oleh karena itu, ada 2⁴ = 16 cara untuk Hira menempatkan kelereng di bagian ini. Pengamatan penting untuk dilakukan adalah bahwa setelah Hira memutuskan bagaimana mengisi bagian ini, Hira tidak lagi memiliki pilihan tentang bagaimana mengisi baris dan kolom yang tersisa. Untuk setiap kotak yang tersisa, persyaratan bahwa jumlah baris dan jumlah kolom harus genap membuat Hira harus memilih apakah ia akan memasukkan kelereng atau tidak.\n\nMisalnya, Hira mengisi bagian seperti yang ditunjukkan pada gambar berikut:\n\nKarena kolom pertama hanya memiliki 1 kelereng, Hira harus meletakkan kelereng di kotak A agar jumlah kolom menjadi genap. Kolom 2 sudah memiliki jumlah kelereng genap sehingga Hira harus mengosongkan kotak B. Menggunakan alasan yang sama, Hira harus membiarkan C kosong dan menempatkan kelereng di D dan E.\nOleh karena itu, Hira dapat menempatkan kelereng di dalam nampan dengan 16 cara berbeda.",
+  "iniInformatika": "Nampan dan kotak – hanya ada satu nampan yang memuat sejumlah kotak.",
+  "clue": "",
+  "notes": "Gambar wajib (hal. 18): nampan 3x3 kotak + tumpukan 9 kelereng kuning. Dua susunan di Catatan adalah gambar kisi 3x3 berisi huruf O — kisi pertama: O di baris 1–2 kolom 1–2; kisi kedua: O di baris 1–2 kolom 2–3 (pembedanya posisi kolom, teks hanya bisa memuat baris O). Penjelasan: gambar nampan dengan lingkaran di 2x2 kiri-atas (hal. 18, teks penjelasan di sampingnya 2 kolom) dan gambar pasangan nampan contoh + nampan berlabel kotak A/B/C/D/E (hal. 19). '2 4' artifact pdf.js diperbaiki jadi '2⁴' (superskrip di buku). Kata Penting dan Istilah memakai tanda '–' (en dash) per halaman jpg: 'Nampan dan kotak – hanya ada satu nampan yang memuat sejumlah kotak.'"
+}

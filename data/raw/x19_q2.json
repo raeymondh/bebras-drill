@@ -1,0 +1,28 @@
+{
+  "id": "x19_q2",
+  "scheduleTitle": "SIMULASI · Gelang Persahabatan",
+  "bookTitle": "Gelang Persahabatan",
+  "book": "b2019",
+  "code": "2019-BE-04",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-BE-04",
+  "soalPages": [4],
+  "imgPages": [4, 5],
+  "deskripsi": "Santi membuat gelang dimulai dengan [kotak teks: gelang] dan merangkainya sesuai dengan aturan sebagai berikut:\n[gambar 6 aturan substitusi simbol: gelang = rantai | sambungan | pengunci; rantai = [gambar manik-manik]; pengunci = [gambar manik + gesper]; sambungan = [gambar 2 manik kuning] manik-manik bulat atau [gambar manik swirl] atau bunga; manik-manik bulat = [gambar 2 manik swirl] sambungan; bunga = [gambar bunga merah] sambungan [gambar bunga merah]]\nArtinya, setiap simbol di sebelah kiri diganti dengan salah satu urutan simbol yang ditunjukkannya. Misalnya, dengan menggunakan aturan ini beberapa kali, Santi dapat membuat dua gelang sebagai berikut.\n[gambar: dua contoh gelang hasil rangkaian]",
+  "pertanyaan": "Dari beberapa gelang berikut ini, gelang mana yang tidak mengikuti aturan?",
+  "options": [
+    "a)",
+    "b)",
+    "c)",
+    "d)"
+  ],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah :\nc)",
+  "penjelasan": "Dari pada membuktikan bahwa c) memiliki kesalahan, mungkin lebih mudah untuk menunjukkan bahwa tiga gelang lainnya memang dapat dibuat menggunakan aturan-aturan ini. Untuk gelang d), kami menunjukkannya dalam gambar di bawah ini:\n[gambar: derivasi gelang d) dalam 8 baris — label Rantai/Sambungan/Pengunci diurai bertahap menjadi rangkaian manik-manik]\nTidak begitu sulit untuk membuat gambar serupa untuk a) dan b).\nUntuk membuktikan bahwa c) tidak mungkin dibuat menggunakan aturan-aturan tersebut, kita melihat aturan 'Sambungan', aturan 'Manik -manik bulat, dan aturan 'bunga'.\nKetiga aturan ini dapat digabungkan menjadi aturan baru, yang tidak mengubah jenis gelang yang dapat kita buat:\n[gambar aturan gabungan: TIDAK IKUT TERCETAK pada buku]\nDengan kata lain, jika kita mengabaikan manik bunga, maka setiap gelang terdiri dari pola yang diulang beberapa kali (mungkin hanya sekali, atau bahkan tidak sama sekali), diikuti oleh sebuah manik biru.\nGelang a), b), dan d) jelas mengikuti pola ini, tetapi gelang c) tidak - ada tiga sambungan berwarna biru muda yang berbentuk 'swirly' di tengah gelang, dan itu tidak diizinkan.",
+  "iniInformatika": "Kumpulan aturan yang diberikan dalam tugas ini dapat digunakan oleh komputer untuk memeriksa apakah sebuah gelang dapat dibuat oleh Santi. Aturan-aturan serupa digunakan oleh komputer untuk memeriksa apakah para programmer membuat kesalahan pengetikan dalam program-program mereka, atau untuk memeriksa apakah apa yang Anda ketikkan ke dalam formulir web benar. Sebagai contoh, aturan-aturan berikut:\n• number → unsigned or + unsigned or - unsigned\n• unsigned → digit or unsigned digit\n• digit → 0 or 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9\ndapat digunakan untuk memberi tahu komputer apa itu angka yang valid.\nTipe-tipe kumpulan aturan seperti ini, dalam ilmu komputer, disebut sebagai tata bahasa atau khususnya tata bahasa bebas konteks.",
+  "clue": "",
+  "notes": "SEMUA opsi (a–d) berupa gambar gelang — diwakili label 'a)'–'d)' saja; jawaban c) juga ditampilkan sebagai gambar gelang (lihat imgPages). Heading sebelum opsi di buku berupa 'Jawaban:' (bukan 'Pilihan Jawaban:'), dan 'Jawaban yang benar adalah :' + 'c)' dipisah baris di text layer — dipertahankan. Gambar aturan gabungan (setelah '...dapat kita buat:') tidak ikut tercetak di buku — dicatat sebagai celah. Typo buku: kutipan tak seimbang \"aturan 'Manik -manik bulat,\" dipertahankan. Glyph pdf '?'→'•' dan panah '→' pada daftar tata bahasa dikoreksi per jpg hal. 5. Footer/Authorship/License (hal. 6) tidak disalin."
+}

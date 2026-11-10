@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T11:05:34.534Z",
+  "generated": "2026-11-10T12:44:29.090Z",
   "schedule": "Minggu 1: 28 Okt–1 Nov 2026 · Minggu 2: 2–8 Nov 2026 · Minggu 3: 9–15 Nov 2026 · HARI H: Senin, 16 Nov 2026",
   "modules": [
     {
@@ -508,83 +508,7 @@
       "week": 3,
       "file": "day_19_exam.py",
       "type": "exam",
-      "questions": [
-        {
-          "id": "d19_q1",
-          "title": "Set 1 · Kode Kartu (2017)",
-          "type": "sa"
-        },
-        {
-          "id": "d19_q2",
-          "title": "Set 1 · Kiri Kanan (2017)",
-          "type": "sa"
-        },
-        {
-          "id": "d19_q3",
-          "title": "Set 1 · Keluar dari Labirin (2017)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q4",
-          "title": "Set 1 · Robot Pengumpul Permen (2017)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q5",
-          "title": "Set 1 · Upah Membantu (2017)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q6",
-          "title": "Set 2 · Antrian Mobil (2018)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q7",
-          "title": "Set 2 · Peta Harta Karun (2018)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q8",
-          "title": "Set 2 · Titik Utama Wifi (2018)",
-          "type": "sa"
-        },
-        {
-          "id": "d19_q9",
-          "title": "Set 2 · Twist and Turn (2018)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q10",
-          "title": "Set 2 · Medical Labs (2018)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q11",
-          "title": "Set 3 · Karung-karung Dalam Elevator (2016)",
-          "type": "sa"
-        },
-        {
-          "id": "d19_q12",
-          "title": "Set 3 · Temukan Si Pencuri (2016)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q13",
-          "title": "Set 3 · Jadwal Gladi Resik (2018)",
-          "type": "mc"
-        },
-        {
-          "id": "d19_q14",
-          "title": "Set 3 · Terowongan (2017)",
-          "type": "sa"
-        },
-        {
-          "id": "d19_q15",
-          "title": "Set 3 · Memindahkan Dadu (2017)",
-          "type": "mc"
-        }
-      ]
+      "questions": []
     }
   ],
   "banner": {
@@ -592,5 +516,217 @@
     "label": "HARI 20",
     "day": "Senin, 16 Nov 2026",
     "title": "HARI H — Lomba Tantangan Bebras SMA 2026"
-  }
+  },
+  "examBank": [
+    {
+      "id": "x19_q1",
+      "src": "x19_q1",
+      "title": "SIMULASI · Pohon Willows dan Pohon Poplars",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q10",
+      "src": "x19_q10",
+      "title": "SIMULASI · Meniliti Rekaman",
+      "type": "sa"
+    },
+    {
+      "id": "x19_q11",
+      "src": "x19_q11",
+      "title": "SIMULASI · Membeli Sepatu",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q12",
+      "src": "x19_q12",
+      "title": "SIMULASI · Semut di Sarang",
+      "type": "sa"
+    },
+    {
+      "id": "x19_q13",
+      "src": "x19_q13",
+      "title": "SIMULASI · Peta Yang Mana",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q14",
+      "src": "x19_q14",
+      "title": "SIMULASI · Angka Digital",
+      "type": "sa"
+    },
+    {
+      "id": "x19_q15",
+      "src": "x19_q15",
+      "title": "SIMULASI · Pencacah",
+      "type": "sa"
+    },
+    {
+      "id": "x19_q2",
+      "src": "x19_q2",
+      "title": "SIMULASI · Gelang Persahabatan",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q3",
+      "src": "x19_q3",
+      "title": "SIMULASI · Rute Penerbangan",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q4",
+      "src": "x19_q4",
+      "title": "SIMULASI · Petani Zacland",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q5",
+      "src": "x19_q5",
+      "title": "SIMULASI · Ilmuwan di Laboratorium",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q6",
+      "src": "x19_q6",
+      "title": "SIMULASI · Si Topi Merah",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q7",
+      "src": "x19_q7",
+      "title": "SIMULASI · Daur Ulang Botol Gelas",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q8",
+      "src": "x19_q8",
+      "title": "SIMULASI · Putar, Putar dan Putar",
+      "type": "mc"
+    },
+    {
+      "id": "x19_q9",
+      "src": "x19_q9",
+      "title": "SIMULASI · Pengaturan Tempat Duduk",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q1",
+      "src": "x20_q1",
+      "title": "SIMULASI · Mesin Matematika",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q10",
+      "src": "x20_q10",
+      "title": "SIMULASI · Toko Sembako",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q11",
+      "src": "x20_q11",
+      "title": "SIMULASI · LED Berkedip",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q12",
+      "src": "x20_q12",
+      "title": "SIMULASI · Permainan Robot",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q13",
+      "src": "x20_q13",
+      "title": "SIMULASI · Menara Balok",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q14",
+      "src": "x20_q14",
+      "title": "SIMULASI · Kode Roti",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q15",
+      "src": "x20_q15",
+      "title": "SIMULASI · Krisis Akibat Pandemi",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q16",
+      "src": "x20_q16",
+      "title": "SIMULASI · Mengisi Kotak",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q17",
+      "src": "x20_q17",
+      "title": "SIMULASI · Menara Spesial",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q18",
+      "src": "x20_q18",
+      "title": "SIMULASI · Mobil Listrik",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q19",
+      "src": "x20_q19",
+      "title": "SIMULASI · Pemeriksaan Darah",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q2",
+      "src": "x20_q2",
+      "title": "SIMULASI · Pohon Sudoku",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q20",
+      "src": "x20_q20",
+      "title": "SIMULASI · Lampu Lalu Lintas",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q3",
+      "src": "x20_q3",
+      "title": "SIMULASI · Keliling Museum",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q4",
+      "src": "x20_q4",
+      "title": "SIMULASI · Heat Maps",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q5",
+      "src": "x20_q5",
+      "title": "SIMULASI · Keamanan Password",
+      "type": "sa"
+    },
+    {
+      "id": "x20_q6",
+      "src": "x20_q6",
+      "title": "SIMULASI · Mesin Penuang Susu",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q7",
+      "src": "x20_q7",
+      "title": "SIMULASI · Lima Berang-berang",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q8",
+      "src": "x20_q8",
+      "title": "SIMULASI · Hamming Lemmings",
+      "type": "mc"
+    },
+    {
+      "id": "x20_q9",
+      "src": "x20_q9",
+      "title": "SIMULASI · Kelereng dan Kotak-kotak",
+      "type": "mc"
+    }
+  ]
 }

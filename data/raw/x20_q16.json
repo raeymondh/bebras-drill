@@ -1,0 +1,23 @@
+{
+  "id": "x20_q16",
+  "scheduleTitle": "SIMULASI · Mengisi Kotak",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-KR-06",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-KR-06",
+  "soalPages": [33],
+  "imgPages": [33, 34],
+  "deskripsi": "Anna diberi tugas untuk memasukkan 5 bola besar, 2 bola sedang dan 5 bola kecil ke dalam kotak. Kotak yang tersedia adalah 3 kotak besar, 5 kotak sedang dan 3 kotak kecil. Sebuah bola hanya dapat dimasukkan ke dalam kotak dengan ukuran yang sama atau lebih besar. Sebuah kotak hanya dapat berisi satu bola. Kotak yang besar juga hanya dapat berisi sebuah bola.",
+  "pertanyaan": "Berapa banyak bola yang dapat dimasukkan ke dalan kotak?",
+  "options": ["A. 8", "B. 11", "C. 10", "D. 9"],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "C",
+  "penjelasan": "[gambar: diagram solusi dengan panah berwarna bernomor 1-4 dari baris bola ke baris kotak]\n\nSolusi yang mungkin:\n1. 3 bola besar dimasukkan ke dalam 3 kotak besar.\n2. 2 bola sedang dimasukkan ke dalam 2 kotak sedang.\n3. 3 bola kecil dimasukkan ke dalam 3 kotak kecil.\n4. Sisa 2 bola kecil dimasukkan ke dalam 2 kotak sedang yang tersisa.\n\nTidak mungkin untuk mengemas lebih banyak bola karena tidak ada kotak besar untuk sisa 2 bola besar.",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Gambar baris bola (besar 5, sedang 2, kecil 5) dan baris kotak (besar 3, sedang 5, kecil 3) dengan label kiri-kanan di hal. 33; gambar diagram solusi (panah bernomor 1-4) di awal penjelasan; aplikasi menampilkan render halaman asli (imgPages 33-34). Typo buku 'ke dalan kotak' dipertahankan verbatim (terverifikasi jpg hal. 33). Opsi tercetak tidak urut naik (8, 11, 10, 9) - urutan asli dipertahankan; kunci C. Tidak ada bagian 'Kata Penting dan Istilah'/'Ini Informatika!' pada soal ini. Jawaban + penjelasan di halaman soal yang sama (hal. 33); hal. 34 hanya lanjutan Authorship/License. Lisensi blok menulis 'Copyright © 2019' - soal daur ulang tahun 2019. Authorship: Hyun-seok Jeon, Heejin Park (South Korea), Martina Palazzolo (Italy), Allira Crowe (Australia), Wilfried Baumann (Austria), 2019-04-01 s.d. 2019-05-15."
+}

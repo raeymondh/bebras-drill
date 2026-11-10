@@ -1,0 +1,23 @@
+{
+  "id": "x20_q7",
+  "scheduleTitle": "SIMULASI · Lima Berang-berang",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-LT-05",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-LT-05",
+  "soalPages": [12],
+  "imgPages": [12, 13, 14],
+  "deskripsi": "Saat melintasi rawa dengan menggunakan jalan setapak yang terdiri dari batang -batang kayu, lima berang-berang bertemu dengan sekelompok kanguru yang sedang menuju ke arah berlawanan. Mereka dipisahkan satu batang kayu kosong. Tidak ada satupun dari mereka yang mau basah atau kotor sehingga mereka tetap berada di atas batang kayu.\n\nPara kanguru sedang tergesa-gesa sementara para berang-berang tidak keberatan untuk balik ke tepi memberi jalan buat para kanguru, kecuali Fred, berang-berang yang berada paling depan. Kanguru menemukan bahwa di dekat batang kayu kosong ada satu batu yang dapat dipakai untuk tempat sementara dan balik melompat ke batang kayu itu lagi. Hanya satu kanguru yang dapat berdiri di atas batu setiap saat. Jadi kanguru pertama harus lompat ke batu lalu Fred maju dua langkah agar kanguru bisa lompat ke belakang Fred. Untuk kanguru kedua, Fred harus mundur dua langkah agar kanguru bisa lompat ke batu, dan seterusnya, Fred harus maju dan mundur berulang-ulang. Sayangnya Fred hanya mau total melangkah mundur 10 langkah saja",
+  "pertanyaan": "Berapa banyak maksimum kanguru dapat melewatinya Fred?",
+  "options": ["A. Lebih dari 10 kanguru dapat melewati Fred.", "B. Tepat ada 10 kanguru dapat melewati Fred.", "C. Tepat ada 6 kanguru dapat melewati Fred.", "D. Tepat ada 4 kanguru dapat melewati Fred.", "E. Kurang dari 4 kanguru dapat melewati Fred.", "F. Tidak mungkin ditentukan."],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "C",
+  "penjelasan": "Semua berang-berang kecuali Fred dapat diabaikan untuk saat ini karena mereka bersedia untuk kembali ke awal.\nAgar Fred dapat membiarkan satu kanguru lewat, ini yang mungkin terjadi:\nKanguru lompat ke atas batu\nFred maju 2 langkah\nKanguru lompat kembali ke potongan kayu lalu dapat melanjutkan maju ke depan\nFred mundur dua langkah agar kanguru lain dapat lompat ke batu\n\nDengan melakukan langkah-langkah di atas sebanyak 5 kali, Fred dapat membantu 5 kanguru lewat dengan mundur total 10 langkah; lalu 1 kanguru lagi dapat lewat karena Fred akan berada di posisi awal lagi. Sehingga, akan ada 6 kanguru yang dapat lewat.\nHal ini dapat dituliskan dengan formula matematika. Jika Fred ingin membantu kanguru lewat, Fred harus mundur s = 2 × (k − 1) langkah. Untuk k ekor kanguru, formulanya menjadi k = 0.5 × s + 1.",
+  "iniInformatika": "rawa: tempat yang tidak disukai berang-berang dan kanguru karena membuat basah dan kotor\njalur potongan kayu: jalur di mana berang-berang dan kanguru dapat lewat tanpa menjadi basah dan kotor; dianggap sebagai tempat sementara untuk paling banyak satu binatang\nbatu: tempat berbeda untuk kanguru dan berang-berang berdiri tanpa menjadi basah dan kotor; batu hanya dapat ditempati kanguru dengan melompat, namun tidak bisa ditempati berang-berang\nmaju: mengambil satu langkah ke arah yang dibutuhkan\nmundur: mengambil satu langkah ke arah yang tidak diinginkan oleh berang-berang atau kanguru",
+  "clue": "",
+  "notes": "6 opsi (A–F) — bukan A–D standar. Gambar wajib (hal. 12): barisan berang-berang + kanguru di atas batang kayu dengan batu dan panah lompatan, 'Fred' di bawah posisinya. Penjelasan memuat tabel 4 baris (teks kiri + gambar ilustrasi kanan, hal. 13); 4 baris teksnya dimasukkan berurutan di penjelasan. Formula dicetak miring di buku: s = 2 × (k − 1) dan k = 0.5 × s + 1 (mojibake '�' → '×'). 'batang -batang kayu' sesuai cetakan (ada spasi sebelum tanda hubung di buku). Kalimat terakhir deskripsi memang tanpa titik di buku. Kata Penting dan Istilah menyambung hal. 13–14 (entri 'mundur' di hal. 14). hal. 14 sisanya Authorship/License."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "x19_q9",
+  "scheduleTitle": "SIMULASI · Pengaturan Tempat Duduk",
+  "bookTitle": "Buku Bebras Indonesia 2019 – Kategori Penegak",
+  "book": "b2019",
+  "code": "2019-CA-05",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-CA-05",
+  "soalPages": [21],
+  "imgPages": [21, 22],
+  "deskripsi": "8 orang sahabat (Ani, Buni, Cici, Dani, Eni, Fani, Gani, Hani) duduk melingkar mengelilingi sebuah meja bundar seperti ditunjukkan pada gambar sebagai berikut: [gambar meja bundar dengan 8 kursi melingkar, kursi paling atas berlabel A — lihat halaman soal]\n\nDiketahui beberapa fakta sebagai berikut:\n• Ani duduk di seberang (berlawanan) dengan Dani.\n• Hani duduk di antara Gani dan Eni.\n• Fani tidak disebelah Ani maupun Dani.\n• Ada satu orang di antara Gani dan Cici.\n• Eni di sebelah kiri Dani.",
+  "pertanyaan": "Tentukan urutan tempat duduk ke 8 sahabat tersebut, dengan menuliskan huruf-huruf awal nama mereka saja, searah jarum jam, dimulai dari A. Contoh jawaban: AHCFGBED",
+  "options": [],
+  "key": "",
+  "keys": ["ACFBDEHG"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah ACFBDEHG.",
+  "penjelasan": "Fakta 1, Ani duduk tepat di hadapan Dani, memungkinkan kita menempatkan Dani.\nSekarang, Fakta 5, Eni berada di samping Dani, di sebelah kiri Dani, memungkinkan kita menempatkan Eni.\nPada tahap ini, Fakta 2, Hani duduk di antara Gani dan Eni, memberitahu kita di mana Heni duduk. Mengetahui di mana Heni duduk, kita sekarang dapat menempatkan Gani.\nDengan lima teman ditempatkan, Fakta 3, Fani tidak berada di samping Ani atau Dani, hanya meninggalkan satu tempat untuk Fani.\nFakta 4, Ada satu orang di antara Gani dan Cici, sekarang memberitahu kita di mana Cici duduk.\nAkhirnya, hanya ada satu kursi dan satu teman yang harus ditempatkan, jadi kita dapat menempatkan Buni.",
+  "iniInformatika": "Logika adalah tentang mengikuti aturan, memahami urutan, dan negasi.\nSebagai contoh, operator logika kunci yang digunakan dalam pertanyaan ini adalah negasi, yang digunakan setiap kali kita mengatakan \"tidak\". Jadi, fakta yang menyatakan bahwa \"Fani tidak berada di samping Ani atau Dani\" dapat dinyatakan secara berbeda sebagai \"Fany tidak berada di samping (Ani atau Dani)\" yang sama dengan \"(Fani tidak berada di samping Ani) dan (Fani tidak berada di samping Dani)\".\n\nPara siswa yang lebih tua mungkin tertarik dengan fakta bahwa operator negasi, \"not\", mengubah ekspresi logika dari not (A atau B) menjadi (not A) dan (not B), yang merupakan contoh hukum De Morgan.\n\nMengetahui bagaimana ekspresi logika dapat ditulis ulang, digabungkan, atau disederhanakan adalah keterampilan yang sangat berguna dalam ilmu komputer.",
+  "clue": "",
+  "notes": "Isian singkat — buku TIDAK menyediakan opsi pilihan ganda (beda format dari buku 2016–2018 yang umumnya punya blok Pilihan Jawaban); jawaban berupa string urutan huruf, dicetak tebal tanpa gambar susunan jawaban. Gambar meja bundar 8 kursi (kursi teratas berlabel A) di hal. 21 diperlukan untuk menjawab. Typo buku dipertahankan verbatim: 'Heni' (2x, konteksnya Hani/Eni) di penjelasan dan 'Fany' di Ini Informatika; 'tidak disebelah' (tanpa spasi) sesuai buku. Ini Informatika menyeberang hal. 21–22 (paragraf De Morgan + penutup di hal. 22)."
+}

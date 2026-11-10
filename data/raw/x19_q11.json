@@ -1,0 +1,23 @@
+{
+  "id": "x19_q11",
+  "scheduleTitle": "SIMULASI · Membeli Sepatu",
+  "bookTitle": "Buku Bebras Indonesia 2019 – Kategori Penegak",
+  "book": "b2019",
+  "code": "2019-KR-04",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-KR-04",
+  "soalPages": [25],
+  "imgPages": [25, 26, 27],
+  "deskripsi": "Bebras Koko pergi ke sebuah toko untuk membeli sepatu. Ia melihat beberapa pasang sepatu diatur sesuai ukuran dan lebarnya, mulai dari paling kecil dan sempit, berjajar lebih besar dan lebar, yang paling besar dan paling lebar ada di sudut paling kanan atas. [gambar rak sepatu 7×7 berlabel Width/Size dengan sumbu Narrow↔Wide (horizontal) dan Big↔Small (vertikal) — lihat halaman soal]\n\nKarena Koko pelupa, ia lupa ukuran sepatunya, dan harus mencoba yang ukuran dan lebarnya paling pas. Koko menggunakan cara yang menjamin bahwa ia dapat menemukan sepatu paling pas dengan mencoba N kali.",
+  "pertanyaan": "Berapa nilai N yang paling kecil?",
+  "options": ["a) 1", "b) 2", "c) 4", "d) 6"],
+  "key": "b",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah 2.",
+  "penjelasan": "Bebras Koko bisa saja beruntung karena menemukan sepatu pada percobaan pertama. Namun, dapat dijamin bahwa ia dapat menemukan sepatu yang pas setelah mencoba 2 pasang sepatu.\n\nBebras Koko dapat memulai dari sepatu yang paling tengah seperti pada gambar berikut. [gambar rak kosong dengan satu sepatu di sel tengah — lihat halaman soal]\n\n• Sepatu yang di tengah itu mungkin ukurannya sama, lebih kecil, lebih besar dan juga lebarnya pas, lebih sempit atau lebih lebar. Setelah mencoba, Koko akan berada pada salah satu situasi yang digambarkan dengan 9 zona yang diwarnai berbeda sebagai berikut.\n• Jika sepatu itu pas untuknya, dia telah mendapatkan sepatu yang dicarinya\n• Jika sepatu itu kekecilan dan terlalu lebar, ia akan mencari di zona 1\n• Jika sepatu itu terlalu kecil tetapi sudah pas lebarnya, ia akan mencoba sepatu di zona 2\n• Jika sepatu itu terlalu besar dan terlalu sempit, ia akan mencoba sepatu di zona 9 dan seterusnya\n[gambar grid 9 zona berwarna berlabel A, B dan 1–9 — lihat halaman soal]\n\nMisalnya, sepatu yang dicoba oleh Koko terlalu besar dan terlalu sempit, Koko akan mencoba sepatu yang lebuh kecil dan lebih lebar, yaitu sepatu-sepatu di zona 1.\n\nKoko akan mencoba sepatu yang paling tengah yaitu di zona 1 (yang sel yang ada tanda angka 1).\n• Jika sepatu itu pas ukurannya, ia menemukan sepatu yang dicarinya\n• Jika sepatu itu masih kekecilan dan terlalu lebar, sepatu di posisi A adalah sepatu yang cocok.\n• Jika sepatunya kekecilan tapi pas lebarnya, sepatu di posisi B adalah sepatu yang cocok.\n\nSeperti kita lihat, Koko harus mencoba paling banyak 2 pasang sepatu untuk menemukan sepatu yang cocok.\n\nJika Koko mulai dari posisi lainnya, ia harus mencoba lebih dari 2 kali.",
+  "iniInformatika": "Pada soal di atas, sepatu yang dipajang di toko sepatu disusun dalam urutan peningkatan ukuran dan lebar, yang ditata pada dua dimensi. Untuk mendapatkan data dalam susunan terurut seperti itu disebut “sorting” (pengurutan). Algoritma pencarian biner digunakan pada data yang telah terurut untuk menemukan suatu nilai dengan sangat cepat. Setiap kali mencari, Pencarian biner mengurangi ruang pencarian menjadi setengahnya untuk mendapatkan jawaban yang benar, sehingga membutuhkan upaya yang lebih sedikit.\n\nMenggunakan algoritma pencarian biner untuk menebak angka antara di antara 1 dan 100 dapat mengarah pada menebak angka dalam upaya minimum.\n\nPersoalan ini terkait dengan “binary searching” untuk menemukan sebuah nilai yang diinginkan, dalam suatu himpunan data yang disimpan dalam dua dimensi.",
+  "clue": "",
+  "notes": "Opsi teks berlabel huruf kecil a)–d) persis seperti buku; jawaban buku ditulis sebagai NILAI '2' (= opsi b), key memakai 'b' huruf kecil mengikuti label buku. Tiga gambar diperlukan: rak sepatu 7×7 (hal. 25), rak kosong + sepatu tengah dan grid 9 zona berwarna berlabel A/B dan angka 1–9 (hal. 26). Typo buku 'lebuh kecil' (maksudnya 'lebih kecil') diverifikasi pada jpg orisinal dan dipertahankan verbatim; frasa aneh 'yang sel yang ada tanda angka 1' juga sesuai buku. Ini Informatika menyeberang hal. 26–27; tanda kutip melengkung “sorting”/“binary searching” sesuai buku. Justifikasi pdf.js (spasi ganda) dinormalisasi."
+}

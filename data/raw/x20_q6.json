@@ -1,0 +1,23 @@
+{
+  "id": "x20_q6",
+  "scheduleTitle": "SIMULASI · Mesin Penuang Susu",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-KR-08",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-KR-08",
+  "soalPages": [10],
+  "imgPages": [10, 11],
+  "deskripsi": "Cobi si berang-berang mempunyai sebuah mesin misterius yang berwarna biru seperti ditunjukkan pada Gambar 1. Ada 2 corong pada mesin tsb.\n• Jika kita menuangkan susu coklat di kedua corongnya, maka akan keluar susu putih.\n• Jika kita menuangkan susu putih ke salah satu corong, maka susu coklat yang akan keluar.\n• Jika kita menghubungkan dua buah mesin dan menuangkan susu coklat ke dua corong seperti pada Gambar 2, maka susu coklat yang akan keluar. Perhatikan bahwa konektor yang berwarna hijau tidak akan berefek pada susu.",
+  "pertanyaan": "Susu jenis apa yang harus dituangkan sehingga akan dikeluarkan susu putih dengan menggunakan 3 mesin seperti pada Gambar 3?",
+  "options": ["A. Susu putih, susu putih.", "B. Susu putih, susu coklat.", "C. Susu coklat, susu putih.", "D. Susu coklat, susu coklat."],
+  "key": "A",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "A",
+  "penjelasan": "Perhatikan gambar di bawah ini!\n\nUntuk mendapatkan susu putih di akhir, susu coklat harus ditambahkan ke kedua corong di mesin ketiga (paling bawah). Dengan kata lain, susu coklat harus dihasilkan dari kedua mesin di atas mesin ketiga.\n\nUntuk mendapatkan susu coklat dari kedua mesin di bagian atas, susu putih harus dimasukkan ke salah satu dari dua corong pada setiap mesin. Akan tetapi, mesin seharusnya dimasukkan bahan yang sama pada kedua corongnya. Oleh karena itu, untuk dapat mengeluarkan susu putih, maka pada kedua corong harus dimasukkan susu putih dan susu putih.",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Gambar wajib (hal. 10): Gambar 1 (satu mesin biru 2 corong), Gambar 2 (dua mesin terhubung konektor hijau), Gambar 3 (tiga mesin, corong atas bertanda '???'). Gambar penjelasan di akhir hal. 10. 'kedua corongnya' dan 'salah satu corong' dicetak tebal di buku. TIDAK ADA bagian 'Kata Penting dan Istilah' → iniInformatika kosong. 'ditunjukka n' artifact pemenggalan pdf.js diperbaiki jadi 'ditunjukkan'. Kalimat 'Akan tetapi, mesin seharusnya dimasukkan bahan yang sama pada kedua corongnya.' memang diketik demikian di buku (dipertahankan verbatim)."
+}

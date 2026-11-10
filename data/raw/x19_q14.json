@@ -1,0 +1,23 @@
+{
+  "id": "x19_q14",
+  "scheduleTitle": "SIMULASI · Angka Digital",
+  "bookTitle": "Buku Bebras Indonesia 2019 – Kategori Penegak",
+  "book": "b2019",
+  "code": "2019-MY-02",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-MY-02",
+  "soalPages": [34],
+  "imgPages": [34, 35],
+  "deskripsi": "Alyna bermain angka dengan menggunakan LED (Light Emitting Diodes). Dia ingin menggunakan LED dengan 7 segmen untuk merepresentasikan sebuah angka. Setiap segmen LED ditandai dengan A, B, C, D, E, F, dan G, seperti ditunjukkan sebagai berikut. [gambar segmen LED berlabel A–G — lihat halaman soal]\n\nUntuk memberitahukan segmen mana yang harus dinyalakan, ia harus menuliskan kode dalam sebuah tabel. Misalnya, tabel berikut akan menunjukkan 3 angka 103: [gambar tabel kode A–G 3 baris (sel merah/putih) + tampilan 7-segmen angka 103 — lihat halaman soal]",
+  "pertanyaan": "Angka apa yang akan ditunjukkan oleh tabel sebagai berikut? [gambar tabel kode A–G 6 baris (sel merah/putih) — lihat halaman soal]",
+  "options": [],
+  "key": "",
+  "keys": ["423958"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah: [gambar tampilan 7-segmen enam digit menunjukkan 423958 — lihat halaman soal; nilai angka dari kalimat penjelasan buku]",
+  "penjelasan": "Dari contoh tersebut, kita perhatikan bahwa setiap baris dalam tabel mewakili satu angka digital. Untuk baris pertama dalam tabel pertanyaan, hanya segmen B, C, F, dan G yang dipilih, yang mewakili angka 4. Untuk baris kedua, segmen A, B, D, E, G dipilih, mewakili angka 2. Melanjutkan proses ini untuk setiap baris, kita mendapatkan angka 423958.",
+  "iniInformatika": "Perubahan representasi satu objek dengan kumpulan objek lain disebut encoding. Encoding adalah hal yang sangat umum dalam Ilmu Komputer. Kita menggantikan setiap digit dengan urutan tujuh sel yang dapat memiliki dua nilai mungkin: merah atau putih.\n\nTampilan seperti ini banyak digunakan di era modern ini. Karena ukuran kecil dari dioda pemancar cahaya (LED), beberapa dioda dapat dihubungkan menjadi tampilan 7-segment.\n\nKetika kita menggunakan tampilan 7-segment, kita dapat mengirimkan urutan dari 7 nilai, baik angka satu (merah) atau angka nol (putih), untuk ABCDEFG di mana nol mematikan segmen dan satu menghidupkannya. Sebagai contoh, angka \"4\" dalam tampilan 7-segment dijelaskan oleh 0110011.",
+  "clue": "",
+  "notes": "Isian singkat. Soal berbasis gambar penuh: tabel kode contoh (3 baris → angka 103) dan tabel pertanyaan (6 baris) adalah GAMBAR sel merah/putih — soal TIDAK dapat dijawab tanpa halaman soal (imgPages). ANOMALI FORMAT JAWABAN: baris 'Jawaban yang tepat adalah:' diikuti GAMBAR tampilan 7-segmen '423958' TANPA teks angka sama sekali (beda dari buku 2016–2018 yang menulis jawaban dalam teks); nilai 423958 hanya muncul di kalimat penjelasan. Kutip lurus \"4\" dan penulisan '7-segment' (bukan '7-segmen') di Ini Informatika sesuai buku. Spasi berlebih akibat teks tebal (mis. 'B, C, F, dan G') dinormalisasi."
+}

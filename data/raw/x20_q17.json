@@ -1,0 +1,23 @@
+{
+  "id": "x20_q17",
+  "scheduleTitle": "SIMULASI · Menara Spesial",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2019-CA-01",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2019-CA-01",
+  "soalPages": [35],
+  "imgPages": [35, 36],
+  "deskripsi": "Lihatlah sederetan menara sebagai berikut:\n[gambar: sederetan menara dengan tinggi bervariasi]\n\nSebuah menara dinyatakan spesial jika semua menara di kirinya lebih pendek, dan semua menara di kanannya lebih tinggi.",
+  "pertanyaan": "Ada berapa menara spesial pada gambar tersebut?",
+  "options": [],
+  "key": "",
+  "keys": ["3", "tiga"],
+  "pairs": [],
+  "jawabanResmi": "3",
+  "penjelasan": "Cara memeriksa apakah sebuah menara adalah istimewa: Buat persegi panjang dari ujung menara yang sedang diperiksa ke kiri (beri warna hijau) dan ke kanan (beri warna merah). Sebuah menara dikatakan istimewa jika semua ujung menara di sebelah kiri berada dalam persegi panjang berwarna hijau (lihat Gambar 1) dan jika semua ujung menara di kanan berada di luar persegi panjang berwarna merah (lihat Gambar 1). Berikut merupakan contoh untuk memeriksa untuk menara kedelapan.\n[gambar: pemeriksaan menara ke-8 dengan persegi panjang hijau/merah]\nGambar 1: Contoh Pemeriksaan Menara Kedelapan\n\nSalah satu cara yang mungkin untuk menemukan solusinya adalah bergerak melalui semua menara, satu per satu, dan menandai sebuah menara jika semua di sebelah kiri lebih pendek (lihat Gambar 2). Kemudian buat lintasan kedua yang serupa, tandai menara jika semua ke kanan lebih tinggi (lihat Gambar 3).\n[gambar: penandaan '<' di bawah menara]\nGambar 2: Contoh Menandai Menara yang Semua Menara di Sebelah Kiri Lebih Pendek\n[gambar: penandaan '>' di bawah menara]\nGambar 3: Contoh Menandai Menara yang Semua Menara di Sebelah Kanan Lebih Tinggi\n[gambar: penandaan ganda '<,>' dan bintang '*' pada menara istimewa]\nGambar 4: Contoh Menandai Menara yang Istimewa\n\nSemua menara yang ditandai dua kali (<,>) adalah menara khusus (*).",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Sederetan menara di hal. 35 - WAJIB dilihat untuk menjawab (jumlah/tinggi menara hanya terbaca dari gambar); Gambar 1-4 pada penjelasan (hal. 35-36) dengan caption tercetak DI BAWAH tiap gambar - caption disalin verbatim, gambar ditandai '[gambar: ...]'; aplikasi menampilkan render halaman asli (imgPages 35-36). Kode soal tercetak di buku memakai kode ASLI 2019 (2019-CA-01), bukan kode 2020; blok lisensi juga menulis 'Copyright © 2019' - soal daur ulang 2019. Istilah buku campur: 'spesial' (deskripsi), 'istimewa'/'khusus' (penjelasan) - dipertahankan verbatim. Kalimat penjelasan terakhir 'Semua menara yang ditandai dua kali (<,>)...' ada di hal. 36. Buku 2020 TIDAK memiliki bagian 'Ini Informatika!'. Authorship: J.P. Pretti (Canada), Martina Palazzolo (Italy), Allira Crowe (Australia), Wilfried Baumann (Austria), 2019-03-13 s.d. 2019-05-15."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "x20_q14",
+  "scheduleTitle": "SIMULASI · Kode Roti",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-RU-01",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-RU-01",
+  "soalPages": [28],
+  "imgPages": [28, 29],
+  "deskripsi": "Dua bersaudara tinggal di sebuah padepokan di mana mereka berlatih untuk diam, tetapi masih bisa berkomunikasi. Mereka menemukan cara untuk \"berbicara\" satu sama lain dengan menggunakan 6 potong roti yang mereka terima saat makan siang. Setiap anak menyusun rotinya di atas meja dari 1 sampai 6 tumpukan. Mereka selalu menggunakan semua 6 potong roti. Susunan tumpukan mewakili kata yang ingin dikomunikasikannya.\n\nMisalnya, kata “halo” mungkin dikomunikasikan dengan menyusun roti seperti yang ditunjukkan sebagai berikut:\n[gambar: 3 tumpukan roti — 1, 2, lalu 3 potong]\n\nGambar di atas kita tuliskan sebagai bilangan (1,2,3) sebagai 3 tumpukan. Selain itu kemungkinannya bisa termasuk (1,1,1,1,1,1) yaitu 6 tumpukan masing-masing satu potong roti, atau (3,3) yaitu 2 tumpukan dengan masing-masing 3 potong roti, atau (6) yaitu satu tumpukan yang berisi 6 potong roti. Tentu saja (1,2,3) tidak sama dengan (3,1,2), juga (2,4) tidak sama dengan (4,2).",
+  "pertanyaan": "Berapa banyak kata yang dapat dipakai untuk berkomunikasi dengan sistem tersebut? (isikan sebuah bilangan bulat)",
+  "options": [],
+  "key": "",
+  "keys": ["32"],
+  "pairs": [],
+  "jawabanResmi": "32",
+  "penjelasan": "Tiap saudara memiliki 6 potong roti. Berikut adalah metode penyusunannya:\n• Letakkan potongan roti pertama di atas meja.\n• Lemparkan koin.\n• Jika muncul “gambar”, letakkan potongan selanjutnya di atas tumpukan.\n• Jika muncul “angka”, mulailah tumpukan baru.\n• Lanjutkan lempar koin sampai semua potongan tersusun.\n\nSemua kemungkinan penyusunan roti dapat dihasilkan dari metode tersebut. Contoh pesan [gambar: 3 tumpukan roti (1,2,3)], adalah hasil lemparan koin angka, gambar, angka, gambar, gambar. Karena dibutuhkan 5 kali lemparan koin untuk menyusun seluruh 6 potong roti, dan tiap lemparan koin memiliki 2 kemungkinan hasil, maka terdapat 2⁵ = 32 kemungkinan penyusunan roti. Oleh karena itu, para saudara dapat menyampaikan 32 kata berbeda.",
+  "iniInformatika": "Tumpukan – potongan roti yang ditumpuk secara vertikal\nSusunan – urutan tumpukan roti dari kiri ke kanan",
+  "clue": "",
+  "notes": "Gambar 3 tumpukan roti (contoh kata 'halo') di hal. 28 dan gambar roti inline di penjelasan (contoh pesan hasil lemparan koin) ditandai '[gambar: ...]'; aplikasi menampilkan render halaman asli (imgPages 28-29). Pangkat pada '2 5' di text layer adalah superskrip tercetak '2⁵ = 32' (terverifikasi jpg hal. 28) - dirender sebagai '2⁵'. Bagian 'Kata Penting dan Istilah' (padanan bagian 'Ini Informatika!' di buku 2016-2018) dipetakan ke field iniInformatika (isi verbatim, heading bagian tidak disalin). Buku 2020 TIDAK memiliki bagian 'Ini Informatika!'. Jawaban + penjelasan + glosarium di halaman soal yang sama (hal. 28); hal. 29 hanya berisi Authorship/License. Authorship: Anton Chukhnov (Russia), Andrew Csizmadia (UK), Sarah Chan (Canada), Vaidotas Kinčius (Lithuania)."
+}

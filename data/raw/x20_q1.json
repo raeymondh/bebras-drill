@@ -1,0 +1,23 @@
+{
+  "id": "x20_q1",
+  "scheduleTitle": "SIMULASI · Mesin Matematika",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-DE-06",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-DE-06",
+  "soalPages": [1],
+  "imgPages": [1, 2],
+  "deskripsi": "Bebras si berang-berang menciptakan Mesin Matematika. Mesin itu menerima sebuah bilangan sebagai input, dan menghasilkan bilangan lain sebagai output.\n\nDi dalam mesin ada komponen-komponen. Setiap komponen bekerja dengan cara yang sama. Setiap komponen menerima 3 bilangan sebagai input: B1, B2, dan B3. Komponen memproses input sebagai berikut:\n\nJika B1 bernilai 1, maka langsung B3 dijadikan output untuk mesin dan selesai.\nJika B1 bukan 1:\nKurangi B1 dengan 1 dan hasilnya menjadi B1 yang baru.\nTambahkan B2 dengan 2, dan hasilnya menjadi B2 yang baru.\nTambahkan B2 yang baru di atas, pada B3, dan hasilnya menjadi B3 yang baru.\nTeruskan B1 baru, B2 baru, B3 baru menjadi input untuk komponen berikutnya yang akan memproses dengan aturan yang sama.\n\nMesin Matematika menerima satu bilangan bulat sebagai input, bilangan itu menjadi B1 untuk komponen pertama. Sementara, B2 dan B3 untuk komponen pertama ini 1.\n\nGambar berikut menunjukkan bagaimana Mesin Matematika memproses input bernilai 2. Kemudian nilai ini mengakibatkan dua komponen bekerja dan komponen kedua memberikan output 4 yang kemudian menjadi output Mesin Matematika.",
+  "pertanyaan": "Mesin Matematika memproses input bernilai 4. Berapa output yang dihasilkan?",
+  "options": ["A. 7", "B. 10", "C. 16", "D. 62"],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "C",
+  "penjelasan": "Komponen pertama mendapat input (4,1,1) dan menghasilkan output (3,3,4). Komponen kedua mendapat input (3,3,4) dan menghasilkan output (2,5,9). Komponen ketiga mendapat input (2,5,9) dan menghasilkan output (1,7,16). Komponen keempat mendapat input (1,7,16) dan mengembalikan 16.\n\nJawaban A salah: Komponen terakhir mengembalikan angka ketiga bukan kedua.\nJawaban B salah: Komponen tidak menambah hasil dengan 3 dimulai dari 1.\nJawaban C benar.\nJawaban D salah: Komponen tidak menambah hasil dengan 3 dimulai dari 1.",
+  "iniInformatika": "Mesin Matematika: mesin buatan untuk menjalankan proses rekursif.\nKomponen: subproses rekursif pada mesin matematika.\nMenerima angka: digunakan pada mesin matematika untuk menginput angka\nMeneruskan angka: pada kasus rekursif, komponen meneruskan output sebagai input yang menerima angka tersebut.\nMengembalikan angka: digunakan pada mesin matematika untuk mengeluarkan hasil keseluruhan.",
+  "clue": "",
+  "notes": "Buku 2020 memakai judul bagian 'Kata Penting dan Istilah' (padanan 'Ini Informatika!' buku 2016–2018); isinya dimasukkan ke iniInformatika sebagai daftar baris. Aturan komponen tercetak di dalam kotak/bingkai (hal. 1). Gambar contoh proses input bernilai 2 (berang-berang + 2 komponen, hal. 1) diperlukan untuk memahami aturan. jawabanResmi = isi baris 'Jawaban yang tepat:' di buku (hanya huruf). Spasi berlebih hasil ekstraksi pdf.js dinormalisasi jadi satu spasi."
+}

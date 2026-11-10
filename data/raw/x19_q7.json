@@ -1,0 +1,28 @@
+{
+  "id": "x19_q7",
+  "scheduleTitle": "SIMULASI · Daur Ulang Botol Gelas",
+  "bookTitle": "Daur Ulang Botol Gelas",
+  "book": "b2019",
+  "code": "2019-RO-03",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-RO-03",
+  "soalPages": [16],
+  "imgPages": [16, 17, 18],
+  "deskripsi": "Ibu Kepala Sekolah Bebras sangat sibuk berurusan dengan botol gelas di sekolah. Ia mengamati bahwa gelas di sekolahnya berwarna putih atau warna warni lainnya. Untungnya, ia punya 3 buah mesin yang dapat mengubah gelas. Dua buah mesinnya menerima dua jenis gelas dan mengubahnya. Satu mesin lainnya menerima sebuah gelas dan mengubah warnanya.\n[Tabel 3 mesin — kiri: gambar gerbang logika; kanan: uraian berikut]\nMesin ini akan menghasilkan gelas putih jika dua gelas putih dimasukkan. Kombinasi warna lain akan menghasilkan gelas berwarna\nMesin ini akan menghasilkan gelas berwarna jika dua buah gelas berwarna dimasukkan. Kombinasi lainnya akan menghasilkan gelas putih\nMesin ini akan mengubah gelas berwarna menjadi putih, atau mengubah gelas putih menjadi berwarna\nIa merangkai mesin menjadi sebuah sistem sebagai berikut:\n[gambar: rangkaian sistem dengan masukan A, B, C, D dan satu keluaran]",
+  "pertanyaan": "Gelas apa yang harus dimasukkan ke A, B, C, D sehingga hasilnya adalah gelas putih?",
+  "options": [
+    "a) A = berwarna, B = berwarna, C = berwarna, D = putih",
+    "b) A = putih, B = putih, C = berwarna, D = putih",
+    "c) A = putih, B = berwarna, C = berwarna, D = putih",
+    "d) A = berwarna, B = berwarna, C = putih, D = berwarna"
+  ],
+  "key": "A",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah a) A = berwarna, B = berwarna, C = berwarna, D = putih",
+  "penjelasan": "Kita dapat menggambar gambar untuk setiap pilihan dan menuliskan jenis gelas di atas setiap garis (gelas yang dimasukkan dan yang dihasilkan). Dengan cara ini, kita dapat memeriksa hasil keluaran dari setiap pilihan dan menemukan yang benar. Satu-satunya gambar dari pilihan-pilihan ini dengan gelas putih sebagai hasil keluaran adalah: Gambar 2.\n[Gambar 1–4: rangkaian keempat pilihan dengan label putih/berwarna di atas tiap garis]\nPerhatikan bahwa ada tiga masukan yang mungkin menghasilkan gelas putih sebagai keluaran:\n• A = berwarna, B = berwarna, C = berwarna, D = berwarna\n• A = berwarna, B = berwarna, C = berwarna, D = putih (ini adalah jawaban a) di atas)\n• A = berwarna, B = berwarna, C = putih, D = putih",
+  "iniInformatika": "Semua komputer memiliki rangkaian, yang terdiri dari berbagai jenis elemen kecil yang disebut gerbang. Beberapa gerbang yang paling populer adalah NOT, OR, AND, dan XOR.\nDi sini kita memiliki gerbang AND, OR, dan NOT (representasi grafis mereka dalam tugas ini sama seperti yang digunakan dalam Teknik Elektro). Dalam Teknik Elektro, elemen-elemen tersebut bekerja menggunakan sinyal-sinyal listrik. Kami menyatakan mereka sebagai 1 jika ada sinyal, dan 0 jika tidak ada sinyal. Dalam logika, kami merujuk pada sinyal 1 sebagai BENAR (TRUE) dan pada sinyal 0 sebagai SALAH (FALSE). Dalam tugas ini, kami mempertimbangkan kaca putih sebagai BENAR (atau 1) dan kaca berwarna sebagai SALAH (atau 0).\nGerbang AND membutuhkan kedua input menjadi BENAR (gelas putih) untuk mendapatkan BENAR sebagai keluaran.\nGerbang OR membutuhkan setidaknya salah satu dari input menjadi BENAR untuk mendapatkan BENAR sebagai keluaran.\nGerbang NOT membalik nilai, jadi jika inputnya BENAR, maka keluarannya SALAH, dan jika inputnya SALAH, maka keluarannya BENAR.\nGerbang logika digunakan, antara lain, dalam arsitektur mikroprosesor untuk melakukan operasi aritmatika dan logika.\nhttps://en.wikipedia.org/wiki/Logic_gate",
+  "clue": "",
+  "notes": "Tabel 3 mesin, rangkaian sistem, dan Gambar 1–4 berupa gambar gerbang logika (imgPages); tiga kalimat gerbang pada Ini Informatika (hal. 17–18) masing-masing disertai gambar mini gerbang. Typo buku 'kaca putih' (bukan 'gelas') pada Ini Informatika dipertahankan. Kalimat uraian mesin memang tidak diakhiri titik pada buku (verbatim). Spasi ganda pada bullet ketiga ('B   =') dinormalkan satu spasi. Footer/Authorship/License tidak disalin."
+}

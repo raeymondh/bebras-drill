@@ -1,0 +1,28 @@
+{
+  "id": "x19_q5",
+  "scheduleTitle": "SIMULASI · Ilmuwan di Laboratorium",
+  "bookTitle": "Ilmuwan di Laboratorium",
+  "book": "b2019",
+  "code": "2019-HU-04",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-HU-04",
+  "soalPages": [12],
+  "imgPages": [12, 13],
+  "deskripsi": "Tiga orang Ilmuwan Charli (C), Paula (P), dan Bary (B), mula-mula hanya mempunyai 4 (empat) jenis bahan kimia\n[gambar: 4 bahan — segitiga kuning, segitiga biru, persegi merah, persegi berkerangka hitam]\nMereka ingin membentuk sebuah bahan kimia baru, yaitu\n[gambar: simbol bahan kimia baru — palang/plus warna zaitun]\nSetiap ilmuwan bekerja selama dua hari. Setiap harinya, hanya satu ilmuwan yang bekerja dan hanya bisa menghasilkan salah satu proses saja. Satu proses artinya adalah mencampurkan dua zat kimia untuk membentuk zat kimia baru, yang bisa dipakai untuk proses berikutnya. Setiap ilmuwan hanya dapat melakukan dua proses seperti ditunjukkan pada gambar:\n| Ahli Kimia Charli (C) | [gambar 2 proses pencampuran] |\n| Ahli Fisika Paula (P) | [gambar 2 proses pencampuran] |\n| Ahli Biologi Bary (B) | [gambar 2 proses pencampuran] |",
+  "pertanyaan": "Urutan huruf inisial Ilmuwan mana yang menunjukkan urutan mereka bekerja, yang tidak memungkinkan menghasilkan produk akhir [gambar: simbol bahan kimia baru]",
+  "options": [
+    "a) C P B P C B",
+    "b) P P C C B B",
+    "c) C P B C P B",
+    "d) P B P C C B"
+  ],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah: c) C P B C P B",
+  "penjelasan": "Karena ini adalah proses keduanya yang menciptakan produk akhir, B (Ahli Biologi Bary) harus menjadi orang terakhir dalam urutan. Agar dapat menciptakan produk akhir menggunakan operasinya yang kedua, dia memerlukan:\n[gambar: lingkaran hitam + belah ketupat hijau muda]\nUntuk menghasilkan lingkaran hitam [gambar: lingkaran hitam], C (Ahli Kimia Carli) perlu memiliki akses ke [gambar: bangun datar hijau kebiruan] dan harus pergi ke laboratorium setelah P (Ahli Fisika Paula). C juga harus melakukan operasi pertamanya sebelum operasi keduanya. Untuk melakukan operasi pertamanya, B (Ahli Biologi Bary) membutuhkan P untuk melakukan operasi pertamanya.\nPada jawaban C, P pertama dalam urutan hanya dapat menciptakan salah satu bahan kimia yang diperlukan untuk melakukan dua operasi berikutnya. Salah satunya pasti gagal. Urutan C P B C P B tidak akan berhasil menciptakan produk akhir.",
+  "iniInformatika": "Dalam Ilmu Komputer dan pemrograman, kita memiliki proses di mana kita menggunakan masukan dan menciptakan keluaran. Penting untuk dipahami bahwa kita tidak dapat memulai sebuah proses jika masukan yang dibutuhkan, yang diperoleh dari keluaran proses sebelumnya, tidak tersedia. Programer harus mengorganisir tugas-tugas kecil untuk memastikan keluaran yang dibutuhkan dari proses sebelumnya sudah tersedia.\nSeorang programer yang baik harus mampu mengantrikan proses dengan tepat.",
+  "clue": "",
+  "notes": "Tabel proses 3 ilmuwan berupa gambar simbol kimia dengan label teks baris 'Ahli Kimia Charli (C)' dst. (imgPages); kalimat tantangan diakhiri gambar simbol produk inline. Quirk buku dipertahankan: 'Carli' (tanpa h) pada pembahasan; label 'Ahli Fisika' untuk Paula meski intro menyebut ketiganya 'Ilmuwan'; typo 'mengantrikan'. Pemisah baris hal. 12→13 di tengah kalimat ('...operasi pertamanya / sebelum operasi keduanya...') digabung menjadi satu paragraf. Authorship memuat mojibake (András Béni, Zsuzsa Pluhár) — tidak disalin."
+}

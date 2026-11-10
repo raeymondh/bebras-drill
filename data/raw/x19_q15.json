@@ -1,0 +1,23 @@
+{
+  "id": "x19_q15",
+  "scheduleTitle": "SIMULASI · Pencacah",
+  "bookTitle": "Buku Bebras Indonesia 2019 – Kategori Penegak",
+  "book": "b2019",
+  "code": "2019-AT-03",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-AT-03",
+  "soalPages": [36],
+  "imgPages": [36, 37],
+  "deskripsi": "Pada mesin Pencacah ini, ada 4 batang yang dapat bergoyang miring ke kiri atau kekanan.\n• batang bergoyang ke kiri= 0\n• batang bergoyang ke kanan= 1\nSaat sebuah bola jatuh pada sebuah batang, batang menjadi miring dan bola jatuh menggelinding. Ilustrasinya adalah sebagai berikut: [gambar ilustrasi 6 frame bola jatuh pada batang — lihat halaman soal]\n\nBerikut ini adalah mesin di mana dua bola dijatuhkan. Pada gambar pertama, semua batang miring ke kiri dan Pencacah menunjukkan 0000.\n[deretan 6 gambar mesin dengan counter 0000, 0001, 0001, 0000, 0010, 0010; caption: 'Permulaan', 'Setelah bola pertama jatuh.', 'Setelah bola kedua jatuh.' — lihat halaman soal]",
+  "pertanyaan": "Apa yang ditunjukkan pencacah setelah 5 bola dijatuhkan? Tuliskan jawaban dalam bentuk 4-digit yang terdiri dari 0 dan 1.",
+  "options": [],
+  "key": "",
+  "keys": ["0101"],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang benar adalah 0101.",
+  "penjelasan": "Urutan lengkapnya adalah: 0001, 0010, 0011, 0100, 0101.\n\nIni adalah penghitung biner mekanis.\n• Posisi awalnya adalah 0000.\n• Bola pertama membuat Batang 1 miring ke kanan. Penghitung menjadi 0001.\n• Bola kedua membuat Batang 1 miring ke kiri dan Batang 2 miring ke kanan. Penghitung menjadi 0010.\n• Bola ketiga membuat Batang 1 miring ke kanan dan kemudian berguling keluar. Batang 2 tetap miring ke kanan. Penghitung menjadi 0011.\n• Bola keempat membuat Batang 1 miring ke kiri, Batang 2 miring ke kiri, dan Batang 3 miring ke kanan. Penghitung menjadi 0100.\n• Bola terakhir membuat Batang 1 miring ke kanan dan kemudian berguling keluar. Batang 2 tetap miring ke kiri dan Batang 3 tetap miring ke kanan. Penghitung menjadi 0101.\n\nKita juga dapat melihatnya dari sudut pandang berikut:\nBola jatuh ke setiap batang sampai mencapai batang pertama yang berada dalam posisi 0.\nLalu batang miring ke arah kanan dan keluar dari mesin.",
+  "iniInformatika": "Ketika Anda terbatas untuk menghitung dengan hanya dua digit, yaitu 0 dan 1, Anda menggunakan sistem bilangan berbasis 2. Sistem ini disebut sistem biner. Biner digunakan oleh komputer karena setiap saklar di dalamnya hanya bisa diaktifkan (1) atau dimatikan (0). Komputer saat ini memiliki banyak saklar yang mengontrol semua informasi yang digunakan oleh komputer.\n\nMesin yang mudah dibangun ini mewakili penghitung biner mekanis. Penghitung ini memiliki 4 digit, sehingga dapat menghitung hingga angka 15.\nBerikut adalah tabel dari semua angka 4 digit. [tabel 'Binary number | Number' berisi 0001–1111 (gambar) — lihat halaman soal]\n\nBerikut adalah video tentang bagaimana penghitung biner bekerja:\nhttps://www.youtube.com/watch?v=zELAfmp3fXY&fbclid=IwAR1iVWNrmrj-bNzD26i5xNivAaN2Ue7o_AWkRtIpRGamiHFEsOfigpRWizQ",
+  "clue": "",
+  "notes": "Soal TERAKHIR dalam buku: halaman cetak terakhir adalah 37 (PDF 46), sehingga rentang sebenarnya 36–37 (bukan 36–38). Isian singkat (string 4 digit 0/1). Ejaan buku dipertahankan: 'kekanan' (satu kata), 'ke kiri= 0'/'ke kanan= 1' (tanpa spasi sebelum '='), 'bentuk 4-digit'. Gambar: ilustrasi bola-batang, 6 frame mesin (counter terbaca 0000/0001/0001/0000/0010/0010), dan tabel biner 0001–1111 yang dimulai TANPA baris 0000 — semua gambar di halaman soal. ANOMALI: heading penulis di buku 'Authors and Contributors (incl. Graphics)' (task lain memakai 'Authorship') dan bagian License buku salah tulis tahun 'Copyright © 2018 Bebras' padahal buku 2019 (keduanya di luar field JSON, hanya catatan). URL YouTube disambung dari potongan baris pdf.js."
+}

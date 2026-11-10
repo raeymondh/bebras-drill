@@ -1,0 +1,23 @@
+{
+  "id": "x20_q15",
+  "scheduleTitle": "SIMULASI · Krisis Akibat Pandemi",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-TW-02",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-TW-02",
+  "soalPages": [30],
+  "imgPages": [30, 31, 32],
+  "deskripsi": "Di negeri Bebras, ada 12 kota yang terhubung melalui jalan tol yang diberi tanda A s.d. O seperti ditunjukkan pada peta sebagai berikut:\n[gambar: peta 12 kota (kepala berang-berang) terhubung jalan berlabel A s.d. O]\n\nKota-kota yang terhubung secara langsung atau tidak langsung dengan satu atau lebih jalan membentuk sebuah “komunitas ekonomi”. Saat ini, semua kota berada dalam satu komunitas yang sama. Sayangnya, karena epidemi, pemerintah memutuskan untuk mengurangi perjalanan antar kota, yaitu menutup dua jalan raya (menggunakan blok jalan). Tujuannya adalah untuk membagi negara menjadi tiga komunitas ekonomi yang terpisah. Misalnya jika I dan J ditutup maka akan menghasilkan komunitas ekonomi yang berisi 7 kota, 4 kota dan 1 kota.\n\nKarena mereka ingin meminimalkan gangguan ekonomi, dari semua kemungkinan dua jalan raya yang ditutup untuk menghasilkan 3 komunitas ekonomi, dicari kemungkinan terbaik yaitu di mana komunitas ekonomi terkecil (yaitu yang banyak kotanya paling sedikit) akan berisi sebanyak mungkin kota.",
+  "pertanyaan": "Jalan mana yang harus ditutup untuk mendapatkan kemungkinan terbaik? Jawaban adalah dua buah huruf urut abjad tanpa dipisahkan spasi dengan urutan sembarang.",
+  "options": [],
+  "key": "",
+  "keys": ["FI", "IF"],
+  "pairs": [],
+  "jawabanResmi": "FI",
+  "penjelasan": "Ada beberapa jalan yang bisa Anda abaikan karena memasang pembatas jalan tidak memecah belah komunitas ekonomi. Misalnya, jika Anda menutup jalan C, orang masih bisa berkeliling dengan menggunakan jalan A dan B. Perhatikan baik-baik, Anda melihat bahwa hanya dengan menutup satu dari lima jalan F, G, H, I dan J yang dapat membagi komunitas menjadi bagian-bagian yang lebih kecil. (Diakui, jika Anda menutup kedua jalan A dan B pada saat yang sama, satu kota terpisah dari yang lain, tetapi kemudian Anda telah menggunakan dua blok jalan Anda dan Anda berakhir dengan hanya dua komunitas yang terpisah, bukan tiga.)\n\nSekarang coba tutup semua kombinasi dua jalan di antara lima jalan ini dan dalam setiap kasus percobaan, periksalah ukuran komunitas terkecil. Misalnya, jika kita menutup jalan F dan G, tiga ukuran komunitas yang dihasilkan masing-masing adalah 4, 1 dan 7, komunitas terkecil berukuran 1.\n\nKombinasi lain yang mengarah ke komunitas kecil berukuran 1 adalah FH, FJ, GH, GJ, HI, HJ dan IJ. Menutup jalan G dan I mengarah ke hasil dengan komunitas berukuran 5, 2 dan 5, dan komunitas terkecil berukuran 2 - seperti pada gambar ini:\n[gambar: peta dengan jalan G dan I ditutup (blok jalan), komunitas berukuran 5, 2 dan 5]\n\nHanya satu kombinasi - FI - yang tersisa. Dalam hal ini komunitas berukuran 3, 4 dan 5, dan ukuran terkecil adalah 3.\n\nUntuk tugas ini, kita ingin komunitas terkecil dari tiga komunitas memiliki kota sebanyak mungkin. Oleh karena itu, contoh terakhir inilah yang kita cari.",
+  "iniInformatika": "Suspensi jalan: mengindikasikan perjalanan melalui jalan tidak diperbolehkan.",
+  "clue": "",
+  "notes": "Peta graf 12 kota dengan 15 jalan berlabel A s.d. O di hal. 30 - WAJIB dilihat untuk menjawab (edges hanya terbaca dari gambar); gambar solusi penutupan jalan G dan I di hal. 31 pada penjelasan; aplikasi menampilkan render halaman asli (imgPages 30-31-32). Frasa 'akan berisi sebanyak mungkin kota.' bergaris bawah dan 'dua'/'tiga' bold di buku (formatting tidak tersalin ke field teks). keys memuat 'IF' karena buku menyatakan 'urutan sembarang'. Bagian 'Kata penting dan istilah' (di buku ditulis huruf kecil campur; padanan 'Ini Informatika!') dipetakan ke field iniInformatika. Buku 2020 TIDAK memiliki bagian 'Ini Informatika!'. Pembahasan selesai di hal. 31; hal. 32 hanya lanjutan bullet Authorship + License. Authorship: Chia-Yi Ku (Taiwan), Judith Lin (Taiwan), Marielle Léonard (France), Agnes Erdosne Dr. Nemeth (Hungary), Kris Coolsaet (Belgium) - revisi 2020-03-25 s.d. 2020-05-20."
+}

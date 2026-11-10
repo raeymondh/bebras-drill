@@ -1,0 +1,45 @@
+{
+  "id": "x20_q5",
+  "scheduleTitle": "SIMULASI · Keamanan Password",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-DE-05",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-DE-05",
+  "soalPages": [
+    8
+  ],
+  "imgPages": [
+    8,
+    9
+  ],
+  "deskripsi": "Para berang-berang membuat beberapa password untuk mengamankan rumahnya. Password terdiri dari dua simbol: dan\nSetiap password diperiksa oleh \"checker\", apakah bisa diterima atau tidak. Berang-berang memakai lingkaran dan panah untuk menunjukkan bagaimana \"checker\" atau pemeriksa password tersebut bekerja:\n• Sebuah checker selalu mulai dari \"S\" dan berakhir di \"E\".\n• Checker membaca huruf password dari kiri kanan. Pada setiap lingkaran, checker akan membaca simbol dan mengikuti arah panah ke lingkaran berikutnya, atau berhenti dan tidak menerima password.\n• Jika pada lingkaran tersebut ada panah keluar dengan label simbol yang sedang diproses, checker mengikuti panah ke lingkaran berikutnya; jika tidak maka checker berhenti dan menolak password.\n• Jika tidak ada lagi simbol yang dibaca, checker berhenti. Hanya jika checker berhenti pada \"E\", password dapat diterima.\nPada contoh yang diberikan di atas, checker hanya akan menerima password:\nBerang-berang merancang checker sebagai berikut:",
+  "pertanyaan": "Password-pasword manakah yang akan diterima?\n(Jawaban mungkin lebih dari satu, harap periksa semua)",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "key": "AB",
+  "keys": [
+    "A, B",
+    "AB",
+    "A dan B",
+    "a, b",
+    "ab",
+    "a b",
+    "a,b",
+    "a dan b",
+    "A & B",
+    "a & b"
+  ],
+  "pairs": [],
+  "jawabanResmi": "A, B",
+  "penjelasan": "Untuk kedua kata sandi, checker kata sandi berhenti di lingkaran \"E\" setelah memproses simbol terakhir.\n\nJawaban C salah: Simbol pertama adalah  , tetapi semua kata sandi yang diterima dimulai dengan .\nJawaban D salah: Terdiri dari 10 simbol, tetapi panjang semua kata sandi yang diterima habis dibagi 3. Jika Anda menelusuri kata sandi dengan checker, Anda dapat melihat checker berhenti sebelum simbol kesembilan.\nJawaban E salah: Simbol   muncul 5 kali, dan simbol   muncul 4 kali. Tetapi kata sandi yang diterima terdiri dari   dua kali lebih banyak dari  . Jika Anda melacak kata sandi dengan checker, Anda akan melihat checker berhenti sebelum simbol terakhir.",
+  "iniInformatika": "Simbol grafis pada soal ini membentuk alfabet untuk pemeriksa kata sandi. Checker kata sandi merupakan finite state machine yang memproses simbol berang-berang. Tanda panah merepresentasikan secara grafis perpindahan atau transisi dari satu keadaan ke keadaan lainnya. FSM pemeriksa kata sandi menerima kata sandi hingga mencapai status terminalnya (berlabel E dalam diagram) setelah memproses simbol terakhir dari simbol sandi saat ini. \"Saat ini\" dalam kalimat ini menunjukkan lingkaran state (keadaan) yang sedang dilalui oleh checker, atau simbol yang sedang diproses oleh checker pada saat tertentu.",
+  "clue": "",
+  "notes": "OPSI BERUPA GAMBAR: A–E adalah deretan gambar simbol password (ranting/bola kayu) — options di JSON hanya label; A–C di hal. 8, D–E di hal. 9. DUA simbol dalam kalimat 'terdiri dari dua simbol: dan' adalah gambar inline (hilang dari teks, lihat hal. 8). Gambar penting lain: diagram FSM contoh + password contoh (3 simbol), diagram FSM soal (hal. 8). Penjelasan menyisipkan gambar simbol inline di beberapa titik (spasi ganda menandai posisi gambar). Buku menjawab 'A, B' → key 'AB' (konkatenasi) sementara jawabanResmi verbatim 'A, B'. Soal mc multi-jawaban (jarang di buku 2016–2018). 'Jik a' artifact pdf.js diperbaiki jadi 'Jika'. Kata Penting dan Istilah berbentuk paragraf (bukan bullet) → iniInformatika. [FIX 2026-11-10] MC multi-jawaban (key AB) tidak bisa single-select radio, dikonversi SA (ketik huruf jawaban, mis. \"A, B\"); keys fleksibel; badge Isian Singkat."
+}

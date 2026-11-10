@@ -1,0 +1,23 @@
+{
+  "id": "x20_q13",
+  "scheduleTitle": "SIMULASI · Menara Balok",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-PT-02",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-PT-02",
+  "soalPages": [26],
+  "imgPages": [26, 27],
+  "deskripsi": "Sam, si berang-berang kecil, sedang bermain dengan balok mainannya. Setiap balok memiliki tinggi yang sama, tetapi berbeda lebarnya. Dia membangun sembilan menara yang indah, masing-masing dibuat dengan balok dengan lebar yang sama.\n\nUntuk mengubah ketinggian menara, Sam dapat menambahkan balok yang bentuknya sama ke balok paling atas suatu menara (tidak harus dari balok yang ada di tumpukan-tumpukan tersebut), atau menghilangkan satu atau beberapa balok yang paling atas pada suatu menara. Perlu diperhatikan bahwa, energi untuk mengubah ketinggian menara sebanding dengan lebar dan jumlah balok. Misalnya: menghilangkan 2 balok dari menara dengan lebar 1 harganya 2 × 1 = 2 unit energi; dan menambahkan 4 balok ke menara dengan lebar 3 biaya 4 × 3 = 12 unit energi. Sam ingin semua menara memiliki ketinggian yang sama, dan dia ingin menghabiskan total energi yang sesedikit mungkin.",
+  "pertanyaan": "Berapa total energi yang minimum untuk mendapatkan menara yang tingginya sama? Asumsikan Sam memiliki tak hingga banyaknya persediaan balok untuk setiap ukuran.",
+  "options": [],
+  "key": "",
+  "keys": ["39", "tiga puluh sembilan"],
+  "pairs": [],
+  "jawabanResmi": "39",
+  "penjelasan": "Jika menambah balok digambarkan dengan [ikon +] dan mengurangi balok dengan [ikon −], maka gambar berikut ini menggambarkan solusi yang optimal untuk membuat semua menara terdiri dari 3 balok.\n\nMedian dari tinggi seluruh sembilan menara (awal) adalah 4 (1 2 2 3 4 4 5 6 7). Mungkin kita berpikir bahwa median adalah jawaban yang tepat, tetapi tidak demikian adanya. Seperti yang dihitung di tabel di bawah ini, semua tinggi yang mungkin dapat saja membutuhkan biaya energi yang lebih besar:\n\nTinggi Asli | 7 | 5 | 3 | 4 | 2 | 4 | 6 | 1 | 2 | Total Biaya\nLebar | 1 | 2 | 4 | 2 | 1 | 3 | 4 | 5 | 3 | Energi\nBiaya Energi | Tinggi 1 | 6 | 8 | 8 | 6 | 1 | 9 | 20 | 0 | 3 | 61\nBiaya Energi | Tinggi 2 | 5 | 6 | 4 | 4 | 0 | 6 | 16 | 5 | 0 | 46\nBiaya Energi | Tinggi 3 | 4 | 4 | 0 | 2 | 1 | 3 | 12 | 10 | 3 | 39\nBiaya Energi | Tinggi 4 | 3 | 2 | 4 | 0 | 2 | 0 | 8 | 15 | 6 | 40\nBiaya Energi | Tinggi 5 | 2 | 0 | 8 | 2 | 3 | 3 | 4 | 20 | 9 | 51\nBiaya Energi | Tinggi 6 | 1 | 2 | 12 | 4 | 4 | 6 | 0 | 25 | 12 | 66\nBiaya Energi | Tinggi 7 | 0 | 4 | 16 | 6 | 5 | 9 | 4 | 30 | 15 | 89\n\nHal ini terjadi disebabkan karena balok-balok tersebut memiliki lebar yang berbeda. Oleh karena itu, kita perlu mencari semua kemungkinan agar dapat menentukan total energi yang minimum.",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Gambar 9 menara awal (tinggi bervariasi, baris label 'Lebar 1 2 4 2 1 3 4 5 3') di hal. 26 - WAJIB dilihat untuk menjawab (tinggi awal tiap menara hanya terbaca dari gambar; data tabel jawaban: tinggi 7,5,3,4,2,4,6,1,2 dengan lebar 1,2,4,2,1,3,4,5,3); aplikasi menampilkan render halaman asli (imgPages 26-27). Penjelasan memakai ikon gambar [+]/[−] inline (ditandai [ikon +]/[ikon −]) dan gambar solusi optimal dengan label 'Lebar' + 'Biaya 4 4 0 2 1 3 12 10 3' di hal. 26. Tabel biaya energi hal. 27 (kolom 'Biaya/Energi' merged cell) disalin ulang sebagai baris 'kolom | kolom' dengan isi verbatim. Jawaban + awal penjelasan di halaman soal yang sama (hal. 26). Buku 2020 TIDAK memiliki bagian 'Ini Informatika!'. Authorship: Pedro Ribeiro (Portugal); revisi 2020-05-18 Judith Lin & Meng-ting Tsai (Taiwan)."
+}

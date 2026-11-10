@@ -1,0 +1,23 @@
+{
+  "id": "x20_q4",
+  "scheduleTitle": "SIMULASI · Heat Maps",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-DE-02",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-DE-02",
+  "soalPages": [6],
+  "imgPages": [6, 7],
+  "deskripsi": "Sebuah Mesin di desa Berang-berang dapat mengenali lima gambar pola yang merepresentasikan huruf I, T, O, C dan L.\n\nPola-pola berisikan piksel-piksel (posisi-posisi) yang bisa memiliki dua kemungkinan harga: hitam dan putih. Mesin tersebut menggunakan alat yang disebut Heat Maps untuk proses pengenalannya. Heat Maps terdiri dari 3x3 buah sensor dan setiap sensor dapat mendeteksi/memeriksa tingkat keunikan warna pada piksel dari pola yang sedang dikenali dibandingkan dengan pola-pola lainnya pada posisi yang sama. Semakin terang warna yang dideteksi, semakin unik piksel tersebut. Berikut ini tabel tingkat keunikan dari sensor Heat Map dan artinya.\n\nTidak ada pola lain yang berharga sama pada posisi ini (unik).\nAda satu pola lain yang berharga sama pada posisi ini (agak unik).\nAda dua pola lain yang berharga sama pada posisi ini (kurang unik).\nAda tiga pola lain yang berharga yang sama pada posisi ini (hampir tidak unik).\nSemua pola lain berharga sama pada posisi ini (tidak unik).\n\nContoh, untuk pola Heat Map-nya adalah",
+  "pertanyaan": "Pola mana yang Heat map-nya adalah sbb:",
+  "options": ["A", "B", "C", "D"],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "B",
+  "penjelasan": "Heat map yang diberikan berwarna putih pada posisi 3 di baris kedua. Itu berarti bahwa piksel gambar yang sesuai harus memiliki warna yang unik.\n\n adalah satu-satunya gambar dengan piksel hitam pada posisi ini. Dengan demikian, ini adalah satu-satunya gambar dengan warna piksel unik pada posisi ini.\nBerikut adalah pasangan dari masing-masing gambar dengan Heat map yang sesuai:",
+  "iniInformatika": "Gambar: gambar 3x3 piksel hitam-putih dari sebuah huruf.\nHeat map (dari suatu gambar): representasi kode warna, menunjukkan keunikan warna piksel dari setiap piksel dalam gambar.\nGambar A memiliki heat map B: B adalah heat map gambar A.",
+  "clue": "",
+  "notes": "SANGAT BERGANTUNG GAMBAR (hal. 6): 5 gambar pola huruf I/T/O/C/L setelah kalimat pertama; tabel keunikan = 5 baris dengan swatch warna (putih/kuning/hijau muda/biru/hitam) di kirinya; kalimat 'Contoh, untuk pola Heat Map-nya adalah' diselingi 2 gambar inline (pola huruf I lalu Heat Map-nya). Pertanyaan diikuti gambar Heat Map biru-hijau yang ditanyakan. OPSI BERUPA GAMBAR: tabel A–D berisi 4 pola 3x3 hitam-putih (hal. 7) — options di JSON hanya label. Penjelasan punya 2 gambar inline (heat map yang diberikan; gambar berpola O) + gambar pasangan 5 gambar & heat map-nya. 'keunika n' (artifact pemenggalan pdf.js) diperbaiki jadi 'keunikan'; 'hitam'/'putih' tebal di buku. Kata Penting dan Istilah masuk iniInformatika."
+}

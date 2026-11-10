@@ -1,0 +1,23 @@
+{
+  "id": "x20_q11",
+  "scheduleTitle": "SIMULASI · LED Berkedip",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-BE-01",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-BE-01",
+  "soalPages": [22],
+  "imgPages": [22, 23],
+  "deskripsi": "Sebuah papan elektronik dapat diprogram. Di papan ini, terdapat tiga LED (satu merah, satu hijau dan satu biru), yaitu sejenis lampu tertentu, yang dapat dikontrol dengan program dengan menyalakan atau mematikannya (semuanya mati sebelum program dimulai).\n\nBerikut ini adalah contoh sebuah program, di mana lampu LED merah akan berkedip selamanya, bergantian antara hidup selama 1 detik dan mati selama 2 detik.\n\nULANGI:\n| Hidupkan (LED_MERAH);\n| Tunggu (1s);\n| Matikan (LED_MERAH);\n| Tunggu (2s);\n\nProgram tersebut akan menjalankan:\n1. Menyalakan LED merah;\n2. Menunggu dan tidak mengerjakan apapun selama 1 detik;\n3. Mematikan LED merah;\n4. Menunggu dan tidak mengerjakan apapun selama 2 detik;\n5. Memulai lagi langkah 1 .\n\nDiberikan sebuah program sebagai berikut\n\nULANGI:\n| Hidupkan (LED_BIRU);\n| Tunggu (2s);\n| Hidupkan (LED_MERAH);\n| Hidupkan (LED_HIJAU);\n| Tunggu (2s);\n| Matikan (LED_HIJAU);\n| Matikan (LED_BIRU);\n| Tunggu (2s);\n| Hidupkan (LED_HIJAU);\n| Tunggu (2s);\n| Matikan (LED_MERAH);\n| Matikan (LED_HIJAU);",
+  "pertanyaan": "Berapa banyak LED yang menyala pada saat 13 detik setelah program mulai? Jawaban adalah sebuah bilangan bulat.",
+  "options": [],
+  "key": "",
+  "keys": ["1", "satu"],
+  "pairs": [],
+  "jawabanResmi": "1",
+  "penjelasan": "Diagram pada gambar berikut menunjukkan evolusi status ketiga LED terhadap waktu. Pada diagram ini, garis horizontal dapat ditarik lebih tinggi (LED menyala) atau lebih rendah (LED dimatikan). Setelah 13 detik, LED merah menyala (karena garis horizontal ditarik lebih tinggi) dan LED hijau dan biru mati (karena garis horizontal ditarik lebih rendah).",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Contoh program di buku berupa kotak dua kolom (kode kiri, uraian bernomor kanan); disalin ulang berurutan: blok kode lalu uraian. Karakter '|' tercetak di buku sebagai penanda indentasi baris kode - dipertahankan. Gambar papan Arduino + tiga LED berlabel merah/hijau/biru di hal. 22, dan diagram timing evolusi LED (red/green/blue, skala 0-24) di hal. 23 pada penjelasan - aplikasi menampilkan render halaman asli (imgPages 22-23). Buku 2020 TIDAK memiliki bagian 'Ini Informatika!' (iniInformatika kosong; jawaban langsung diikuti Authorship/License yang tidak disalin). Authorship: Sébastien Combéfis (Belgium), Tony René Andersen (Norway)."
+}

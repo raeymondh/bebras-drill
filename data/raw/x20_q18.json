@@ -1,0 +1,23 @@
+{
+  "id": "x20_q18",
+  "scheduleTitle": "SIMULASI · Mobil Listrik",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-IE-03",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-IE-03",
+  "soalPages": [37],
+  "imgPages": [37, 38],
+  "deskripsi": "Bebe sedang memilih tiga mobil listrik untuk digunakan: mobil biru, mobil hijau dan mobil merah. Baterai mobil biru dapat dipakai menempuh 4 km sebelum baterainya harus diisi, dan membutuhkan 3 menit untuk mengisinya sampai penuh. Baterai mobil hijau dapat dipakai menempuh 5 km, dan membutuhkan 4 menit untuk mengisinya sampai penuh. Baterai mobil merah dapat dipakai menempuh 6 km, dan membutuhkan 5 menit untuk mengisinya sampai penuh.\n\nSetiap mobil dapat diisi di stasiun pengisian yang ditunjukkan pada peta berikut ini tanpa ada waktu mengantri, dan lamanya mengisi baterai tetap sama seperti di atas walaupun baterai belum sepenuhnya habis. Setiap mobil memiliki kecepatan yang sama yaitu 1 km/menit dan sudah terisi penuh saat mulai berjalan dari stasiun A.\n\n[gambar: peta graf jalan dari kota A (ikon 3 mobil) ke kota B dengan 8 stasiun pengisian baterai (ikon baterai) dan label jarak pada tiap ruas]\n\nPeta di atas juga merupakan peta jalan dari kota A ke kota B, serta stasiun-stasiun pengisian baterai antara A dan B. Angka menunjukkan jarak antara satu stasiun pengisian dengan lainnya, termasuk dari kota A serta ke kota B.",
+  "pertanyaan": "Jika dari kota A baterai semua mobil dalam keadaan penuh, mobil mana yang berangkat dari A, akan tiba paling cepat di kota B?",
+  "options": ["A. Merah", "B. Biru", "C. Hijau"],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "C",
+  "penjelasan": "Mobil Hijau melalui rute dengan jarak {5, 2, 1, 5}, total jarak 13 km dengan waktu tempuh 13 menit. Mobil Hijau perlu berhenti di stasiun pengisian pertama dan ketiga, terhitung selama 8 menit (2 * 4 menit) untuk pengisian daya. Total waktu adalah 13 + 8 = 21 menit.\n\nWaktu tercepat yang dapat dicapai mobil Biru ke titik B adalah 26 menit melalui rute dengan jarak {4, 3, 2, 3, 2}, total jarak 14 km dengan waktu tempuh 14 menit. Mobil Biru harus berhenti di semua 4 stasiun pengisian, terhitung selama 12 menit (4 * 3 menit) untuk pengisian daya. Total waktu adalah 14 + 12 = 26 menit.\n\nWaktu tercepat yang dapat dicapai mobil Merah menuju titik B adalah 23 menit melalui rute dengan jarak {5, 2, 1, 5}, total jarak 13 km dengan waktu tempuh 13 menit. Mobil Merah perlu berhenti di stasiun pengisian pertama dan ketiga, terhitung selama 10 menit (2 * 5 menit) untuk pengisian daya. Total waktu adalah 13 + 10 = 23 menit.",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Peta graf stasiun pengisian (8 simpul ikon baterai + kota A dan B) dengan label jarak ruas di hal. 37 - WAJIB dilihat untuk menjawab (edges hanya terbaca dari gambar); rute pada pembahasan: hijau/merah {5,2,1,5}, biru {4,3,2,3,2}; aplikasi menampilkan render halaman asli (imgPages 37-38). Typo buku 'mengantri' dipertahankan verbatim. Hanya 3 opsi (A. Merah, B. Biru, C. Hijau) - bukan 4 seperti buku 2016-2018. Jawaban + penjelasan di halaman soal yang sama (hal. 37); penjelasan berlanjut ke hal. 38. Buku 2020 TIDAK memiliki bagian 'Ini Informatika!'. Authorship: Aidan Mooney (Ireland), Ezra Templonuevo, Rechilda Villame (Philippines), Judith Lin (Taiwan)."
+}

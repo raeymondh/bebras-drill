@@ -1,0 +1,23 @@
+{
+  "id": "x20_q19",
+  "scheduleTitle": "SIMULASI · Pemeriksaan Darah",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-IE-07",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-IE-07",
+  "soalPages": [39, 40],
+  "imgPages": [39, 40, 41],
+  "deskripsi": "Dokter Beverley tahu persis bahwa satu dari 16 pasiennya benar-benar terinveksi virus dan lainnya tidak, tapi tidak tahu siapakah dia. Sayangnya ia hanya punya 8 tabung darah yang dilabeli: A, B, C, D, E, F, G, dan H. Untuk mengidentifikasi siapa si sakit, ia perlu mendapatkan tabung yang darahnya terinfeksi. Ia mengambil sampel darah dari setiap pasien dan membagi ke dalam empat dari delapan tabung itu. Setiap pasien memiliki kombinasi tabung yang berbeda dan pembagian darah dilakukan dengan tanpa salah. Misalnya sampel darah pasien nomor 0 dibagi ke tabung-tabung A, C, E dan G dan pasien nomor 1 ke tabung-tabung A, C, E, dan H.\n\n[gambar: contoh — 'tabung mana untuk darah bebras 0?' berang-berang dengan jarum suntik membagi darah ke tabung A, C, E, G]\n\nSelengkapnya tabung-tabung pembagian sampel darah adalah sesuai dengan tabel berikut:\n\n[gambar: tabel 'Pembagian tabung sampel darah' — 16 pasien, tiap pasien membagi darahnya ke 4 dari 8 tabung]\n\nSetelah melakukan pembagian itu, setiap tabung diperiksa dan ternyata dr. Beverley sudah mengetes tabung A terinfeksi, C sehat, dan E sehat.\n\n[gambar: 'Hasil tes sejauh ini' — Tabung A terinfeksi, Tabung C sehat, Tabung E sehat]",
+  "pertanyaan": "Ternyata Beverley hanya perlu mengetes satu kali lagi. Tabung mana yang dapat dipakai dokter Beverley untuk mengidentifikasi pasien yang sakit?",
+  "options": ["A. Tabung B", "B. Tabung D", "C. Tabung F", "D. Tabung G"],
+  "key": "D",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "D",
+  "penjelasan": "[gambar: tabel X berwarna — kolom A kuning, kolom C biru, sebagian sel E hijau; kurung kuraw menandai 'Berang-berang 6 dan 7 memenuhi semua kondisi'; legenda A-terinfeksi/C-sehat/E-sehat]\n\nPada tabel di gambar atas, untuk setiap pasien, empat 'X' menunjukkan empat tabung reaksi mana yang berisi darah pasien tersebut. Berdasarkan hasil masing-masing dari tiga tes sejauh ini, sel-sel tabel yang berwarna menunjukkan kemungkinan pasien sakit:\n1. Untuk tabung reaksi yang terinfeksi, semua pasien yang darahnya ada di dalam tabung reaksi itu kemungkinan adalah pasien yang sakit (ditunjukkan oleh sel berwarna kuning).\n2. Untuk tabung reaksi yang sehat, semua pasien yang darahnya tidak ada dalam tabung reaksi tersebut kemungkinan besar adalah pasien sakit (ditunjukkan oleh sel berwarna biru dan hijau).\n3. Berang-berang yang memiliki ketiga warna adalah berang-berang yang mungkin sakit, kemungkinannya hanya berang-berang 6 atau berang-berang 7. Tabung yang memuat darah hanya salah satu berang-berang tersebut adalah tabung G dan H. Karena kita tahu persis satu pasien sakit, pengujian G atau H (apakah kita mendapatkan hasil yang terinfeksi atau sehat) akan memungkinkan kita untuk menentukan yang mana dari keduanya adalah pasien sedang sakit. Karena G yang muncul di pilihan, maka jawaban yang tepat adalah G.",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "Tabel pembagian tabung (gambar biru 'Pembagian tabung sampel darah', hal. 39) WAJIB dilihat untuk menjawab; isi dipulihkan via OCR: 0 ACEG, 1 ACEH, 2 ACFG, 3 ACFH, 4 ADEG, 5 ADEH, 6 ADFG, 7 ADFH, 8 BCEG, 9 BCEH, 10 BCFG, 11 BCFH, 12 BDEG, 13 BDEH, 14 BDFG, 15 BDFH. Juga gambar contoh pembagian pasien 0 (A,C,E,G) dan kotak 'Hasil tes sejauh ini'. Tabel X berwarna (kuning/biru/hijau + kurung 'Berang-berang 6 dan 7 memenuhi semua kondisi') di hal. 40 pada awal penjelasan; aplikasi menampilkan render halaman asli (imgPages 39-40-41). Typo buku dipertahankan verbatim: 'terinveksi', 'siapa si sakit', 'dengan tanpa salah', 'Selengkapnya', 'sesuai dengan tabel berikut'. Kalimat akhir penjelasan 'jawaban yang tepat adalah G' merujuk TABUNG G (= pilihan D); kunci resmi buku 'Jawaban yang tepat: D'. Istilah 'berang-berang' di poin 3 penjelasan padahal konteks pasien - dipertahankan sesuai buku. Tantangan di hal. 39, daftar Pilihan Jawaban di hal. 40 (soalPages dua halaman). Buku 2020 TIDAK memiliki bagian 'Ini Informatika!'. Authorship: Rosemary Monahan, Kevin Casey (Ireland - kurung tutup tidak tercetak di buku), Eugenio Bravo (Spain), Tom Naughton (Ireland)."
+}

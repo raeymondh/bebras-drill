@@ -1,0 +1,28 @@
+{
+  "id": "x19_q3",
+  "scheduleTitle": "SIMULASI · Rute Penerbangan",
+  "bookTitle": "Rute Penerbangan",
+  "book": "b2019",
+  "code": "2019-BE-07",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-BE-07",
+  "soalPages": [7],
+  "imgPages": [7, 8],
+  "deskripsi": "Perusahaan penerbangan Bebras International memiliki rute penerbangan yang menghubungkan beberapa kota di dunia seperti ditunjukkan pada gambar sebagai berikut:\n[gambar: peta jaringan rute 8 kota — Washington D.C., New York, San Francisco, London, Paris, Moscow, Kuala Lumpur, Cairo]\nEmisi gas CO2 adalah penyebab utama pemanasan global. Untuk mengurangi CO2, perusahaan berencana untuk menghapus rute, yang tetap memungkinkan pelanggan pasti bisa bepergian dari satu kota ke kota lainnya. Misalnya, jika rute dari San Franscisco ke Washington D.C dihapus, pelanggan masih dapat bepergian dari San Francisco ke New York, kemudian dari New York ke Washington D.C.",
+  "pertanyaan": "Untuk rute yang ditunjukkan di atas, berapa (maksimal) rute yang dapat dihapus?",
+  "options": [
+    "a) 6",
+    "b) 7",
+    "c) 8",
+    "d) 9"
+  ],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat: c) 8.",
+  "penjelasan": "Contoh di bawah ini menunjukkan bahwa memungkinkan untuk menghapus 8 rute dan masih memungkinkan pelanggan terbang ke kota mana pun.\n[gambar contoh penghapusan 8 rute: TIDAK IKUT TERCETAK pada buku]\nPerhatikan bahwa ketika kita menghapus 8 rute, kita akan memiliki 15-8=7 rute yang tersisa. Mengapa kita tidak bisa menghapus lebih banyak rute? Jika hanya ada 2 kota, jelas bahwa kita memerlukan 1 rute. Jika ada 3 kota, maka kita memerlukan 2 rute. Pola ini terus berlanjut dan ketika ada 8 kota, kita memerlukan 7 rute.\nUntuk memastikan bahwa pola ini benar, kita perlu meyakinkan diri sendiri bahwa jika Anda menghapus 9 rute (atau lebih), maka pelanggan tidak selalu dapat terbang ke kota mana pun. Jika 9 rute (atau lebih) dihapus, maka akan ada hanya 6 rute (atau kurang) yang tersisa. Apa yang salah jika hanya ada 6 rute? Jika hanya ada 6 rute, karena ada 8 kota, maka entah ada kota yang tidak berada di rute mana pun atau ada kota yang hanya berada di satu rute. Jika ada kota yang hanya berada di satu rute, maka kita bisa menghapus kota dan rute ini dan tersisa 5 rute dan 7 kota. Melanjutkan argumen ini, dalam semua kasus, kita akan tersisa dengan kota yang tidak berada di rute atau akhirnya tidak ada rute antara 2 kota. Oleh karena itu, jika hanya ada 6 rute, maka pelanggan tidak selalu dapat terbang ke kota mana pun.",
+  "iniInformatika": "Rute penerbangan dapat digambarkan sebagai graf. Kota adalah simpul dan rute adalah jalur. Masalah untuk mengurangi sebanyak mungkin jumlah rute, sambil memastikan bahwa semua kota tetap terhubung, adalah aplikasi dari masalah Minimum Spanning Tree (MST) dalam Ilmu Komputer. Masalah MST adalah mengekstraksi pohon yang menghubungkan semua simpul dari suatu graf. Untuk informasi lebih lanjut, bacalah https://en.wikipedia.org/wiki/Minimum_spanning_tree\nInformatikawan menggunakan algoritma MST untuk menyelesaikan persoalan-persoalan jaringan telekomunikasi, transportasi atau penyaluran air.",
+  "clue": "",
+  "notes": "Peta rute berupa gambar (imgPages). Typo buku 'San Franscisco' pada kalimat contoh dipertahankan — kalimat yang sama kemudian menulis 'San Francisco' dengan benar. Gambar contoh penghapusan 8 rute yang dirujuk frasa 'Contoh di bawah ini' tidak ikut tercetak di buku. Heading jawaban buku berupa 'Jawaban yang tepat:' (tanpa kata 'adalah', langsung diikuti jawaban). Footer/Authorship/License (hal. 8) tidak disalin; nama penulis di Authorship mengandung mojibake (Sébastien Combéfis) — tidak disalin."
+}

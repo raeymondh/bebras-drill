@@ -1,0 +1,23 @@
+{
+  "id": "x20_q10",
+  "scheduleTitle": "SIMULASI · Toko Sembako",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-AT-06",
+  "type": "sa",
+  "badge": "Isian Singkat",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-AT-06",
+  "soalPages": [20],
+  "imgPages": [20, 21],
+  "deskripsi": "Karena virus Corona, banyak toko sembako tutup. Namun, setiap desa Bebras membutuhkan paling tidak satu toko sembako yang buka untuk menjamin ketersediaan makanan. Demi usaha pencegahan penularan virus, penduduk dari suatu desa dalam perjalanannya ke toko tidak boleh melalui desa lain.\n\nBulatan hijau adalah desa, persegi merah adalah toko sembako. Garis yang menghubungkan toko dengan desa menyatakan jalan.",
+  "pertanyaan": "Berapa banyak toko sembako sekurangnya pada peta tersebut yang harus dibuka? Jawablah dengan menuliskan sebuah bilangan bulat positif. Ketikkan angkanya saja.",
+  "options": [],
+  "key": "",
+  "keys": ["5", "lima"],
+  "pairs": [],
+  "jawabanResmi": "5",
+  "penjelasan": "Lima toko sembako harus tetap buka. Yang paling kiri dan paling kanan harus tetap terbuka untuk melayani desa paling kiri dan paling kanan. Untuk melayani dua desa di bagian bawah, cukup toko sembako di bagian bawah yang tetap buka. Pada tahap ini, tiga toko sembako telah dipilih dan semua desa sudah terlayani, kecuali empat desa di atas. Karena toko sembako di tengah keempat desa pada bagian atas tidak terhubung ke desa-desa di bagian atas dan bawah toko, setidaknya kita harus memilih dua toko sembako lagi.\n\nMemilih dua yang berlawanan dari bujur sangkar akan melayani empat desa yang tersisa, tidak peduli yang mana yang dipilih, seperti yang ditunjukkan pada grafik di bawah ini.\n\nKita menemukan solusi sempurna dengan 5 toko sembako yang dipilih: Yang paling kiri dan paling kanan, satu di bawah, dan dua yang berlawanan di bagian atas.",
+  "iniInformatika": "Bersisian dengan (incident to): terhubung oleh sisi",
+  "clue": "",
+  "notes": "Satu-satunya soal ISIAN SINGKAT di rangkaian ini; buku: 'Jawaban yang tepat: 5'. keys = ['5','lima'] (pertama = jawaban buku). GAMBAR WAJIB (hal. 20): peta graf desa (bulatan hijau) + toko (persegi merah); penjelasan memuat gambar grafik dua solusi alternatif di hal. 30 (sebelum kalimat penutup). '(incident to)' dicetak miring di buku. Spasi berlebih pdf.js dinormalisasi. Kata Penting dan Istilah satu baris → iniInformatika."
+}

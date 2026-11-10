@@ -1,0 +1,23 @@
+{
+  "id": "x20_q2",
+  "scheduleTitle": "SIMULASI · Pohon Sudoku",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-CH-04",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-CH-04",
+  "soalPages": [3],
+  "imgPages": [3, 4],
+  "deskripsi": "Bebras si berang-berang membagi ladangnya menjadi 16 petak dengan aturan 4x4 petak dan setiap petak ditanami 1 pohon. Pohon-pohon itu mempunyai tinggi yang berbeda-beda:1 ( ), 2 ( ), 3 ( ), dan 4 ( ) di setiap petak dengan aturan sebagai berikut:\n• setiap baris (garis horizontal) berisi satu pohon dari setiap ketinggian.\n• setiap kolom (garis vertikal) berisi satu pohon dari setiap ketinggian.\n\nJika berang-berang mengamati pepohonan dalam satu baris (lihat gambar) mereka tidak dapat melihat pepohonan yang tersembunyi di balik pohon yang lebih tinggi. Pada akhir setiap baris dan kolom dari lapangan 4 x 4 tersebut, berang-berang memasang papan tanda dan menuliskan di atasnya jumlah pohon yang terlihat dari posisi tersebut.\nKubko telah menuliskan angka-angka pada papan tanda dengan benar tetapi dia menempatkan beberapa pohon di petak yang salah.",
+  "pertanyaan": "Posisi yang mana yang mempunyai pohon yang salah?\n\nCatatan: Posisi kotak dinyatakan sebagai (b, k), dengan b adalah nomor baris dari bawah ke atas: 1, 2, 3, 4, dan k adalah nomor kolom dari kiri ke kanan: 1, 2, 3, 4.",
+  "options": ["A. (2, 1) dan (2, 4)", "B. (2, 2), (2, 4), (4, 3) dan (4, 2)", "C. (1, 1), (1, 3), (4, 1), (4, 3)", "D. Seluruh baris pertama."],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "C",
+  "penjelasan": "Agar posisi pohon sesuai dengan angka pada masing-masing tanda, langkah pertama adalah identifikasi tanda mana saja yang sudah sesuai dengan banyaknya pohon yang terlihat. Tanda dan banyaknya pohon yang terlihat yang sudah sesuai adalah baris 2 dan 3 serta kolom 2 dan 4. Artinya baris 2 dan 3 serta kolom 2 dan 4 tidak perlu mengalami perubahan.\n\nIdentifikasi posisi yang merupakan irisan baris dan kolom yang perlu diubah (diwarnai dengan merah pada gambar di bawah). Posisi yang perlu diubah (salah) adalah posisi pada (1,1), (1,3), (4,1), dan (4,3).",
+  "iniInformatika": "Baris: deretan data yang disusun horisontal\nKolom: deretan data yang disusun vertikal\nSudoku: permainan menyusun angka kombinatorial berbasis logika",
+  "clue": "",
+  "notes": "Gambar inline di deskripsi: 4 gambar pohon (tinggi 1–4) di dalam tanda kurung setelah 'berbeda-beda:1 ( ), 2 ( ), 3 ( ), dan 4 ( )' — teks mempertahankan tanda kurungnya, gambarnya lihat hal. 3. Gambar soal: barisan pohon dilihat berang-berang + ladang 4x4 dengan papan angka (hal. 3); gambar jawaban dengan petak merah (hal. 4). Bullet mojibake '?' diperbaiki jadi '•' per halaman jpg. 'Kata Penting dan Istilah' = padanan Ini Informatika (masuk iniInformatika)."
+}

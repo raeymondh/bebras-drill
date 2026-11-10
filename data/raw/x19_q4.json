@@ -1,0 +1,28 @@
+{
+  "id": "x19_q4",
+  "scheduleTitle": "SIMULASI · Petani Zacland",
+  "bookTitle": "Petani Zacland",
+  "book": "b2019",
+  "code": "2019-CY-02",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-CY-02",
+  "soalPages": [9],
+  "imgPages": [9, 10, 11],
+  "deskripsi": "Lahan pertanian di Zacland dibagi menjadi petak-petak. Setiap tahun, para petani harus memutuskan apakah tanah pertaniannya akan dipakai menanam gandum (warna kuning), atau rumput (hijau), dan mereka harus melaporkan ladang gandumnya ke pemerintah. Laporannya harus berisi banyaknya petak ditanami gandum pada setiap baris dan kolom, yang akan dibaca melalui satelit.\nSalah satu laporan petani diberikan sebagai berikut:\n[gambar: ladang 3×3 dengan rumah di tengah; jumlah gandum per baris 1, 1, 1 (di kanan); per kolom 1, 2, 0 (di bawah)]",
+  "pertanyaan": "Yang mana di antara gambar sebagai berikut, yang akan menghasilkan laporan yang akurat?",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "key": "B",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah: B .",
+  "penjelasan": "Mengapa jawaban-jawaban lainnya salah?\nPada jawaban A dan D, jumlah bidang dengan gandum di baris dan kolom tidak sesuai:\nA: baris: 7, kolom: 9\nD: baris: 11, kolom: 10.\nKarena jumlah baris dan kolom pada jawaban C sesuai, kita harus berargumen dengan cara berbeda:\nBaris pertama dan kolom pertama harus kosong:\nHanya ada satu cara untuk menutupi bidang-bidang di baris ketiga dan kolom ketiga dengan gandum:\n[gambar: petak opsi C — baris pertama dan kolom pertama kosong]\nKemudian, semua bidang lainnya dalam kolom 4 dan 5 harus ditutupi oleh rumput.\n[gambar: petak opsi C — gandum menutup baris ketiga dan kolom ketiga]\n.\n[gambar: petak opsi C — satu bidang ditandai kotak merah]\nSetelah itu, tidak mungkin menanam gandum di dua bidang lainnya di baris kedua karena hanya ada satu bidang lagi yang tersedia (ditandai dengan warna merah).\nJadi, jawaban C salah.",
+  "iniInformatika": "Array adalah struktur data fundamental dalam pemrograman. Sebuah array terdiri dari objek-objek serupa, dalam kasus kita adalah batang pohon, yang diatur dalam baris dan kolom. Selain itu, jumlah dari suatu baris atau jumlah dari suatu kolom juga merupakan hal yang fundamental dalam pemrograman awal.\nAlgoritma Backtracking: Masalah ini dapat dianggap dapat dipecahkan dengan menggunakan konsep dasar dari algoritma Backtracking. Solusi dibangun secara bertahap, satu bagian pada satu waktu, dengan menghilangkan solusi yang gagal memenuhi batasan masalah.\nUntuk informasi lebih lanjut, lihat https://en.wikipedia.org/wiki/Backtracking .",
+  "clue": "",
+  "notes": "Opsi A–D berupa gambar petak 5×5 lengkap dengan angka jumlah baris/kolom — diwakili label 'A','B','C','D' saja; label opsi soal ini huruf besar TANPA tanda '//', berbeda dari soal lain di buku ini yang memakai 'a)'–'d)'. Jawaban resmi mempertahankan spasi aneh 'B .' dari text layer jpg. Titik tunggal '.' yatim di akhir hal. 10 (antara dua gambar petak C) dipertahankan verbatim. Quirk buku: Ini Informatika menyebut 'batang pohon' padahal konteks soal gandum. Petak jawaban B digambar di bawah kalimat jawaban (hal. 10). Footer/Authorship/License (hal. 11) tidak disalin."
+}

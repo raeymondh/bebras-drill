@@ -1,0 +1,28 @@
+{
+  "id": "x19_q8",
+  "scheduleTitle": "SIMULASI · Putar, Putar dan Putar",
+  "bookTitle": "Putar, Putar dan Putar",
+  "book": "b2019",
+  "code": "2019-RU-05",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2019 | Kode Soal: 2019-RU-05",
+  "soalPages": [19],
+  "imgPages": [19, 20],
+  "deskripsi": "[gambar: segitiga hitam berputar di atas ban berjalan dengan batang-batang penunjuk ungu]\nSebuah segitiga bergerak di atas ban berjalan. Segitiga itu mempunyai titik (poros) putar yang ditandai bulatan kecil. Tiga titik sudut segitiga, hanya satu yang posisinya lebih jauh ke poros. Jika segitiga berputar 120 derajat, salah satu titik sudut segitiga posisinya selalu di atas poros.\nAda sejumlah batang di atas ban berjalan. Ada dua jenis batang:\n• Batang yang panjang, selalu memutar segitiga sebesar 120 derajat berlawanan arah jarum jam\n• Batang yang pendek hanya akan memutar segitiga jika titik sudut segitiga yang terjauh dari titik poros sedang berada di atas\nBob merancang proses yang menggunakan segitiga dan batang seperti yang ditunjukkan di atas. Dia ingin agar segitiga yang masuk ban berjalan dalam berbagai orientasi untuk diatur menjadi orientasi yang sama di akhir ban berjalan.\nBob ingin Anda menemukan urutan batang yang mampu membuat segitiga yang awalnya dengan orientasi apa pun, akan berputar dan berakhir dengan orientasi yang selalu sama di akhir ban berjalan. Bob tidak peduli dengan orientasi akhir segitiga, asalkan segitiga selalu berorientasi sama.",
+  "pertanyaan": "Urutan yang mana akan menghasilkan sesuai harapan Bob?",
+  "options": [
+    "a) Pendek, Panjang, Pendek, Panjang",
+    "b) Panjang, Pendek, Panjang, Pendek",
+    "c) Pendek, Panjang, Panjang, Pendek",
+    "d) Panjang, Pendek, Pendek, Panjang"
+  ],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "Jawaban yang tepat adalah c) Pendek, Panjang, Panjang, Pendek",
+  "penjelasan": "Untuk memeriksa bahwa posisi pendek, panjang, panjang, posisi pendek mengarah pada rotasi akhir yang sama, mari kita periksa semua rotasi awal:\n[gambar/tabel pemeriksaan semua rotasi awal: TIDAK IKUT TERCETAK pada buku]\nSemua variasi lain mengarah pada rotasi akhir yang berbeda.",
+  "iniInformatika": "Tugas ini mengenai mesin berkeadaan terbatas (finite-state machine) seperti yang ditunjukkan di sini:\n[gambar diagram mesin keadaan: TIDAK IKUT TERCETAK pada buku]\nMesin ini memiliki tiga keadaan, di mana titik paling jauh dari poros adalah: ATAS (UP), KIRI (LEFT), atau KANAN (RIGHT).\nAda dua operator transisi: tangan pendek (shorthand) dan tangan panjang (long hand).\nDari setiap keadaan, segitiga dapat melompat ke keadaan lain melalui sebuah transisi.\nDalam tugas ini, kita harus menemukan urutan transisi yang selalu menghasilkan keadaan akhir yang sama, tidak peduli keadaan awalnya. Jadi, kita diminta untuk menghasilkan sebuah urutan reset. Ini adalah tugas yang cukup umum dalam Ilmu Komputer.\nDi bawah ini adalah tautan ke situasi serupa yang melibatkan teks daripada segitiga!\nSynchronizing words dalam finite automata.",
+  "clue": "",
+  "notes": "Ilustrasi ban berjalan berada di atas teks pada hal. 19 (imgPages). Dua gambar dirujuk teks tetapi tidak ikut tercetak di buku: (1) pemeriksaan semua rotasi awal pada pembahasan, (2) diagram mesin keadaan pada Ini Informatika ('seperti yang ditunjukkan di sini:'). Bullets pdf glyph '?' dikoreksi '•' per jpg. Kata italic ('finite-state machine', 'shorthand', 'long hand', 'Synchronizing words') dirender sebagai teks biasa. Footer/Authorship/License (hal. 20) tidak disalin."
+}

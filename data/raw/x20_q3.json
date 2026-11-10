@@ -1,0 +1,23 @@
+{
+  "id": "x20_q3",
+  "scheduleTitle": "SIMULASI · Keliling Museum",
+  "bookTitle": "Buku Bebras Indonesia 2020 – Kategori Penegak",
+  "book": "b2020",
+  "code": "2020-CH-21",
+  "type": "mc",
+  "badge": "Pilihan Ganda",
+  "pdfInfo": "Bebras Indonesia – Kelompok Penegak 2020 | Kode Soal: 2020-CH-21",
+  "soalPages": [5],
+  "imgPages": [5],
+  "deskripsi": "Kota Bebras akan membangun sebuah museum, dengan 4 alternatif tata-ruang seperti pada gambar A, B, C, D. Setiap tata-ruang terdiri dari 7 ruangan, yang diberi nomor 1 s.d. 7. Pengunjung diharapkan akan mengunjungi setiap ruangan satu kali saja, dimulai dari pintu masuk dan berakhir di pintu keluar.",
+  "pertanyaan": "Yang mana memungkinkan pengunjung dapat mengunjungi setiap ruangan tepat satu kali saja, mulai dari pintu masuk sampai pintu keluar?",
+  "options": ["A", "B", "C", "D"],
+  "key": "C",
+  "keys": [],
+  "pairs": [],
+  "jawabanResmi": "C",
+  "penjelasan": "Hanya tata-ruang C yang memungkinkan pengunjung melakukan tur satu arah.\nUrutan ruang adalah: 2, 1, 3, 4, 7, 6, 5.\nSecara umum, jika sebuah ruang hanya memiliki satu pintu masuk, tur satu arah tidak dimungkinkan:\nJika pengunjung memasuki ruang ini, mereka harus kembali ke ruang asal mereka dan karenanya mengunjunginya dua kali.\n\nPada tata-ruang A, ruang #1 hanya memiliki satu pintu masuk.\nPada tata-ruang B, ruang terakhir #6 dapat dicapai dari ruang #5 dan ruang #7. Jika seseorang memilih untuk pergi melalui ruang #5, seseorang dapat mengunjungi ruang #7 dan mencapai pintu keluar setelahnya hanya dengan mengunjungi ruang #6 dua kali (dan sebaliknya).\nPada tata letak D, ruang #6 hanya memiliki satu pintu masuk.",
+  "iniInformatika": "",
+  "clue": "",
+  "notes": "OPSI BERUPA GAMBAR: 'Pilihan Jawaban' di buku adalah 4 gambar tata-ruang museum berlabel A, B, C, D (masing-masing 7 ruangan bernomor + label 'masuk'/'keluar') — options di JSON hanya label, gambar ada di hal. 5 (imgPages). Soal satu halaman penuh (soal + opsi gambar + jawaban + penjelasan + authorship). TIDAK ADA bagian 'Kata Penting dan Istilah' untuk soal ini → iniInformatika kosong. Spasi berlebih hasil ekstraksi pdf.js dinormalisasi jadi satu spasi; 'Pada tata letak D' (tanpa tanda hubung) sesuai cetakan."
+}
