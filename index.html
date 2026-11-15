@@ -1144,20 +1144,34 @@ const examBank = [
     }
     return null;
   }
-  // pastikan run punya set soal bank tersimpan (pick 15 fresh, exclude examUsed);
-  // kalau pool fresh < 15 → kocok ulang seluruh bank. Set disimpan + sync ke cloud.
+  // pastikan run punya set soal tersimpan. v3.12e urutan prioritas "buku terbaru dulu":
+  //   1) soal fresh buku 2020 (x20) → 2) soal fresh buku 2019 (x19)
+  //   → 3) soal drill 2016–2018 yang BELUM pernah kejawab di drill → 4) sisanya soal drill.
+  // "examUsed" hanya berisi soal yang PERNAH DIJAWAB di simulasi (benar/salah) —
+  // soal yang kelewat waktu (blank) dihitung "belum dikerjain" dan boleh keluar lagi.
   function ensureExamSet(run) {
     progress.examSetSrcs = progress.examSetSrcs || {};
     if (Array.isArray(progress.examSetSrcs[run]) && progress.examSetSrcs[run].length) return progress.examSetSrcs[run];
-    var bank = (typeof examBank !== 'undefined' && Array.isArray(examBank)) ? examBank : [];
-    var pool = bank.map(function (q) { return q.src || q.id; });
-    if (!pool.length) return null;
     var used = progress.examUsed || [];
-    var fresh = pool.filter(function (id) { return used.indexOf(id) < 0; });
-    var wrapped = fresh.length < 15;
-    if (wrapped) fresh = pool.slice();
-    shuffleArr(fresh);
-    var srcs = fresh.slice(0, Math.min(15, fresh.length));
+    var bank = (typeof examBank !== 'undefined' && Array.isArray(examBank)) ? examBank : [];
+    var p20 = bank.filter(function (q) { var s = q.src || q.id; return s.indexOf('x20_') === 0 && used.indexOf(s) < 0; }).map(function (q) { return q.src || q.id; });
+    var p19 = bank.filter(function (q) { var s = q.src || q.id; return s.indexOf('x19_') === 0 && used.indexOf(s) < 0; }).map(function (q) { return q.src || q.id; });
+    shuffleArr(p20); shuffleArr(p19);
+    var srcs = p20.concat(p19).slice(0, 15);
+    if (srcs.length < 15) {
+      var drillFresh = [], drillLain = [];
+      modules.forEach(function (mm) {
+        if (mm.type !== 'normal') return;
+        mm.questions.forEach(function (q) {
+          var id = q.src || q.id;
+          if (used.indexOf(id) >= 0) return;
+          (isSolved(q.id) ? drillLain : drillFresh).push(id);
+        });
+      });
+      shuffleArr(drillFresh); shuffleArr(drillLain);
+      srcs = srcs.concat(drillFresh).concat(drillLain).slice(0, 15);
+    }
+    if (!srcs.length) return null;
     progress.examSetSrcs[run] = srcs;
     saveProgress();
     return srcs;
@@ -2064,6 +2078,7 @@ updateToolbar(); updateProgress();
     progress.examHistory.push(hist);
     progress.examUsed = progress.examUsed || [];
     m.questions.forEach(function (q) {
+      if (blank.indexOf(q.id) >= 0) return; // v3.12e: blank = belum sempet dijawab → dihitung belum dikerjain
       var s = q.src || q.id;
       if (progress.examUsed.indexOf(s) < 0) progress.examUsed.push(s);
     });
@@ -2283,32 +2298,22 @@ updateToolbar(); updateProgress();
   function closeRedoModal() { if (redoModal) redoModal.hidden = true; }
   function startRedo() {
     closeRedoModal();
-    var pool = [];
-    if (typeof examBank !== 'undefined' && Array.isArray(examBank)) {
-      examBank.forEach(function (q) { pool.push(q.src || q.id); });
-    } else {
-      modules.forEach(function (mm) {
-        if (mm.type === 'normal') mm.questions.forEach(function (q) { pool.push(q.id); });
-      });
-    }
-    var used = progress.examUsed || [];
-    var fresh = pool.filter(function (id) { return used.indexOf(id) < 0; });
-    var wrapped = fresh.length < 15; // pool bank habis → kocok ulang semua soal bank
-    if (wrapped) fresh = pool.slice();
-    shuffleArr(fresh);
-    var srcs = fresh.slice(0, Math.min(15, fresh.length));
-    if (!srcs.length) return;
     var run = examRunOf() + 1;
     progress.examRun = run;
-    progress.examSetSrcs = progress.examSetSrcs || {};
-    progress.examSetSrcs[run] = srcs;
+    var srcs = ensureExamSet(run);
+    if (!srcs || !srcs.length) { progress.examRun = run - 1; saveProgress(); return; }
     saveProgress();
     renderModule();
     try { window.scrollTo({ top: 0 }); } catch (e) { /* noop */ }
+    var fromDrill = srcs.filter(function (s) { return !/^x(19|20)_/.test(s); }).length;
     var banner = document.getElementById('examBanner');
     if (banner) {
       banner.hidden = false;
-      banner.textContent = '🔁 REDO RUN ' + run + (wrapped ? ' — pool bank 2019–2020 udah habis, diacak ulang dari semua soal bank' : ' — 15 soal BARU yang belum pernah kamu kerjakan') + '. Tekan ▶ MULAI SIMULASI kalau mental lu udah siap.';
+      banner.textContent = '🔁 REDO RUN ' + run +
+        (fromDrill === 0 ? ' — 15 soal BARU yang belum pernah kamu kerjakan'
+          : fromDrill === srcs.length ? ' — buku 2019–2020 udah abis semua, 15 soal segar dari buku Bebras 2016–2018'
+          : ' — sisa soal buku 2019–2020 + ' + fromDrill + ' soal segar dari buku Bebras 2016–2018') +
+        '. Tekan ▶ MULAI SIMULASI kalau mental lu udah siap.';
     }
   }
 
