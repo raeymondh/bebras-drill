@@ -354,18 +354,7 @@ body.victory-open{overflow:hidden}
 .switch input:checked + .slider{background:rgba(63,185,80,.22);border-color:rgba(63,185,80,.6)}
 .switch input:checked + .slider:before{transform:translateX(28px);background:var(--green)}
 .switch input:focus-visible + .slider{outline:2px solid var(--blue);outline-offset:2px}
-/* Hari-20 banner */
-.banner-h20{
-  margin-top:26px;text-align:center;padding:30px 22px;border-radius:12px;
-  border:1px solid rgba(188,140,255,.45);
-  background:linear-gradient(135deg,rgba(188,140,255,.14),rgba(88,166,255,.14));
-  animation:rise .3s ease both;
-}
-.h20-emoji{font-size:40px;line-height:1}
-.h20-title{font-size:21px;font-weight:800;margin:10px 0 6px;color:#d2a8ff}
-.h20-text{font-size:15.5px;font-weight:700;line-height:1.7}
-.banner-h20.glow{animation:glow 1.1s ease 2}
-@keyframes glow{0%,100%{box-shadow:0 0 0 rgba(188,140,255,0)}50%{box-shadow:0 0 36px rgba(188,140,255,.55)}}
+/* v3.12d: banner HARI H dihapus (user: ganggu pikiran) — CSS ikut dibuang */
 /* empty state */
 .empty-hero{min-height:52vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:30px 10px}
 .eh-icon{font-size:52px;animation:float 2.2s ease-in-out infinite}
@@ -1458,16 +1447,7 @@ const examBank = [
     return card;
   }
 
-  /* ================= render: hari-20 banner ================= */
-  function renderHari20Banner() {
-    return el('section', { class: 'banner-h20', id: 'hari20Banner', 'aria-label': 'Pengumuman Hari H lomba' },
-      el('div', { class: 'h20-emoji', 'aria-hidden': 'true', text: '🏆' }),
-      el('h2', { class: 'h20-title', text: 'HARI H — Senin, 16 Nov 2026' }),
-      el('p', { class: 'h20-text', text: '🏆 HARI H — Senin, 16 Nov 2026: LOMBA TANTANGAN BEBRAS SMA 2026! 🇮🇩 Semoga sukses!' })
-    );
-  }
-
-  /* ================= render module ================= */
+/* ================= render module ================= */
   /* ================= jawaban terakhir (persist + restore) ================= */
   function qById(qid) {
     if (typeof examBank !== 'undefined' && Array.isArray(examBank)) {
@@ -1563,10 +1543,10 @@ const examBank = [
       m.questions.forEach(function (q) {
         section.append(q.type === 'check' ? renderCheckCard(m, q) : renderCard(m, q));
       });
-      app.append(section);
-    }
-    if (modules[modules.length - 1].id === m.id) app.append(renderHari20Banner());
-    updateToolbar(); updateProgress();
+app.append(section);
+}
+// v3.12d: banner HARI H dihapus dari halaman d19 (user: ganggu pikiran) — card di picker tetap ada
+updateToolbar(); updateProgress();
     if (m.type === 'exam') setupExam(m);
   }
 
