@@ -167,6 +167,10 @@ main#app{padding:22px;min-height:58vh}
 .reason-btn{font-family:var(--mono);font-size:12px;padding:9px 14px;min-height:40px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:#c9d1d9;cursor:pointer;transition:border-color .15s,background .15s}
 .reason-btn:hover{border-color:#e3b341}
 .reason-btn.selected{color:#0d1117;background:#e3b341;border-color:#e3b341;font-weight:700}
+.reason-btn.danger{color:#ff8b81;border-color:rgba(248,81,73,.55)}
+.reason-btn.danger:hover{border-color:#f85149;background:rgba(248,81,73,.08)}
+.btn-reset{color:#ff8b81;border-color:rgba(248,81,73,.5);background:rgba(248,81,73,.07)}
+.btn-reset:hover:not(:disabled){border-color:#f85149;background:rgba(248,81,73,.14)}
 .er-cta{width:100%;margin-top:18px;font-size:14px}
 /* evaluasi stepper */
 .eval-backdrop{position:fixed;inset:0;z-index:135;background:rgba(1,4,9,.94);overflow:auto;padding:18px}
@@ -948,12 +952,12 @@ const examBank = [
   var pendingNext = null;
 
   function loadProgress() {
-    var empty = function () { return { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {}, examRun: 0, examSetSrcs: {}, examHistory: [], examUsed: [], bebras100: false }; };
+    var empty = function () { return { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {}, examRun: 0, examSetSrcs: {}, examHistory: [], examUsed: [], bebras100: false, examResetAt: 0 }; };
     try {
       var raw = localStorage.getItem(LS_PROGRESS);
       if (!raw) return empty();
       var p = JSON.parse(raw);
-      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {}, answers: p.answers || {}, hearts: p.hearts || {}, examRun: p.examRun || 0, examSetSrcs: p.examSetSrcs || {}, examHistory: Array.isArray(p.examHistory) ? p.examHistory : [], examUsed: Array.isArray(p.examUsed) ? p.examUsed : [], bebras100: !!p.bebras100 };
+      return { solved: p.solved || {}, examStart: p.examStart || {}, clueUsed: p.clueUsed || {}, answers: p.answers || {}, hearts: p.hearts || {}, examRun: p.examRun || 0, examSetSrcs: p.examSetSrcs || {}, examHistory: Array.isArray(p.examHistory) ? p.examHistory : [], examUsed: Array.isArray(p.examUsed) ? p.examUsed : [], bebras100: !!p.bebras100, examResetAt: Number(p.examResetAt) || 0 };
     } catch (e) { return empty(); }
   }
   function saveProgress() {
@@ -981,7 +985,7 @@ const examBank = [
     try {
       fetch(syncUrl('api/progress'), { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {}, examRun: 0, examSetSrcs: {}, examHistory: [], examUsed: [], bebras100: false }) : null); })
+        .then(function (j) { finish(j && j.ok ? (j.progress || { solved: {}, examStart: {}, clueUsed: {}, answers: {}, hearts: {}, examRun: 0, examSetSrcs: {}, examHistory: [], examUsed: [], bebras100: false, examResetAt: 0 }) : null); })
         .catch(function () { finish(null); });
       setTimeout(function () { finish(null); }, 5000);
     } catch (e) { finish(null); }
@@ -992,7 +996,7 @@ const examBank = [
     var n = 0, k;
     for (k in s) n += Object.keys(s[k]).length;
     return n === 0 && Object.keys(e).length === 0 && Object.keys(c).length === 0
-      && !(p.examHistory || []).length && !(p.examUsed || []).length && !p.bebras100;
+      && !(p.examHistory || []).length && !(p.examUsed || []).length && !p.bebras100 && !(Number(p.examResetAt) || 0);
   }
   function mergeProgress(a, b) {
     var out = { solved: {}, examStart: {}, clueUsed: {} }, ids = {}, k, kk;
@@ -1020,20 +1024,34 @@ const examBank = [
     for (k in (b.hearts || {})) {
       if (out.hearts[k] === undefined || Number(b.hearts[k]) < Number(out.hearts[k])) out.hearts[k] = b.hearts[k];
     }
-    // exam (v3.11): run maksimum, set soal per run, riwayat per run (b/local menang per run), used union
-    out.examRun = Math.max(Number(a.examRun) || 0, Number(b.examRun) || 0);
+    // exam (v3.11 + v3.12c tombstone): run maksimum, set soal per run, riwayat per run (b/local menang per run), used union.
+    // examResetAt = detik reset simulasi terakhir — semua jejak exam lebih tua dari tombstone ini dibuang saat merge,
+    // biar state gagal yang udah ke-push ke cloud gak bangkit lagi dari device lain.
+    var aReset = Number(a.examResetAt) || 0, bReset = Number(b.examResetAt) || 0;
+    var cut = Math.max(aReset, bReset); // ambang: run/jejak dengan timestamp < cut dianggap udah dihapus
+    var bAuth = bReset > aReset; // device lokal yang baru reset = sumber kebenaran utk exam
+    out.examResetAt = cut;
+    out.examRun = bAuth ? (Number(b.examRun) || 0) : Math.max(Number(a.examRun) || 0, Number(b.examRun) || 0);
     out.examSetSrcs = {};
-    for (k in (a.examSetSrcs || {})) out.examSetSrcs[k] = a.examSetSrcs[k];
-    for (k in (b.examSetSrcs || {})) out.examSetSrcs[k] = b.examSetSrcs[k];
+    if (bAuth) {
+      for (k in (b.examSetSrcs || {})) out.examSetSrcs[k] = b.examSetSrcs[k];
+    } else {
+      for (k in (a.examSetSrcs || {})) out.examSetSrcs[k] = a.examSetSrcs[k];
+      for (k in (b.examSetSrcs || {})) out.examSetSrcs[k] = b.examSetSrcs[k];
+    }
     var histA = Array.isArray(a.examHistory) ? a.examHistory : [];
     var histB = Array.isArray(b.examHistory) ? b.examHistory : [];
     var byRun = {};
-    histA.forEach(function (h) { if (h && h.run !== undefined) byRun[h.run] = h; });
-    histB.forEach(function (h) { if (h && h.run !== undefined) byRun[h.run] = h; }); // local menang utk run sama
+    histA.forEach(function (h) { if (h && h.run !== undefined && (Number(h.date) || 0) >= cut) byRun[h.run] = h; });
+    histB.forEach(function (h) { if (h && h.run !== undefined && (Number(h.date) || 0) >= cut) byRun[h.run] = h; }); // local menang utk run sama
     out.examHistory = Object.keys(byRun).map(function (r) { return byRun[r]; }).sort(function (x, y) { return x.run - y.run; });
     out.examUsed = [];
-    (a.examUsed || []).forEach(function (x) { if (out.examUsed.indexOf(x) < 0) out.examUsed.push(x); });
-    (b.examUsed || []).forEach(function (x) { if (out.examUsed.indexOf(x) < 0) out.examUsed.push(x); });
+    var usedSrc = bAuth ? (b.examUsed || []) : (a.examUsed || []).concat(b.examUsed || []);
+    usedSrc.forEach(function (x) { if (out.examUsed.indexOf(x) < 0) out.examUsed.push(x); });
+    out.examStart = {};
+    for (k in (a.examStart || {})) out.examStart[k] = a.examStart[k];
+    for (k in (b.examStart || {})) if (out.examStart[k] === undefined || Number(b.examStart[k]) > Number(out.examStart[k])) out.examStart[k] = b.examStart[k];
+    Object.keys(out.examStart).forEach(function (k) { if (Number(out.examStart[k]) < cut) delete out.examStart[k]; });
     out.bebras100 = !!(a.bebras100 || b.bebras100);
     return out;
   }
@@ -1213,7 +1231,8 @@ const examBank = [
       el('div', { class: 'exam-banner', id: 'examBanner', role: 'alert', hidden: 'true' }),
       done && !progress.bebras100 ? el('button', { class: 'btn btn-debug btn-mini', id: 'btnEvalReopen', type: 'button', text: '📋 EVALUASI' }) : null,
       done && !progress.bebras100 ? el('button', { class: 'btn btn-exam btn-mini', id: 'btnRedoReopen', type: 'button', text: '🔁 REDO' }) : null,
-      progress.bebras100 ? el('button', { class: 'btn btn-mini', id: 'btnVictoryReplay', type: 'button', 'aria-label': 'Buka lagi victory page', title: 'Victory page — BEBRAS 100%', text: '🏆' }) : null
+      progress.bebras100 ? el('button', { class: 'btn btn-mini', id: 'btnVictoryReplay', type: 'button', 'aria-label': 'Buka lagi victory page', title: 'Victory page — BEBRAS 100%', text: '🏆' }) : null,
+      done ? el('button', { class: 'btn btn-reset btn-mini', id: 'btnResetExam', type: 'button', 'aria-label': 'Reset simulasi Hari 19', title: 'Reset simulasi — Hari 19 balik ke kondisi kayak belum pernah dikerjain', text: '↺ RESET SIMULASI' }) : null
     );
   }
 
@@ -1944,9 +1963,11 @@ const examBank = [
     var evalBtn = document.getElementById('btnEvalReopen');
     var redoBtn = document.getElementById('btnRedoReopen');
     var vpBtn = document.getElementById('btnVictoryReplay');
+    var resetBtn = document.getElementById('btnResetExam');
     if (evalBtn) evalBtn.addEventListener('click', function () { var h = examHistOf(examRunOf()); if (h) openEval(h); });
     if (redoBtn) redoBtn.addEventListener('click', openRedoPrompt);
     if (vpBtn) vpBtn.addEventListener('click', function () { startVictory(true); });
+    if (resetBtn) resetBtn.addEventListener('click', askResetExam);
     if (done) {
       if (startBtn) startBtn.hidden = true;
       if (submitBtn) submitBtn.hidden = true;
@@ -1994,6 +2015,47 @@ const examBank = [
     submitModal.hidden = false;
   }
   function closeSubmitConfirm() { if (submitModal) submitModal.hidden = true; }
+
+  /* v3.12c: reset simulasi — hapus semua jejak exam Hari 19 (drill 1–18 aman) */
+  var resetModal = null;
+  function askResetExam() {
+    var m = mod();
+    if (!m || m.type !== 'exam' || !examSubmitted()) return;
+    if (!resetModal) {
+      resetModal = el('div', { class: 'er-backdrop', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Konfirmasi reset simulasi' },
+        el('div', { class: 'er-card' },
+          el('div', { class: 'er-title', text: '↺ RESET SIMULASI' }),
+          el('div', { class: 'er-sub', id: 'resetAskText' }),
+          el('div', { class: 'er-sub2', text: 'Drill Hari 1–18 sama sekali GAK ikut kehapus — ini cuma buat page Hari 19. Timernya juga di-reset, jadi lu bisa mulai simulasi baru dengan tenang.' }),
+          el('div', { class: 'cue-actions' },
+            el('button', { class: 'btn btn-ghost', type: 'button', text: 'Batal', onclick: closeResetExam }),
+            el('button', { class: 'reason-btn danger', type: 'button', text: 'Ya, reset simulasi', onclick: doResetExam })),
+          el('div', { class: 'eg-warn', text: '⚠️ Gak bisa di-undo. Hasil, evaluasi, dan riwayat run hilang permanen.' })));
+      resetModal.addEventListener('click', function (e) { if (e.target === resetModal) closeResetExam(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && resetModal && !resetModal.hidden) closeResetExam(); });
+      document.body.append(resetModal);
+    }
+    var run = examRunOf();
+    var ask = resetModal.querySelector('#resetAskText');
+    if (ask) ask.textContent = 'Yakin reset simulasi? Semua hasil run' + (run > 0 ? ' (termasuk ' + run + ' redo)' : '') +
+      ', skor, evaluasi, dan riwayatnya dihapus — Hari 19 balik ke kondisi kayak belum pernah disentuh.';
+    resetModal.hidden = false;
+  }
+  function closeResetExam() { if (resetModal) resetModal.hidden = true; }
+  function doResetExam() {
+    progress.examRun = 0;
+    progress.examSetSrcs = {};
+    progress.examHistory = [];
+    progress.examUsed = [];
+    progress.examResetAt = Date.now(); // tombstone: merge cloud nanti buang semua jejak exam lebih tua dari ini
+    Object.keys(progress.examStart || {}).forEach(function (k) { if (k === 'd19' || k.indexOf('d19:') === 0) delete progress.examStart[k]; });
+    if (progress.solved) delete progress.solved['d19'];
+    Object.keys(progress.answers || {}).forEach(function (k) { if (k.indexOf('d19') === 0) delete progress.answers[k]; });
+    if (progress.hearts) Object.keys(progress.hearts).forEach(function (k) { if (k.indexOf('d19') === 0) delete progress.hearts[k]; });
+    closeResetExam();
+    saveProgress();
+    renderModule(); // → gate fresh (SIMULASI_TERKUNCI + MULAI SIMULASI)
+  }
 
   function submitExam(m, auto) {
     stopExamTick();
