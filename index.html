@@ -140,6 +140,15 @@ main#app{padding:22px;min-height:58vh}
 .btn-submit:hover:not(:disabled){border-color:#56d364;background:linear-gradient(180deg,#46c35a,#33a647)}
 .exam-fill{font-family:var(--mono);font-size:12px;font-weight:600;padding:8px 12px;border-radius:8px;background:var(--bg);border:1px solid var(--border);color:#79c0ff;white-space:nowrap}
 .exam-fill.full{color:#0d1117;background:rgba(63,185,80,.85);border-color:#3fb950}
+/* v3.12b: exam gate — soal disembunyikan sampai MULAI SIMULASI ditekan */
+.exam-gate{display:flex;flex-direction:column;align-items:center;gap:16px;background:var(--bg2,#161b22);border:1px solid var(--border);border-radius:12px;padding:52px 24px;text-align:center;margin-top:18px}
+.exam-gate .eg-icon{font-size:52px;line-height:1}
+.exam-gate .eg-title{font-family:var(--mono);font-size:21px;font-weight:700;color:var(--text);letter-spacing:.5px}
+.exam-gate .eg-sub{color:#8b949e;font-size:14px;max-width:540px;line-height:1.65}
+.exam-gate .eg-meta{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.exam-gate .btn-exam{font-size:17px;padding:15px 34px;min-height:52px}
+.exam-gate .eg-warn{color:#d29922;font-size:12.5px;font-family:var(--mono)}
+.exam-gate .eg-redo{color:#d29922;background:rgba(210,153,34,.1);border:1px solid rgba(210,153,34,.5);border-radius:8px;padding:10px 16px;font-size:13px;font-weight:600;max-width:540px}
 .btn-mini{font-size:12px;padding:6px 12px;min-height:34px}
 .qc-x{color:#ff8b81;font-weight:800;font-size:15px}
 .qc-void{color:#8b949e;font-weight:800;font-size:15px}
@@ -1192,8 +1201,10 @@ const examBank = [
     return head;
   }
   function renderExamControls(m) {
+    var started = !!progress.examStart[examStartKey(examRunOf())];
     var hist = examHistOf(examRunOf());
     var done = !!(hist && hist.submitted);
+    if (!started && !done) return el('div', { class: 'exam-controls', id: 'examControls' }); // pre-start: tombol ada di gate, kontrol kosong
     return el('div', { class: 'exam-controls' },
       el('span', { class: 'exam-chip', id: 'examChip', 'aria-label': 'Sisa waktu simulasi', text: '⏱ 45:00' }),
       el('span', { class: 'exam-fill', id: 'examFill', 'aria-label': 'Soal terisi', text: '0/' + m.questions.length + ' terisi', hidden: 'true' }),
@@ -1203,6 +1214,24 @@ const examBank = [
       done && !progress.bebras100 ? el('button', { class: 'btn btn-debug btn-mini', id: 'btnEvalReopen', type: 'button', text: '📋 EVALUASI' }) : null,
       done && !progress.bebras100 ? el('button', { class: 'btn btn-exam btn-mini', id: 'btnRedoReopen', type: 'button', text: '🔁 REDO' }) : null,
       progress.bebras100 ? el('button', { class: 'btn btn-mini', id: 'btnVictoryReplay', type: 'button', 'aria-label': 'Buka lagi victory page', title: 'Victory page — BEBRAS 100%', text: '🏆' }) : null
+    );
+  }
+
+  /* v3.12b: gate — sebelum MULAI SIMULASI, halaman cuma nampilin tombol mulai (soal disembunyikan) */
+  function renderExamGate(m) {
+    var run = examRunOf();
+    return el('div', { class: 'exam-gate', id: 'examGate', 'aria-label': 'Simulasi belum dimulai — soal disembunyikan' },
+      el('div', { class: 'eg-icon', text: '🔒' }),
+      el('div', { class: 'eg-title', text: '// SIMULASI_TERKUNCI' }),
+      run > 0 ? el('div', { class: 'eg-redo', text: '🔁 REDO RUN ' + run + ' — 15 soal BARU dari bank (belum pernah lu kerjain). Kalau udah siap beneran, gas.' }) : null,
+      el('div', { class: 'eg-sub', text: 'Soal disembunyikan sampai simulasi dimulai — kayak lomba beneran. Begitu tombol ditekan, timer 45:00 langsung jalan dan baru soal keliatan. Jawaban baru dinilai pas SUBMIT (zero feedback selama ujian).' }),
+      el('div', { class: 'eg-meta' },
+        el('span', { class: 'chip chip-blue', text: m.questions.length + ' soal' }),
+        el('span', { class: 'chip', text: '⏱ 45:00' }),
+        el('span', { class: 'chip chip-purple', text: 'bank Bebras 2019–2020 · soal fresh' })
+      ),
+      el('button', { class: 'btn btn-exam', id: 'btnStartExam', type: 'button', text: '▶ MULAI SIMULASI' }),
+      el('div', { class: 'eg-warn', text: '⚠️ Gak bisa di-pause — kalau reload/tutup halaman, timer tetap jalan.' })
     );
   }
 
@@ -1507,11 +1536,16 @@ const examBank = [
     currentId = m.id;
     if (m.type === 'exam') applyExamSet(m); // pasang set soal redo (kalau examRun > 0)
     app.append(renderModuleHeader(m));
-    var section = el('section', { class: 'cards', 'aria-label': 'Daftar soal ' + m.label });
-    m.questions.forEach(function (q) {
-      section.append(q.type === 'check' ? renderCheckCard(m, q) : renderCard(m, q));
-    });
-    app.append(section);
+    var examGated = m.type === 'exam' && !progress.examStart[examStartKey(examRunOf())] && !examSubmitted();
+    if (examGated) {
+      app.append(renderExamGate(m));
+    } else {
+      var section = el('section', { class: 'cards', 'aria-label': 'Daftar soal ' + m.label });
+      m.questions.forEach(function (q) {
+        section.append(q.type === 'check' ? renderCheckCard(m, q) : renderCard(m, q));
+      });
+      app.append(section);
+    }
     if (modules[modules.length - 1].id === m.id) app.append(renderHari20Banner());
     updateToolbar(); updateProgress();
     if (m.type === 'exam') setupExam(m);
