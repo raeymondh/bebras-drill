@@ -214,10 +214,10 @@ body.review-open{overflow:hidden}
 .review-day{font-family:var(--mono);font-size:10.5px;color:#6e7681;margin-left:auto}
 .review-title{font-weight:700;font-size:14.5px;margin-bottom:8px}
 .review-empty{font-family:var(--mono);font-size:13px;color:#3fb950;border:1px dashed rgba(63,185,80,.4);border-radius:10px;padding:26px;text-align:center}
-.vp-overlay{position:fixed;inset:0;z-index:300;background:#000;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .7s ease}
+.vp-overlay{position:fixed;inset:0;z-index:300;background:#000;display:flex;overflow-y:auto;padding:24px 16px;opacity:0;transition:opacity .7s ease}
 .vp-overlay.on{opacity:1}
 .vp-overlay[hidden]{display:none}
-.vp-stage{position:relative;text-align:center;max-width:640px;width:100%;padding:24px}
+.vp-stage{position:relative;text-align:center;max-width:640px;width:100%;padding:24px;margin:auto}
 .vp-overlay.gone .vp-stage{display:none}
 .vp-envelope{position:relative;width:min(300px,78vw);height:190px;margin:30px auto 0;background:linear-gradient(180deg,#1c2431,#12161d);border:1px solid rgba(227,179,65,.65);border-radius:10px;cursor:pointer;animation:vpeIn .8s cubic-bezier(.22,1,.36,1) .15s both,float 3.2s ease-in-out 1.2s infinite;box-shadow:0 0 44px rgba(227,179,65,.28)}
 @keyframes vpeIn{from{opacity:0;transform:translateY(26px) scale(.92)}to{opacity:1;transform:none}}
@@ -2494,8 +2494,8 @@ updateToolbar(); updateProgress();
       el('div', { class: 'vp-sign', text: '// exit code 0 — bebras_sma_complete_workspace.py · mission complete' }),
       el('div', { class: 'vp-actions' },
         el('button', { class: 'btn vp-btn', type: 'button', text: 'kembali ke workspace', onclick: closeVictory })));
-    stage.append(letter);
-    vp = el('div', { class: 'vp-overlay', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Victory — BEBRAS 100%' }, stage);
+    // BUGFIX v3.12g: letter HARUS sibling dari stage (bukan anaknya) — .gone menghide .vp-stage, kalau letter di dalamnya ikut terhide → layar item setelah buka surat
+    vp = el('div', { class: 'vp-overlay', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Victory — BEBRAS 100%' }, stage, letter);
     envelope.addEventListener('click', openEnvelope);
     envelope.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openEnvelope(); } });
     document.addEventListener('keydown', function (e) {
