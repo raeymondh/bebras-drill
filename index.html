@@ -198,6 +198,22 @@ main#app{padding:22px;min-height:58vh}
 .redo-card.quake{animation:cardShakeBig .6s cubic-bezier(.36,.07,.19,.97) both}
 /* victory: blank → surat → victory page */
 body.victory-open{overflow:hidden}
+/* v3.12f: review salah — page fullscreen daftar soal yang pernah dijawab salah */
+body.review-open{overflow:hidden}
+.review-backdrop{position:fixed;inset:0;z-index:300;background:#0d1117;overflow-y:auto;padding:16px 12px 48px;-webkit-overflow-scrolling:touch}
+.review-head{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(13,17,23,.94);border:1px solid #30363d;border-radius:10px;padding:12px 14px;margin:0 auto 14px;max-width:980px}
+.review-sub{font-family:var(--mono);font-size:11.5px;color:#8b949e;margin-top:5px;line-height:1.6}
+.review-body{display:flex;flex-direction:column;gap:14px;max-width:980px;margin:0 auto}
+.review-card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px}
+.review-card-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.review-status{font-family:var(--mono);font-size:10.5px;padding:3px 9px;border-radius:999px;border:1px solid #30363d;color:#8b949e;white-space:nowrap}
+.review-status.ok{color:#3fb950;border-color:rgba(63,185,80,.45)}
+.review-status.sim{color:#f85149;border-color:rgba(248,81,73,.45)}
+.review-status.forced{color:#f85149;border-color:rgba(248,81,73,.45)}
+.review-status.open{color:#d29922;border-color:rgba(210,153,34,.45)}
+.review-day{font-family:var(--mono);font-size:10.5px;color:#6e7681;margin-left:auto}
+.review-title{font-weight:700;font-size:14.5px;margin-bottom:8px}
+.review-empty{font-family:var(--mono);font-size:13px;color:#3fb950;border:1px dashed rgba(63,185,80,.4);border-radius:10px;padding:26px;text-align:center}
 .vp-overlay{position:fixed;inset:0;z-index:300;background:#000;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .7s ease}
 .vp-overlay.on{opacity:1}
 .vp-overlay[hidden]{display:none}
@@ -517,6 +533,7 @@ body.fx-shake3 .ide-window{animation:fxShake3 .74s cubic-bezier(.36,.07,.19,.97)
       <span class="progress-text" id="progressText">0/0 terjawab</span>
     </div>
     <span class="sync-chip" id="syncChip" title="Sinkronisasi progres cloud">☁ …</span>
+    <button id="btnReviewWrong" class="btn btn-ghost" type="button" title="Review semua soal yang pernah lu jawab salah + pembahasannya">📋 REVIEW SALAH</button>
     <button id="btnReset" class="btn btn-reset" type="button">🗑️ RESET</button>
   </div>
 
@@ -1253,9 +1270,12 @@ const examBank = [
         el('span', { class: 'chip chip-purple', text: 'bank Bebras 2019–2020 · soal fresh' })
       ),
       el('button', { class: 'btn btn-exam', id: 'btnStartExam', type: 'button', text: '▶ MULAI SIMULASI' }),
-      el('div', { class: 'eg-warn', text: '⚠️ Gak bisa di-pause — kalau reload/tutup halaman, timer tetap jalan.' })
+      el('div', { class: 'eg-warn', text: '⚠️ Gak bisa di-pause — kalau reload/tutup halaman, timer tetap jalan.' }),
+      progress.bebras100
+            ? el('button', { class: 'btn btn-ghost btn-mini', id: 'btnBooster', type: 'button', 'aria-label': 'Buka lagi victory page 100%', text: '🏆 BUKA LAGI KEMENANGAN' })
+            : el('button', { class: 'btn btn-ghost btn-mini', id: 'btnBooster', type: 'button', 'aria-label': 'Booster mental — muter kemenangan 100% sekarang juga', title: 'Bypass simulasi: langsung dapet victory 100% buat boost mental', text: '⚡ BOOSTER — LANGSUNG 100%' })
     );
-  }
+}
 
   /* ================= render: question card ================= */
   function renderCard(m, q) {
@@ -1958,10 +1978,12 @@ updateToolbar(); updateProgress();
     var redoBtn = document.getElementById('btnRedoReopen');
     var vpBtn = document.getElementById('btnVictoryReplay');
     var resetBtn = document.getElementById('btnResetExam');
+    var boosterBtn = document.getElementById('btnBooster');
     if (evalBtn) evalBtn.addEventListener('click', function () { var h = examHistOf(examRunOf()); if (h) openEval(h); });
     if (redoBtn) redoBtn.addEventListener('click', openRedoPrompt);
     if (vpBtn) vpBtn.addEventListener('click', function () { startVictory(true); });
     if (resetBtn) resetBtn.addEventListener('click', askResetExam);
+    if (boosterBtn) boosterBtn.addEventListener('click', askBooster);
     if (done) {
       if (startBtn) startBtn.hidden = true;
       if (submitBtn) submitBtn.hidden = true;
@@ -2049,6 +2071,132 @@ updateToolbar(); updateProgress();
     closeResetExam();
     saveProgress();
     renderModule(); // → gate fresh (SIMULASI_TERKUNCI + MULAI SIMULASI)
+  }
+
+  /* v3.12f: BOOSTER — bypass simulasi langsung ke victory 100% (boost mental pralomba) */
+  var boosterModal = null;
+  function askBooster() {
+    var m = mod();
+    if (!m || m.type !== 'exam') return;
+    if (progress.bebras100) { startVictory(true); return; } // udah pernah bypass/100% → replay langsung tanpa modal
+    if (examSubmitted()) return; // done state punya tombol 🏆 sendiri
+    if (!boosterModal) {
+      boosterModal = el('div', { class: 'er-backdrop', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Konfirmasi booster' },
+        el('div', { class: 'er-card' },
+          el('div', { class: 'er-title', text: '⚡ BOOSTER MENTAL' }),
+          el('div', { class: 'er-sub', text: 'Ini nge-bypass simulasi: lu langsung muterin kemenangan 100% (screen blank → surat → victory page) tanpa ngerjain soal satu pun.' }),
+          el('div', { class: 'er-sub2', text: 'Gak ada data simulasi palsu — ini murni booster mental sebelum lomba beneran. Kalau mau latihan beneran, tekan Batal lalu ▶ MULAI SIMULASI.' }),
+          el('div', { class: 'cue-actions' },
+            el('button', { class: 'btn btn-ghost', type: 'button', text: 'Batal', onclick: closeBooster }),
+            el('button', { class: 'btn btn-submit', type: 'button', text: '⚡ MUTER KEMENANGANNYA', onclick: doBooster }))));
+      boosterModal.addEventListener('click', function (e) { if (e.target === boosterModal) closeBooster(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && boosterModal && !boosterModal.hidden) closeBooster(); });
+      document.body.append(boosterModal);
+    }
+    boosterModal.hidden = false;
+  }
+  function closeBooster() { if (boosterModal) boosterModal.hidden = true; }
+  function doBooster() {
+    closeBooster();
+    if (!progress.bebras100) { progress.bebras100 = true; saveProgress(); }
+    startVictory(false); // full ceremony: blank → surat → victory page + gold confetti
+  }
+
+  /* v3.12f: REVIEW SALAH — semua soal yang pernah dijawab salah (drill + sim) + pembahasannya */
+  var reviewOverlay = null;
+  function collectWrongSoal() {
+    var items = [], seen = {};
+    modules.forEach(function (m) {
+      if (m.type !== 'normal') return;
+      m.questions.forEach(function (q) {
+        var h = progress.hearts ? progress.hearts[q.id] : undefined;
+        if (h === undefined || Number(h) >= 3 || seen[q.id]) return;
+        seen[q.id] = 1;
+        var status = isSolved(q.id) ? 'ok' : (isRevealed(q.id) ? 'forced' : 'open');
+        items.push({ q: q, src: q.id, kind: 'drill', day: m.scheduleTitle || ('HARI ' + m.id), status: status });
+      });
+    });
+    (progress.examHistory || []).forEach(function (hist) {
+      (hist.wrong || []).forEach(function (cloneId) {
+        var src = (hist.srcs || {})[cloneId] || cloneId;
+        if (seen[src]) {
+          items.forEach(function (it) { if (it.src === src && it.kind === 'sim' && it.runs.indexOf(hist.run) < 0) it.runs.push(hist.run); });
+          return;
+        }
+        var q = poolQById(src);
+        if (!q) return;
+        seen[src] = 1;
+        items.push({ q: q, src: src, kind: 'sim', day: 'Simulasi', status: 'sim', runs: [hist.run] });
+      });
+    });
+    return items;
+  }
+  function ensureReviewOverlay() {
+    if (reviewOverlay) return;
+    reviewOverlay = el('div', { class: 'review-backdrop', id: 'reviewOverlay', hidden: 'true', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Review soal yang pernah dijawab salah' },
+      el('div', { class: 'review-head' },
+        el('div', {},
+          el('div', { class: 'eg-title', text: '// REVIEW_SALAH' }),
+          el('div', { class: 'review-sub', id: 'reviewSub' })),
+        el('button', { class: 'modal-close', type: 'button', 'aria-label': 'Tutup review', text: '✕', onclick: closeReview })),
+      el('div', { class: 'review-body', id: 'reviewBody' }));
+    reviewOverlay.addEventListener('click', function (e) { if (e.target === reviewOverlay) closeReview(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && reviewOverlay && !reviewOverlay.hidden) closeReview(); });
+    document.body.append(reviewOverlay);
+  }
+  function openReview() {
+    ensureReviewOverlay();
+    var items = collectWrongSoal();
+    var sub = reviewOverlay.querySelector('#reviewSub');
+    if (sub) sub.textContent = items.length === 0
+      ? 'Bersih — belum ada soal yang pernah lu jawab salah.'
+      : items.length + ' soal pernah lu jawab salah (drill + simulasi). Buka pembahasannya satu-satu — fokusin TIPE soal yang ke-miss, bukan hafalan jawaban.';
+    var body = reviewOverlay.querySelector('#reviewBody');
+    body.textContent = '';
+    if (!items.length) {
+      body.append(el('div', { class: 'review-empty', text: '✅ Bersih! Gak ada soal yang pernah lu jawab salah. Lanjut jaga streak itu. 🦁' }));
+    } else {
+      items.forEach(function (it) {
+        var q = it.q;
+        var chip = it.kind === 'sim'
+          ? '✗ salah di sim run ' + (it.runs || []).join(' & ')
+          : it.status === 'ok' ? '✓ kejawab abis salah'
+          : it.status === 'forced' ? '💀 dibuka paksa (3x salah)'
+          : '⏳ belum kejawab';
+        var card = el('div', { class: 'review-card', id: 'review-' + it.src },
+          el('div', { class: 'review-card-head' },
+            el('span', { class: 'q-id-chip', text: q.id }),
+            el('span', { class: 'review-status st-' + it.status + (it.kind === 'sim' ? ' sim' : ''), text: chip }),
+            el('span', { class: 'review-day', text: it.day })),
+          el('div', { class: 'review-title', text: q.title }));
+        var soalImgs = Array.isArray(q.img) && q.img.length && typeof q.img[0] === 'string' && q.img[0].length > 0;
+        if (soalImgs) card.append(el('div', { class: 'eval-qimg' }, q.img.map(function (s2) {
+          return el('img', { src: s2, alt: 'Gambar soal ' + q.id, loading: 'lazy', 'data-lb': s2, 'data-cap': 'Soal ' + q.id });
+        })));
+        if (q.pertanyaan) card.append(el('div', { class: 'eval-qtext', text: q.pertanyaan }));
+        var solWrap = el('div', { class: 'eval-sol', hidden: 'true' });
+        var solImgs = Array.isArray(q.imgSol) && q.imgSol.length && typeof q.imgSol[0] === 'string' && q.imgSol[0].length > 0;
+        if (solImgs) q.imgSol.forEach(function (s2) {
+          solWrap.append(el('img', { src: s2, alt: 'Pembahasan ' + q.id, loading: 'lazy', 'data-lb': s2, 'data-cap': 'Pembahasan ' + q.id }));
+        });
+        if (q.jawabanResmi) solWrap.append(el('div', { class: 'eval-soltext', text: q.jawabanResmi }));
+        if (q.penjelasan) solWrap.append(el('div', { class: 'eval-soltext', text: q.penjelasan }));
+        if (q.iniInformatika) solWrap.append(el('div', { class: 'eval-soltext info' }, '💡 INI INFORMATIKA! — ' + q.iniInformatika));
+        var dbg = el('button', { class: 'btn btn-debug btn-mini', type: 'button', 'aria-expanded': 'false', text: '📖 BUKA PEMBAHASAN', onclick: function () {
+          solWrap.hidden = !solWrap.hidden;
+          dbg.setAttribute('aria-expanded', String(!solWrap.hidden));
+          dbg.textContent = solWrap.hidden ? '📖 BUKA PEMBAHASAN' : '📖 TUTUP PEMBAHASAN';
+        } });
+        card.append(dbg, solWrap);
+        body.append(card);
+      });
+    }
+    reviewOverlay.hidden = false;
+    document.body.classList.add('review-open');
+  }
+  function closeReview() {
+    if (reviewOverlay) reviewOverlay.hidden = true;
+    document.body.classList.remove('review-open');
   }
 
   function submitExam(m, auto) {
@@ -2359,6 +2507,8 @@ updateToolbar(); updateProgress();
     ensureVictory();
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     vp.className = 'vp-overlay';
+    var envReset = vp.querySelector('.vp-envelope'); // closeVictory cuma reset class overlay — anaknya (envelope) bisa nyangkut .open dari sesi sebelumnya → klik surat jadi mati di replay
+    if (envReset) envReset.classList.remove('open');
     vp.hidden = false;
     document.body.classList.add('victory-open');
     if (reduce) { vp.classList.add('on', 'letter', 'gone'); return; }
@@ -2505,6 +2655,7 @@ updateToolbar(); updateProgress();
   });
   $('#progressBar').addEventListener('click', openPicker);
   $('#btnNextModule').addEventListener('click', onCeleNext);
+  $('#btnReviewWrong').addEventListener('click', openReview);
   $('#btnReset').addEventListener('click', function () {
     if (!confirm('Yakin RESET semua progres drill? Semua jawaban & checklist tersimpan di browser akan dihapus.')) return;
     try { localStorage.removeItem(LS_PROGRESS); localStorage.removeItem(LS_CURRENT); } catch (e) { /* ignore */ }
